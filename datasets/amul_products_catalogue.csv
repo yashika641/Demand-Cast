@@ -1,0 +1,209 @@
+SKU_ID,Product_Name,Category,Sub_Category,Pack_Size,Packaging_Type,Min_Price,Max_Price,Supplier,Storage_Type,Shelf_Life_Days,Seasonal_Flag,Special_Tag,Launch_Date,Discontinued_Flag,Popularity_Score
+AM-2000,Amul Gold Dairy Milk 200ml,Dairy Milk,Gold,200ml,Tetra Pack,58.33,75.78,Amul Dairy Plant Delhi,Refrigerated,9,No,,2021-10-01,No,87
+AM-2001,Amul Gold Dairy Milk 200ml,Dairy Milk,Gold,200ml,Tetra Pack,53.75,82.3,Amul Dairy Plant Hyderabad,Refrigerated,13,No,,2025-05-25,No,65
+AM-2002,Amul Taaza Dairy Milk 1L,Dairy Milk,Taaza,1L,Tetra Pack,59.12,87.63,Amul Dairy Plant Delhi,Refrigerated,14,No,,2022-10-27,No,76
+AM-2003,Amul Taaza Dairy Milk 500ml,Dairy Milk,Taaza,500ml,Tetra Pack,29.06,51.28,Amul Dairy Plant Bengaluru,Refrigerated,9,No,,2023-06-06,No,66
+AM-2004,Amul Taaza Dairy Milk 1L,Dairy Milk,Taaza,1L,Tetra Pack,56.9,66.27,Amul Dairy Plant Bengaluru,Refrigerated,13,No,,2021-02-19,No,70
+AM-2005,Amul Taaza Dairy Milk 500ml,Dairy Milk,Taaza,500ml,Tetra Pack,51.87,68.34,Amul Dairy Plant Anand,Refrigerated,7,No,,2021-12-15,No,70
+AM-2006,Amul Shakti Dairy Milk 1L,Dairy Milk,Shakti,1L,Tetra Pack,49.35,78.4,Amul Dairy Plant Delhi,Refrigerated,8,No,,2022-04-21,No,62
+AM-2007,Amul Shakti Dairy Milk 1L,Dairy Milk,Shakti,1L,Tetra Pack,59.89,72.44,Amul Dairy Plant Mumbai,Refrigerated,8,No,,2024-01-29,No,79
+AM-2008,Amul Shakti Dairy Milk 1L,Dairy Milk,Shakti,1L,Tetra Pack,65.82,72.26,Amul Dairy Plant Delhi,Refrigerated,9,No,,2022-09-11,No,93
+AM-2009,Amul Shakti Dairy Milk 500ml,Dairy Milk,Shakti,500ml,Tetra Pack,32.02,53.85,Amul Dairy Plant Hyderabad,Refrigerated,13,Yes,Winter Special,2023-10-18,No,70
+AM-2010,Amul Shakti Dairy Milk 1L,Dairy Milk,Shakti,1L,Tetra Pack,30.7,40.4,Amul Dairy Plant Bengaluru,Refrigerated,15,No,,2023-11-03,No,80
+AM-2011,Amul Slim Dairy Milk 1L,Dairy Milk,Slim,1L,Tetra Pack,46.41,59.19,Amul Dairy Plant Mumbai,Refrigerated,14,No,,2023-11-12,No,99
+AM-2012,Amul Slim Dairy Milk 1L,Dairy Milk,Slim,1L,Tetra Pack,30.47,44.96,Amul Dairy Plant Delhi,Refrigerated,15,No,,2025-05-31,Yes,97
+AM-2013,Amul Slim Dairy Milk 1L,Dairy Milk,Slim,1L,Tetra Pack,28.39,58.23,Amul Dairy Plant Delhi,Refrigerated,15,Yes,Summer Special,2025-03-08,Yes,79
+AM-2014,Amul Slim Dairy Milk 1L,Dairy Milk,Slim,1L,Tetra Pack,65.26,88.39,Amul Dairy Plant Delhi,Refrigerated,14,No,,2025-02-27,No,75
+AM-2015,Amul Lactose-Free Dairy Milk 1L,Dairy Milk,Lactose-Free,1L,Tetra Pack,43.34,69.37,Amul Dairy Plant Bengaluru,Refrigerated,11,No,,2022-02-24,No,61
+AM-2016,Amul Lactose-Free Dairy Milk 1L,Dairy Milk,Lactose-Free,1L,Tetra Pack,57.04,70.87,Amul Dairy Plant Delhi,Refrigerated,7,No,,2023-02-05,No,67
+AM-2017,Amul Classic Butter 100g,Butter,Classic,100g,Carton,118.87,130.44,Amul Dairy Plant Bengaluru,Refrigerated,91,No,,2020-09-06,No,54
+AM-2018,Amul Classic Butter 100g,Butter,Classic,100g,Carton,132.43,148.41,Amul Dairy Plant Mumbai,Refrigerated,129,No,,2025-02-15,No,67
+AM-2019,Amul Classic Butter 100g,Butter,Classic,100g,Carton,55.08,78.83,Amul Dairy Plant Delhi,Refrigerated,142,No,,2025-03-09,No,59
+AM-2020,Amul Classic Butter 500g,Butter,Classic,500g,Carton,113.98,143.55,Amul Dairy Plant Anand,Refrigerated,101,No,,2023-08-29,No,86
+AM-2021,Amul Classic Butter 500g,Butter,Classic,500g,Carton,49.71,57.41,Amul Dairy Plant Mumbai,Refrigerated,159,No,,2021-03-30,No,81
+AM-2022,Amul Lite Butter 250g,Butter,Lite,250g,Carton,63.16,89.37,Amul Dairy Plant Hyderabad,Refrigerated,179,No,,2021-05-19,No,89
+AM-2023,Amul Lite Butter 250g,Butter,Lite,250g,Carton,165.09,174.78,Amul Dairy Plant Bengaluru,Refrigerated,134,No,,2023-03-27,No,75
+AM-2024,Amul Lite Butter 250g,Butter,Lite,250g,Carton,45.12,55.33,Amul Dairy Plant Anand,Refrigerated,163,No,,2023-04-11,No,89
+AM-2025,Amul Lite Butter 250g,Butter,Lite,250g,Carton,42.26,58.18,Amul Dairy Plant Kolkata,Refrigerated,170,No,,2020-08-19,No,59
+AM-2026,Amul Lite Butter 250g,Butter,Lite,250g,Carton,140.56,155.08,Amul Dairy Plant Delhi,Refrigerated,144,No,,2023-04-23,No,69
+AM-2027,Amul Garlic Butter 100g,Butter,Garlic,100g,Carton,115.29,125.82,Amul Dairy Plant Delhi,Refrigerated,174,Yes,Diwali Pack,2021-08-28,No,51
+AM-2028,Amul Garlic Butter 100g,Butter,Garlic,100g,Carton,140.24,145.69,Amul Dairy Plant Hyderabad,Refrigerated,106,No,,2025-05-28,No,80
+AM-2029,Amul Garlic Butter 100g,Butter,Garlic,100g,Carton,165.07,184.64,Amul Dairy Plant Delhi,Refrigerated,130,No,,2022-01-21,No,50
+AM-2030,Amul Garlic Butter 100g,Butter,Garlic,100g,Carton,40.33,47.14,Amul Dairy Plant Delhi,Refrigerated,155,No,Diwali Pack,2023-08-10,No,84
+AM-2031,Amul Garlic Butter 100g,Butter,Garlic,100g,Carton,61.14,68.89,Amul Dairy Plant Mumbai,Refrigerated,100,No,,2023-12-30,No,71
+AM-2032,Amul Salted Butter 500g,Butter,Salted,500g,Carton,147.38,163.65,Amul Dairy Plant Mumbai,Refrigerated,133,No,,2020-08-24,No,69
+AM-2033,Amul Salted Butter 500g,Butter,Salted,500g,Carton,159.48,177.55,Amul Dairy Plant Mumbai,Refrigerated,176,No,,2022-01-19,No,58
+AM-2034,Amul Salted Butter 500g,Butter,Salted,500g,Carton,119.1,131.66,Amul Dairy Plant Kolkata,Refrigerated,144,No,,2020-11-21,No,78
+AM-2035,Amul Salted Butter 500g,Butter,Salted,500g,Carton,56.2,85.67,Amul Dairy Plant Hyderabad,Refrigerated,109,No,,2021-05-20,No,66
+AM-2036,Amul Salted Butter 500g,Butter,Salted,500g,Carton,99.44,117.25,Amul Dairy Plant Delhi,Refrigerated,110,No,,2024-11-25,No,70
+AM-2037,Amul Unsalted Butter 500g,Butter,Unsalted,500g,Carton,134.19,139.83,Amul Dairy Plant Anand,Refrigerated,138,No,,2022-11-23,No,85
+AM-2038,Amul Unsalted Butter 500g,Butter,Unsalted,500g,Carton,75.72,82.96,Amul Dairy Plant Kolkata,Refrigerated,92,No,,2024-12-06,No,57
+AM-2039,Amul Unsalted Butter 500g,Butter,Unsalted,500g,Carton,84.43,98.09,Amul Dairy Plant Hyderabad,Refrigerated,154,No,,2025-01-26,Yes,68
+AM-2040,Amul Unsalted Butter 500g,Butter,Unsalted,500g,Carton,95.25,115.67,Amul Dairy Plant Anand,Refrigerated,130,Yes,Diwali Pack,2022-06-26,No,65
+AM-2041,Amul Block Cheese 500g,Cheese,Block,500g,Box,137.21,162.65,Amul Dairy Plant Hyderabad,Refrigerated,142,No,,2025-07-12,No,77
+AM-2042,Amul Block Cheese 500g,Cheese,Block,500g,Box,275.92,283.74,Amul Dairy Plant Bengaluru,Refrigerated,175,No,,2023-11-28,No,57
+AM-2043,Amul Block Cheese 500g,Cheese,Block,500g,Box,216.7,234.52,Amul Dairy Plant Bengaluru,Refrigerated,152,No,,2022-09-15,No,69
+AM-2044,Amul Block Cheese 200g,Cheese,Block,200g,Box,253.72,279.51,Amul Dairy Plant Kolkata,Refrigerated,104,No,,2024-05-31,No,53
+AM-2045,Amul Pizza Cheese 100g,Cheese,Pizza,100g,Box,209.1,217.98,Amul Dairy Plant Kolkata,Refrigerated,95,No,,2025-02-15,No,55
+AM-2046,Amul Pizza Cheese 100g,Cheese,Pizza,100g,Box,254.51,276.18,Amul Dairy Plant Delhi,Refrigerated,149,No,,2024-05-22,No,62
+AM-2047,Amul Pizza Cheese 200g,Cheese,Pizza,200g,Box,146.1,155.84,Amul Dairy Plant Anand,Refrigerated,141,No,,2024-07-22,No,76
+AM-2048,Amul Mozzarella Cheese 200g,Cheese,Mozzarella,200g,Box,218.15,237.46,Amul Dairy Plant Bengaluru,Refrigerated,118,No,,2024-06-05,No,68
+AM-2049,Amul Mozzarella Cheese 200g,Cheese,Mozzarella,200g,Box,109.7,133.01,Amul Dairy Plant Anand,Refrigerated,120,No,,2025-04-15,No,78
+AM-2050,Amul Vegan Cheese 200g,Cheese,Vegan,200g,Box,235.99,246.11,Amul Dairy Plant Mumbai,Refrigerated,91,No,Vegan,2022-06-12,No,80
+AM-2051,Amul Vegan Cheese 200g,Cheese,Vegan,200g,Box,141.06,170.18,Amul Dairy Plant Mumbai,Refrigerated,97,No,Vegan,2020-08-19,No,44
+AM-2052,Amul Keto Cheese Cheese 200g,Cheese,Keto Cheese,200g,Box,88.54,106.97,Amul Dairy Plant Delhi,Refrigerated,144,No,Keto Cheese,2023-04-18,No,78
+AM-2053,Amul Keto Cheese Cheese 200g,Cheese,Keto Cheese,200g,Box,182.73,197.57,Amul Dairy Plant Bengaluru,Refrigerated,160,No,Keto Cheese,2024-04-10,No,64
+AM-2054,Amul Keto Cheese Cheese 200g,Cheese,Keto Cheese,200g,Box,149.26,176.76,Amul Dairy Plant Bengaluru,Refrigerated,108,No,Keto Cheese,2022-05-06,No,48
+AM-2055,Amul Keto Cheese Cheese 200g,Cheese,Keto Cheese,200g,Box,284.62,297.26,Amul Dairy Plant Anand,Refrigerated,164,No,Keto Cheese,2024-03-21,No,84
+AM-2056,Amul Keto Cheese Cheese 200g,Cheese,Keto Cheese,200g,Box,196.48,217.62,Amul Dairy Plant Hyderabad,Refrigerated,132,No,Keto Cheese,2024-07-25,No,72
+AM-2057,Amul Malai Paneer 200g,Paneer,Malai,200g,Pouch,215.07,234.28,Amul Dairy Plant Bengaluru,Refrigerated,14,No,,2021-04-27,No,48
+AM-2058,Amul Malai Paneer 1kg,Paneer,Malai,1kg,Pouch,389.01,418.4,Amul Dairy Plant Kolkata,Refrigerated,12,No,,2021-08-19,No,41
+AM-2059,Amul Malai Paneer 200g,Paneer,Malai,200g,Pouch,249.06,263.03,Amul Dairy Plant Bengaluru,Refrigerated,10,No,Limited Edition,2024-03-06,No,46
+AM-2060,Amul Low-Fat Paneer 200g,Paneer,Low-Fat,200g,Pouch,197.25,211.41,Amul Dairy Plant Bengaluru,Refrigerated,10,No,,2024-10-23,No,48
+AM-2061,Amul Low-Fat Paneer 200g,Paneer,Low-Fat,200g,Pouch,292.34,304.5,Amul Dairy Plant Anand,Refrigerated,10,No,,2024-02-11,No,46
+AM-2062,Amul Protein-Enriched Paneer 200g,Paneer,Protein-Enriched,200g,Pouch,114.65,140.94,Amul Dairy Plant Delhi,Refrigerated,12,No,Protein-Enriched,2024-04-20,No,47
+AM-2063,Amul Protein-Enriched Paneer 200g,Paneer,Protein-Enriched,200g,Pouch,119.74,144.47,Amul Dairy Plant Hyderabad,Refrigerated,8,No,Protein-Enriched,2023-06-18,No,60
+AM-2064,Amul Protein-Enriched Paneer 200g,Paneer,Protein-Enriched,200g,Pouch,376.46,390.21,Amul Dairy Plant Bengaluru,Refrigerated,9,No,Protein-Enriched,2025-04-06,No,76
+AM-2065,Amul Protein-Enriched Paneer 200g,Paneer,Protein-Enriched,200g,Pouch,175.3,204.48,Amul Dairy Plant Delhi,Refrigerated,10,Yes,Diwali Pack,2021-08-26,No,75
+AM-2066,Amul Vanilla Ice Creams & Desserts 1L,Ice Creams & Desserts,Vanilla,1L,Tub,64.15,78.34,Amul Dairy Plant Kolkata,Frozen,354,No,,2021-11-18,No,70
+AM-2067,Amul Vanilla Ice Creams & Desserts 1L,Ice Creams & Desserts,Vanilla,1L,Tub,111.95,120.15,Amul Dairy Plant Bengaluru,Frozen,337,No,,2022-11-11,No,97
+AM-2068,Amul Vanilla Ice Creams & Desserts 500ml,Ice Creams & Desserts,Vanilla,500ml,Tub,89.67,117.18,Amul Dairy Plant Kolkata,Frozen,264,No,,2021-12-16,No,91
+AM-2069,Amul Vanilla Ice Creams & Desserts 500ml,Ice Creams & Desserts,Vanilla,500ml,Tub,53.68,72.17,Amul Dairy Plant Kolkata,Frozen,314,No,,2023-01-19,No,96
+AM-2070,Amul Vanilla Ice Creams & Desserts 1L,Ice Creams & Desserts,Vanilla,1L,Tub,102.95,124.75,Amul Dairy Plant Bengaluru,Frozen,291,No,,2024-03-27,Yes,91
+AM-2071,Amul Chocolate Ice Creams & Desserts 500ml,Ice Creams & Desserts,Chocolate,500ml,Tub,117.22,139.8,Amul Dairy Plant Delhi,Frozen,197,No,,2024-11-14,No,89
+AM-2072,Amul Chocolate Ice Creams & Desserts 500ml,Ice Creams & Desserts,Chocolate,500ml,Tub,60.09,68.12,Amul Dairy Plant Kolkata,Frozen,323,Yes,Winter Special,2023-02-15,No,80
+AM-2073,Amul Chocolate Ice Creams & Desserts 500ml,Ice Creams & Desserts,Chocolate,500ml,Tub,49.16,61.55,Amul Dairy Plant Delhi,Frozen,317,No,,2022-03-20,No,84
+AM-2074,Amul Kesar Pista Ice Creams & Desserts 500ml,Ice Creams & Desserts,Kesar Pista,500ml,Tub,80.26,95.42,Amul Dairy Plant Mumbai,Frozen,200,No,,2025-01-28,No,70
+AM-2075,Amul Kesar Pista Ice Creams & Desserts 500ml,Ice Creams & Desserts,Kesar Pista,500ml,Tub,97.47,121.5,Amul Dairy Plant Mumbai,Frozen,294,Yes,Diwali Pack,2023-11-24,No,71
+AM-2076,Amul Kesar Pista Ice Creams & Desserts 500ml,Ice Creams & Desserts,Kesar Pista,500ml,Tub,150.23,160.88,Amul Dairy Plant Bengaluru,Frozen,362,Yes,Winter Special,2023-08-06,No,95
+AM-2077,Amul Vegan Ice Cream Ice Creams & Desserts 500ml,Ice Creams & Desserts,Vegan Ice Cream,500ml,Tub,188.59,216.39,Amul Dairy Plant Bengaluru,Frozen,234,No,Vegan Ice Cream,2022-12-03,No,64
+AM-2078,Amul Vegan Ice Cream Ice Creams & Desserts 500ml,Ice Creams & Desserts,Vegan Ice Cream,500ml,Tub,185.98,212.18,Amul Dairy Plant Bengaluru,Frozen,333,No,Vegan Ice Cream,2021-11-10,No,92
+AM-2079,Amul Vegan Ice Cream Ice Creams & Desserts 500ml,Ice Creams & Desserts,Vegan Ice Cream,500ml,Tub,229.69,240.09,Amul Dairy Plant Delhi,Frozen,329,No,Vegan Ice Cream,2025-07-04,No,83
+AM-2080,Amul Vegan Ice Cream Ice Creams & Desserts 500ml,Ice Creams & Desserts,Vegan Ice Cream,500ml,Tub,154.28,182.96,Amul Dairy Plant Kolkata,Frozen,245,No,Vegan Ice Cream,2024-02-25,No,69
+AM-2081,Amul Kulfi Ice Creams & Desserts 60ml,Ice Creams & Desserts,Kulfi,60ml,Stick,137.02,142.44,Amul Dairy Plant Hyderabad,Frozen,347,Yes,Summer Special,2021-08-30,No,72
+AM-2082,Amul Kulfi Ice Creams & Desserts 100ml,Ice Creams & Desserts,Kulfi,100ml,Stick,197.11,218.23,Amul Dairy Plant Hyderabad,Frozen,298,Yes,Summer Special,2021-06-05,No,93
+AM-2083,Amul Kulfi Ice Creams & Desserts 100ml,Ice Creams & Desserts,Kulfi,100ml,Stick,135.78,158.86,Amul Dairy Plant Delhi,Frozen,211,Yes,Summer Special,2023-02-04,No,95
+AM-2084,Amul Kulfi Ice Creams & Desserts 100ml,Ice Creams & Desserts,Kulfi,100ml,Stick,157.62,183.13,Amul Dairy Plant Anand,Frozen,250,Yes,Winter Special,2022-10-06,No,62
+AM-2085,Amul Frozen Yogurt Ice Creams & Desserts 100ml,Ice Creams & Desserts,Frozen Yogurt,100ml,Cup,78.09,107.09,Amul Dairy Plant Anand,Frozen,269,No,,2025-03-23,No,76
+AM-2086,Amul Frozen Yogurt Ice Creams & Desserts 100ml,Ice Creams & Desserts,Frozen Yogurt,100ml,Cup,140.5,152.83,Amul Dairy Plant Mumbai,Frozen,228,No,,2022-01-12,No,92
+AM-2087,Amul Dessert Cups Ice Creams & Desserts 100ml,Ice Creams & Desserts,Dessert Cups,100ml,Cup,184.74,204.83,Amul Dairy Plant Bengaluru,Frozen,322,Yes,Summer Special,2025-04-15,No,66
+AM-2088,Amul Dessert Cups Ice Creams & Desserts 100ml,Ice Creams & Desserts,Dessert Cups,100ml,Cup,231.25,239.67,Amul Dairy Plant Bengaluru,Frozen,233,Yes,Winter Special,2021-11-14,No,77
+AM-2089,Amul Dessert Cups Ice Creams & Desserts 100ml,Ice Creams & Desserts,Dessert Cups,100ml,Cup,166.33,176.84,Amul Dairy Plant Hyderabad,Frozen,189,Yes,Diwali Pack,2023-05-09,Yes,63
+AM-2090,Amul Dessert Cups Ice Creams & Desserts 100ml,Ice Creams & Desserts,Dessert Cups,100ml,Cup,165.21,184.78,Amul Dairy Plant Anand,Frozen,232,Yes,Summer Special,2023-11-24,No,64
+AM-2091,Amul Probiotic Yogurt 500g,Yogurt,Probiotic,500g,Cup,78.48,100.1,Amul Dairy Plant Anand,Refrigerated,12,No,,2020-10-23,No,72
+AM-2092,Amul Probiotic Yogurt 100g,Yogurt,Probiotic,100g,Cup,79.11,105.26,Amul Dairy Plant Anand,Refrigerated,10,No,,2023-04-01,No,45
+AM-2093,Amul Probiotic Yogurt 500g,Yogurt,Probiotic,500g,Cup,65.82,82.67,Amul Dairy Plant Hyderabad,Refrigerated,26,No,,2022-02-24,No,42
+AM-2094,Amul Probiotic Yogurt 100g,Yogurt,Probiotic,100g,Cup,38.51,43.72,Amul Dairy Plant Hyderabad,Refrigerated,22,No,,2021-09-12,No,53
+AM-2095,Amul Masti Yogurt 500g,Yogurt,Masti,500g,Cup,78.73,91.06,Amul Dairy Plant Hyderabad,Refrigerated,21,No,,2024-09-02,No,66
+AM-2096,Amul Masti Yogurt 500g,Yogurt,Masti,500g,Cup,34.11,54.94,Amul Dairy Plant Kolkata,Refrigerated,11,No,,2020-10-02,No,51
+AM-2097,Amul Masti Yogurt 500g,Yogurt,Masti,500g,Cup,26.17,46.24,Amul Dairy Plant Bengaluru,Refrigerated,29,No,,2021-11-10,No,70
+AM-2098,Amul Greek Yogurt Yogurt 100g,Yogurt,Greek Yogurt,100g,Cup,81.93,104.29,Amul Dairy Plant Anand,Refrigerated,16,No,Keto-Friendly,2021-03-10,No,65
+AM-2099,Amul Greek Yogurt Yogurt 100g,Yogurt,Greek Yogurt,100g,Cup,27.24,33.7,Amul Dairy Plant Bengaluru,Refrigerated,17,No,,2025-07-28,No,80
+AM-2100,Amul Greek Yogurt Yogurt 100g,Yogurt,Greek Yogurt,100g,Cup,77.38,96.04,Amul Dairy Plant Bengaluru,Refrigerated,19,No,,2024-11-08,No,59
+AM-2101,Amul Greek Yogurt Yogurt 100g,Yogurt,Greek Yogurt,100g,Cup,42.02,70.02,Amul Dairy Plant Delhi,Refrigerated,11,No,,2021-11-08,No,65
+AM-2102,Amul Greek Yogurt Yogurt 100g,Yogurt,Greek Yogurt,100g,Cup,84.22,94.7,Amul Dairy Plant Hyderabad,Refrigerated,10,No,,2021-09-12,No,67
+AM-2103,Amul High Protein Yogurt Yogurt 100g,Yogurt,High Protein Yogurt,100g,Cup,88.38,104.71,Amul Dairy Plant Anand,Refrigerated,12,No,High Protein Yogurt,2020-10-03,No,54
+AM-2104,Amul High Protein Yogurt Yogurt 100g,Yogurt,High Protein Yogurt,100g,Cup,89.88,100.94,Amul Dairy Plant Kolkata,Refrigerated,12,No,High Protein Yogurt,2024-01-28,No,78
+AM-2105,Amul High Protein Yogurt Yogurt 100g,Yogurt,High Protein Yogurt,100g,Cup,28.98,55.71,Amul Dairy Plant Bengaluru,Refrigerated,17,No,High Protein Yogurt,2024-03-25,No,53
+AM-2106,Amul High Protein Yogurt Yogurt 100g,Yogurt,High Protein Yogurt,100g,Cup,41.42,60.95,Amul Dairy Plant Kolkata,Refrigerated,27,No,High Protein Yogurt,2023-07-21,No,46
+AM-2107,Amul Dark Chocolate & Confectionery 150g,Chocolate & Confectionery,Dark,150g,Box,75.45,84.3,Amul Dairy Plant Mumbai,Ambient,192,No,,2021-08-15,No,60
+AM-2108,Amul Dark Chocolate & Confectionery 150g,Chocolate & Confectionery,Dark,150g,Box,131.77,159.06,Amul Dairy Plant Bengaluru,Ambient,245,No,,2021-06-28,No,85
+AM-2109,Amul Dark Chocolate & Confectionery 150g,Chocolate & Confectionery,Dark,150g,Box,43.09,53.93,Amul Dairy Plant Anand,Ambient,335,No,,2021-12-09,No,90
+AM-2110,Amul Dark Chocolate & Confectionery 150g,Chocolate & Confectionery,Dark,150g,Box,155.45,181.07,Amul Dairy Plant Kolkata,Ambient,208,No,,2021-09-01,No,72
+AM-2111,Amul Dark Chocolate & Confectionery 150g,Chocolate & Confectionery,Dark,150g,Box,77.68,83.25,Amul Dairy Plant Mumbai,Ambient,362,No,,2021-12-16,No,100
+AM-2112,Amul Milk Chocolate & Confectionery 150g,Chocolate & Confectionery,Milk,150g,Box,107.06,120.56,Amul Dairy Plant Anand,Ambient,277,No,,2024-08-27,No,65
+AM-2113,Amul Milk Chocolate & Confectionery 150g,Chocolate & Confectionery,Milk,150g,Box,51.55,60.85,Amul Dairy Plant Kolkata,Ambient,242,Yes,Winter Special,2020-12-30,No,93
+AM-2114,Amul Milk Chocolate & Confectionery 150g,Chocolate & Confectionery,Milk,150g,Box,55.6,82.48,Amul Dairy Plant Kolkata,Ambient,276,No,,2022-03-03,No,83
+AM-2115,Amul Milk Chocolate & Confectionery 150g,Chocolate & Confectionery,Milk,150g,Box,63.86,75.62,Amul Dairy Plant Bengaluru,Ambient,198,No,,2024-11-07,Yes,79
+AM-2116,Amul Fruit & Nut Chocolate & Confectionery 150g,Chocolate & Confectionery,Fruit & Nut,150g,Box,171.75,195.61,Amul Dairy Plant Anand,Ambient,285,Yes,Winter Special,2024-06-17,No,71
+AM-2117,Amul Fruit & Nut Chocolate & Confectionery 150g,Chocolate & Confectionery,Fruit & Nut,150g,Box,125.25,135.01,Amul Dairy Plant Anand,Ambient,266,No,,2021-03-28,No,74
+AM-2118,Amul Fruit & Nut Chocolate & Confectionery 150g,Chocolate & Confectionery,Fruit & Nut,150g,Box,96.8,108.55,Amul Dairy Plant Hyderabad,Ambient,259,No,,2022-08-27,No,85
+AM-2119,Amul Fruit & Nut Chocolate & Confectionery 150g,Chocolate & Confectionery,Fruit & Nut,150g,Box,161.49,182.07,Amul Dairy Plant Mumbai,Ambient,315,No,,2021-12-27,No,93
+AM-2120,Amul Fruit & Nut Chocolate & Confectionery 150g,Chocolate & Confectionery,Fruit & Nut,150g,Box,63.67,85.03,Amul Dairy Plant Anand,Ambient,264,No,,2024-08-03,No,94
+AM-2121,Amul Chocolate Syrup Chocolate & Confectionery 200ml,Chocolate & Confectionery,Chocolate Syrup,200ml,Bottle,136.61,146.49,Amul Dairy Plant Delhi,Ambient,289,No,,2024-08-05,No,90
+AM-2122,Amul Chocolate Syrup Chocolate & Confectionery 200ml,Chocolate & Confectionery,Chocolate Syrup,200ml,Bottle,127.99,143.16,Amul Dairy Plant Kolkata,Ambient,182,No,,2021-12-18,No,82
+AM-2123,Amul Chocolate Syrup Chocolate & Confectionery 200ml,Chocolate & Confectionery,Chocolate Syrup,200ml,Bottle,165.68,181.92,Amul Dairy Plant Delhi,Ambient,182,No,,2020-09-14,No,63
+AM-2124,Amul Kool Café Beverages 200ml,Beverages,Kool Café,200ml,Bottle,34.86,64.81,Amul Dairy Plant Mumbai,Ambient,95,No,,2021-01-27,No,87
+AM-2125,Amul Kool Café Beverages 200ml,Beverages,Kool Café,200ml,Bottle,34.08,49.71,Amul Dairy Plant Anand,Ambient,73,No,Sugar-Free,2023-01-13,No,77
+AM-2126,Amul Kool Koko Beverages 200ml,Beverages,Kool Koko,200ml,Bottle,35.61,62.28,Amul Dairy Plant Bengaluru,Ambient,89,No,,2024-08-19,Yes,73
+AM-2127,Amul Kool Koko Beverages 200ml,Beverages,Kool Koko,200ml,Bottle,24.54,47.58,Amul Dairy Plant Delhi,Ambient,118,No,,2023-02-19,No,83
+AM-2128,Amul Kool Koko Beverages 200ml,Beverages,Kool Koko,200ml,Bottle,46.69,59.1,Amul Dairy Plant Mumbai,Ambient,94,No,,2025-03-14,No,53
+AM-2129,Amul Kool Badam Beverages 200ml,Beverages,Kool Badam,200ml,Bottle,43.52,49.24,Amul Dairy Plant Delhi,Ambient,120,No,,2024-10-11,No,86
+AM-2130,Amul Kool Badam Beverages 200ml,Beverages,Kool Badam,200ml,Bottle,30.11,57.77,Amul Dairy Plant Bengaluru,Ambient,120,No,,2025-03-11,No,87
+AM-2131,Amul Kool Badam Beverages 200ml,Beverages,Kool Badam,200ml,Bottle,24.9,42.6,Amul Dairy Plant Hyderabad,Ambient,38,No,Keto-Friendly,2022-05-10,No,84
+AM-2132,Amul Kool Badam Beverages 200ml,Beverages,Kool Badam,200ml,Bottle,42.46,67.18,Amul Dairy Plant Bengaluru,Ambient,98,No,,2025-03-02,No,78
+AM-2133,Amul Turmeric Milk Beverages 200ml,Beverages,Turmeric Milk,200ml,Bottle,26.85,55.32,Amul Dairy Plant Kolkata,Ambient,49,No,,2021-03-19,No,58
+AM-2134,Amul Turmeric Milk Beverages 200ml,Beverages,Turmeric Milk,200ml,Bottle,29.47,36.59,Amul Dairy Plant Kolkata,Ambient,31,No,,2021-11-15,No,67
+AM-2135,Amul Turmeric Milk Beverages 200ml,Beverages,Turmeric Milk,200ml,Bottle,39.09,49.48,Amul Dairy Plant Kolkata,Ambient,41,No,,2022-06-14,No,87
+AM-2136,Amul Turmeric Milk Beverages 200ml,Beverages,Turmeric Milk,200ml,Bottle,29.62,59.34,Amul Dairy Plant Delhi,Ambient,41,No,,2020-11-23,No,66
+AM-2137,Amul Turmeric Milk Beverages 200ml,Beverages,Turmeric Milk,200ml,Bottle,25.25,46.08,Amul Dairy Plant Hyderabad,Ambient,48,No,,2022-09-25,No,58
+AM-2138,Amul Buttermilk Beverages 1L,Beverages,Buttermilk,1L,Pouch,29.93,56.8,Amul Dairy Plant Kolkata,Ambient,62,Yes,Winter Special,2023-09-09,No,87
+AM-2139,Amul Buttermilk Beverages 200ml,Beverages,Buttermilk,200ml,Pouch,41.93,61.94,Amul Dairy Plant Mumbai,Ambient,115,No,,2023-01-03,No,77
+AM-2140,Amul Lassi Beverages 200ml,Beverages,Lassi,200ml,Pouch,22.21,50.73,Amul Dairy Plant Mumbai,Ambient,82,No,,2024-11-29,No,89
+AM-2141,Amul Lassi Beverages 200ml,Beverages,Lassi,200ml,Pouch,35.78,53.54,Amul Dairy Plant Kolkata,Ambient,41,No,,2023-03-02,No,58
+AM-2142,Amul Lassi Beverages 200ml,Beverages,Lassi,200ml,Pouch,43.85,72.0,Amul Dairy Plant Mumbai,Ambient,68,No,,2021-12-21,No,69
+AM-2143,Amul Lassi Beverages 200ml,Beverages,Lassi,200ml,Pouch,42.8,71.09,Amul Dairy Plant Anand,Ambient,52,No,,2021-12-24,No,66
+AM-2144,Amul Flavored Milk Beverages 200ml,Beverages,Flavored Milk,200ml,Bottle,31.31,46.13,Amul Dairy Plant Anand,Ambient,68,No,,2022-09-26,No,85
+AM-2145,Amul Flavored Milk Beverages 200ml,Beverages,Flavored Milk,200ml,Bottle,27.41,40.45,Amul Dairy Plant Bengaluru,Ambient,112,No,,2021-01-15,No,63
+AM-2146,Amul Flavored Milk Beverages 200ml,Beverages,Flavored Milk,200ml,Bottle,41.45,64.45,Amul Dairy Plant Hyderabad,Ambient,40,No,Diwali Pack,2022-04-17,No,72
+AM-2147,Amul Flavored Milk Beverages 200ml,Beverages,Flavored Milk,200ml,Bottle,44.99,72.02,Amul Dairy Plant Bengaluru,Ambient,45,No,,2024-12-31,No,78
+AM-2148,Amul Whey Protein Protein Products 500g,Protein Products,Whey Protein,500g,Jar,46.06,54.32,Amul Dairy Plant Hyderabad,Ambient,256,No,Whey Protein,2020-10-08,No,32
+AM-2149,Amul Whey Protein Protein Products 500g,Protein Products,Whey Protein,500g,Jar,541.21,556.24,Amul Dairy Plant Bengaluru,Ambient,345,No,Whey Protein,2021-01-15,Yes,49
+AM-2150,Amul Whey Protein Protein Products 500g,Protein Products,Whey Protein,500g,Jar,550.49,574.52,Amul Dairy Plant Kolkata,Ambient,351,No,Whey Protein,2023-10-07,No,63
+AM-2151,Amul Whey Protein Protein Products 500g,Protein Products,Whey Protein,500g,Jar,86.46,92.78,Amul Dairy Plant Hyderabad,Ambient,239,No,Whey Protein,2022-11-27,No,30
+AM-2152,Amul Whey Protein Protein Products 500g,Protein Products,Whey Protein,500g,Jar,426.63,442.84,Amul Dairy Plant Kolkata,Ambient,260,No,Whey Protein,2025-05-08,No,55
+AM-2153,Amul High Protein Milk Protein Products 200ml,Protein Products,High Protein Milk,200ml,Bottle,332.37,357.2,Amul Dairy Plant Kolkata,Ambient,208,Yes,Summer Special,2022-11-09,No,37
+AM-2154,Amul High Protein Milk Protein Products 200ml,Protein Products,High Protein Milk,200ml,Bottle,419.46,431.81,Amul Dairy Plant Bengaluru,Ambient,298,No,High Protein Milk,2021-10-09,No,37
+AM-2155,Amul High Protein Milk Protein Products 200ml,Protein Products,High Protein Milk,200ml,Bottle,521.89,533.14,Amul Dairy Plant Hyderabad,Ambient,252,No,High Protein Milk,2024-03-20,No,76
+AM-2156,Amul High Protein Milk Protein Products 200ml,Protein Products,High Protein Milk,200ml,Bottle,565.3,572.95,Amul Dairy Plant Hyderabad,Ambient,335,No,High Protein Milk,2021-06-17,No,80
+AM-2157,Amul Protein Bar Protein Products 60g,Protein Products,Protein Bar,60g,Box,473.52,497.49,Amul Dairy Plant Anand,Ambient,263,No,Protein Bar,2023-01-22,No,67
+AM-2158,Amul Protein Bar Protein Products 60g,Protein Products,Protein Bar,60g,Box,373.7,383.29,Amul Dairy Plant Hyderabad,Ambient,295,No,Protein Bar,2020-09-06,No,45
+AM-2159,Amul Protein Bar Protein Products 60g,Protein Products,Protein Bar,60g,Box,404.98,422.23,Amul Dairy Plant Hyderabad,Ambient,202,No,Protein Bar,2021-04-12,No,48
+AM-2160,Amul Protein Bar Protein Products 60g,Protein Products,Protein Bar,60g,Box,556.7,565.62,Amul Dairy Plant Bengaluru,Ambient,214,No,Protein Bar,2024-07-08,No,68
+AM-2161,Amul Protein Shakes Protein Products 200ml,Protein Products,Protein Shakes,200ml,Bottle,142.98,155.31,Amul Dairy Plant Mumbai,Ambient,213,No,Protein Shakes,2022-09-01,No,58
+AM-2162,Amul Protein Shakes Protein Products 200ml,Protein Products,Protein Shakes,200ml,Bottle,529.73,553.26,Amul Dairy Plant Anand,Ambient,344,No,Protein Shakes,2024-05-30,No,35
+AM-2163,Amul Protein Shakes Protein Products 200ml,Protein Products,Protein Shakes,200ml,Bottle,287.09,294.56,Amul Dairy Plant Delhi,Ambient,228,No,Protein Shakes,2021-04-01,No,52
+AM-2164,Amul Protein Shakes Protein Products 200ml,Protein Products,Protein Shakes,200ml,Bottle,124.71,154.68,Amul Dairy Plant Hyderabad,Ambient,282,No,Protein Shakes,2022-05-02,No,46
+AM-2165,Amul Almond Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Almond Milk,1L,Tetra Pack,74.16,97.03,Amul Dairy Plant Bengaluru,Ambient,101,No,,2024-07-31,No,24
+AM-2166,Amul Almond Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Almond Milk,1L,Tetra Pack,130.51,147.62,Amul Dairy Plant Kolkata,Ambient,33,Yes,Summer Special,2025-04-12,No,37
+AM-2167,Amul Almond Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Almond Milk,1L,Tetra Pack,233.97,241.93,Amul Dairy Plant Kolkata,Ambient,69,No,,2023-04-16,No,39
+AM-2168,Amul Almond Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Almond Milk,1L,Tetra Pack,87.69,101.92,Amul Dairy Plant Mumbai,Ambient,86,No,,2020-09-05,No,52
+AM-2169,Amul Soy Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Soy Milk,1L,Tetra Pack,176.23,194.65,Amul Dairy Plant Mumbai,Ambient,62,No,,2024-05-17,No,58
+AM-2170,Amul Soy Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Soy Milk,1L,Tetra Pack,143.42,168.56,Amul Dairy Plant Kolkata,Ambient,105,No,,2023-04-06,No,59
+AM-2171,Amul Oat Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Oat Milk,1L,Tetra Pack,213.86,221.28,Amul Dairy Plant Delhi,Ambient,109,Yes,Diwali Pack,2021-07-28,No,21
+AM-2172,Amul Oat Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Oat Milk,1L,Tetra Pack,182.01,201.16,Amul Dairy Plant Hyderabad,Ambient,47,No,,2022-06-27,No,28
+AM-2173,Amul Oat Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Oat Milk,1L,Tetra Pack,229.49,240.46,Amul Dairy Plant Bengaluru,Ambient,39,No,,2022-10-19,No,66
+AM-2174,Amul Oat Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Oat Milk,1L,Tetra Pack,209.72,234.36,Amul Dairy Plant Hyderabad,Ambient,86,No,,2023-02-04,No,38
+AM-2175,Amul Oat Milk Vegan & Plant-Based 1L,Vegan & Plant-Based,Oat Milk,1L,Tetra Pack,183.81,199.46,Amul Dairy Plant Kolkata,Ambient,50,No,Vegan,2025-06-26,No,69
+AM-2176,Amul Vegan Cheese Vegan & Plant-Based 200g,Vegan & Plant-Based,Vegan Cheese,200g,Box,141.21,149.93,Amul Dairy Plant Mumbai,Ambient,48,Yes,Summer Special,2024-04-19,No,67
+AM-2177,Amul Vegan Cheese Vegan & Plant-Based 200g,Vegan & Plant-Based,Vegan Cheese,200g,Box,207.6,214.51,Amul Dairy Plant Anand,Ambient,34,No,Vegan Cheese,2022-08-07,No,64
+AM-2178,Amul Vegan Cheese Vegan & Plant-Based 200g,Vegan & Plant-Based,Vegan Cheese,200g,Box,140.92,147.15,Amul Dairy Plant Hyderabad,Ambient,107,No,Vegan Cheese,2024-06-06,No,45
+AM-2179,Amul Immunity Booster Drink Functional Products 200ml,Functional Products,Immunity Booster Drink,200ml,Bottle,117.36,143.5,Amul Dairy Plant Hyderabad,Ambient,86,No,,2021-09-07,No,40
+AM-2180,Amul Immunity Booster Drink Functional Products 200ml,Functional Products,Immunity Booster Drink,200ml,Bottle,264.65,282.31,Amul Dairy Plant Anand,Ambient,118,Yes,Winter Special,2024-11-10,No,64
+AM-2181,Amul Immunity Booster Drink Functional Products 200ml,Functional Products,Immunity Booster Drink,200ml,Bottle,89.93,98.68,Amul Dairy Plant Delhi,Ambient,147,No,,2024-04-07,No,40
+AM-2182,Amul Keto Cheese Functional Products 200g,Functional Products,Keto Cheese,200g,Box,81.67,96.49,Amul Dairy Plant Kolkata,Ambient,72,Yes,Summer Special,2025-06-13,No,64
+AM-2183,Amul Keto Cheese Functional Products 200g,Functional Products,Keto Cheese,200g,Box,270.17,282.69,Amul Dairy Plant Delhi,Ambient,115,No,Keto Cheese,2023-12-11,No,23
+AM-2184,Amul Keto Cheese Functional Products 200g,Functional Products,Keto Cheese,200g,Box,257.4,271.0,Amul Dairy Plant Anand,Ambient,44,No,Keto Cheese,2022-05-21,No,63
+AM-2185,Amul Keto Cheese Functional Products 200g,Functional Products,Keto Cheese,200g,Box,128.24,140.18,Amul Dairy Plant Kolkata,Ambient,171,Yes,Diwali Pack,2021-03-19,No,55
+AM-2186,Amul Haldi Doodh Powder Functional Products 200g,Functional Products,Haldi Doodh Powder,200g,Jar,224.15,251.69,Amul Dairy Plant Delhi,Ambient,71,No,,2021-03-14,No,56
+AM-2187,Amul Haldi Doodh Powder Functional Products 200g,Functional Products,Haldi Doodh Powder,200g,Jar,47.18,74.51,Amul Dairy Plant Kolkata,Ambient,170,No,,2021-04-06,No,44
+AM-2188,Amul Probiotic Drink Functional Products 200ml,Functional Products,Probiotic Drink,200ml,Bottle,89.08,99.34,Amul Dairy Plant Hyderabad,Ambient,60,No,High Protein,2023-06-01,No,32
+AM-2189,Amul Probiotic Drink Functional Products 200ml,Functional Products,Probiotic Drink,200ml,Bottle,176.14,199.42,Amul Dairy Plant Bengaluru,Ambient,154,No,,2022-12-26,Yes,56
+AM-2190,Amul Probiotic Drink Functional Products 200ml,Functional Products,Probiotic Drink,200ml,Bottle,48.25,70.45,Amul Dairy Plant Hyderabad,Ambient,62,No,,2021-11-03,No,32
+AM-2191,Amul Probiotic Drink Functional Products 200ml,Functional Products,Probiotic Drink,200ml,Bottle,43.74,63.4,Amul Dairy Plant Mumbai,Ambient,149,No,,2021-12-20,No,44
+AM-2192,Amul Sugar-Free Products Functional Products 200g,Functional Products,Sugar-Free Products,200g,Box,55.83,70.54,Amul Dairy Plant Anand,Ambient,50,No,Sugar-Free Products,2025-04-08,Yes,35
+AM-2193,Amul Sugar-Free Products Functional Products 200g,Functional Products,Sugar-Free Products,200g,Box,226.16,233.36,Amul Dairy Plant Anand,Ambient,66,No,Sugar-Free Products,2023-02-01,No,23
+AM-2194,Amul Sugar-Free Products Functional Products 200g,Functional Products,Sugar-Free Products,200g,Box,288.96,301.66,Amul Dairy Plant Mumbai,Ambient,123,No,Sugar-Free Products,2025-04-06,No,32
+AM-2195,Amul Keto-friendly Milk Value-Added Dairy 1L,Value-Added Dairy,Keto-friendly Milk,1L,Tetra Pack,155.42,181.36,Amul Dairy Plant Kolkata,Ambient,51,No,Keto-friendly Milk,2021-02-19,No,47
+AM-2196,Amul Keto-friendly Milk Value-Added Dairy 1L,Value-Added Dairy,Keto-friendly Milk,1L,Tetra Pack,98.9,107.69,Amul Dairy Plant Delhi,Ambient,32,No,Keto-friendly Milk,2021-12-25,No,42
+AM-2197,Amul Keto-friendly Milk Value-Added Dairy 1L,Value-Added Dairy,Keto-friendly Milk,1L,Tetra Pack,180.64,187.83,Amul Dairy Plant Anand,Ambient,113,No,Keto-friendly Milk,2024-10-22,No,47
+AM-2198,Amul Keto-friendly Milk Value-Added Dairy 1L,Value-Added Dairy,Keto-friendly Milk,1L,Tetra Pack,102.69,109.13,Amul Dairy Plant Bengaluru,Ambient,84,No,Keto-friendly Milk,2021-03-27,No,65
+AM-2199,Amul Keto-friendly Milk Value-Added Dairy 1L,Value-Added Dairy,Keto-friendly Milk,1L,Tetra Pack,122.83,134.7,Amul Dairy Plant Anand,Ambient,136,No,Keto-friendly Milk,2025-04-28,No,58
+AM-2200,Amul Sugar-Free Ghee Value-Added Dairy 500ml,Value-Added Dairy,Sugar-Free Ghee,500ml,Jar,61.97,79.91,Amul Dairy Plant Delhi,Ambient,95,No,Sugar-Free Ghee,2020-10-24,No,20
+AM-2201,Amul Sugar-Free Ghee Value-Added Dairy 500ml,Value-Added Dairy,Sugar-Free Ghee,500ml,Jar,164.52,182.13,Amul Dairy Plant Kolkata,Ambient,160,No,Sugar-Free Ghee,2021-01-24,No,59
+AM-2202,Amul Sugar-Free Ghee Value-Added Dairy 500ml,Value-Added Dairy,Sugar-Free Ghee,500ml,Jar,179.64,186.75,Amul Dairy Plant Hyderabad,Ambient,82,No,Sugar-Free Ghee,2025-07-21,No,52
+AM-2203,Amul Sugar-Free Ghee Value-Added Dairy 500ml,Value-Added Dairy,Sugar-Free Ghee,500ml,Jar,50.55,61.89,Amul Dairy Plant Mumbai,Ambient,38,No,Sugar-Free Ghee,2022-07-05,No,66
+AM-2204,Amul Fortified Milk Value-Added Dairy 1L,Value-Added Dairy,Fortified Milk,1L,Tetra Pack,165.91,184.0,Amul Dairy Plant Mumbai,Ambient,156,No,,2023-11-04,No,20
+AM-2205,Amul Fortified Milk Value-Added Dairy 1L,Value-Added Dairy,Fortified Milk,1L,Tetra Pack,154.95,167.87,Amul Dairy Plant Delhi,Ambient,112,No,,2021-07-27,No,57
+AM-2206,Amul Omega-3 Enriched Milk Value-Added Dairy 1L,Value-Added Dairy,Omega-3 Enriched Milk,1L,Tetra Pack,123.43,138.74,Amul Dairy Plant Anand,Ambient,150,No,,2023-04-08,No,36
+AM-2207,Amul Omega-3 Enriched Milk Value-Added Dairy 1L,Value-Added Dairy,Omega-3 Enriched Milk,1L,Tetra Pack,120.44,144.89,Amul Dairy Plant Mumbai,Ambient,74,No,,2022-08-29,No,37

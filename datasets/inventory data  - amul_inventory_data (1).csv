@@ -1,0 +1,401 @@
+SKU_ID,Product_Name,Category,Sub_Category,Pack_Size,Unit_Cost_Price,Unit_Selling_Price,Stock_Quantity,Reorder_Level,Supplier_Name,Supplier_Lead_Time_Days,Expiry_Date,Storage_Type,Manufacturing_Date,Batch_Number,Shelf_Life_Days,Location
+AM-1001,Amul Almond Milk 1L,Vegan,Almond,1L,125.03,134.28,269,97,Amul Chocolate Works,7,2025-09-11,Ambient,2025-08-08,B3732D,34,STORE-01
+AM-1234,Amul Lactose-Free Dairy Milk 100g,Dairy Milk,Lactose-Free,100g,90.43,100.97,211,94,Amul Beverages,7,2025-08-27,Refrigerated,2025-08-12,B8709A,15,STORE-02
+AM-1207,Amul Vegan 1L,Vegan,Vegan,1L,35.95,41.85,185,81,Gujarat Co-op,4,2025-10-01,Ambient,2025-08-01,B1827C,61,STORE-01
+AM-1002,Amul Soy Milk 1L,Vegan,Soy,1L,115.84,118.84,22,74,Amul Dairy Anand,3,2025-09-21,Ambient,2025-06-11,B7187A,102,WH-02
+AM-1207,Amul Vegan 1L,Vegan,Vegan,1L,44.74,59.13,485,100,Amul Ice Creams,4,2025-11-07,Ambient,2025-08-05,B8049A,94,STORE-03
+AM-303,Amul Pizza Cheese 100g,Cheese,Pizza,100g,96.7,101.46,10,51,Amul Ice Creams,5,2025-08-19,Refrigerated,2025-03-27,B3813C,145,STORE-04
+AM-1231,Amul Kesar Pista Ice Cream 1L,Ice Cream,Kesar,1L,211.79,222.92,230,89,Amul Beverages,3,2026-02-02,Frozen,2025-07-24,B7114C,193,WH-02
+AM-1001,Amul Almond Milk 1L,Vegan,Almond,1L,123.78,131.5,416,73,Amul Beverages,5,2025-10-29,Ambient,2025-07-10,B8810D,111,STORE-01
+AM-305,Amul Vegan Cheese 200g,Cheese,Vegan,200g,227.45,238.36,72,11,Amul Dairy Anand,2,2025-08-24,Refrigerated,2025-05-17,B3917D,99,STORE-01
+AM-1003,Amul Oat Milk 1L,Vegan,Oat,1L,137.69,149.42,43,84,Amul Beverages,3,2025-09-15,Ambient,2025-06-05,B9049C,102,STORE-02
+AM-1204,Amul Kool Koko Beverages 1kg,Beverages,Kool,1kg,262.05,271.31,421,27,Gujarat Co-op,7,2025-11-11,Ambient,2025-07-25,B8076A,109,STORE-03
+AM-1226,Amul Organic Paneer 250g,Paneer,Organic,250g,272.97,281.3,57,23,Amul Foods Pvt Ltd,3,2025-08-19,Refrigerated,2025-08-08,B9306D,11,STORE-04
+AM-1210,Amul Low Fat Paneer 1kg,Paneer,Low,1kg,124.06,126.53,454,86,Amul Beverages,1,2025-08-19,Refrigerated,2025-08-06,B7434A,13,STORE-02
+AM-1236,Amul Immunity Booster Functional 250g,Functional,Immunity,250g,164.73,168.89,408,17,Gujarat Co-op,4,2025-11-16,Ambient,2025-06-26,B6754B,143,WH-01
+AM-206,Amul Lite Butter 250g,Butter,Lite,250g,82.24,86.65,42,14,Amul Ice Creams,4,2025-12-12,Refrigerated,2025-07-19,B5377D,146,WH-01
+AM-1226,Amul Organic Paneer 250g,Paneer,Organic,250g,272.69,285.98,275,71,Amul Protein Division,3,2025-08-18,Refrigerated,2025-08-08,B4088C,10,STORE-02
+AM-1201,Amul Full Cream Dairy Milk 1L,Dairy Milk,Full,1L,235.16,246.39,37,43,Amul Protein Division,6,2025-08-18,Refrigerated,2025-08-09,B5751C,9,STORE-05
+AM-304,Amul Mozzarella Cheese 200g,Cheese,Mozzarella,200g,195.56,206.23,482,76,Amul Beverages,6,2025-08-27,Refrigerated,2025-05-03,B1360C,116,WH-01
+AM-004,Amul Slim Milk 1L,Dairy Milk,Slim,1L,58.49,65.12,244,43,Amul Ice Creams,3,2025-08-18,Refrigerated,2025-08-08,B6733A,10,WH-02
+AM-404,Amul Masti Yogurt 500g,Yogurt,Masti,500g,51.28,60.28,171,99,Amul Beverages,4,2025-09-02,Refrigerated,2025-08-05,B9383B,28,STORE-02
+AM-702,Amul Milk Chocolate 150g,Chocolate,Milk,150g,100.43,104.87,488,40,Amul Chocolate Works,3,2025-11-02,Ambient,2025-04-18,B6875A,198,WH-01
+AM-804,Amul Turmeric Milk 200ml,Beverages,Turmeric,200ml,30.82,45.25,33,100,Amul Foods Pvt Ltd,6,2025-08-18,Ambient,2025-07-04,B9798D,45,STORE-01
+AM-802,Amul Kool Café 200ml,Beverages,Kool,200ml,26.85,39.33,436,57,Gujarat Co-op,2,2025-08-19,Ambient,2025-07-11,B5720D,39,STORE-02
+AM-1003,Amul Oat Milk 1L,Vegan,Oat,1L,135.57,142.08,327,12,Gujarat Co-op,6,2025-08-21,Ambient,2025-06-07,B2180A,75,STORE-05
+AM-1230,Amul Kool Badam Beverages 200g,Beverages,Kool,200g,231.25,237.55,417,11,Amul Chocolate Works,1,2025-09-08,Ambient,2025-06-22,B6845C,78,STORE-03
+AM-1224,Amul Keto Cheese Functional 500g,Functional,Keto,500g,219.56,232.07,394,61,Amul Ice Creams,3,2025-09-19,Ambient,2025-05-05,B3874C,137,STORE-03
+AM-703,Amul Fruit & Nut Chocolate 150g,Chocolate,Fruit,150g,114.54,117.11,322,73,Amul Beverages,5,2025-11-22,Ambient,2024-12-09,B3742C,348,STORE-04
+AM-1235,Amul Turmeric Milk Beverages 200ml,Beverages,Turmeric,200ml,78.49,93.03,116,25,Gujarat Co-op,5,2025-09-10,Ambient,2025-07-27,B6730D,45,WH-01
+AM-1213,Amul Pizza Cheese 200ml,Cheese,Pizza,200ml,111.04,118.88,278,17,Amul Beverages,2,2025-11-17,Refrigerated,2025-06-28,B2027C,142,STORE-05
+AM-106,Amul Kesar Pista 500ml,Ice Cream,Kesar,500ml,107.76,113.07,494,94,Amul Protein Division,5,2026-05-02,Frozen,2025-07-28,B5545A,278,WH-02
+AM-803,Amul Kool Badam 200ml,Beverages,Kool,200ml,28.97,35.53,256,45,Amul Value Added,4,2025-09-05,Ambient,2025-07-16,B1962D,51,STORE-03
+AM-1102,Amul Keto Cheese 200g,Functional,Keto,200g,251.9,265.66,293,22,Amul Value Added,1,2025-12-25,Ambient,2025-08-12,B6854C,135,STORE-01
+AM-1200,Amul Almond Milk Vegan 500g,Vegan,Almond,500g,158.57,164.41,388,80,Gujarat Co-op,1,2025-08-20,Ambient,2025-07-07,B9672C,44,STORE-02
+AM-1232,Amul Dark Chocolate 500g,Chocolate,Dark,500g,77.92,86.5,422,40,Amul Ice Creams,6,2025-12-20,Ambient,2025-06-21,B7596A,182,STORE-04
+AM-1236,Amul Immunity Booster Functional 250g,Functional,Immunity,250g,173.97,183.04,236,69,Amul Value Added,4,2025-09-15,Ambient,2025-06-20,B8457D,87,STORE-02
+AM-404,Amul Masti Yogurt 500g,Yogurt,Masti,500g,45.01,57.65,153,100,Amul Ice Creams,1,2025-09-01,Refrigerated,2025-08-07,B7298B,25,STORE-02
+AM-1103,Amul Haldi Doodh Powder 200g,Functional,Haldi,200g,160.92,172.83,178,28,Amul Protein Division,2,2025-10-28,Ambient,2025-07-23,B9241B,97,STORE-02
+AM-904,Amul Protein Shake Vanilla 200ml,Protein,Protein,200ml,45.39,60.11,82,34,Amul Protein Division,5,2025-12-06,Ambient,2025-01-13,B6992D,327,STORE-05
+AM-001,Amul Gold Milk 1L,Dairy Milk,Gold,1L,62.51,77.48,71,89,Amul Chocolate Works,1,2025-08-21,Refrigerated,2025-08-11,B8732A,10,STORE-03
+AM-601,Amul Malai Paneer 200g,Paneer,Malai,200g,82.4,91.69,131,68,Amul Protein Division,1,2025-08-19,Refrigerated,2025-08-07,B4654B,12,WH-01
+AM-1218,Amul Salted Butter 200ml,Butter,Salted,200ml,295.89,305.14,145,12,Amul Beverages,5,2025-10-09,Refrigerated,2025-06-29,B5057A,102,STORE-03
+AM-1001,Amul Almond Milk 1L,Vegan,Almond,1L,123.6,126.99,83,94,Amul Dairy Anand,4,2025-08-21,Ambient,2025-07-17,B2043C,35,STORE-04
+AM-002,Amul Taaza Milk 1L,Dairy Milk,Taaza,1L,56.39,66.25,301,60,Amul Value Added,1,2025-08-21,Refrigerated,2025-08-13,B7474A,8,STORE-03
+AM-1200,Amul Almond Milk Vegan 500g,Vegan,Almond,500g,156.37,163.78,394,31,Amul Protein Division,5,2025-09-13,Ambient,2025-08-06,B4344B,38,STORE-01
+AM-803,Amul Kool Badam 200ml,Beverages,Kool,200ml,28.21,31.59,286,79,Amul Protein Division,6,2025-09-05,Ambient,2025-06-24,B7783D,73,STORE-03
+AM-903,Amul Protein Bar 60g,Protein,Protein,60g,59.97,74.44,306,99,Amul Dairy Anand,6,2025-09-21,Ambient,2025-02-02,B3662B,231,STORE-05
+AM-1222,Amul Buttermilk Beverages 1L,Beverages,Buttermilk,1L,292.33,304.7,493,14,Amul Ice Creams,4,2025-08-20,Ambient,2025-07-07,B1751C,44,STORE-05
+AM-1223,Amul Slim Dairy Milk 1kg,Dairy Milk,Slim,1kg,263.97,276,35,75,Gujarat Co-op,6,2025-08-21,Refrigerated,2025-08-13,B1560B,8,STORE-02
+AM-1229,Amul Low Fat Yogurt 1L,Yogurt,Low,1L,231.86,244.68,97,75,Amul Foods Pvt Ltd,1,2025-08-29,Refrigerated,2025-08-05,B3784B,24,STORE-03
+AM-1230,Amul Kool Badam Beverages 200g,Beverages,Kool,200g,238.56,242.59,415,16,Amul Dairy Anand,6,2025-08-18,Ambient,2025-06-13,B5340D,66,WH-02
+AM-1236,Amul Immunity Booster Functional 250g,Functional,Immunity,250g,179.18,189.98,409,28,Amul Beverages,5,2025-10-05,Ambient,2025-07-29,B7662D,68,STORE-01
+AM-003,Amul Shakti Milk 500ml,Dairy Milk,Shakti,500ml,28.92,40.31,295,41,Amul Ice Creams,2,2025-08-20,Refrigerated,2025-08-13,B2536D,7,STORE-04
+AM-1205,Amul Probiotic Drink Functional 500ml,Functional,Probiotic,500ml,90.13,98.1,420,86,Amul Beverages,4,2025-10-13,Ambient,2025-08-10,B3057A,64,STORE-01
+AM-601,Amul Malai Paneer 200g,Paneer,Malai,200g,86.65,95.12,350,28,Amul Foods Pvt Ltd,7,2025-08-27,Refrigerated,2025-08-12,B7833C,15,WH-01
+AM-1215,Amul Probiotic Drink Functional 500ml,Functional,Probiotic,500ml,214.03,220.15,497,99,Amul Ice Creams,3,2025-08-29,Ambient,2025-05-19,B3466A,102,WH-03
+AM-1234,Amul Lactose-Free Dairy Milk 100g,Dairy Milk,Lactose-Free,100g,90.28,102.55,106,28,Gujarat Co-op,7,2025-08-19,Refrigerated,2025-08-07,B6531D,12,STORE-01
+AM-1206,Amul Soy Milk Vegan 200g,Vegan,Soy,200g,103.42,116.45,199,98,Amul Chocolate Works,6,2025-09-30,Ambient,2025-07-03,B8803A,89,STORE-03
+AM-207,Amul Garlic Butter 100g,Butter,Garlic,100g,50,52.52,466,99,Amul Ice Creams,4,2025-09-17,Refrigerated,2025-03-31,B6475D,170,STORE-05
+AM-1201,Amul Full Cream Dairy Milk 1L,Dairy Milk,Full,1L,240.14,251.62,376,86,Amul Chocolate Works,5,2025-08-20,Refrigerated,2025-08-09,B4139D,11,STORE-01
+AM-302,Amul Cheese Block 200g,Cheese,Cheese,200g,171.28,180.77,181,20,Amul Protein Division,6,2025-10-25,Refrigerated,2025-07-11,B6914A,106,WH-03
+AM-004,Amul Slim Milk 1L,Dairy Milk,Slim,1L,60.34,72.07,262,35,Amul Ice Creams,1,2025-08-19,Refrigerated,2025-08-10,B1338C,9,WH-03
+AM-904,Amul Protein Shake Vanilla 200ml,Protein,Protein,200ml,46.55,58.37,220,54,Amul Value Added,1,2025-11-06,Ambient,2025-03-24,B8796C,227,WH-02
+AM-107,Amul Vegan Ice Cream 500ml,Ice Cream,Vegan,500ml,123.87,132.04,47,66,Amul Value Added,6,2025-09-28,Frozen,2025-01-18,B5499D,253,STORE-03
+AM-1201,Amul Full Cream Dairy Milk 1L,Dairy Milk,Full,1L,241.72,243.96,188,22,Amul Ice Creams,7,2025-08-22,Refrigerated,2025-08-12,B9088C,10,STORE-02
+AM-1210,Amul Low Fat Paneer 1kg,Paneer,Low,1kg,97.15,100.91,359,67,Gujarat Co-op,1,2025-08-21,Refrigerated,2025-08-13,B9273D,8,STORE-01
+AM-803,Amul Kool Badam 200ml,Beverages,Kool,200ml,30.99,40.83,102,28,Amul Chocolate Works,5,2025-09-12,Ambient,2025-07-20,B5192C,54,WH-01
+AM-1233,Amul Strawberry Ice Cream 500g,Ice Cream,Strawberry,500g,204.3,215.38,380,14,Amul Protein Division,3,2026-03-11,Frozen,2025-07-05,B6226B,249,STORE-02
+AM-1224,Amul Keto Cheese Functional 500g,Functional,Keto,500g,207.1,216.62,94,18,Amul Dairy Anand,5,2025-08-23,Ambient,2025-06-28,B8250D,56,WH-02
+AM-702,Amul Milk Chocolate 150g,Chocolate,Milk,150g,100.82,106.66,360,100,Amul Protein Division,1,2025-10-05,Ambient,2025-01-10,B5441A,268,WH-03
+AM-901,Amul PRO Whey Protein 500g,Protein,PRO,500g,552.18,561.85,58,84,Amul Value Added,5,2026-03-01,Ambient,2025-08-02,B5674D,211,WH-03
+AM-1213,Amul Pizza Cheese 200ml,Cheese,Pizza,200ml,111.66,114.15,98,99,Amul Value Added,3,2025-08-21,Refrigerated,2025-05-14,B8126C,99,WH-03
+AM-1103,Amul Haldi Doodh Powder 200g,Functional,Haldi,200g,153.77,164.03,120,64,Amul Beverages,6,2025-12-02,Ambient,2025-08-10,B4901D,114,STORE-02
+AM-1208,Amul Unsalted Butter 100g,Butter,Unsalted,100g,88.31,100.39,75,66,Amul Beverages,6,2025-12-05,Refrigerated,2025-06-09,B6931B,179,WH-02
+AM-1217,Amul Yogurt 500ml,Yogurt,Yogurt,500ml,143.14,147.44,145,27,Amul Chocolate Works,4,2025-09-02,Refrigerated,2025-08-13,B6121A,20,STORE-01
+AM-1202,Amul Greek Yogurt 250g,Yogurt,Greek,250g,91.14,99.2,83,52,Gujarat Co-op,3,2025-08-26,Refrigerated,2025-08-10,B5931A,16,STORE-04
+AM-1204,Amul Kool Koko Beverages 1kg,Beverages,Kool,1kg,253.19,265.35,361,79,Amul Chocolate Works,7,2025-10-13,Ambient,2025-07-16,B5115C,89,STORE-02
+AM-302,Amul Cheese Block 200g,Cheese,Cheese,200g,175.17,189.43,396,51,Amul Foods Pvt Ltd,2,2025-12-24,Refrigerated,2025-08-02,B3009D,144,STORE-02
+AM-1212,Amul Low Fat Yogurt 200g,Yogurt,Low,200g,188.62,194.57,8,95,Amul Ice Creams,1,2025-08-20,Refrigerated,2025-07-26,B5322A,25,STORE-04
+AM-804,Amul Turmeric Milk 200ml,Beverages,Turmeric,200ml,30.42,44.96,420,33,Amul Ice Creams,5,2025-08-20,Ambient,2025-06-29,B8258D,52,WH-01
+AM-1230,Amul Kool Badam Beverages 200g,Beverages,Kool,200g,240.15,252.08,249,27,Gujarat Co-op,7,2025-10-02,Ambient,2025-07-22,B5258B,72,STORE-01
+AM-902,Amul High Protein Milk 200ml,Protein,High,200ml,35.93,49.43,242,25,Amul Ice Creams,6,2026-04-06,Ambient,2025-08-01,B3102B,248,WH-03
+AM-804,Amul Turmeric Milk 200ml,Beverages,Turmeric,200ml,30.43,44.75,231,64,Amul Value Added,6,2025-09-01,Ambient,2025-07-23,B9655C,40,WH-01
+AM-1230,Amul Kool Badam Beverages 200g,Beverages,Kool,200g,238.08,249.93,483,60,Amul Value Added,1,2025-08-25,Ambient,2025-05-15,B8255B,102,STORE-02
+AM-005,Amul Lactose-Free Milk 1L,Dairy Milk,Lactose-Free,1L,67.4,78.68,149,86,Amul Protein Division,2,2025-08-20,Refrigerated,2025-08-07,B1124D,13,STORE-05
+AM-1230,Amul Kool Badam Beverages 200g,Beverages,Kool,200g,242.65,250.34,317,45,Gujarat Co-op,7,2025-10-02,Ambient,2025-07-11,B5256B,83,STORE-03
+AM-1224,Amul Keto Cheese Functional 500g,Functional,Keto,500g,216.58,229.84,179,86,Amul Beverages,6,2025-10-21,Ambient,2025-07-06,B9207D,107,WH-01
+AM-1223,Amul Slim Dairy Milk 1kg,Dairy Milk,Slim,1kg,245.29,258.68,156,14,Amul Ice Creams,3,2025-08-20,Refrigerated,2025-08-11,B8803D,9,STORE-01
+AM-1213,Amul Pizza Cheese 200ml,Cheese,Pizza,200ml,116.85,120.58,445,46,Amul Chocolate Works,7,2025-11-17,Refrigerated,2025-08-11,B4915A,98,STORE-04
+AM-1213,Amul Pizza Cheese 200ml,Cheese,Pizza,200ml,103.21,114.69,250,24,Amul Chocolate Works,4,2025-09-01,Refrigerated,2025-05-31,B8699A,93,WH-02
+AM-1218,Amul Salted Butter 200ml,Butter,Salted,200ml,305.73,311.84,437,59,Amul Protein Division,7,2025-08-19,Refrigerated,2025-05-05,B6257B,106,STORE-04
+AM-1229,Amul Low Fat Yogurt 1L,Yogurt,Low,1L,229.38,241.22,29,27,Amul Protein Division,6,2025-08-19,Refrigerated,2025-07-22,B4376C,28,STORE-03
+AM-1222,Amul Buttermilk Beverages 1L,Beverages,Buttermilk,1L,288.68,298.49,264,21,Amul Value Added,7,2025-10-18,Ambient,2025-07-19,B2200C,91,WH-01
+AM-802,Amul Kool Café 200ml,Beverages,Kool,200ml,27.78,34.91,426,18,Amul Value Added,1,2025-10-02,Ambient,2025-07-20,B8000D,74,STORE-03
+AM-1217,Amul Yogurt 500ml,Yogurt,Yogurt,500ml,154.51,166.24,459,93,Amul Protein Division,2,2025-08-26,Refrigerated,2025-08-12,B1771B,14,WH-03
+AM-1220,Amul Protein Shake Protein 250g,Protein,Protein,250g,164.17,166.28,399,39,Amul Value Added,1,2025-10-02,Ambient,2025-03-16,B8206A,200,STORE-01
+AM-1216,Amul Low Fat Yogurt 500ml,Yogurt,Low,500ml,175.31,184.9,488,35,Gujarat Co-op,3,2025-08-30,Refrigerated,2025-08-10,B1844D,20,STORE-03
+AM-1209,Amul Block Cheese 250g,Cheese,Block,250g,283.73,288.47,427,37,Amul Value Added,3,2025-10-30,Refrigerated,2025-05-07,B5833D,176,STORE-01
+AM-902,Amul High Protein Milk 200ml,Protein,High,200ml,37.33,50.13,383,20,Amul Value Added,6,2026-05-08,Ambient,2025-07-10,B9898C,302,WH-03
+AM-1221,Amul Milkshake Beverages 1L,Beverages,Milkshake,1L,158.9,165.98,466,54,Amul Ice Creams,4,2025-08-22,Ambient,2025-04-27,B5453D,117,STORE-04
+AM-005,Amul Lactose-Free Milk 1L,Dairy Milk,Lactose-Free,1L,66.29,70.03,416,64,Gujarat Co-op,3,2025-08-21,Refrigerated,2025-08-12,B2942D,9,WH-03
+AM-1236,Amul Immunity Booster Functional 250g,Functional,Immunity,250g,172.47,186.43,490,88,Amul Chocolate Works,7,2025-10-03,Ambient,2025-06-04,B6073A,121,STORE-01
+AM-901,Amul PRO Whey Protein 500g,Protein,PRO,500g,561.01,568.88,435,89,Amul Value Added,6,2025-10-14,Ambient,2025-04-07,B5110C,190,STORE-03
+AM-803,Amul Kool Badam 200ml,Beverages,Kool,200ml,29.19,34.71,99,80,Amul Chocolate Works,1,2025-10-15,Ambient,2025-07-21,B6087A,86,STORE-03
+AM-206,Amul Lite Butter 250g,Butter,Lite,250g,75.48,80.88,350,24,Amul Chocolate Works,5,2025-10-01,Refrigerated,2025-06-02,B3418C,121,STORE-04
+AM-1225,Amul Malai Paneer 1L,Paneer,Malai,1L,117.28,119.75,441,44,Amul Beverages,2,2025-08-21,Refrigerated,2025-08-11,B9739A,10,WH-03
+AM-001,Amul Gold Milk 1L,Dairy Milk,Gold,1L,60.03,73.81,325,63,Amul Foods Pvt Ltd,3,2025-08-23,Refrigerated,2025-08-11,B7074C,12,WH-03
+AM-1103,Amul Haldi Doodh Powder 200g,Functional,Haldi,200g,157.21,166.9,140,95,Amul Beverages,3,2025-10-13,Ambient,2025-08-02,B2746A,72,WH-01
+AM-107,Amul Vegan Ice Cream 500ml,Ice Cream,Vegan,500ml,120.42,126.59,80,71,Amul Dairy Anand,2,2026-02-28,Frozen,2025-04-01,B4730B,333,STORE-01
+AM-403,Amul Probiotic Yogurt 100g,Yogurt,Probiotic,100g,23.4,31.42,163,71,Amul Beverages,7,2025-09-08,Refrigerated,2025-08-12,B3032C,27,STORE-05
+AM-1102,Amul Keto Cheese 200g,Functional,Keto,200g,265.1,268.29,405,30,Amul Protein Division,6,2025-08-30,Ambient,2025-04-23,B8132D,129,STORE-03
+AM-205,Amul Butter 500g,Butter,Butter,500g,152.74,155.13,168,10,Amul Beverages,2,2025-09-21,Refrigerated,2025-06-04,B4710A,109,WH-03
+AM-104,Amul Vanilla 500ml,Ice Cream,Vanilla,500ml,88.72,103.11,409,57,Gujarat Co-op,1,2025-10-21,Frozen,2025-02-06,B7913A,257,WH-01
+AM-1207,Amul Vegan 1L,Vegan,Vegan,1L,67.22,75.06,315,72,Gujarat Co-op,1,2025-11-15,Ambient,2025-07-22,B8428C,116,WH-02
+AM-1205,Amul Probiotic Drink Functional 500ml,Functional,Probiotic,500ml,91.57,95.61,194,82,Amul Ice Creams,1,2025-09-10,Ambient,2025-07-29,B3436B,43,WH-02
+AM-001,Amul Gold Milk 1L,Dairy Milk,Gold,1L,61.95,74.75,323,24,Amul Value Added,5,2025-08-23,Refrigerated,2025-08-11,B1882C,12,STORE-01
+AM-1227,Amul Haldi Doodh Functional 200ml,Functional,Haldi,200ml,224.9,229.48,174,70,Amul Protein Division,1,2025-08-27,Ambient,2025-07-07,B7471C,51,STORE-01
+AM-1211,Amul Keto Cheese Functional 1kg,Functional,Keto,1kg,214.98,221.14,5,57,Amul Dairy Anand,6,2025-09-16,Ambient,2025-08-06,B7705A,41,WH-03
+AM-1210,Amul Low Fat Paneer 1kg,Paneer,Low,1kg,104.88,110.71,419,27,Amul Chocolate Works,7,2025-08-27,Refrigerated,2025-08-12,B4880D,15,STORE-04
+AM-703,Amul Fruit & Nut Chocolate 150g,Chocolate,Fruit,150g,110.29,114.18,400,68,Amul Beverages,4,2025-09-11,Ambient,2024-12-27,B4943C,258,STORE-03
+AM-701,Amul Dark Chocolate 150g,Chocolate,Dark,150g,104.59,106.71,82,98,Amul Value Added,1,2026-03-30,Ambient,2025-06-30,B9303C,273,WH-02
+AM-304,Amul Mozzarella Cheese 200g,Cheese,Mozzarella,200g,181.62,188.71,419,49,Amul Beverages,2,2025-08-28,Refrigerated,2025-04-28,B1371B,122,STORE-02
+AM-1219,Amul Low Fat Paneer 1L,Paneer,Low,1L,265.33,273.58,472,63,Amul Protein Division,7,2025-08-22,Refrigerated,2025-08-12,B8862D,10,STORE-04
+AM-1210,Amul Low Fat Paneer 1kg,Paneer,Low,1kg,108.34,113.66,149,74,Amul Protein Division,3,2025-08-21,Refrigerated,2025-08-11,B7530B,10,WH-03
+AM-703,Amul Fruit & Nut Chocolate 150g,Chocolate,Fruit,150g,111.54,118.98,74,39,Gujarat Co-op,3,2026-01-15,Ambient,2025-06-01,B8119C,228,STORE-03
+AM-1201,Amul Full Cream Dairy Milk 1L,Dairy Milk,Full,1L,231.02,239.99,97,96,Amul Beverages,6,2025-08-22,Refrigerated,2025-08-11,B1536D,11,WH-03
+AM-403,Amul Probiotic Yogurt 100g,Yogurt,Probiotic,100g,23.78,27.83,156,22,Amul Foods Pvt Ltd,4,2025-08-26,Refrigerated,2025-08-05,B8950A,21,STORE-05
+AM-1208,Amul Unsalted Butter 100g,Butter,Unsalted,100g,85.13,97.28,85,85,Amul Ice Creams,6,2025-12-08,Refrigerated,2025-07-18,B8583A,143,WH-01
+AM-1222,Amul Buttermilk Beverages 1L,Beverages,Buttermilk,1L,277.09,286.01,250,98,Gujarat Co-op,2,2025-09-11,Ambient,2025-07-06,B1916D,67,WH-03
+AM-1235,Amul Turmeric Milk Beverages 200ml,Beverages,Turmeric,200ml,79.6,94.51,24,34,Amul Dairy Anand,3,2025-10-01,Ambient,2025-06-25,B2523C,98,STORE-02
+AM-1225,Amul Malai Paneer 1L,Paneer,Malai,1L,126.52,135.68,350,69,Gujarat Co-op,6,2025-08-21,Refrigerated,2025-08-12,B1597D,9,WH-03
+AM-1208,Amul Unsalted Butter 100g,Butter,Unsalted,100g,83.05,94.26,36,81,Amul Protein Division,5,2025-09-07,Refrigerated,2025-05-03,B6261B,127,STORE-05
+AM-005,Amul Lactose-Free Milk 1L,Dairy Milk,Lactose-Free,1L,65.29,77.41,179,30,Amul Foods Pvt Ltd,6,2025-08-19,Refrigerated,2025-08-08,B5180A,11,STORE-02
+AM-1216,Amul Low Fat Yogurt 500ml,Yogurt,Low,500ml,177.12,188.16,406,93,Amul Foods Pvt Ltd,3,2025-08-20,Refrigerated,2025-07-26,B4557D,25,STORE-02
+AM-1103,Amul Haldi Doodh Powder 200g,Functional,Haldi,200g,164.85,168.98,90,63,Amul Value Added,5,2025-10-06,Ambient,2025-07-15,B5427B,83,STORE-05
+AM-801,Amul Kool Koko 200ml,Beverages,Kool,200ml,25.3,35.67,258,93,Gujarat Co-op,3,2025-10-18,Ambient,2025-08-05,B1738D,74,STORE-02
+AM-702,Amul Milk Chocolate 150g,Chocolate,Milk,150g,102.06,108.77,367,66,Amul Protein Division,4,2025-11-02,Ambient,2025-04-24,B9019C,192,WH-02
+AM-1233,Amul Strawberry Ice Cream 500g,Ice Cream,Strawberry,500g,196.17,201.07,87,90,Amul Beverages,6,2025-11-02,Frozen,2025-01-01,B8865C,305,STORE-04
+AM-804,Amul Turmeric Milk 200ml,Beverages,Turmeric,200ml,30.53,37.77,450,18,Amul Beverages,4,2025-11-13,Ambient,2025-07-26,B1793A,110,WH-02
+AM-1211,Amul Keto Cheese Functional 1kg,Functional,Keto,1kg,212.69,215.64,469,44,Amul Protein Division,5,2025-09-13,Ambient,2025-08-04,B4175C,40,STORE-04
+AM-1214,Amul High Protein Milk Protein 100g,Protein,High,100g,218.91,227.63,483,100,Amul Foods Pvt Ltd,3,2026-03-27,Ambient,2025-08-13,B3417B,226,STORE-02
+AM-1212,Amul Low Fat Yogurt 200g,Yogurt,Low,200g,188.5,201.2,152,46,Amul Protein Division,3,2025-08-22,Refrigerated,2025-08-10,B3354A,12,STORE-02
+AM-602,Amul Malai Paneer 1kg,Paneer,Malai,1kg,385.56,399.33,130,97,Amul Beverages,6,2025-08-19,Refrigerated,2025-08-04,B7209D,15,STORE-03
+AM-107,Amul Vegan Ice Cream 500ml,Ice Cream,Vegan,500ml,120.08,132.39,158,96,Gujarat Co-op,4,2026-01-12,Frozen,2025-02-12,B9013D,334,STORE-02
+AM-1206,Amul Soy Milk Vegan 200g,Vegan,Soy,200g,106.63,114.25,445,46,Amul Protein Division,1,2025-09-15,Ambient,2025-06-19,B1906C,88,STORE-04
+AM-207,Amul Garlic Butter 100g,Butter,Garlic,100g,48.29,52.6,393,89,Amul Foods Pvt Ltd,4,2025-08-18,Refrigerated,2025-03-26,B6849A,145,STORE-04
+AM-004,Amul Slim Milk 1L,Dairy Milk,Slim,1L,58.84,72.7,216,66,Amul Value Added,5,2025-08-22,Refrigerated,2025-08-10,B2660A,12,WH-03
+AM-1101,Amul Immunity Booster Drink 200ml,Functional,Immunity,200ml,36.2,43.62,23,95,Amul Beverages,4,2025-09-06,Ambient,2025-07-22,B9979C,46,WH-03
+AM-703,Amul Fruit & Nut Chocolate 150g,Chocolate,Fruit,150g,111.27,116.98,214,87,Amul Beverages,4,2025-09-12,Ambient,2025-02-23,B3673B,201,WH-03
+AM-107,Amul Vegan Ice Cream 500ml,Ice Cream,Vegan,500ml,122.83,126.89,252,23,Amul Chocolate Works,6,2025-08-28,Frozen,2025-02-27,B8245C,182,WH-03
+AM-1205,Amul Probiotic Drink Functional 500ml,Functional,Probiotic,500ml,89.8,100.19,251,48,Amul Protein Division,1,2025-10-09,Ambient,2025-07-11,B7273C,90,STORE-05
+AM-1002,Amul Soy Milk 1L,Vegan,Soy,1L,114.68,127.59,316,54,Amul Chocolate Works,7,2025-12-05,Ambient,2025-08-11,B3938B,116,WH-03
+AM-002,Amul Taaza Milk 1L,Dairy Milk,Taaza,1L,55.96,66.29,420,83,Amul Beverages,6,2025-08-20,Refrigerated,2025-08-13,B1627B,7,WH-03
+AM-1234,Amul Lactose-Free Dairy Milk 100g,Dairy Milk,Lactose-Free,100g,84.45,88.39,35,62,Gujarat Co-op,3,2025-08-20,Refrigerated,2025-08-12,B4145D,8,WH-02
+AM-1227,Amul Haldi Doodh Functional 200ml,Functional,Haldi,200ml,211.27,216.7,403,36,Amul Chocolate Works,3,2025-11-17,Ambient,2025-05-23,B2176A,178,STORE-03
+AM-1226,Amul Organic Paneer 250g,Paneer,Organic,250g,270.13,283,186,31,Amul Ice Creams,7,2025-08-18,Refrigerated,2025-08-07,B2024B,11,WH-02
+AM-1223,Amul Slim Dairy Milk 1kg,Dairy Milk,Slim,1kg,245.32,247.4,73,29,Amul Foods Pvt Ltd,7,2025-08-19,Refrigerated,2025-08-09,B5444C,10,STORE-02
+AM-206,Amul Lite Butter 250g,Butter,Lite,250g,77.87,83.98,455,48,Gujarat Co-op,5,2025-10-01,Refrigerated,2025-05-13,B4188B,141,STORE-04
+AM-104,Amul Vanilla 500ml,Ice Cream,Vanilla,500ml,86.12,96,406,73,Amul Beverages,1,2025-09-24,Frozen,2024-10-09,B8550C,350,STORE-03
+AM-304,Amul Mozzarella Cheese 200g,Cheese,Mozzarella,200g,190.87,194.93,397,88,Amul Beverages,2,2025-10-12,Refrigerated,2025-06-27,B9068B,107,STORE-03
+AM-1214,Amul High Protein Milk Protein 100g,Protein,High,100g,211.1,222.15,41,29,Amul Foods Pvt Ltd,7,2026-03-05,Ambient,2025-07-14,B9202D,234,STORE-05
+AM-1201,Amul Full Cream Dairy Milk 1L,Dairy Milk,Full,1L,222.26,227.69,344,90,Amul Beverages,7,2025-08-21,Refrigerated,2025-08-11,B2344C,10,STORE-01
+AM-701,Amul Dark Chocolate 150g,Chocolate,Dark,150g,103.22,107.14,141,94,Gujarat Co-op,2,2026-04-08,Ambient,2025-07-02,B8095A,280,STORE-05
+AM-1230,Amul Kool Badam Beverages 200g,Beverages,Kool,200g,232.13,241.09,306,61,Amul Value Added,7,2025-09-04,Ambient,2025-07-31,B2163D,35,STORE-05
+AM-1225,Amul Malai Paneer 1L,Paneer,Malai,1L,115.89,126.38,130,80,Amul Protein Division,1,2025-08-18,Refrigerated,2025-08-11,B2572D,7,STORE-05
+AM-1209,Amul Block Cheese 250g,Cheese,Block,250g,282.48,286.2,122,26,Amul Ice Creams,6,2025-08-30,Refrigerated,2025-04-25,B3932B,127,WH-02
+AM-1217,Amul Yogurt 500ml,Yogurt,Yogurt,500ml,143.59,150.12,63,68,Gujarat Co-op,6,2025-08-26,Refrigerated,2025-08-02,B7536A,24,STORE-01
+AM-1102,Amul Keto Cheese 200g,Functional,Keto,200g,257.16,268.01,225,22,Amul Foods Pvt Ltd,1,2025-09-18,Ambient,2025-07-12,B8890B,68,WH-02
+AM-1234,Amul Lactose-Free Dairy Milk 100g,Dairy Milk,Lactose-Free,100g,96.53,98.76,45,31,Amul Dairy Anand,7,2025-08-19,Refrigerated,2025-08-08,B6042C,11,STORE-02
+AM-903,Amul Protein Bar 60g,Protein,Protein,60g,62.4,70.91,460,55,Amul Chocolate Works,6,2025-09-02,Ambient,2024-10-11,B3373B,326,STORE-05
+AM-1225,Amul Malai Paneer 1L,Paneer,Malai,1L,114.26,118.7,256,34,Amul Chocolate Works,5,2025-08-26,Refrigerated,2025-08-13,B5835D,13,STORE-02
+AM-1202,Amul Greek Yogurt 250g,Yogurt,Greek,250g,88.29,102.67,299,31,Amul Chocolate Works,7,2025-08-23,Refrigerated,2025-08-12,B8684A,11,WH-02
+AM-403,Amul Probiotic Yogurt 100g,Yogurt,Probiotic,100g,24.96,38.31,165,65,Amul Foods Pvt Ltd,1,2025-09-03,Refrigerated,2025-08-09,B5494C,25,WH-01
+AM-207,Amul Garlic Butter 100g,Butter,Garlic,100g,52.92,55.39,54,30,Gujarat Co-op,1,2026-01-19,Refrigerated,2025-08-04,B4350A,168,WH-01
+AM-1235,Amul Turmeric Milk Beverages 200ml,Beverages,Turmeric,200ml,76.67,79,406,67,Amul Protein Division,5,2025-10-02,Ambient,2025-06-07,B4209C,117,STORE-02
+AM-001,Amul Gold Milk 1L,Dairy Milk,Gold,1L,62.42,69.84,491,94,Gujarat Co-op,1,2025-08-22,Refrigerated,2025-08-12,B7910A,10,WH-03
+AM-1200,Amul Almond Milk Vegan 500g,Vegan,Almond,500g,156.44,158.51,384,41,Amul Foods Pvt Ltd,6,2025-09-21,Ambient,2025-08-04,B9765D,48,WH-02
+AM-1210,Amul Low Fat Paneer 1kg,Paneer,Low,1kg,140.41,146.84,470,45,Amul Ice Creams,6,2025-08-18,Refrigerated,2025-08-11,B8120D,7,STORE-01
+AM-1227,Amul Haldi Doodh Functional 200ml,Functional,Haldi,200ml,212.14,222.76,72,37,Amul Chocolate Works,3,2025-10-28,Ambient,2025-06-15,B7423A,135,STORE-01
+AM-207,Amul Garlic Butter 100g,Butter,Garlic,100g,49.86,62.36,425,28,Amul Protein Division,2,2025-12-10,Refrigerated,2025-07-17,B7845B,146,STORE-04
+AM-1214,Amul High Protein Milk Protein 100g,Protein,High,100g,213.98,226.73,221,25,Amul Ice Creams,7,2025-09-21,Ambient,2025-01-11,B6541C,253,STORE-04
+AM-1204,Amul Kool Koko Beverages 1kg,Beverages,Kool,1kg,264.86,274.85,209,95,Amul Ice Creams,5,2025-08-24,Ambient,2025-07-18,B2659C,37,WH-01
+AM-902,Amul High Protein Milk 200ml,Protein,High,200ml,36.74,42.8,410,29,Amul Value Added,5,2025-09-14,Ambient,2025-01-08,B6371C,249,WH-03
+AM-1226,Amul Organic Paneer 250g,Paneer,Organic,250g,273.28,276.12,72,42,Amul Protein Division,3,2025-08-18,Refrigerated,2025-08-10,B7833B,8,STORE-05
+AM-903,Amul Protein Bar 60g,Protein,Protein,60g,61.81,67.8,0,40,Amul Foods Pvt Ltd,4,2026-06-10,Ambient,2025-08-03,B4069C,311,WH-01
+AM-1002,Amul Soy Milk 1L,Vegan,Soy,1L,113.68,122.11,257,52,Amul Value Added,1,2025-09-08,Ambient,2025-07-10,B9956C,60,WH-01
+AM-802,Amul Kool Café 200ml,Beverages,Kool,200ml,25.04,27.33,36,31,Amul Chocolate Works,4,2025-11-14,Ambient,2025-07-30,B6480C,107,WH-03
+AM-106,Amul Kesar Pista 500ml,Ice Cream,Kesar,500ml,101.84,115.1,294,88,Amul Dairy Anand,1,2025-12-03,Frozen,2025-02-09,B3340A,297,STORE-04
+AM-1101,Amul Immunity Booster Drink 200ml,Functional,Immunity,200ml,35.93,50.52,393,79,Amul Chocolate Works,2,2025-11-11,Ambient,2025-07-07,B8535D,127,STORE-02
+AM-207,Amul Garlic Butter 100g,Butter,Garlic,100g,50.83,61.43,440,88,Amul Protein Division,5,2025-08-28,Refrigerated,2025-04-21,B7227D,129,STORE-02
+AM-601,Amul Malai Paneer 200g,Paneer,Malai,200g,81.24,90.32,172,24,Amul Foods Pvt Ltd,1,2025-08-27,Refrigerated,2025-08-12,B8197C,15,WH-02
+AM-801,Amul Kool Koko 200ml,Beverages,Kool,200ml,26.48,36.54,409,20,Amul Chocolate Works,4,2025-10-24,Ambient,2025-07-30,B1456A,86,STORE-03
+AM-1213,Amul Pizza Cheese 200ml,Cheese,Pizza,200ml,100.03,110.24,45,87,Amul Dairy Anand,6,2025-09-23,Refrigerated,2025-06-18,B4498A,97,STORE-01
+AM-1207,Amul Vegan 1L,Vegan,Vegan,1L,27.52,31.4,395,23,Amul Beverages,2,2025-09-07,Ambient,2025-08-03,B4160B,35,STORE-02
+AM-1221,Amul Milkshake Beverages 1L,Beverages,Milkshake,1L,150.1,158.87,12,60,Amul Dairy Anand,3,2025-08-22,Ambient,2025-06-18,B7457B,65,WH-02
+AM-1001,Amul Almond Milk 1L,Vegan,Almond,1L,123.7,129.76,17,91,Amul Protein Division,2,2025-09-03,Ambient,2025-08-04,B8727C,30,WH-01
+AM-1215,Amul Probiotic Drink Functional 500ml,Functional,Probiotic,500ml,202.42,215.93,146,89,Amul Beverages,2,2025-10-12,Ambient,2025-07-09,B5661D,95,STORE-04
+AM-1232,Amul Dark Chocolate 500g,Chocolate,Dark,500g,86.09,97.42,359,80,Gujarat Co-op,1,2026-06-09,Ambient,2025-06-20,B7781A,354,WH-02
+AM-702,Amul Milk Chocolate 150g,Chocolate,Milk,150g,102.15,112.07,5,57,Amul Dairy Anand,5,2025-09-02,Ambient,2025-01-28,B1532D,217,WH-01
+AM-205,Amul Butter 500g,Butter,Butter,500g,150.18,152.24,225,33,Amul Beverages,2,2025-08-19,Refrigerated,2025-05-05,B4563A,106,WH-01
+AM-1218,Amul Salted Butter 200ml,Butter,Salted,200ml,299.58,306.89,90,50,Amul Beverages,1,2025-08-30,Refrigerated,2025-03-07,B3706A,176,STORE-04
+AM-207,Amul Garlic Butter 100g,Butter,Garlic,100g,48.93,52.96,19,23,Amul Protein Division,2,2025-09-15,Refrigerated,2025-05-12,B7995C,126,STORE-05
+AM-701,Amul Dark Chocolate 150g,Chocolate,Dark,150g,101.19,114.42,477,25,Amul Protein Division,1,2026-01-26,Ambient,2025-02-26,B6800D,334,STORE-02
+AM-1001,Amul Almond Milk 1L,Vegan,Almond,1L,125.5,136.95,164,51,Amul Value Added,2,2025-11-26,Ambient,2025-08-03,B1390D,115,WH-03
+AM-1216,Amul Low Fat Yogurt 500ml,Yogurt,Low,500ml,182.35,189.76,194,52,Amul Chocolate Works,2,2025-08-18,Refrigerated,2025-08-01,B3989A,17,STORE-02
+AM-1203,Amul Probiotic Yogurt 1kg,Yogurt,Probiotic,1kg,221.23,229.66,50,95,Amul Value Added,7,2025-09-04,Refrigerated,2025-08-09,B1036C,26,STORE-04
+AM-1231,Amul Kesar Pista Ice Cream 1L,Ice Cream,Kesar,1L,216.59,221.36,456,80,Amul Protein Division,4,2025-10-02,Frozen,2024-11-24,B3490B,312,STORE-01
+AM-1202,Amul Greek Yogurt 250g,Yogurt,Greek,250g,91.95,106.54,336,34,Amul Chocolate Works,7,2025-08-23,Refrigerated,2025-07-28,B9750B,26,STORE-02
+AM-1220,Amul Protein Shake Protein 250g,Protein,Protein,250g,189.49,192.58,341,57,Gujarat Co-op,7,2025-08-21,Ambient,2024-11-05,B3735A,289,WH-02
+AM-1222,Amul Buttermilk Beverages 1L,Beverages,Buttermilk,1L,301.45,313.28,405,74,Amul Foods Pvt Ltd,7,2025-11-23,Ambient,2025-08-09,B2000A,106,STORE-01
+AM-902,Amul High Protein Milk 200ml,Protein,High,200ml,35.13,42.15,139,96,Amul Foods Pvt Ltd,4,2025-09-30,Ambient,2025-02-10,B5657B,232,WH-03
+AM-303,Amul Pizza Cheese 100g,Cheese,Pizza,100g,90.94,93.98,359,95,Amul Chocolate Works,5,2025-10-25,Refrigerated,2025-07-08,B3189C,109,WH-02
+AM-1210,Amul Low Fat Paneer 1kg,Paneer,Low,1kg,139.22,141.91,251,80,Amul Beverages,3,2025-08-25,Refrigerated,2025-08-13,B9632B,12,STORE-01
+AM-1203,Amul Probiotic Yogurt 1kg,Yogurt,Probiotic,1kg,228.6,235.16,386,81,Amul Foods Pvt Ltd,1,2025-08-22,Refrigerated,2025-08-10,B6837D,12,STORE-03
+AM-1236,Amul Immunity Booster Functional 250g,Functional,Immunity,250g,165.35,173.37,75,28,Amul Ice Creams,5,2025-08-26,Ambient,2025-06-25,B5634D,62,STORE-03
+AM-602,Amul Malai Paneer 1kg,Paneer,Malai,1kg,389.64,395.85,180,57,Gujarat Co-op,4,2025-08-19,Refrigerated,2025-08-05,B2922D,14,STORE-02
+AM-1216,Amul Low Fat Yogurt 500ml,Yogurt,Low,500ml,172.53,186.9,341,41,Amul Chocolate Works,4,2025-08-23,Refrigerated,2025-08-06,B6328D,17,STORE-05
+AM-005,Amul Lactose-Free Milk 1L,Dairy Milk,Lactose-Free,1L,67.94,73.83,367,65,Amul Dairy Anand,3,2025-08-23,Refrigerated,2025-08-13,B7679D,10,WH-01
+AM-105,Amul Chocolate 500ml,Ice Cream,Chocolate,500ml,85.45,90.52,198,14,Amul Foods Pvt Ltd,4,2026-01-07,Frozen,2025-01-21,B9306B,351,WH-03
+AM-1221,Amul Milkshake Beverages 1L,Beverages,Milkshake,1L,172.92,177.57,484,85,Amul Dairy Anand,5,2025-09-13,Ambient,2025-07-26,B8597B,49,STORE-05
+AM-1228,Amul Soy Milk Vegan 200ml,Vegan,Soy,200ml,301.64,310.25,31,42,Gujarat Co-op,3,2025-09-21,Ambient,2025-07-25,B7143C,58,WH-01
+AM-901,Amul PRO Whey Protein 500g,Protein,PRO,500g,571.51,583.39,178,78,Gujarat Co-op,2,2025-12-28,Ambient,2025-05-09,B2757A,233,WH-01
+AM-003,Amul Shakti Milk 500ml,Dairy Milk,Shakti,500ml,29.58,33.58,412,61,Amul Ice Creams,1,2025-08-21,Refrigerated,2025-08-13,B6070A,8,STORE-03
+AM-602,Amul Malai Paneer 1kg,Paneer,Malai,1kg,383.19,388.68,66,74,Amul Ice Creams,3,2025-08-26,Refrigerated,2025-08-13,B7025D,13,STORE-03
+AM-1233,Amul Strawberry Ice Cream 500g,Ice Cream,Strawberry,500g,193.93,197.9,6,45,Amul Protein Division,2,2026-01-05,Frozen,2025-03-26,B8034C,285,STORE-05
+AM-003,Amul Shakti Milk 500ml,Dairy Milk,Shakti,500ml,29.95,39.21,205,22,Amul Foods Pvt Ltd,4,2025-08-21,Refrigerated,2025-08-09,B5124A,12,STORE-04
+AM-1203,Amul Probiotic Yogurt 1kg,Yogurt,Probiotic,1kg,241.6,246.45,71,14,Gujarat Co-op,2,2025-08-24,Refrigerated,2025-07-26,B4450A,29,WH-03
+AM-1236,Amul Immunity Booster Functional 250g,Functional,Immunity,250g,174.93,177.96,67,90,Gujarat Co-op,4,2025-09-29,Ambient,2025-07-25,B2306B,66,STORE-02
+AM-801,Amul Kool Koko 200ml,Beverages,Kool,200ml,27.42,37.27,336,97,Amul Dairy Anand,3,2025-08-26,Ambient,2025-07-15,B9040C,42,STORE-02
+AM-902,Amul High Protein Milk 200ml,Protein,High,200ml,35.48,46.63,82,65,Amul Chocolate Works,7,2025-09-04,Ambient,2025-02-04,B3833D,212,WH-01
+AM-1200,Amul Almond Milk Vegan 500g,Vegan,Almond,500g,152.61,155.74,371,59,Amul Dairy Anand,6,2025-09-12,Ambient,2025-06-02,B3995A,102,WH-02
+AM-106,Amul Kesar Pista 500ml,Ice Cream,Kesar,500ml,105.91,111.42,203,68,Amul Chocolate Works,6,2026-02-16,Frozen,2025-05-10,B9774D,282,STORE-05
+AM-1235,Amul Turmeric Milk Beverages 200ml,Beverages,Turmeric,200ml,77.56,89.43,385,46,Amul Chocolate Works,2,2025-11-26,Ambient,2025-08-12,B9674C,106,WH-02
+AM-205,Amul Butter 500g,Butter,Butter,500g,148.71,162.01,271,25,Amul Beverages,4,2025-11-06,Refrigerated,2025-06-11,B9376B,148,STORE-01
+AM-107,Amul Vegan Ice Cream 500ml,Ice Cream,Vegan,500ml,127.49,138.22,270,46,Amul Foods Pvt Ltd,7,2025-08-27,Frozen,2024-09-23,B4971B,338,STORE-03
+AM-901,Amul PRO Whey Protein 500g,Protein,PRO,500g,573.7,576.78,194,71,Amul Protein Division,4,2025-11-10,Ambient,2025-04-06,B2526B,218,STORE-02
+AM-701,Amul Dark Chocolate 150g,Chocolate,Dark,150g,102.54,105.18,169,98,Amul Chocolate Works,3,2026-01-23,Ambient,2025-01-27,B4937B,361,STORE-01
+AM-701,Amul Dark Chocolate 150g,Chocolate,Dark,150g,101.91,106.8,271,83,Amul Protein Division,2,2026-02-13,Ambient,2025-08-02,B4189C,195,STORE-04
+AM-1229,Amul Low Fat Yogurt 1L,Yogurt,Low,1L,223.02,228.92,499,31,Amul Beverages,6,2025-09-03,Refrigerated,2025-08-11,B6349B,23,WH-01
+AM-105,Amul Chocolate 500ml,Ice Cream,Chocolate,500ml,87.98,90.81,9,73,Amul Protein Division,6,2026-01-16,Frozen,2025-02-15,B8343A,335,WH-01
+AM-1202,Amul Greek Yogurt 250g,Yogurt,Greek,250g,88.07,90.95,335,72,Gujarat Co-op,7,2025-08-23,Refrigerated,2025-07-24,B4770D,30,STORE-03
+AM-305,Amul Vegan Cheese 200g,Cheese,Vegan,200g,220.2,229.62,11,58,Amul Dairy Anand,3,2025-10-14,Refrigerated,2025-05-29,B7690C,138,STORE-04
+AM-804,Amul Turmeric Milk 200ml,Beverages,Turmeric,200ml,30.2,38.27,110,20,Amul Beverages,3,2025-08-25,Ambient,2025-06-20,B1164B,66,STORE-03
+AM-1233,Amul Strawberry Ice Cream 500g,Ice Cream,Strawberry,500g,201.01,208.54,427,71,Amul Protein Division,2,2026-01-18,Frozen,2025-05-13,B2335C,250,WH-03
+AM-1232,Amul Dark Chocolate 500g,Chocolate,Dark,500g,75.17,82.1,370,100,Amul Value Added,1,2026-04-16,Ambient,2025-05-30,B3210C,321,WH-01
+AM-106,Amul Kesar Pista 500ml,Ice Cream,Kesar,500ml,106.71,111.57,138,38,Amul Dairy Anand,7,2025-09-12,Frozen,2025-02-05,B9786A,219,WH-01
+AM-1226,Amul Organic Paneer 250g,Paneer,Organic,250g,274.72,279.47,372,93,Amul Chocolate Works,1,2025-08-21,Refrigerated,2025-08-11,B7885D,10,WH-01
+AM-902,Amul High Protein Milk 200ml,Protein,High,200ml,37.52,51.63,39,76,Amul Dairy Anand,6,2026-07-17,Ambient,2025-07-22,B6025D,360,WH-03
+AM-1219,Amul Low Fat Paneer 1L,Paneer,Low,1L,256.51,268.66,439,53,Amul Beverages,4,2025-08-19,Refrigerated,2025-08-09,B5633B,10,STORE-05
+AM-1202,Amul Greek Yogurt 250g,Yogurt,Greek,250g,87.73,98.73,406,20,Amul Dairy Anand,1,2025-08-18,Refrigerated,2025-07-29,B9365C,20,STORE-02
+AM-1212,Amul Low Fat Yogurt 200g,Yogurt,Low,200g,191.18,202.02,434,72,Amul Dairy Anand,4,2025-08-25,Refrigerated,2025-07-26,B8287B,30,WH-03
+AM-1206,Amul Soy Milk Vegan 200g,Vegan,Soy,200g,125.59,138.97,30,24,Gujarat Co-op,1,2025-09-07,Ambient,2025-07-27,B7972A,42,STORE-03
+AM-106,Amul Kesar Pista 500ml,Ice Cream,Kesar,500ml,104.13,117.37,467,72,Amul Protein Division,6,2025-12-20,Frozen,2025-04-28,B1401C,236,STORE-02
+AM-1102,Amul Keto Cheese 200g,Functional,Keto,200g,251.55,266.11,469,97,Amul Foods Pvt Ltd,3,2025-09-11,Ambient,2025-08-11,B2568C,31,WH-03
+AM-903,Amul Protein Bar 60g,Protein,Protein,60g,57.31,62.47,204,25,Gujarat Co-op,4,2025-10-12,Ambient,2025-02-13,B8485D,241,STORE-05
+AM-703,Amul Fruit & Nut Chocolate 150g,Chocolate,Fruit,150g,117.28,122.36,389,84,Amul Protein Division,3,2026-01-06,Ambient,2025-06-04,B4195C,216,WH-03
+AM-1220,Amul Protein Shake Protein 250g,Protein,Protein,250g,185.8,191.02,461,42,Amul Value Added,6,2026-04-17,Ambient,2025-06-27,B7759D,294,WH-02
+AM-404,Amul Masti Yogurt 500g,Yogurt,Masti,500g,48.28,57.83,278,77,Amul Value Added,7,2025-08-21,Refrigerated,2025-07-23,B1632A,29,STORE-04
+AM-304,Amul Mozzarella Cheese 200g,Cheese,Mozzarella,200g,181.5,185.44,104,45,Amul Beverages,2,2025-11-23,Refrigerated,2025-07-01,B6900A,145,STORE-04
+AM-901,Amul PRO Whey Protein 500g,Protein,PRO,500g,597.82,604.62,124,47,Amul Chocolate Works,4,2026-04-30,Ambient,2025-07-26,B3634C,278,STORE-01
+AM-904,Amul Protein Shake Vanilla 200ml,Protein,Protein,200ml,50.22,55.57,267,28,Amul Value Added,3,2026-03-31,Ambient,2025-04-02,B6424C,363,WH-03
+AM-1231,Amul Kesar Pista Ice Cream 1L,Ice Cream,Kesar,1L,202.86,206.45,112,65,Amul Foods Pvt Ltd,4,2026-04-08,Frozen,2025-07-07,B3259C,275,STORE-03
+AM-1232,Amul Dark Chocolate 500g,Chocolate,Dark,500g,82.9,93.36,339,88,Gujarat Co-op,5,2025-10-22,Ambient,2024-11-19,B5398D,337,STORE-03
+AM-702,Amul Milk Chocolate 150g,Chocolate,Milk,150g,102.72,112.7,395,58,Amul Value Added,1,2026-01-22,Ambient,2025-04-11,B6399B,286,STORE-02
+AM-1205,Amul Probiotic Drink Functional 500ml,Functional,Probiotic,500ml,91.96,106.75,260,16,Amul Ice Creams,5,2025-12-02,Ambient,2025-08-11,B7217B,113,WH-02
+AM-901,Amul PRO Whey Protein 500g,Protein,PRO,500g,576.08,586.76,338,95,Amul Protein Division,7,2026-02-03,Ambient,2025-05-04,B9121A,275,WH-01
+AM-1209,Amul Block Cheese 250g,Cheese,Block,250g,283.93,287.99,303,59,Amul Chocolate Works,2,2025-09-21,Refrigerated,2025-05-15,B7356B,129,STORE-01
+AM-1229,Amul Low Fat Yogurt 1L,Yogurt,Low,1L,221.86,226.19,343,57,Amul Chocolate Works,3,2025-08-28,Refrigerated,2025-08-02,B6906C,26,WH-02
+AM-703,Amul Fruit & Nut Chocolate 150g,Chocolate,Fruit,150g,115.19,121.37,366,29,Amul Ice Creams,4,2025-11-06,Ambient,2025-01-11,B4747C,299,WH-03
+AM-1223,Amul Slim Dairy Milk 1kg,Dairy Milk,Slim,1kg,251.99,263.05,352,21,Amul Beverages,1,2025-08-22,Refrigerated,2025-08-13,B8828D,9,WH-01
+AM-904,Amul Protein Shake Vanilla 200ml,Protein,Protein,200ml,45.94,48,342,69,Amul Dairy Anand,2,2026-03-08,Ambient,2025-07-09,B2458C,242,WH-03
+AM-1223,Amul Slim Dairy Milk 1kg,Dairy Milk,Slim,1kg,259.94,266.63,59,59,Amul Value Added,3,2025-08-27,Refrigerated,2025-08-13,B1750D,14,STORE-04
+AM-1203,Amul Probiotic Yogurt 1kg,Yogurt,Probiotic,1kg,239.4,242.84,374,37,Amul Protein Division,6,2025-08-19,Refrigerated,2025-07-24,B9714C,26,STORE-05
+AM-1001,Amul Almond Milk 1L,Vegan,Almond,1L,122.43,136.76,361,11,Amul Beverages,3,2025-09-25,Ambient,2025-07-24,B2008D,63,STORE-02
+AM-1223,Amul Slim Dairy Milk 1kg,Dairy Milk,Slim,1kg,245.49,255.7,169,95,Amul Value Added,1,2025-08-26,Refrigerated,2025-08-13,B3248B,13,WH-01
+AM-1214,Amul High Protein Milk Protein 100g,Protein,High,100g,211.17,216.25,204,36,Amul Chocolate Works,2,2025-10-13,Ambient,2025-02-09,B1085C,246,WH-01
+AM-002,Amul Taaza Milk 1L,Dairy Milk,Taaza,1L,55.35,69.56,299,78,Amul Foods Pvt Ltd,3,2025-08-20,Refrigerated,2025-08-10,B4381D,10,WH-03
+AM-1001,Amul Almond Milk 1L,Vegan,Almond,1L,127.41,129.53,260,69,Amul Ice Creams,2,2025-11-06,Ambient,2025-08-01,B7849D,97,STORE-02
+AM-405,Amul Greek Yogurt 100g,Yogurt,Greek,100g,37.2,51.22,395,91,Amul Beverages,3,2025-09-07,Refrigerated,2025-08-12,B8542A,26,WH-02
+AM-1224,Amul Keto Cheese Functional 500g,Functional,Keto,500g,220.37,232.77,239,23,Gujarat Co-op,7,2025-08-29,Ambient,2025-07-30,B9510A,30,STORE-01
+AM-1213,Amul Pizza Cheese 200ml,Cheese,Pizza,200ml,96.96,105.63,364,66,Gujarat Co-op,5,2025-10-22,Refrigerated,2025-07-13,B5588B,101,STORE-04
+AM-107,Amul Vegan Ice Cream 500ml,Ice Cream,Vegan,500ml,125.19,134.96,19,69,Amul Protein Division,4,2025-12-30,Frozen,2025-06-30,B1674B,183,STORE-05
+AM-701,Amul Dark Chocolate 150g,Chocolate,Dark,150g,101.56,114.8,261,78,Amul Protein Division,1,2025-09-25,Ambient,2025-01-17,B4455A,251,STORE-04
+AM-601,Amul Malai Paneer 200g,Paneer,Malai,200g,81.88,91.54,79,79,Amul Chocolate Works,4,2025-08-19,Refrigerated,2025-08-05,B1645A,14,WH-02
+AM-1211,Amul Keto Cheese Functional 1kg,Functional,Keto,1kg,237.6,250.86,162,58,Gujarat Co-op,6,2025-09-14,Ambient,2025-06-05,B2616B,101,STORE-03
+AM-1225,Amul Malai Paneer 1L,Paneer,Malai,1L,114.52,125.23,455,35,Amul Value Added,4,2025-08-23,Refrigerated,2025-08-12,B8610D,11,STORE-02
+AM-003,Amul Shakti Milk 500ml,Dairy Milk,Shakti,500ml,29.79,44.4,439,58,Gujarat Co-op,1,2025-08-27,Refrigerated,2025-08-13,B4831D,14,STORE-05
+AM-1205,Amul Probiotic Drink Functional 500ml,Functional,Probiotic,500ml,91.7,106.3,41,32,Amul Protein Division,7,2025-09-20,Ambient,2025-07-24,B4056C,58,WH-03
+AM-1214,Amul High Protein Milk Protein 100g,Protein,High,100g,215.32,226.98,421,21,Amul Value Added,2,2026-03-06,Ambient,2025-05-24,B4223D,286,STORE-03
+AM-1227,Amul Haldi Doodh Functional 200ml,Functional,Haldi,200ml,211.76,213.84,342,36,Amul Value Added,5,2025-09-06,Ambient,2025-04-15,B6373C,144,STORE-05
+AM-801,Amul Kool Koko 200ml,Beverages,Kool,200ml,26.87,33.47,330,71,Amul Foods Pvt Ltd,5,2025-08-28,Ambient,2025-07-16,B4669B,43,WH-01
+AM-1234,Amul Lactose-Free Dairy Milk 100g,Dairy Milk,Lactose-Free,100g,90.86,95.35,418,22,Gujarat Co-op,7,2025-08-25,Refrigerated,2025-08-11,B4078A,14,WH-03
+AM-1222,Amul Buttermilk Beverages 1L,Beverages,Buttermilk,1L,302.78,307.45,458,12,Amul Chocolate Works,7,2025-08-26,Ambient,2025-07-24,B4023C,33,WH-03
+AM-001,Amul Gold Milk 1L,Dairy Milk,Gold,1L,62.3,70.04,348,30,Amul Protein Division,4,2025-08-18,Refrigerated,2025-08-09,B1275D,9,WH-01
+AM-405,Amul Greek Yogurt 100g,Yogurt,Greek,100g,37.49,46.8,411,54,Amul Foods Pvt Ltd,7,2025-08-31,Refrigerated,2025-08-04,B2299A,27,STORE-03
+AM-1210,Amul Low Fat Paneer 1kg,Paneer,Low,1kg,95.77,104.24,92,46,Amul Ice Creams,3,2025-08-19,Refrigerated,2025-08-12,B1980A,7,STORE-01
+AM-1213,Amul Pizza Cheese 200ml,Cheese,Pizza,200ml,102.8,114.23,135,87,Amul Foods Pvt Ltd,2,2025-10-07,Refrigerated,2025-04-27,B9851A,163,STORE-03
+AM-802,Amul Kool Café 200ml,Beverages,Kool,200ml,27.32,36.65,391,54,Amul Foods Pvt Ltd,7,2025-10-05,Ambient,2025-06-07,B2976C,120,STORE-03
+AM-303,Amul Pizza Cheese 100g,Cheese,Pizza,100g,97.28,104.66,138,79,Amul Beverages,1,2025-11-21,Refrigerated,2025-07-08,B1061D,136,STORE-04
+AM-1227,Amul Haldi Doodh Functional 200ml,Functional,Haldi,200ml,226.99,235.77,153,37,Gujarat Co-op,3,2025-09-21,Ambient,2025-07-23,B7141B,60,WH-02
+AM-207,Amul Garlic Butter 100g,Butter,Garlic,100g,50.7,57.01,91,25,Amul Chocolate Works,6,2025-09-12,Refrigerated,2025-04-22,B4913C,143,STORE-03
+AM-403,Amul Probiotic Yogurt 100g,Yogurt,Probiotic,100g,24.79,33.63,418,78,Amul Chocolate Works,4,2025-08-28,Refrigerated,2025-08-05,B1846A,23,WH-02
+AM-802,Amul Kool Café 200ml,Beverages,Kool,200ml,26.92,40.34,475,14,Amul Chocolate Works,5,2025-10-26,Ambient,2025-07-25,B1940C,93,STORE-02
+AM-804,Amul Turmeric Milk 200ml,Beverages,Turmeric,200ml,29.89,37.4,367,39,Amul Ice Creams,3,2025-09-22,Ambient,2025-07-03,B6418B,81,STORE-05
+AM-206,Amul Lite Butter 250g,Butter,Lite,250g,80.89,90.73,63,44,Amul Foods Pvt Ltd,2,2025-10-03,Refrigerated,2025-04-23,B1277A,163,WH-01
+AM-405,Amul Greek Yogurt 100g,Yogurt,Greek,100g,36.54,41.33,7,72,Amul Ice Creams,2,2025-08-23,Refrigerated,2025-08-12,B3439D,11,STORE-05
+AM-005,Amul Lactose-Free Milk 1L,Dairy Milk,Lactose-Free,1L,65.54,74,47,17,Amul Foods Pvt Ltd,7,2025-08-23,Refrigerated,2025-08-08,B5124C,15,WH-01
+AM-303,Amul Pizza Cheese 100g,Cheese,Pizza,100g,95.77,107.42,474,36,Amul Chocolate Works,7,2025-10-13,Refrigerated,2025-06-22,B6407C,113,STORE-05
+AM-404,Amul Masti Yogurt 500g,Yogurt,Masti,500g,50.08,53.1,20,39,Gujarat Co-op,4,2025-08-26,Refrigerated,2025-08-11,B9476A,15,STORE-01
+AM-801,Amul Kool Koko 200ml,Beverages,Kool,200ml,27.07,37.48,465,99,Amul Protein Division,3,2025-09-02,Ambient,2025-07-09,B1017C,55,WH-02
+AM-1229,Amul Low Fat Yogurt 1L,Yogurt,Low,1L,217.36,229.62,423,98,Amul Value Added,5,2025-09-08,Refrigerated,2025-08-13,B2512C,26,WH-02
+AM-1204,Amul Kool Koko Beverages 1kg,Beverages,Kool,1kg,266.39,270.29,85,18,Amul Foods Pvt Ltd,3,2025-09-15,Ambient,2025-07-01,B4790B,76,WH-03
+AM-1217,Amul Yogurt 500ml,Yogurt,Yogurt,500ml,154.63,157.66,231,86,Amul Foods Pvt Ltd,2,2025-08-23,Refrigerated,2025-08-11,B9468B,12,WH-01
+AM-1207,Amul Vegan 1L,Vegan,Vegan,1L,49.87,58.35,101,48,Amul Beverages,3,2025-08-28,Ambient,2025-06-11,B5027B,78,WH-01
+AM-901,Amul PRO Whey Protein 500g,Protein,PRO,500g,565.79,579.61,495,89,Gujarat Co-op,1,2025-12-28,Ambient,2025-06-18,B5621B,193,WH-01
+AM-1200,Amul Almond Milk Vegan 500g,Vegan,Almond,500g,162.73,171.41,492,93,Amul Foods Pvt Ltd,6,2025-09-01,Ambient,2025-06-14,B5100B,79,WH-02
+AM-702,Amul Milk Chocolate 150g,Chocolate,Milk,150g,96.87,110.36,59,27,Amul Ice Creams,7,2025-08-31,Ambient,2025-02-02,B7496C,210,STORE-03
+AM-003,Amul Shakti Milk 500ml,Dairy Milk,Shakti,500ml,28.77,37.96,262,20,Amul Value Added,7,2025-08-26,Refrigerated,2025-08-12,B4858C,14,WH-03
+AM-005,Amul Lactose-Free Milk 1L,Dairy Milk,Lactose-Free,1L,67.06,77.67,334,51,Gujarat Co-op,4,2025-08-20,Refrigerated,2025-08-12,B5271D,8,WH-02
+AM-1220,Amul Protein Shake Protein 250g,Protein,Protein,250g,169.6,175.2,123,33,Amul Ice Creams,3,2026-02-21,Ambient,2025-04-07,B4295A,320,STORE-03
+AM-405,Amul Greek Yogurt 100g,Yogurt,Greek,100g,35.74,48.37,286,71,Amul Dairy Anand,7,2025-08-24,Refrigerated,2025-08-12,B2846B,12,WH-01
+AM-1208,Amul Unsalted Butter 100g,Butter,Unsalted,100g,84.71,98.81,427,78,Amul Ice Creams,7,2025-09-29,Refrigerated,2025-05-11,B7223D,141,STORE-01
+AM-1236,Amul Immunity Booster Functional 250g,Functional,Immunity,250g,171.65,173.83,130,39,Amul Foods Pvt Ltd,2,2025-09-18,Ambient,2025-06-17,B8882D,93,STORE-04
+AM-602,Amul Malai Paneer 1kg,Paneer,Malai,1kg,393.61,396.12,188,75,Amul Foods Pvt Ltd,1,2025-08-19,Refrigerated,2025-08-09,B4413A,10,STORE-03
+AM-801,Amul Kool Koko 200ml,Beverages,Kool,200ml,26.01,34.48,188,80,Amul Foods Pvt Ltd,3,2025-09-04,Ambient,2025-07-10,B5749C,56,WH-02
+AM-1229,Amul Low Fat Yogurt 1L,Yogurt,Low,1L,223.62,226.05,401,89,Amul Foods Pvt Ltd,6,2025-08-24,Refrigerated,2025-08-05,B9884C,19,WH-01
+AM-903,Amul Protein Bar 60g,Protein,Protein,60g,55.38,61.61,356,68,Amul Value Added,3,2026-01-09,Ambient,2025-03-04,B7426C,311,STORE-04
+AM-303,Amul Pizza Cheese 100g,Cheese,Pizza,100g,95.34,107.91,179,83,Amul Beverages,7,2025-11-25,Refrigerated,2025-06-16,B8793C,162,STORE-03
+AM-305,Amul Vegan Cheese 200g,Cheese,Vegan,200g,217.9,226.39,316,85,Amul Foods Pvt Ltd,6,2025-12-18,Refrigerated,2025-07-12,B8368A,159,STORE-02
+AM-304,Amul Mozzarella Cheese 200g,Cheese,Mozzarella,200g,195.57,208.81,20,60,Amul Foods Pvt Ltd,3,2025-09-13,Refrigerated,2025-04-30,B3318D,136,WH-01
+AM-1210,Amul Low Fat Paneer 1kg,Paneer,Low,1kg,111.4,115.65,343,78,Amul Ice Creams,5,2025-08-27,Refrigerated,2025-08-13,B8933A,14,WH-03
+AM-005,Amul Lactose-Free Milk 1L,Dairy Milk,Lactose-Free,1L,65.21,68.09,281,90,Amul Value Added,7,2025-08-21,Refrigerated,2025-08-06,B7894B,15,STORE-02
+AM-105,Amul Chocolate 500ml,Ice Cream,Chocolate,500ml,90.07,99.77,267,18,Amul Chocolate Works,6,2026-02-18,Frozen,2025-05-16,B6618C,278,WH-01
+AM-205,Amul Butter 500g,Butter,Butter,500g,150.92,155.98,322,99,Amul Dairy Anand,2,2025-12-02,Refrigerated,2025-08-04,B6400C,120,STORE-03
+AM-1211,Amul Keto Cheese Functional 1kg,Functional,Keto,1kg,237.05,243.07,470,53,Amul Protein Division,5,2025-09-24,Ambient,2025-05-07,B4826D,140,WH-03
+AM-004,Amul Slim Milk 1L,Dairy Milk,Slim,1L,60.85,72.04,279,95,Amul Ice Creams,4,2025-08-19,Refrigerated,2025-08-10,B8181B,9,STORE-02
+AM-405,Amul Greek Yogurt 100g,Yogurt,Greek,100g,35.19,42.04,321,60,Amul Chocolate Works,3,2025-08-29,Refrigerated,2025-08-08,B6855D,21,WH-01
+AM-004,Amul Slim Milk 1L,Dairy Milk,Slim,1L,60.32,68.93,250,82,Amul Beverages,5,2025-08-19,Refrigerated,2025-08-06,B3813B,13,STORE-04
+AM-1216,Amul Low Fat Yogurt 500ml,Yogurt,Low,500ml,179.31,190.55,252,32,Amul Protein Division,5,2025-08-26,Refrigerated,2025-08-02,B3709A,24,STORE-02
+AM-1212,Amul Low Fat Yogurt 200g,Yogurt,Low,200g,190.49,199.15,151,58,Amul Protein Division,5,2025-08-23,Refrigerated,2025-08-04,B2167C,19,WH-03
+AM-104,Amul Vanilla 500ml,Ice Cream,Vanilla,500ml,91.77,99.06,253,14,Amul Chocolate Works,6,2026-03-03,Frozen,2025-07-30,B7243D,216,WH-01
+AM-206,Amul Lite Butter 250g,Butter,Lite,250g,79.37,88.08,62,39,Amul Beverages,3,2025-10-31,Refrigerated,2025-05-25,B4671A,159,WH-02
+AM-1102,Amul Keto Cheese 200g,Functional,Keto,200g,255.07,257.92,175,58,Amul Dairy Anand,5,2025-10-05,Ambient,2025-06-01,B4562D,126,STORE-03
+AM-206,Amul Lite Butter 250g,Butter,Lite,250g,77.15,89.33,372,22,Amul Protein Division,2,2026-01-14,Refrigerated,2025-07-25,B1278B,173,WH-03
+AM-302,Amul Cheese Block 200g,Cheese,Cheese,200g,186.01,194.88,188,90,Amul Beverages,4,2025-09-23,Refrigerated,2025-05-28,B2653B,118,WH-02
+AM-1228,Amul Soy Milk Vegan 200ml,Vegan,Soy,200ml,302.84,307.3,65,13,Amul Ice Creams,6,2025-09-07,Ambient,2025-05-17,B6397A,113,WH-01
+AM-1229,Amul Low Fat Yogurt 1L,Yogurt,Low,1L,234.77,242.81,393,99,Amul Protein Division,7,2025-08-22,Refrigerated,2025-08-10,B4098B,12,STORE-03
+AM-903,Amul Protein Bar 60g,Protein,Protein,60g,62.34,76.68,433,29,Amul Protein Division,4,2025-10-10,Ambient,2025-01-16,B9436B,267,STORE-03
+AM-802,Amul Kool Café 200ml,Beverages,Kool,200ml,26.97,33.14,211,98,Amul Dairy Anand,5,2025-10-03,Ambient,2025-07-31,B8730C,64,WH-01
+AM-002,Amul Taaza Milk 1L,Dairy Milk,Taaza,1L,56.06,69.55,193,66,Amul Foods Pvt Ltd,3,2025-08-24,Refrigerated,2025-08-09,B8214C,15,WH-01
+AM-1217,Amul Yogurt 500ml,Yogurt,Yogurt,500ml,143.76,148.87,398,79,Amul Chocolate Works,4,2025-08-19,Refrigerated,2025-07-26,B2914B,24,STORE-04
+AM-1001,Amul Almond Milk 1L,Vegan,Almond,1L,125.39,137.28,280,24,Amul Foods Pvt Ltd,7,2025-08-19,Ambient,2025-06-27,B3583B,53,STORE-05
+AM-1216,Amul Low Fat Yogurt 500ml,Yogurt,Low,500ml,177.49,181.52,49,60,Amul Protein Division,1,2025-08-25,Refrigerated,2025-08-02,B9537D,23,STORE-04
+AM-1227,Amul Haldi Doodh Functional 200ml,Functional,Haldi,200ml,216.9,231.5,368,53,Amul Foods Pvt Ltd,2,2025-10-12,Ambient,2025-06-24,B1217C,110,STORE-01
+AM-104,Amul Vanilla 500ml,Ice Cream,Vanilla,500ml,86.27,100.42,187,83,Amul Chocolate Works,3,2026-02-26,Frozen,2025-05-28,B5302B,274,STORE-02
+AM-004,Amul Slim Milk 1L,Dairy Milk,Slim,1L,59.24,73.54,329,99,Amul Dairy Anand,1,2025-08-20,Refrigerated,2025-08-06,B6712C,14,STORE-02
+AM-1205,Amul Probiotic Drink Functional 500ml,Functional,Probiotic,500ml,90.74,99.9,187,54,Amul Chocolate Works,2,2025-09-21,Ambient,2025-08-08,B5198D,44,STORE-03
+AM-106,Amul Kesar Pista 500ml,Ice Cream,Kesar,500ml,101.72,107.07,111,74,Amul Value Added,4,2026-04-27,Frozen,2025-07-18,B8263A,283,WH-01
+AM-1224,Amul Keto Cheese Functional 500g,Functional,Keto,500g,210.13,213.78,443,85,Amul Chocolate Works,4,2025-10-06,Ambient,2025-06-10,B6007C,118,WH-01
+AM-1231,Amul Kesar Pista Ice Cream 1L,Ice Cream,Kesar,1L,222.14,232.3,187,83,Amul Dairy Anand,7,2026-05-16,Frozen,2025-05-25,B7988A,356,WH-02
+AM-1220,Amul Protein Shake Protein 250g,Protein,Protein,250g,169.33,171.73,318,64,Gujarat Co-op,6,2025-09-10,Ambient,2024-10-22,B4507A,323,WH-01
+AM-1214,Amul High Protein Milk Protein 100g,Protein,High,100g,220.41,235.13,422,99,Amul Ice Creams,2,2025-09-09,Ambient,2024-12-18,B3571D,265,WH-02
+AM-1228,Amul Soy Milk Vegan 200ml,Vegan,Soy,200ml,299.03,306.96,189,15,Amul Value Added,1,2025-09-10,Ambient,2025-07-21,B5786D,51,STORE-05
+AM-1216,Amul Low Fat Yogurt 500ml,Yogurt,Low,500ml,176.64,186.74,35,15,Amul Dairy Anand,1,2025-08-18,Refrigerated,2025-07-23,B9728B,26,WH-01
+AM-904,Amul Protein Shake Vanilla 200ml,Protein,Protein,200ml,46.48,49.28,380,60,Amul Value Added,3,2025-09-03,Ambient,2025-02-14,B1324A,201,STORE-04
+AM-1219,Amul Low Fat Paneer 1L,Paneer,Low,1L,250.73,258.28,60,17,Amul Ice Creams,3,2025-08-20,Refrigerated,2025-08-11,B5377B,9,STORE-05
+AM-1209,Amul Block Cheese 250g,Cheese,Block,250g,286.95,292.86,126,51,Gujarat Co-op,4,2025-12-23,Refrigerated,2025-07-14,B1126B,162,WH-03
+AM-302,Amul Cheese Block 200g,Cheese,Cheese,200g,176.04,185.84,419,37,Amul Beverages,7,2025-11-03,Refrigerated,2025-07-23,B8050A,103,STORE-04
+AM-1232,Amul Dark Chocolate 500g,Chocolate,Dark,500g,85.08,90.22,27,16,Amul Chocolate Works,1,2026-01-01,Ambient,2025-02-18,B2008B,317,WH-03
+AM-1207,Amul Vegan 1L,Vegan,Vegan,1L,30.88,36.63,193,11,Amul Chocolate Works,3,2025-08-26,Ambient,2025-06-20,B6815A,67,WH-03
+AM-403,Amul Probiotic Yogurt 100g,Yogurt,Probiotic,100g,23.7,26.29,297,70,Amul Chocolate Works,6,2025-08-23,Refrigerated,2025-08-05,B2447A,18,STORE-03
+AM-802,Amul Kool Café 200ml,Beverages,Kool,200ml,26.22,36.59,312,60,Amul Chocolate Works,4,2025-10-25,Ambient,2025-07-24,B3499C,93,STORE-05
+AM-1215,Amul Probiotic Drink Functional 500ml,Functional,Probiotic,500ml,220.66,225.24,57,72,Amul Chocolate Works,1,2025-11-04,Ambient,2025-05-08,B2340D,180,STORE-02
+AM-1101,Amul Immunity Booster Drink 200ml,Functional,Immunity,200ml,37.39,39.77,450,15,Amul Beverages,4,2025-09-12,Ambient,2025-08-01,B7849B,42,STORE-05
+AM-1214,Amul High Protein Milk Protein 100g,Protein,High,100g,210.35,219.61,210,42,Amul Foods Pvt Ltd,6,2026-01-13,Ambient,2025-03-31,B1194D,288,STORE-01
+AM-1218,Amul Salted Butter 200ml,Butter,Salted,200ml,306.95,320.93,372,59,Amul Ice Creams,5,2025-12-28,Refrigerated,2025-07-12,B2562C,169,STORE-02
+AM-1234,Amul Lactose-Free Dairy Milk 100g,Dairy Milk,Lactose-Free,100g,83.9,95.63,147,68,Amul Beverages,7,2025-08-23,Refrigerated,2025-08-10,B4119D,13,WH-03
+AM-1212,Amul Low Fat Yogurt 200g,Yogurt,Low,200g,188.39,201.56,441,87,Amul Foods Pvt Ltd,5,2025-08-25,Refrigerated,2025-08-06,B5588D,19,WH-02
+AM-104,Amul Vanilla 500ml,Ice Cream,Vanilla,500ml,88.42,102.26,48,21,Amul Foods Pvt Ltd,2,2025-10-22,Frozen,2025-03-25,B9818C,211,STORE-01
+AM-003,Amul Shakti Milk 500ml,Dairy Milk,Shakti,500ml,29.58,40.8,495,64,Amul Ice Creams,1,2025-08-26,Refrigerated,2025-08-13,B1323B,13,STORE-05
+AM-1003,Amul Oat Milk 1L,Vegan,Oat,1L,137.92,141.07,367,34,Amul Chocolate Works,7,2025-08-19,Ambient,2025-06-25,B6581C,55,STORE-01
+AM-1222,Amul Buttermilk Beverages 1L,Beverages,Buttermilk,1L,314.29,316.59,204,30,Amul Foods Pvt Ltd,2,2025-09-21,Ambient,2025-06-12,B9236D,101,STORE-04
+AM-1217,Amul Yogurt 500ml,Yogurt,Yogurt,500ml,153.7,163.2,67,76,Amul Ice Creams,3,2025-08-18,Refrigerated,2025-08-02,B6588B,16,STORE-04
+AM-701,Amul Dark Chocolate 150g,Chocolate,Dark,150g,105.49,111.7,167,65,Amul Ice Creams,2,2026-01-15,Ambient,2025-04-20,B4891B,270,WH-01
+AM-701,Amul Dark Chocolate 150g,Chocolate,Dark,150g,104.9,110.92,270,44,Amul Chocolate Works,5,2026-02-23,Ambient,2025-07-13,B8974A,225,STORE-04
+AM-001,Amul Gold Milk 1L,Dairy Milk,Gold,1L,61.67,76.1,390,31,Amul Value Added,6,2025-08-26,Refrigerated,2025-08-13,B4481A,13,STORE-01
+AM-1101,Amul Immunity Booster Drink 200ml,Functional,Immunity,200ml,35.36,42.32,327,80,Amul Protein Division,2,2025-09-29,Ambient,2025-07-31,B2010B,60,STORE-01
+AM-1103,Amul Haldi Doodh Powder 200g,Functional,Haldi,200g,163.09,174.8,322,54,Amul Dairy Anand,6,2025-11-05,Ambient,2025-07-07,B4188A,121,WH-02
+AM-1213,Amul Pizza Cheese 200ml,Cheese,Pizza,200ml,94.39,98.84,254,46,Amul Ice Creams,4,2025-08-29,Refrigerated,2025-04-13,B8241D,138,STORE-04
+AM-305,Amul Vegan Cheese 200g,Cheese,Vegan,200g,211.26,219.93,136,21,Amul Beverages,5,2025-10-30,Refrigerated,2025-06-15,B6956D,137,WH-02
+AM-1221,Amul Milkshake Beverages 1L,Beverages,Milkshake,1L,158.05,170.7,75,56,Amul Ice Creams,1,2025-08-23,Ambient,2025-06-07,B1153C,77,WH-03
+AM-1226,Amul Organic Paneer 250g,Paneer,Organic,250g,273.19,284.67,387,63,Amul Foods Pvt Ltd,3,2025-08-27,Refrigerated,2025-08-13,B7782B,14,STORE-01
+AM-902,Amul High Protein Milk 200ml,Protein,High,200ml,35.34,37.48,328,32,Amul Foods Pvt Ltd,2,2026-03-12,Ambient,2025-06-20,B3040C,265,STORE-03
+AM-405,Amul Greek Yogurt 100g,Yogurt,Greek,100g,35.19,45.62,411,93,Gujarat Co-op,4,2025-08-23,Refrigerated,2025-08-07,B4148D,16,WH-02
+AM-1227,Amul Haldi Doodh Functional 200ml,Functional,Haldi,200ml,225.27,238.28,157,64,Amul Dairy Anand,4,2025-08-27,Ambient,2025-07-12,B8464C,46,STORE-05
+AM-1208,Amul Unsalted Butter 100g,Butter,Unsalted,100g,72.05,80.63,494,25,Amul Foods Pvt Ltd,5,2025-12-20,Refrigerated,2025-07-24,B5944C,149,WH-02
+AM-305,Amul Vegan Cheese 200g,Cheese,Vegan,200g,226.37,229.41,372,11,Amul Chocolate Works,5,2025-11-21,Refrigerated,2025-08-13,B9296B,100,STORE-05
+AM-1208,Amul Unsalted Butter 100g,Butter,Unsalted,100g,95.43,104.34,29,81,Amul Chocolate Works,1,2025-11-16,Refrigerated,2025-06-18,B7412A,151,WH-01
+AM-801,Amul Kool Koko 200ml,Beverages,Kool,200ml,27.95,35.49,467,32,Gujarat Co-op,1,2025-10-16,Ambient,2025-06-21,B9572B,117,STORE-03
+AM-305,Amul Vegan Cheese 200g,Cheese,Vegan,200g,224.79,235.03,496,69,Amul Dairy Anand,1,2025-10-12,Refrigerated,2025-07-10,B3980D,94,WH-03
+AM-801,Amul Kool Koko 200ml,Beverages,Kool,200ml,25.83,29,203,22,Amul Beverages,6,2025-10-08,Ambient,2025-07-06,B7732B,94,STORE-02

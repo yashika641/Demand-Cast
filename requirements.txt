@@ -1,0 +1,81 @@
+# Core Data Science
+numpy
+pandas
+scipy
+
+# Machine Learning
+scikit-learn
+xgboost
+lightgbm
+catboost
+
+# Deep Learning
+tensorflow
+keras
+torch
+torchvision
+torchaudio
+
+# Time Series Forecasting
+prophet
+statsmodels
+pmdarima
+sktime
+
+# Natural Language Processing
+nltk
+spacy
+textblob
+vaderSentiment
+transformers
+sentence-transformers
+
+# Web Scraping & Data Access
+beautifulsoup4
+requests
+html5lib
+lxml
+selenium
+yfinance
+google-api-python-client
+
+# Data Visualization
+matplotlib
+seaborn
+plotly
+bokeh
+altair
+folium
+
+# Data Preprocessing & Feature Engineering
+category-encoders
+imbalanced-learn
+feature-engine
+
+# Model Evaluation & Experiment Tracking
+mlflow
+optuna
+shap
+lime
+
+# Deployment
+streamlit
+flask
+fastapi
+uvicorn
+gunicorn
+
+# Utilities
+tqdm
+joblib
+python-dateutil
+openpyxl
+pyyaml
+pydantic
+dotenv
+
+# Optional Big Data / Cloud (if scaling later)
+pyspark
+dask
+boto3
+google-cloud-storage
