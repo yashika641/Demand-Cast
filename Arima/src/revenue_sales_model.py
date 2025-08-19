@@ -1,3 +1,10 @@
+import numpy as np
+import pandas as pd
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+from pmdarima import auto_arima
+import matplotlib.pyplot as plt
+import tqdm
+import time
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)  # optional: silence sklearn deprecation noise
 
@@ -10,14 +17,10 @@ from pmdarima import auto_arima
 from tqdm import tqdm
 import time
 
-# ----------------------------
-# 1) Load + clean columns
-# ----------------------------
-CSV_PATH = r"C:\Users\palya\Desktop\DemandCast\Demand-Cast\datasets\cleaned_data.csv"
+df= pd.read_csv(r'C:\Users\palya\Desktop\DemandCast\Demand-Cast\datasets\cleaned_data.csv')
 
-df = pd.read_csv(CSV_PATH)
+# ----------------------------
 print("Initial columns:", df.columns.tolist())
-
 # strip whitespace from column names
 df.columns = df.columns.str.strip()
 
@@ -28,7 +31,7 @@ if not date_col_candidates:
 DATE_COL = date_col_candidates[0]
 
 # parse datetime
-df[DATE_COL] = pd.to_datetime(df[DATE_COL], errors="coerce")
+df[DATE_COL] = pd.to_datetime(df[DATE_COL], errors="coerce")    
 if df[DATE_COL].isna().all():
     raise ValueError("⚠️ All parsed dates are NaT. Check your date format in the CSV.")
 # drop rows with NaT dates
@@ -37,10 +40,8 @@ df = df.dropna(subset=[DATE_COL])
 # set index & sort
 df = df.set_index(DATE_COL).sort_index()
 print("Datetime index set. Example index range:", df.index.min(), "→", df.index.max())
-
 # ----------------------------
 # 2) Optional resampling (faster for huge series)
-# ----------------------------
 # If you have ~1.5 lakh rows, weekly aggregation will speed up ARIMA massively.
 RESAMPLE_TO_WEEKLY = True
 
@@ -69,7 +70,7 @@ print("Columns after resample/clean:", df.columns.tolist())
 # ----------------------------
 # 3) Ensure required columns exist & are numeric
 # ----------------------------
-TARGET_COL = "Units_Sold"
+TARGET_COL = "Revenue"
 EXOG_COLS = ["Promotion_Flag", "Weather_Temp", "Competitor_Price", "Festival_Season"]
 
 for col in [TARGET_COL] + EXOG_COLS:
@@ -101,8 +102,8 @@ train_X, test_X = exog.iloc[:train_size], exog.iloc[train_size:]
 
 print("Train size:", train_y.shape, "Test size:", test_y.shape)
 print("Train NA check (target):", int(train_y.isna().sum()), "dtype:", train_y.dtype)
-
 # ----------------------------
+
 # 5) Progress bar for auto_arima via callback
 # ----------------------------
 # estimate total combos for progress (rough; stepwise reduces it)
@@ -125,21 +126,28 @@ def progress_cb(res):
 # IMPORTANT:
 # - stepwise=True ignores n_jobs (pmdarima constraint); we set n_jobs=1 to avoid warnings
 # - we DO NOT pass exog to auto_arima here to keep search faster; we add exog in final SARIMAX
-stepwise_model = auto_arima(
+
+stepwise_model=auto_arima(
     train_y,
-    start_p=0, start_q=0,
+    start_p=0,start_q=0,
     max_p=max_p, max_q=max_q,
-    m=season_m,
-    start_P=0, seasonal=True,
+    start_P=0,start_Q=0,
     max_P=max_P, max_Q=max_Q,
-    d=None, D=1,
-    trace=False,
-    error_action="ignore",
-    suppress_warnings=True,
+    m=season_m,
+    seasonal=True,
     stepwise=False,
+    d=None, D=1,
+    trace=True,
+    error_action='ignore',
+    suppress_warnings=True,
     n_jobs=1,
-    callback=progress_cb   # <-- progress hook
+    callback=progress_cb,
+    # see https://github.com/alkaline-ml/pmdarima/issues/220
+    # for why we need to set n_jobs=1 here
+    # n_jobs=1,
+    # n_fits
 )
+
 pbar.close()
 
 print("\nBest order found:", stepwise_model.order, "seasonal:", stepwise_model.seasonal_order)
@@ -150,7 +158,8 @@ seasonal_order = stepwise_model.seasonal_order
 
 # ----------------------------
 # 6) SARIMAX training with progress bar
-# ----------------------------
+# ----------------------------      
+print("\nFitting SARIMAX model...")
 print("\nFitting SARIMAX model...")
 with tqdm(total=1, desc="Training SARIMAX", bar_format="{l_bar}{bar} [ elapsed: {elapsed} ]") as fitbar:
     model = SARIMAX(
@@ -165,59 +174,22 @@ with tqdm(total=1, desc="Training SARIMAX", bar_format="{l_bar}{bar} [ elapsed: 
     fitbar.update(1)
 
 print(results.summary())
-
 # ----------------------------
 # 7) In-sample prediction for test window
 # ----------------------------
 pred = results.predict(
-    start=train_y.index[-1],  # last train index
+    start=train_y.index[-1],
     end=test_y.index[-1],
     exog=test_X,
     dynamic=False
 )
-# The predict with start at last train index returns one extra point; align to test index
 pred = pred.reindex(test_y.index)
 
-plt.figure(figsize=(12, 6))
-plt.plot(train_y.index, train_y, label="Train")
-plt.plot(test_y.index, test_y, label="Test")
-plt.plot(pred.index, pred, label="Predictions")
-plt.legend()
-plt.tight_layout()
-plt.show()
-
 # ----------------------------
-# 8) Future 30-step forecast WITH exog placeholder
+# 7b) Error Metrics on Test Set
 # ----------------------------
-# Future 30-step forecast
-future_steps = 30
-freq = pd.infer_freq(ts.index) or ("W" if RESAMPLE_TO_WEEKLY else "D")
-
-future_index = pd.date_range(
-    ts.index[-1] + pd.tseries.frequencies.to_offset(freq),
-    periods=future_steps, freq=freq
-)
-
-# Placeholder future exog: repeat last row
-last_exog = exog.iloc[[-1]].copy()
-future_exog = pd.DataFrame(
-    np.repeat(last_exog.values, future_steps, axis=0),
-    columns=EXOG_COLS, index=future_index
-)
-
-# Forecast using future exog
-future_forecast = results.get_forecast(
-    steps=future_steps, exog=future_exog
-).predicted_mean
-
-print("\nFuture Forecast (next 30 steps):")
-print(future_forecast)
-
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 
-# ----------------------------
-# 7b) Error Metrics
-# ----------------------------
 mse = mean_squared_error(test_y, pred)
 rmse = np.sqrt(mse)
 mae = mean_absolute_error(test_y, pred)
@@ -228,6 +200,41 @@ print(f"MSE  : {mse:.4f}")
 print(f"RMSE : {rmse:.4f}")
 print(f"MAE  : {mae:.4f}")
 print(f"MAPE : {mape:.2f}%")
+
+# --- (plot goes here if you want) ---
+plt.figure(figsize=(12, 6))
+plt.plot(train_y.index, train_y, label="Train")
+plt.plot(test_y.index, test_y, label="Test")
+plt.plot(pred.index, pred, label="Predictions")
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+# ----------------------------
+# 8) Future 30-step forecast
+# ----------------------------
+future_steps = 30
+freq = pd.infer_freq(ts.index)
+if freq is None:
+    freq = "W" if RESAMPLE_TO_WEEKLY else "D"
+
+future_index = pd.date_range(ts.index[-1] + pd.tseries.frequencies.to_offset(freq),
+                            periods=future_steps, freq=freq)
+
+last_exog = exog.iloc[[-1]].copy()
+future_exog = pd.DataFrame(
+    np.repeat(last_exog.values, future_steps, axis=0),
+    columns=EXOG_COLS, index=future_index
+)
+
+future_forecast = results.predict(
+    start=len(ts),
+    end=len(ts) + future_steps - 1,
+    exog=future_exog
+)
+
+print("\nFuture Forecast (next 30 steps):")
+print(future_forecast)
 
 # ----------------------------
 # 1. Naïve Baseline

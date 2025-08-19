@@ -36,8 +36,8 @@ df_copy['Day']=df_copy['Date'].dt.day
 df_copy['Price_Diff'] = df_copy['Price_per_Unit'] - df_copy['Competitor_Price']
 # df['Temp_Category'] = pd.cut(df['Weather_Temp'], bins=[-100,15,25,40], labels=['Cold','Mild','Hot'])
 # df_copy = df_copy.sort_values(['Product_Name','Date'])
-# df_copy['Lag_1'] = df_copy.groupby(['Product_Name','Region'])['Units_Sold'].shift(1)
-# df_copy['Lag_7'] = df_copy.groupby(['Product_Name','Region'])['Units_Sold'].shift(7)
+df_copy['Lag_1'] = df_copy.groupby(['Product_Name','Region'])['Units_Sold'].shift(1)
+df_copy['Lag_7'] = df_copy.groupby(['Product_Name','Region'])['Units_Sold'].shift(7)
 
 Q1 = df_copy['Units_Sold'].quantile(0.10)
 Q3 = df_copy['Units_Sold'].quantile(0.75)
@@ -58,5 +58,6 @@ import matplotlib.pyplot as plt
 
 df_copy['Units_Sold'].hist(bins=30)
 plt.show()
+
 
 df_copy.to_csv(r'C:\Users\palya\Desktop\DemandCast\Demand-Cast\datasets\cleaned_data.csv',index=False)
