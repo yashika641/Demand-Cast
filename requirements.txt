@@ -79,3 +79,6 @@ pyspark
 dask
 boto3
 google-cloud-storage
+faker
+
+snscrape

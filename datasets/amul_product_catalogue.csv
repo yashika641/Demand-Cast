@@ -1,0 +1,109 @@
+SKU_ID,Product_Name,Category,Price,Packaging_Size,Supplier,Storage_Type,Shelf_Life_Days,Seasonal_Flag,Special_Tag,Launch_Date,Discontinued_Flag,Popularity_Score
+25032666,Amul Gold Milk 1L,Dairy Products,100,1L,Kumar Traders,Frozen,99,No,Trendy Pick,2021-02-10,Yes,3.22
+16994393,Amul Taaza Milk 1L,Dairy Products,100,1L,Jaanvi Foods,Hot Storage,80,Yes,New Arrival,2024-08-05,No,2.78
+64335100,Amul Slim & Trim Milk 500ml,Dairy Products,100,500ml,GCMMF Ltd.,Ambient,131,Yes,Organic,2025-08-18,No,4.52
+91017437,Amul Lactose-Free Milk 1L,Dairy Products,100,1L,Agarwal Enterprises,Frozen,286,Yes,Bulk Pack,2021-05-19,Yes,2.53
+44564353,Amul Fresh Cream 250ml,Dairy Products,100,250ml,Kumar Traders,Room Temperature,360,Yes,Best Seller,2023-04-27,No,1.98
+26598550,Amul Masti Buttermilk 500ml,Dairy Products,100,500ml,Patel Suppliers,Chilled,350,No,Trendy Pick,2025-01-12,Yes,1.1
+91503640,Amul Spiced Buttermilk 500ml,Dairy Products,99,500ml,Verma Distributors,Room Temperature,14,Yes,Fortified,2024-02-05,No,4.9
+18315080,Amul Paneer 200g,Dairy Products,61,200g,Agarwal Enterprises,Hot Storage,257,No,Limited Edition,2023-10-19,Yes,4.72
+43280889,Amul Malai Paneer 1kg,Dairy Products,100,1kg,New Jindal Enterprises,Cold Storage,108,Yes,Best Seller,2021-08-16,No,1.8
+11288909,Amul Mithai Mate Condensed Milk 400g,Dairy Products,100,400g,GCMMF Ltd.,Frozen,176,Yes,Classic Favorite,2022-07-29,No,2.2
+80016687,Amul Butter 100g,Butter & Spreads,198,100g,New Jindal Enterprises,Refrigerated,25,No,Chef’s Choice,2022-12-16,Yes,4.37
+79291279,Amul Butter 500g,Butter & Spreads,200,500g,Verma Distributors,Chilled,249,Yes,Gift Pack,2024-12-21,No,3.33
+88384214,Amul Lite Spread 250g,Butter & Spreads,54,250g,Aditya Food Services Company,Frozen,223,Yes,Everyday Essential,2022-02-04,Yes,4.66
+16267619,Amul Garlic & Herbs Butter 100g,Butter & Spreads,50,100g,New Jindal Enterprises,Room Temperature,9,No,Organic,2024-05-07,No,4.2
+94900507,Amul Peanut Spread Crunchy 200g,Butter & Spreads,100,200g,Agarwal Enterprises,hot & Cold Storage,58,Yes,Best Seller,2022-10-28,No,2.35
+57348568,Amul Peanut Spread Creamy 200g,Butter & Spreads,51,200g,Singh Wholesale,Refrigerated,124,Yes,Classic Favorite,2021-02-09,No,1.59
+83734632,Amul Cheese Spread Yummy Plain 200g,Butter & Spreads,177,200g,Kumar Traders,Ambient,176,No,Eco Friendly,2024-10-27,No,4.21
+70537390,Amul Cheese Spread Red Chilli Flakes 200g,Butter & Spreads,68,200g,Amul Dairy Anand,hot & Cold Storage,134,No,Everyday Essential,2023-02-03,No,1.55
+93020688,Amul Cheese Spread Garlic 200g,Butter & Spreads,200,200g,Kumar Traders,Refrigerated,51,Yes,Quick Snack,2021-09-01,Yes,1.16
+92496774,Amul Cheese Slices 200g,Cheese & Cheese Products,357,200g,GCMMF Ltd.,Frozen,330,No,Organic,2024-05-21,Yes,2.89
+46612151,Amul Processed Cheese Cube 200g,Cheese & Cheese Products,238,200g,Aditya Food Services Company,Refrigerated,201,Yes,Everyday Essential,2021-06-29,No,1.22
+97719922,Amul Cheese Block 500g,Cheese & Cheese Products,500,500g,Aditya Food Services Company,Room Temperature,277,No,Organic,2023-05-18,No,2.07
+59239307,Amul Mozzarella Cheese 200g,Cheese & Cheese Products,500,200g,Spectrum Dairies Pvt Ltd,Room Temperature,31,No,Eco Friendly,2023-10-14,No,1.27
+79666428,Amul Pizza Cheese 1kg,Cheese & Cheese Products,500,1kg,Singh Wholesale,Hot Storage,356,Yes,Dairy Delight,2022-08-15,Yes,2.24
+78916050,Amul Gouda Cheese 200g,Cheese & Cheese Products,500,200g,Sharma Suppliers,Hot Storage,106,No,Bulk Pack,2023-05-22,Yes,1.36
+63607529,Amul Emmental Cheese 200g,Cheese & Cheese Products,500,200g,Spectrum Dairies Pvt Ltd,Refrigerated,284,Yes,Gift Pack,2025-05-22,No,3.37
+53074058,Amul Cheddar Cheese 200g,Cheese & Cheese Products,500,200g,New Jindal Enterprises,Cold Storage,103,Yes,Gift Pack,2022-12-06,Yes,3.84
+45007361,Amul Vanilla Ice Cream 1L,Ice Creams,149,1L,Aditya Food Services Company,hot & Cold Storage,146,Yes,Fortified,2024-04-10,Yes,4.45
+97241768,Amul Chocolate Ice Cream 1L,Ice Creams,300,1L,New Jindal Enterprises,Cold Storage,325,Yes,Chef’s Choice,2022-05-15,Yes,2.71
+97994268,Amul Butter Scotch Ice Cream 1L,Ice Creams,300,1L,Jaanvi Foods,Cold Storage,323,No,Everyday Essential,2023-12-22,Yes,3.38
+07241154,Amul Rajbhog Ice Cream 1L,Ice Creams,300,1L,Verma Distributors,Room Temperature,33,No,Quick Snack,2021-05-04,Yes,1.67
+37505707,Amul Choco Chips Ice Cream 1L,Ice Creams,300,1L,Sharma Suppliers,Cold Storage,272,Yes,Budget Friendly,2021-11-04,No,1.86
+68137847,Amul Kulfi 60ml,Ice Creams,107,60ml,Local Distributor,Room Temperature,196,Yes,Everyday Essential,2022-03-16,No,3.19
+16367289,Amul Strawberry Magic 750ml,Ice Creams,300,750ml,Aditya Food Services Company,Ambient,257,No,Chef’s Choice,2023-02-15,No,1.5
+14909382,Amul Cassata Slice 120ml,Ice Creams,56,120ml,New Jindal Enterprises,hot & Cold Storage,118,Yes,Low Fat,2022-07-12,No,2.33
+13006228,Amul Dark Chocolate Ice Cream 1L,Ice Creams,300,1L,Verma Distributors,Hot Storage,198,Yes,Premium,2022-06-09,Yes,1.54
+24078757,Amul Kesar Pista Ice Cream 1L,Ice Creams,300,1L,Spectrum Dairies Pvt Ltd,hot & Cold Storage,42,No,Premium,2023-02-01,Yes,4.38
+62232487,Amul Milk Chocolate 150g,Chocolates,115,150g,Jaanvi Foods,Ambient,358,No,Limited Edition,2024-09-13,Yes,1.96
+70549300,Amul Dark Chocolate 150g,Chocolates,114,150g,Sharma Suppliers,hot & Cold Storage,56,No,Kids’ Favorite,2020-10-02,No,2.97
+16443921,Amul Fruit & Nut Chocolate 150g,Chocolates,150,150g,Patel Suppliers,hot & Cold Storage,219,Yes,Trendy Pick,2024-01-10,No,1.02
+71579542,Amul Mystic Mocha Chocolate 150g,Chocolates,30,150g,Amul Dairy Anand,Cold Storage,140,No,Chef’s Choice,2025-07-12,Yes,1.69
+35651383,Amul India Twilight Tryst 150g,Chocolates,150,150g,Sharma Suppliers,Hot Storage,116,Yes,Quick Snack,2020-11-07,Yes,2.82
+82147020,Amul Almond Bar 40g,Chocolates,57,40g,Aditya Food Services Company,Room Temperature,307,Yes,Dairy Delight,2025-04-20,No,1.63
+23548091,Amul Chocozoo Kids Pack 250g,Chocolates,150,250g,Singh Wholesale,Cold Storage,240,No,Creamy Choice,2022-06-10,Yes,2.87
+06094027,Amul Kool Flavoured Milk Bottle 200ml,Beverages,120,200ml,Local Distributor,Cold Storage,281,No,Classic Favorite,2022-05-28,No,4.48
+68165390,Amul Kool Café 200ml,Beverages,51,200ml,GCMMF Ltd.,Cold Storage,15,Yes,New Arrival,2023-05-04,Yes,1.86
+83184284,Amul Kool Koko 200ml,Beverages,120,200ml,Amul Dairy Anand,Cold Storage,231,Yes,Creamy Choice,2024-05-14,No,2.29
+14415647,Amul Kool Rose Milk 200ml,Beverages,120,200ml,Jaanvi Foods,Room Temperature,207,No,New Arrival,2025-07-08,Yes,2.79
+14701085,Amul Kool Elaichi Milk 200ml,Beverages,120,200ml,Agarwal Enterprises,Hot Storage,36,No,New Arrival,2023-03-07,Yes,3.84
+79195263,Amul Kool Saffron Milk 200ml,Beverages,120,200ml,Agarwal Enterprises,Ambient,104,No,Chef’s Choice,2025-08-20,No,1.61
+74913534,Amul Pro Milk Drink 200g,Beverages,120,200g,Kumar Traders,Frozen,281,No,Creamy Choice,2024-12-26,Yes,3.56
+26980737,Amul Tru Orange Juice 200ml,Beverages,116,200ml,Singh Wholesale,Hot Storage,90,Yes,Organic,2022-12-11,No,3.92
+70134094,Amul Tru Apple Juice 200ml,Beverages,74,200ml,GCMMF Ltd.,Room Temperature,218,Yes,New Arrival,2025-01-13,No,3.62
+40563084,Amul Pure Ghee 500ml,Ghee & Cooking Essentials,411,500ml,Agarwal Enterprises,Room Temperature,360,Yes,Quick Snack,2023-11-30,No,4.93
+71930565,Amul Cow Ghee 1L,Ghee & Cooking Essentials,800,1L,GCMMF Ltd.,Chilled,219,Yes,Party Pack,2023-01-15,No,4.97
+11071426,Amul Buffalo Ghee 1L,Ghee & Cooking Essentials,703,1L,Patel Suppliers,Hot Storage,10,No,Trendy Pick,2021-01-02,No,1.87
+00206846,Amul Cooking Butter 500g,Ghee & Cooking Essentials,800,500g,Singh Wholesale,Hot Storage,333,No,New Arrival,2023-09-05,No,1.67
+54796676,Amul White Butter 500g,Ghee & Cooking Essentials,800,500g,GCMMF Ltd.,hot & Cold Storage,147,Yes,Low Fat,2023-07-18,No,1.62
+33992976,Amul Probiotic Dahi 400g,Probiotic & Health Range,250,400g,Jaanvi Foods,Frozen,104,Yes,Party Pack,2021-03-23,No,1.09
+04957799,Amul Masti Dahi 400g,Probiotic & Health Range,250,400g,Sharma Suppliers,Cold Storage,357,No,Everyday Essential,2025-03-23,Yes,2.21
+21365294,Amul Greek Yogurt Blueberry 100g,Probiotic & Health Range,245,100g,Jaanvi Foods,Chilled,270,Yes,Premium,2024-08-19,Yes,4.83
+21750991,Amul Greek Yogurt Strawberry 100g,Probiotic & Health Range,223,100g,Spectrum Dairies Pvt Ltd,hot & Cold Storage,337,Yes,Low Fat,2020-11-03,No,1.73
+84729804,Amul Greek Yogurt Mango 100g,Probiotic & Health Range,178,100g,Jaanvi Foods,Room Temperature,218,No,Dairy Delight,2025-06-06,No,1.7
+64935768,Amul Mithai Gulab Jamun Tin 1kg,Specialty Products,400,1kg,Aditya Food Services Company,Room Temperature,37,No,Seasonal Special,2022-11-12,No,3.7
+11289388,Amul Rasmalai 500g,Specialty Products,400,500g,Agarwal Enterprises,Frozen,363,No,Trendy Pick,2021-02-25,Yes,4.1
+12571772,Amul Basundi 1L,Specialty Products,400,1L,Patel Suppliers,hot & Cold Storage,273,No,Eco Friendly,2022-01-23,Yes,3.99
+69924743,Amul Shrikhand Mango 500g,Specialty Products,400,500g,Singh Wholesale,Ambient,326,Yes,Health Friendly,2021-07-04,No,2.21
+12337385,Amul Shrikhand Elaichi 500g,Specialty Products,400,500g,Spectrum Dairies Pvt Ltd,Ambient,105,No,None,2023-02-03,No,3.19
+43726257,Amul Shrikhand Kesar 500g,Specialty Products,400,500g,Spectrum Dairies Pvt Ltd,Room Temperature,197,No,New Arrival,2021-01-03,Yes,1.89
+51772550,Amul Pizza Base 200g,Bakery & Frozen,250,200g,Spectrum Dairies Pvt Ltd,Chilled,249,No,Best Seller,2021-10-27,Yes,3.43
+70167474,Amul Frozen Paratha 400g,Bakery & Frozen,250,400g,Agarwal Enterprises,Chilled,52,No,Gift Pack,2021-03-14,No,1.84
+62882309,Amul Frozen Paneer Tikka 500g,Bakery & Frozen,250,500g,Local Distributor,Hot Storage,202,No,Budget Friendly,2025-06-16,No,4.67
+18439717,Amul Frozen Cheese Corn Nuggets 400g,Bakery & Frozen,250,400g,Verma Distributors,Cold Storage,307,No,Creamy Choice,2024-08-09,No,1.74
+70415490,Amul Frozen Veggie Burger Patty 500g,Bakery & Frozen,250,500g,Singh Wholesale,Room Temperature,364,Yes,Premium,2025-04-26,Yes,1.15
+40523156,Amul Taaza UHT Milk 1L,UHT & Long Life,150,1L,Patel Suppliers,Frozen,91,No,Everyday Essential,2022-04-07,No,4.49
+41910047,Amul Gold UHT Milk 1L,UHT & Long Life,150,1L,Verma Distributors,Chilled,113,No,Fortified,2022-02-25,No,1.54
+45319204,Amul Slim UHT Milk 1L,UHT & Long Life,150,1L,Agarwal Enterprises,Hot Storage,35,No,Low Fat,2021-03-09,No,3.96
+93684965,Amul Mithai Mate UHT 200g,UHT & Long Life,150,200g,Agarwal Enterprises,hot & Cold Storage,156,No,Limited Edition,2023-10-07,Yes,3.06
+64829395,Amul Cream Tetra Pack 250ml,UHT & Long Life,150,250ml,New Jindal Enterprises,hot & Cold Storage,92,Yes,Premium,2023-06-18,Yes,2.01
+01148473,Amul Camel Milk 500ml,Others,500,500ml,Singh Wholesale,Frozen,115,No,Low Fat,2025-05-22,No,1.24
+80405061,Amul A2 Cow Milk 1L,Others,500,1L,Singh Wholesale,Refrigerated,197,No,Limited Edition,2024-03-15,Yes,1.96
+05752287,Amul Camel Milk Chocolate 150g,Others,123,150g,GCMMF Ltd.,hot & Cold Storage,165,Yes,Eco Friendly,2024-09-27,Yes,3.53
+18009972,Amul Organic Ghee 500ml,Others,500,500ml,Jaanvi Foods,Chilled,6,Yes,Limited Edition,2020-11-01,Yes,2.55
+72940877,Amul Butter Cookies 200g,Others,500,200g,Spectrum Dairies Pvt Ltd,Ambient,251,Yes,Eco Friendly,2024-10-18,No,1.13
+31256377,Amul Happy Treats Veggie Stix 400g,Others,500,400g,Jaanvi Foods,Ambient,21,No,Chef’s Choice,2021-09-13,No,3.7
+25444452,Amul Ice Cream Cake 1kg,Others,500,1kg,Verma Distributors,hot & Cold Storage,167,Yes,Quick Snack,2021-03-01,Yes,3.25
+36576395,Amul Kool Café Can 250ml,Others,500,250ml,Singh Wholesale,Ambient,299,Yes,Dairy Delight,2023-06-22,No,2.98
+82806583,Amul Cheese Tin 500g,Others,500,500g,Kumar Traders,Frozen,127,Yes,Eco Friendly,2025-03-25,Yes,2.24
+14921131,Amul Cheesy Corn Puffs 150g,Snacks & Savories,550,150g,Kumar Traders,Refrigerated,96,Yes,Eco Friendly,2021-04-28,No,4.43
+37245757,Amul Spicy Potato Chips 200g,Snacks & Savories,54,200g,Sharma Suppliers,Frozen,365,Yes,New Arrival,2025-01-23,Yes,4.74
+91980489,Amul Masala Peanuts 250g,Snacks & Savories,258,250g,Singh Wholesale,Cold Storage,282,Yes,Health Friendly,2023-07-02,No,3.15
+83950377,Amul Veggie Sticks 100g,Snacks & Savories,85,100g,Local Distributor,Refrigerated,98,Yes,Best Seller,2025-02-18,No,2.09
+81997831,Amul Cheese Crackers 120g,Snacks & Savories,509,120g,Spectrum Dairies Pvt Ltd,Room Temperature,202,Yes,Kids’ Favorite,2025-03-13,No,4.6
+58937020,Amul Chocolate Brownie 100g,Bakery Items,218,100g,Singh Wholesale,Refrigerated,323,No,Popular Choice,2021-06-30,Yes,2.66
+61133075,Amul Butter Croissant 80g,Bakery Items,187,80g,Spectrum Dairies Pvt Ltd,Hot Storage,213,Yes,Sugar-Free,2021-05-05,Yes,2.45
+34223963,Amul Vanilla Muffin 90g,Bakery Items,51,90g,Spectrum Dairies Pvt Ltd,hot & Cold Storage,150,No,Limited Edition,2025-01-26,Yes,1.77
+18798487,Amul Cheese Danish 120g,Bakery Items,53,120g,Amul Dairy Anand,Cold Storage,304,No,Gift Pack,2024-03-07,Yes,3.14
+28937579,Amul Chocolate Donut 80g,Bakery Items,429,80g,Kumar Traders,Refrigerated,131,No,Creamy Choice,2024-05-10,No,2.3
+48334136,Amul Protein Shake Vanilla 200ml,Health & Nutrition,600,200ml,New Jindal Enterprises,Ambient,316,Yes,Everyday Essential,2020-09-06,No,3.51
+57937380,Amul Protein Shake Chocolate 200ml,Health & Nutrition,600,200ml,Singh Wholesale,Refrigerated,255,No,Seasonal Special,2021-09-26,Yes,3.8
+93245593,Amul Multigrain Dahi 200g,Health & Nutrition,158,200g,Singh Wholesale,Cold Storage,68,No,Kids’ Favorite,2021-07-17,Yes,2.0
+81837793,Amul Low Fat Yogurt 100g,Health & Nutrition,436,100g,GCMMF Ltd.,Hot Storage,217,Yes,Seasonal Special,2023-07-15,Yes,4.83
+56068016,Amul Fortified Milk 1L,Health & Nutrition,600,1L,Singh Wholesale,Refrigerated,246,No,Gift Pack,2024-04-27,Yes,2.42
+31363198,Amul Mango Lassi 250ml,Beverages (New Flavors),600,250ml,Singh Wholesale,hot & Cold Storage,81,No,Chef’s Choice,2020-12-19,No,2.56
+71235158,Amul Strawberry Lassi 250ml,Beverages (New Flavors),600,250ml,Agarwal Enterprises,Refrigerated,40,Yes,Best Seller,2023-09-06,Yes,3.97
+04664321,Amul Buttermilk Masala 200ml,Beverages (New Flavors),600,200ml,Verma Distributors,Hot Storage,166,Yes,Seasonal Special,2024-03-07,No,3.23
+42543602,Amul Choco Milk 200ml,Beverages (New Flavors),301,200ml,Spectrum Dairies Pvt Ltd,hot & Cold Storage,176,Yes,Gift Pack,2023-04-11,No,1.22
+51783426,Amul Cold Coffee 200ml,Beverages (New Flavors),375,200ml,Patel Suppliers,Refrigerated,326,Yes,Classic Favorite,2024-10-10,Yes,3.51
