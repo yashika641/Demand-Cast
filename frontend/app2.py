@@ -25,40 +25,73 @@ st.set_page_config(page_title="DemandCast", page_icon=":bar_chart:", layout="wid
 # Navbar HTML & CSS
 st.markdown("""
 <style>
+/* Navbar styling */
 .navbar {
     position: fixed;
-    top: 5;
-    left: 0;
-    width: 50%;
-    height: 60px;
-    background-color: #1f77b4;
+    top: 100px;
+    left: 10px;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;  /* Transparent background */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    padding: 0 30px;  /* reduced side padding */
     z-index: 9999;
 }
-.navbar-logo { display: flex; align-items: center; }
-.navbar-logo img { height: 40px; margin-right: 10px; }
-.navbar-menu a { color: white; text-decoration: none; margin-left: 25px; font-weight: bold; font-size: 16px; }
-.navbar-menu a:hover { text-decoration: underline; }
-</style>
 
+/* Logo + Brand */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+.navbar-logo img {
+    height: 50px;       /* slightly smaller */
+    margin-right: 50px;  /* reduced gap between logo and text */
+}
+.navbar-logo span {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    font-style: italic;
+}
+
+/* Menu */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;  /* reduced gap between menu items */
+    font-weight: 500;
+    font-size: 25px;
+    transition: 0.3s;
+}
+.navbar-menu a:hover {
+    text-decoration: underline;
+}
+</style>
 <div class="navbar">
     <div class="navbar-logo">
-        <img src="https://drive.google.com/uc?export=view&id=1_rpU_uqlfz48VDsG9Y8JqCz4KcDKEwsm" alt="Logo">
-        <span style="color:white; font-weight:bold; font-size:18px;">DemandCast</span>
+        <img src="https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/Gemini_Generated_Image_r3inpnr3inpnr3in-removebg-preview%20(1).png" 
+             alt="Logo" style="height:150px; width:auto;">
+        <span>DemandCast</span>
     </div>
     <div class="navbar-menu">
-        <a href="#tools">Tools</a>
+        <a href="#home">Home</a>
+        <a href="#solutions">Solutions</a>
         <a href="#docs">Docs</a>
+        <a href="#tools">Tools</a>
+        <a href="#contact">Contact</a>
     </div>
 </div>
 
-<div style="padding-top: 80px;"></div>
+
+<div style="padding-top: 90px;"></div>
 """, unsafe_allow_html=True)
+
 
 
 if st.session_state.page == "home":
@@ -66,22 +99,38 @@ if st.session_state.page == "home":
 
 
     # ------------------ Hero Section ------------------
-    st.image("https://drive.google.com/uc?export=view&id=1_rpU_uqlfz48VDsG9Y8JqCz4KcDKEwsm", use_container_width=True)
-    
+    st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url("https://github.com/yashika641/Demand-Cast/blob/02f59593d51aa70b44a417a8afe1522be43cf503/datasets/Gemini_Generated_Image_6uxpod6uxpod6uxp.png");
+        background-attachment: fixed;
+        background-size: cover;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
     st.markdown(
         "<h1 style='text-align:center; color:#1f77b4;'>DemandCast - Your AI Driven Business Partner</h1>",
         unsafe_allow_html=True
     )
+
     st.markdown(
         "<h3 style='text-align:center; color:#6e1e24;'>Sales Forecasting and Demand Planning Made Easy</h3>",
         unsafe_allow_html=True
     )
-    st.markdown("""
-        <p style='text-align:center; color:#555; font-size:18px; font-family: Georgia;'>
+
+    st.markdown(
+        """
+        <p style='text-align:center; color:#fff; font-size:18px; font-family: Georgia; background: rgba(0,0,0,0.5); padding: 15px; border-radius: 8px;'>
         Welcome to <b>DemandCast</b>, your AI-driven business partner for sales forecasting and demand planning. 
         Harness the power of advanced analytics and machine learning to optimize your inventory, reduce costs, and boost your sales performance.
         </p>
-    """, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True
+    )
 
     # ------------------ Centered Button ------------------
     col1, col2, col3 = st.columns([3.8,3,2])
