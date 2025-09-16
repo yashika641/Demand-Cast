@@ -1,263 +1,467 @@
-import warnings
-warnings.filterwarnings("ignore", category=FutureWarning)  # optional: silence sklearn deprecation noise
-
 import pandas as pd
 import numpy as np
+import os, sys
 import matplotlib.pyplot as plt
-
+import matplotlib.pyplot as plt
+import pandas as pd
 from statsmodels.tsa.statespace.sarimax import SARIMAX
-from pmdarima import auto_arima
-from tqdm import tqdm
-import time
-
-# ----------------------------
-# 1) Load + clean columns
-# ----------------------------
-CSV_PATH = r"C:\Users\palya\Desktop\DemandCast\Demand-Cast\datasets\cleaned_data.csv"
-
-df = pd.read_csv(CSV_PATH)
-print("Initial columns:", df.columns.tolist())
-
-# strip whitespace from column names
-df.columns = df.columns.str.strip()
-
-# find the date column robustly (case-insensitive match for 'date')
-date_col_candidates = [c for c in df.columns if c.lower() == "date"]
-if not date_col_candidates:
-    raise KeyError("⚠️ Could not find a 'Date' column (case-insensitive). Check your CSV columns.")
-DATE_COL = date_col_candidates[0]
-
-# parse datetime
-df[DATE_COL] = pd.to_datetime(df[DATE_COL], errors="coerce")
-if df[DATE_COL].isna().all():
-    raise ValueError("⚠️ All parsed dates are NaT. Check your date format in the CSV.")
-# drop rows with NaT dates
-df = df.dropna(subset=[DATE_COL])
-
-# set index & sort
-df = df.set_index(DATE_COL).sort_index()
-print("Datetime index set. Example index range:", df.index.min(), "→", df.index.max())
-
-# ----------------------------
-# 2) Optional resampling (faster for huge series)
-# ----------------------------
-# If you have ~1.5 lakh rows, weekly aggregation will speed up ARIMA massively.
-RESAMPLE_TO_WEEKLY = True
-
-if RESAMPLE_TO_WEEKLY:
-    # we’ll compute numeric means; for non-numeric exog we forward-fill later
-    numeric_df = df.select_dtypes(include=[np.number]).copy()
-    df_numeric_weekly = numeric_df.resample("W").mean()
-
-    # bring back non-numeric columns via forward-fill on weekly index (optional)
-    non_num = df.drop(columns=numeric_df.columns, errors="ignore")
-    if not non_num.empty:
-        non_num_weekly = non_num.resample("W").last().ffill()
-        df = pd.concat([df_numeric_weekly, non_num_weekly], axis=1)
-    else:
-        df = df_numeric_weekly
-
-    df = df.ffill()  # fill any gaps after resample
-    season_m = 52     # weekly seasonality ~ yearly cycle
-else:
-    df = df.sort_index().ffill()
-    season_m = 7      # example: daily data with weekly seasonality
-
-print("Post-resample shape:", df.shape)
-print("Columns after resample/clean:", df.columns.tolist())
-
-# ----------------------------
-# 3) Ensure required columns exist & are numeric
-# ----------------------------
-TARGET_COL = "Units_Sold"
-EXOG_COLS = ["Promotion_Flag", "Weather_Temp", "Competitor_Price", "Festival_Season"]
-
-for col in [TARGET_COL] + EXOG_COLS:
-    if col not in df.columns:
-        raise KeyError(f"⚠️ Required column '{col}' not found in DataFrame.")
-
-# coerce exog columns to numeric if needed (e.g., 'Yes'/'No' → 1/0)
-for col in EXOG_COLS:
-    if not np.issubdtype(df[col].dtype, np.number):
-        # simple binary mapping if strings; otherwise factorize
-        df[col] = df[col].astype(str).str.strip().str.lower()
-        if set(df[col].unique()) <= {"yes", "no", "1", "0", "true", "false"}:
-            df[col] = df[col].map({"yes":1, "no":0, "1":1, "0":0, "true":1, "false":0}).astype(float)
-        else:
-            df[col] = pd.factorize(df[col])[0].astype(float)
-
-# final NA fill for safety
-df[[TARGET_COL] + EXOG_COLS] = df[[TARGET_COL] + EXOG_COLS].ffill().bfill()
-
-# ----------------------------
-# 4) Train/Test split (aligned target + exog)
-# ----------------------------
-ts = df[TARGET_COL].astype(float)
-exog = df[EXOG_COLS].astype(float)
-
-train_size = int(len(ts) * 0.8)
-train_y, test_y = ts.iloc[:train_size], ts.iloc[train_size:]
-train_X, test_X = exog.iloc[:train_size], exog.iloc[train_size:]
-
-print("Train size:", train_y.shape, "Test size:", test_y.shape)
-print("Train NA check (target):", int(train_y.isna().sum()), "dtype:", train_y.dtype)
-
-# ----------------------------
-# 5) Progress bar for auto_arima via callback
-# ----------------------------
-# estimate total combos for progress (rough; stepwise reduces it)
-def estimate_total_models(max_p, max_q, max_P, max_Q, seasonal=True):
-    total = (max_p + 1) * (max_q + 1)
-    if seasonal:
-        total *= (max_P + 1) * (max_Q + 1)
-    return max(total, 1)
-
-max_p, max_q, max_P, max_Q = 2, 2, 2, 2
-total_models = estimate_total_models(max_p, max_q, max_P, max_Q, seasonal=True)
-pbar = tqdm(total=total_models, desc="auto_arima search", unit="model")
-
-def progress_cb(res):
-    # res is a dict of fit results (pmdarima internal); we just tick the bar
-    # guard against over-run
-    if pbar.n < pbar.total:
-        pbar.update(1)
-
-# IMPORTANT:
-# - stepwise=True ignores n_jobs (pmdarima constraint); we set n_jobs=1 to avoid warnings
-# - we DO NOT pass exog to auto_arima here to keep search faster; we add exog in final SARIMAX
-stepwise_model = auto_arima(
-    train_y,
-    start_p=0, start_q=0,
-    max_p=max_p, max_q=max_q,
-    m=season_m,
-    start_P=0, seasonal=True,
-    max_P=max_P, max_Q=max_Q,
-    d=None, D=1,
-    trace=False,
-    error_action="ignore",
-    suppress_warnings=True,
-    stepwise=False,
-    n_jobs=1,
-    callback=progress_cb   # <-- progress hook
-)
-pbar.close()
-
-print("\nBest order found:", stepwise_model.order, "seasonal:", stepwise_model.seasonal_order)
-print(stepwise_model.summary())
-
-order = stepwise_model.order
-seasonal_order = stepwise_model.seasonal_order
-
-# ----------------------------
-# 6) SARIMAX training with progress bar
-# ----------------------------
-print("\nFitting SARIMAX model...")
-with tqdm(total=1, desc="Training SARIMAX", bar_format="{l_bar}{bar} [ elapsed: {elapsed} ]") as fitbar:
-    model = SARIMAX(
-        train_y,
-        order=order,
-        seasonal_order=seasonal_order,
-        exog=train_X,
-        enforce_stationarity=False,
-        enforce_invertibility=False
-    )
-    results = model.fit(disp=False)
-    fitbar.update(1)
-
-print(results.summary())
-
-# ----------------------------
-# 7) In-sample prediction for test window
-# ----------------------------
-pred = results.predict(
-    start=train_y.index[-1],  # last train index
-    end=test_y.index[-1],
-    exog=test_X,
-    dynamic=False
-)
-# The predict with start at last train index returns one extra point; align to test index
-pred = pred.reindex(test_y.index)
-
-plt.figure(figsize=(12, 6))
-plt.plot(train_y.index, train_y, label="Train")
-plt.plot(test_y.index, test_y, label="Test")
-plt.plot(pred.index, pred, label="Predictions")
-plt.legend()
-plt.tight_layout()
-plt.show()
-
-# ----------------------------
-# 8) Future 30-step forecast WITH exog placeholder
-# ----------------------------
-# Future 30-step forecast
-future_steps = 30
-freq = pd.infer_freq(ts.index) or ("W" if RESAMPLE_TO_WEEKLY else "D")
-
-future_index = pd.date_range(
-    ts.index[-1] + pd.tseries.frequencies.to_offset(freq),
-    periods=future_steps, freq=freq
-)
-
-# Placeholder future exog: repeat last row
-last_exog = exog.iloc[[-1]].copy()
-future_exog = pd.DataFrame(
-    np.repeat(last_exog.values, future_steps, axis=0),
-    columns=EXOG_COLS, index=future_index
-)
-
-# Forecast using future exog
-future_forecast = results.get_forecast(
-    steps=future_steps, exog=future_exog
-).predicted_mean
-
-print("\nFuture Forecast (next 30 steps):")
-print(future_forecast)
-
+from sklearn.preprocessing import StandardScaler, LabelEncoder, PowerTransformer
 from sklearn.metrics import mean_squared_error, mean_absolute_error
+from tqdm import tqdm
+import warnings
+from statsmodels.tsa.stattools import adfuller
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tools.sm_exceptions import ConvergenceWarning, ValueWarning
+from pmdarima import auto_arima
+import pickle
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
-# ----------------------------
-# 7b) Error Metrics
-# ----------------------------
-mse = mean_squared_error(test_y, pred)
-rmse = np.sqrt(mse)
-mae = mean_absolute_error(test_y, pred)
-mape = np.mean(np.abs((test_y - pred) / test_y)) * 100
 
-print("\n📊 Test Set Evaluation Metrics:")
-print(f"MSE  : {mse:.4f}")
-print(f"RMSE : {rmse:.4f}")
-print(f"MAE  : {mae:.4f}")
-print(f"MAPE : {mape:.2f}%")
+warnings.filterwarnings("ignore", category=FutureWarning)
+from sklearn.preprocessing import MultiLabelBinarizer
+warnings.simplefilter("ignore", ConvergenceWarning)
+warnings.simplefilter("ignore", ValueWarning)
 
-# ----------------------------
-# 1. Naïve Baseline
-# ----------------------------
-# Predict each test point as the last known value
-naive_forecast = test_y.shift(1).fillna(train_y.iloc[-1])
+# ----------- LOGGER -----------
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+from Arima.src.logger import get_logger
+log = get_logger(__name__)
 
-mse_naive = mean_squared_error(test_y, naive_forecast)
-rmse_naive = np.sqrt(mse_naive)
-mae_naive = mean_absolute_error(test_y, naive_forecast)
-mape_naive = np.mean(np.abs((test_y - naive_forecast) / test_y)) * 100
 
-print("\n📊 Naïve Baseline Metrics:")
-print(f"MSE  : {mse_naive:.4f}")
-print(f"RMSE : {rmse_naive:.4f}")
-print(f"MAE  : {mae_naive:.4f}")
-print(f"MAPE : {mape_naive:.2f}%")
+# ----------- DATA CLEANING -----------
+def cleaning_preprocessing():
+    log.info('Cleaning data...')
 
-# ----------------------------
-# 2. Moving Average Baseline (window=3)
-# ----------------------------
-moving_avg_forecast = test_y.rolling(window=3).mean().shift(1).fillna(train_y.iloc[-1])
+    df=pd.read_csv(r'C:\Users\palya\Desktop\DemandCast\Demand-Cast\synthetic_sales_2yrs.csv' )
+    print(df.head(10))
+    # print(df.info())
+    # print(df.describe())
+    print(df.isnull().sum())
+    print(df.duplicated().sum())
+    print(df['Date'].duplicated().sum())
+    print(df.index.duplicated().sum())
+    print(df.shape)
+    print(df.dtypes)
+    # Check duplicate rows
+    df.drop_duplicates(inplace=True)
+    df.drop(columns=['Festival_Season'],inplace=True)
+    print(df.shape)
+    df.dropna(inplace=True)
+    print(df.shape)
+    print(df.duplicated().sum())
 
-mse_ma = mean_squared_error(test_y, moving_avg_forecast)
-rmse_ma = np.sqrt(mse_ma)
-mae_ma = mean_absolute_error(test_y, moving_avg_forecast)
-mape_ma = np.mean(np.abs((test_y - moving_avg_forecast) / test_y)) * 100
 
-print("\n📊 Moving Average Baseline Metrics (window=3):")
-print(f"MSE  : {mse_ma:.4f}")
-print(f"RMSE : {rmse_ma:.4f}")
-print(f"MAE  : {mae_ma:.4f}")
-print(f"MAPE : {mape_ma:.2f}%")
+
+# Ensure date is datetime
+    df['Date'] = pd.to_datetime(df['Date'])
+
+# Optional: set index
+    df.set_index('Date', inplace=True)
+
+# Aggregation dictionary
+    agg_dict = {
+    'Units_Sold': 'sum',
+    'Revenue': 'sum',
+    'Price_per_Unit': 'mean',
+    'Weather_Temp': 'mean',
+    'Promotion_Flag': 'first',       # keep one representative value
+    'Competitor_Price': 'mean',
+    'Social_Sentiment': 'mean',
+}
+
+# Group by date and reset index
+    df_daily = df.groupby('Date','Product_Name','Region').agg(agg_dict).reset_index()
+    
+    df_daily['Date'] = pd.to_datetime(df_daily['Date'])
+    df_daily.set_index('Date', inplace=True)
+
+# Example: weekly sum for Units_Sold and Revenue, weekly mean for others
+    df_weekly = df_daily.groupby(['Product_Name', 'Region']).resample('W').agg({
+    'Units_Sold': 'sum',
+    'Revenue': 'sum',
+    'Price_per_Unit': 'mean',
+    'Promotion_Flag': 'first',
+    'Weather_Temp': 'mean',
+    'Competitor_Price': 'mean',
+    'Social_Sentiment': 'mean'
+}).reset_index()
+    
+    df_daily = df.groupby(['Product_Name', 'Region']).resample('W', on='Date').agg(agg_dict).reset_index()
+
+    # One-hot encode Product & Region
+
+
+    print(df_daily.head())
+    print(df_daily.shape)
+    print(type(df_daily))
+    print(df_daily.dtypes)
+    print('index_before',df_daily.index)
+    df_daily.set_index('Date', inplace=True)
+    print('index_after',df_daily.index)
+
+    
+    
+    plt.plot(df_daily.index, df_daily['Units_Sold'], label='Original', color='blue', linestyle='-')
+
+# See some duplicate rows
+    print(df_daily.head(10))
+    print('null value',df_daily.isnull().sum())
+    print(df_daily.shape)
+    print(df_daily.index.duplicated().sum())
+    print(df_daily.dtypes)
+    
+    print(df_daily.columns)
+    num_cols = df_daily.select_dtypes(include=['int64', 'float64']).columns.drop("Units_Sold")
+    print("Numerical columns:", num_cols)
+    
+    
+    print(df_daily.head(10))
+    print(df_daily.shape)
+        
+    cat_cols = df.select_dtypes(include=['object']).columns
+    cat_cols = cat_cols.drop('Date')  # Exclude 'Date' from categorical columns
+    print("Categorical columns:", cat_cols)
+    
+    # df_daily = pd.get_dummies(df_weekly, columns=['Product_Name', 'Region'])
+    
+    mlb = MultiLabelBinarizer()
+
+# Columns that contain multiple labels in lists
+    for col in cat_cols:
+        df_encoded = pd.DataFrame(mlb.fit_transform(df_weekly[col]),
+                            columns=[f"{col}_{cls}" for cls in mlb.classes_])
+        df_weekly = pd.concat([df_weekly.drop(columns=[col]), df_encoded], axis=1)
+
+# Optional: encode Product_Name and Region for exogenous variables
+    for col in ['Product_Name', 'Region']:
+        df_encoded = pd.get_dummies(df_weekly[col], prefix=col)
+        df_weekly = pd.concat([df_weekly.drop(columns=[col]), df_encoded], axis=1)
+
+    
+    scaler=StandardScaler()
+    for col in num_cols:
+        df_daily[col]=scaler.fit_transform(df_daily[col].values.reshape(-1,1))
+        # print(df[col].unique())
+        log.info(f'Scaled column: {col}')
+        
+    # df_daily.drop(columns=['Social_Sentiment','Weather_Temp',],inplace=True)
+    # print(df_daily.head(10))
+        
+    plt.plot(df_daily.index, df_daily['Units_Sold'], label='After Scaling', color='red', linestyle=':')
+
+    plt.title('Units Sold Over Time (All Versions)')
+    plt.xlabel('Date')
+    plt.ylabel('Units Sold')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+    
+    # Your series
+    y = df_daily['Units_Sold']
+
+# ADF test
+    adf_result = adfuller(y)
+    print("ADF Statistic:", adf_result[0])
+    print("p-value:", adf_result[1])
+    for key, value in adf_result[4].items():
+        print(f'Critical Value {key}: {value}')
+
+# Interpretation
+    if adf_result[1] <= 0.05:
+        print("Series is stationary → no differencing needed (d=0)")
+    else:
+        print("Series is non-stationary → differencing needed (d=1 or more)")
+
+    y_diff = y.diff().dropna()
+
+    # Plot ACF & PACF for original series or differenced series
+    plt.figure(figsize=(12,5))
+    plt.subplot(1,2,1)
+    plot_acf(y, lags=50, ax=plt.gca())
+    plt.title('ACF Plot')
+
+    plt.subplot(1,2,2)
+    plot_pacf(y, lags=50, ax=plt.gca(), method='ywm')
+    plt.title('PACF Plot')
+
+    plt.tight_layout()
+    plt.show()
+    
+    # If weekly seasonality (m=7)
+    plot_acf(y, lags=28)  # 4 weeks
+    plt.show()
+
+    plot_pacf(y, lags=28, method='ywm')
+    plt.show()
+
+
+
+    return df_daily
+
+# ----------- TRAIN-TEST SPLIT -----------
+def train_test_split_by_series(df, test_size=0.2, min_length=20):
+    """
+    Splits the dataframe into train and test sets for each product-region combination.
+    
+    Parameters:
+        df (pd.DataFrame): The input dataframe containing 'Date', product, and region columns.
+        test_size (float): Fraction of data to be used as test set.
+        min_length (int): Minimum number of rows required to create a split.
+    
+    Returns:
+        dict: Keys are (product_col, region_col), values are (train_df, test_df).
+    """
+    df = df.sort_values('Date')  # Ensure time order
+    product_cols = [col for col in df.columns if col.startswith('Product_Name_')]
+    region_cols = [col for col in df.columns if col.startswith('Region_')]
+    
+    series_dict = {}
+    for prod_col in product_cols:
+        for reg_col in region_cols:
+            df_series = df[(df[prod_col]==1) & (df[reg_col]==1)].copy()
+            if len(df_series) < min_length:
+                continue  # Skip very short series
+            df_series.set_index('Date', inplace=True)
+            split_idx = int(len(df_series) * (1 - test_size))
+            train = df_series.iloc[:split_idx]
+            test = df_series.iloc[split_idx:]
+            series_dict[(prod_col, reg_col)] = (train, test)
+    
+    print(f"Created {len(series_dict)} product-region series splits.")
+    return series_dict
+
+
+
+# ----------- AUTO ARIMA SEARCH -----------
+def auto_arima_search(train, exog_train=None, seasonal_m=7, min_periods=20):
+    """
+    Performs auto ARIMA search for a given train series.
+
+    Parameters:
+        train (pd.DataFrame): Training data with 'Units_Sold' column.
+        exog_train (pd.DataFrame): Optional exogenous variables.
+        seasonal_m (int): Seasonality period (e.g., 7 for weekly).
+        min_periods (int): Minimum number of rows to perform ARIMA search.
+
+    Returns:
+        tuple: (order, seasonal_order) if successful, else None.
+    """
+    if len(train) < min_periods:
+        print("Series too short for ARIMA:", len(train))
+        return None
+
+    try:
+        stepwise_model = auto_arima(
+            train['Units_Sold'],
+            exogenous=exog_train,
+            start_p=0, start_q=0, max_p=5, max_q=5,
+            d=None, max_d=2,
+            start_P=0, start_Q=0, max_P=3, max_Q=3,
+            D=None, max_D=2,
+            seasonal=True, m=seasonal_m,
+            information_criterion='aic',
+            stepwise=False, trace=True,
+            suppress_warnings=True
+        )
+        print(stepwise_model.summary())
+        return stepwise_model.order, stepwise_model.seasonal_order
+    except Exception as e:
+        print("Auto ARIMA failed:", e)
+        return None
+    
+
+# ----------- BUILD & TRAIN MODEL -----------
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+
+def build_and_train_model(df_weekly, order_dict=None, seasonal_order_dict=None, min_length=20):
+    """
+    Trains SARIMAX models for each product-region combination.
+
+    Parameters:
+        df_weekly (pd.DataFrame): Weekly data with products, regions, and 'Units_Sold'.
+        order_dict (dict): Dictionary {(product, region): order} from auto_arima.
+        seasonal_order_dict (dict): Dictionary {(product, region): seasonal_order} from auto_arima.
+        min_length (int): Minimum series length to train a model.
+
+    Returns:
+        dict: {(product, region): fitted SARIMAX model}
+    """
+    results_dict = {}
+    exog_cols = [col for col in df_weekly.columns if col not in ['Date','Units_Sold','Revenue']]
+
+    for product in df_weekly['Product_Name'].unique():
+        for region in df_weekly['Region'].unique():
+            df_prod = df_weekly[(df_weekly[f'Product_Name_{product}']==1) &
+                                (df_weekly[f'Region_{region}']==1)].copy()
+            
+            if len(df_prod) < min_length:
+                continue  # skip short series
+
+            df_prod.set_index('Date', inplace=True)
+
+            # Train/test split
+            split_index = int(len(df_prod)*0.8)
+            train = df_prod.iloc[:split_index]
+            test = df_prod.iloc[split_index:]
+
+            exog_train = train[exog_cols] if exog_cols else None
+            exog_test = test[exog_cols] if exog_cols else None
+
+            # Get ARIMA orders from provided dicts
+            order = order_dict.get((product, region), (1,0,1))
+            seasonal_order = seasonal_order_dict.get((product, region), (1,1,1,52))
+
+            # Fit SARIMAX
+            model = SARIMAX(
+                train['Units_Sold'],
+                order=order,
+                seasonal_order=seasonal_order,
+                exog=exog_train,
+                enforce_stationarity=False,
+                enforce_invertibility=False
+            )
+            res = model.fit(disp=False)
+            results_dict[(product, region)] = res
+            print(f"Trained SARIMAX for {product} | {region}")
+
+    return results_dict
+
+
+
+# ----------- SAFE MAPE -----------
+def safe_mape(y_true, y_pred):
+    y_true, y_pred = np.array(y_true), np.array(y_pred)
+    non_zero_idx = y_true != 0
+    return np.mean(np.abs((y_true[non_zero_idx] - y_pred[non_zero_idx]) / y_true[non_zero_idx])) * 100
+
+
+# ----------- FORECAST & EVALUATE -----------
+def forecast_evaluate(results, train, test, exog_test=None):
+    # Forecast
+    pred = results.get_forecast(steps=len(test), exog=exog_test)
+    pred_ci = pred.conf_int()
+
+    # Extract forecasted and actual values
+    y_forecasted = pred.predicted_mean
+    y_truth = test['Units_Sold']
+
+    # Metrics
+    mse = mean_squared_error(y_truth, y_forecasted)
+    rmse = np.sqrt(mse)
+    mae = mean_absolute_error(y_truth, y_forecasted)
+    mape = safe_mape(y_truth, y_forecasted)
+
+    metrics_df = pd.DataFrame({
+        "Metric": ["MSE", "RMSE", "MAE", "MAPE"],
+        "Value": [mse, rmse, mae, mape]
+    })
+    print(metrics_df)
+
+    # Plot
+    plt.figure(figsize=(14, 7))
+    plt.plot(train.index, train['Units_Sold'], label="Train")
+    plt.plot(test.index, y_truth, label="Test")
+    plt.plot(test.index, y_forecasted, color="red", label="Forecast")
+    plt.fill_between(
+        pred_ci.index,
+        pred_ci.iloc[:, 0],
+        pred_ci.iloc[:, 1],
+        color='k', alpha=.2
+    )
+    plt.legend()
+    plt.show()
+
+    return y_forecasted, metrics_df
+
+
+
+# ----------- SAVE MODEL -----------
+def save_model(results, model_path='sarimax_model.pkl'):
+    with open(model_path, 'wb') as pkl:
+        pickle.dump(results, pkl)
+    print(f'Model saved to {model_path}')
+    return model_path
+
+
+# ----------- MAIN PIPELINE -----------
+def main():
+
+    # Clean + preprocess
+    df_cleaned = cleaning_preprocessing()
+    
+    df_cleaned.to_csv('cleaned_data.csv', index=False)
+    
+    
+    # Split
+    series_dict = train_test_split_by_series(df_cleaned, test_size=0.2)
+
+    # # Exogenous variables
+    exog_cols = [ 'Weather_Temp', 'Competitor_Price', 'Social_Sentiment']
+    # After encoding list columns
+    # exog_cols = [col for col in df_cleaned.columns if col != 'Units_Sold']
+
+# Convert all to numeric (float)
+    df_cleaned[exog_cols] = df_cleaned[exog_cols].apply(pd.to_numeric, errors='coerce')
+    df_cleaned.fillna(method='ffill', inplace=True)
+
+
+# Fill any remaining NaNs
+
+    exog_train = train[exog_cols]
+    
+    exog_test = test[exog_cols]
+
+    print(train.dtypes)
+    print(exog_train.dtypes)
+
+    exog_train = train[exog_cols].astype(float)
+    exog_test = test[exog_cols].astype(float)
+
+    print(train.dtypes)
+    print(exog_train.dtypes)
+    
+    print(df_cleaned.head())
+    print(df_cleaned.shape)
+    print(exog_test.head())
+    print(exog_test.shape)
+    print(exog_test.isnull().sum())
+    print(exog_train.head())
+    print(exog_train.isnull().sum())
+    print(exog_train.shape)
+    print(test.head())
+    print(test.shape)
+    print(train.head())
+    print(train.shape)
+
+    # # Find best orders
+    # Initialize dictionaries
+    order_dict = {}
+    seasonal_order_dict = {}
+
+    for key, (train, test) in series_dict.items():
+        # Get exogenous variables if needed
+        exog_cols = [col for col in train.columns if col not in ['Units_Sold', 'Revenue']]
+        exog_train = train[exog_cols] if exog_cols else None
+
+        result = auto_arima_search(train, exog_train=exog_train, seasonal_m=7, min_periods=20)
+    
+        if result is not None:
+            order, seasonal_order = result
+            order_dict[key] = order
+            seasonal_order_dict[key] = seasonal_order
+        else:
+            print(f"Skipping ARIMA for series {key} due to insufficient data or error.")
+
+    print(f"Generated orders for {len(order_dict)} series.")
+    # # Train
+    results = build_and_train_model(train, order_dict=order_dict,seasonal_order_dict=seasonal_order_dict exog_train)
+
+    # # Evaluate
+    y_forecasted, metrics_df = forecast_evaluate(results, train, test, exog_test)
+
+    # # Save model
+    # model_path = save_model(results)
+
+
+if __name__ == "__main__":
+    main()
