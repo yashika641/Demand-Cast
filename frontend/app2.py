@@ -32,11 +32,11 @@ st.markdown("""
     left: 10px;
     width: 100%;
     height: 100px;
-    background-color: transparent;  /* Transparent background */
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;  /* reduced side padding */
+    padding: 0 30px;
     z-index: 9999;
 }
 
@@ -46,14 +46,19 @@ st.markdown("""
     align-items: center;
 }
 .navbar-logo img {
-    height: 50px;       /* slightly smaller */
-    margin-right: 50px;  /* reduced gap between logo and text */
+    height: 70px;       /* increased logo size */
+    margin-right: 0px; 
+    height: 80px;              /* control final display height */
+    width: 120px;              /* fixed width */
+    object-fit: cover;         /* crops sides to fill box */
+    object-position: center;   /* keeps center of image */
+    border-radius: 8px; /* reduced gap between logo and text */
 }
 .navbar-logo span {
     color: white;
     font-weight: bold;
-    font-size: 35px;
-    font-style: italic;
+    font-size: 32px;
+    font-family: Poppins, sans-serif;
 }
 
 /* Menu */
@@ -64,19 +69,22 @@ st.markdown("""
 .navbar-menu a {
     color: white;
     text-decoration: none;
-    margin-left: 30px;  /* reduced gap between menu items */
+    margin-left: 30px;  
     font-weight: 500;
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.3s;
+    font-family: Poppins, sans-serif;
 }
 .navbar-menu a:hover {
     text-decoration: underline;
 }
 </style>
+
 <div class="navbar">
     <div class="navbar-logo">
-        <img src="https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/Gemini_Generated_Image_r3inpnr3inpnr3in-removebg-preview%20(1).png" 
-             alt="Logo" style="height:150px; width:auto;">
+        <img src="https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/logo.png" 
+             style="height:200px; width:auto;"
+             alt="Logo">
         <span>DemandCast</span>
     </div>
     <div class="navbar-menu">
@@ -88,11 +96,8 @@ st.markdown("""
     </div>
 </div>
 
-
 <div style="padding-top: 90px;"></div>
 """, unsafe_allow_html=True)
-
-
 
 if st.session_state.page == "home":
     # ------------------ Navbar HTML & CSS ---------------
@@ -103,7 +108,7 @@ if st.session_state.page == "home":
     f"""
     <style>
     .stApp {{
-        background-image: url("https://github.com/yashika641/Demand-Cast/blob/02f59593d51aa70b44a417a8afe1522be43cf503/datasets/Gemini_Generated_Image_6uxpod6uxpod6uxp.png");
+        background-image: url("https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/Gemini_Generated_Image_qgc4h9qgc4h9qgc4.png");
         background-attachment: fixed;
         background-size: cover;
     }}
