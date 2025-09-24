@@ -1,10 +1,12 @@
 import plotly.express as px
+import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
 from  utils.column_finder import column_finder
 from models.stockout_model import stockout_dashboard
+
 # Column name possibilities
 possible_date_cols = [
     "date",
@@ -142,13 +144,24 @@ def inventory_dashboard(inventory_df, transactions_df):
     # ================== GLOBAL CSS ==================
     st.markdown("""
         <style>
-        /* Background */
         .stApp {
-            background-image: url("https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/Gemini_Generated_Image_6uxpod6uxpod6uxp.png");
+            background: transparent !important;
+        }
+        video.bg-video {
+            position: fixed;     /* allow scrolling */
+            top: 0;
+            left: 0;
+            display:flex;
+            align-items: center;
+            justify-content: center;    
+            width: 110%;           /* fill full width */
+            height: 100%;           /* scale height proportionally */
+            min-height: 100%;       /* ensures it covers vertically */
+            object-fit: cover;    /* show entire video (no cropping) */
+            z-index: -1;            /* push behind content */
+            background: black;  
+            background-position:center;
             background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            font-family: 'Montserrat', sans-serif;
         }
 
         /* Titles */
@@ -192,7 +205,8 @@ def inventory_dashboard(inventory_df, transactions_df):
             padding: 10px 20px;
             border-radius: 12px;
             font-weight: 600;
-            color: #334e68;
+            font-size: 25px;
+            color: #ccd4db;
             transition: all 0.3s ease;
         }
         .stTabs [data-baseweb="tab"]:hover {
@@ -229,16 +243,19 @@ def inventory_dashboard(inventory_df, transactions_df):
             backdrop-filter: blur(8px);
         }
         </style>
+        <video autoplay muted loop class="bg-video">
+            <source src="https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/bg-video1.mp4" type="video/mp4" >
+        </video>
     """, unsafe_allow_html=True)
 
     # ================== TITLE ==================
     st.markdown("""
         <div>
             <h1>📦 Inventory & Supply Chain Insights</h1>
-            <p style="color:#f5f5f5; font-size:18px; text-align:center;">
+            <p style="color:#f5f5f5; font-size:25px; text-align:center;">
                 Analyze inventory levels, lead times, stockouts, and supply chain performance with interactive dashboards.
             </p>
-            <p style="color:#dbeafe; font-size:16px; text-align:center;">
+            <p style="color:#dbeafe; font-size:20px; text-align:center;">
                 Ensure CSVs contain columns like 'Date', 'Inventory Level', 'Order Date', 'Delivery Date', and 'Price'.
             </p>
         </div>
@@ -273,7 +290,7 @@ def inventory_dashboard(inventory_df, transactions_df):
 
     # ================== TAB 1: INVENTORY LEVELS ==================
     with tab1:
-        st.subheader("Current Inventory Levels")
+        st.header("📊Current Inventory Levels")
         c1, c2, c3, _ = st.columns(4)
         c1.metric("Total Inventory", f"{df[inventory_col].sum():,.0f}")
 
@@ -289,46 +306,163 @@ def inventory_dashboard(inventory_df, transactions_df):
             st.error("⚠️ Missing required columns: 'Date' and 'Inventory Level'")
         else:
             st.subheader(f"📈 Inventory Trend for {product}")
-            plt.figure(figsize=(10, 5))
+
             df_temp = df[df[product_col] == product]
-            plt.bar(df_temp[date_col], df_temp[inventory_col], color="#1f77b4")
-            plt.xlabel("Date")
-            plt.ylabel("Inventory Level")
-            plt.title(f"Inventory Levels - {product}")
-            st.pyplot(plt)
+
+            # Sort by date to avoid jagged lines
+            df_temp = df_temp.sort_values(by=date_col)
+
+            # Line chart with smooth curve
+            fig = go.Figure()
+
+            fig.add_trace(
+                go.Scatter(
+                    x=df_temp[date_col],
+                    y=df_temp[inventory_col],
+                    mode="lines+markers",
+                    line=dict(shape="spline", color="#1f77b4", width=3),
+                    marker=dict(size=6, color="#ff7f0e", line=dict(width=1, color="white")),
+                    name="Inventory Level",
+                    hovertemplate="Date: %{x}<br>Inventory: %{y}<extra></extra>"
+                )
+            )
+
+            # Style layout
+            fig.update_layout(
+                title=dict(text=f"📦 Inventory Levels - {product}", x=0.5, font=dict(size=20, color="#333")),
+                xaxis_title="Date",
+                yaxis_title="Inventory Level",
+                template="plotly_white",
+                hovermode="x unified",
+                plot_bgcolor="#f9f9f9",
+                margin=dict(l=40, r=40, t=60, b=40),
+                height=500
+            )
+
+            st.plotly_chart(fig, use_container_width=True)
 
     # ================== TAB 2: LEAD TIME ==================
     with tab2:
-        st.subheader("Lead Time Insights")
+        st.subheader("📊 Lead Time Distribution (Interactive)")
 
-        if not order_date_col or not delivery_date_col:
-            st.error("⚠️ Missing 'Order Date' or 'Delivery Date'")
+        # Histogram with stronger blue-purple-pink theme
+        fig = px.histogram(
+            df,
+            x=lead_time_col,
+            nbins=20,
+            title="Lead Time Distribution",
+            color_discrete_sequence=["#1f77b4", "#8a2be2", "#ff1493"],  # vivid blue, purple, pink
+            opacity=0.85
+        )
+        fig.update_traces(marker_line_color="white", marker_line_width=1.2)
+        fig.update_layout(
+            xaxis_title="Lead Time (days)",
+            yaxis_title="Frequency",
+            template="plotly_white",
+            title_font=dict(size=20, color="#8a2be2"),
+            plot_bgcolor="rgba(230,230,250,0.9)",  # lavender
+            paper_bgcolor="rgba(255,255,255,1)"
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+
+        if supplier_col and supplier_col in df.columns:
+            st.subheader("📦 Supplier-wise Lead Times (Interactive)")
+
+            # Dropdown for supplier selection
+            supplier_list = df[supplier_col].dropna().unique()
+            selected_supplier = st.selectbox("Select Supplier", supplier_list)
+
+            # ✅ Filter supplier data
+            supplier_data = df[df[supplier_col] == selected_supplier].copy()
+
+            # Ensure order_date is datetime
+            if not pd.api.types.is_datetime64_any_dtype(supplier_data[order_date_col]):
+                supplier_data[order_date_col] = pd.to_datetime(
+                    supplier_data[order_date_col], errors="coerce"
+                )
+
+            # Drop invalid dates
+            supplier_data = supplier_data.dropna(subset=[order_date_col])
+
+            if not supplier_data.empty:
+                # 👇 Let user choose granularity
+                freq_choice = st.radio(
+                    "Select Time Granularity:",
+                    ["Daily", "Weekly", "Monthly"],
+                    horizontal=True
+                )
+
+                if freq_choice == "Daily":
+                    supplier_data["Date"] = supplier_data[order_date_col].dt.date
+                    trend_df = (
+                        supplier_data.groupby("Date")[lead_time_col].mean().reset_index()
+                    )
+                    x_col = "Date"
+
+                elif freq_choice == "Weekly":
+                    supplier_data["YearWeek"] = supplier_data[order_date_col].dt.to_period("W").astype(str)
+                    trend_df = (
+                        supplier_data.groupby("YearWeek")[lead_time_col].mean().reset_index()
+                    )
+                    x_col = "YearWeek"
+
+                else:  # Monthly
+                    supplier_data["YearMonth"] = supplier_data[order_date_col].dt.to_period("M").astype(str)
+                    trend_df = (
+                        supplier_data.groupby("YearMonth")[lead_time_col].mean().reset_index()
+                    )
+                    x_col = "YearMonth"
+
+                # Line chart for supplier trend
+                fig2 = px.line(
+                    trend_df,
+                    x=x_col,
+                    y=lead_time_col,
+                    markers=True,
+                    title=f"📈 {freq_choice} Lead Time Trend for {selected_supplier}",
+                    line_shape="spline",
+                    color_discrete_sequence=["#0077b6"],
+                )
+                fig2.update_traces(line=dict(width=3), marker=dict(size=8, color="#ff4da6"))
+                fig2.update_layout(
+                    xaxis_title=freq_choice,
+                    yaxis_title="Average Lead Time (days)",
+                    template="plotly_white",
+                    title_font=dict(size=20, color="#6f42c1"),
+                    plot_bgcolor="rgba(240,240,255,0.95)",
+                )
+                st.plotly_chart(fig2, use_container_width=True)
+
+            else:
+                st.warning(f"No valid date/lead time data available for supplier: {selected_supplier}")
+
+            # Supplier comparison bar chart (all suppliers)
+            st.subheader("📊 Supplier Comparison (All Suppliers)")
+            avg_supplier_lead_time = (
+                df.groupby(supplier_col)[lead_time_col].mean().reset_index()
+            )
+            fig3 = px.bar(
+                avg_supplier_lead_time,
+                x=supplier_col,
+                y=lead_time_col,
+                color=lead_time_col,
+                color_discrete_sequence=px.colors.qualitative.Dark24,  # 24 distinct colors
+                barmode="group",    
+                title="Average Supplier Lead Times (All Suppliers)",
+            )
+            fig3.update_traces(marker_line_color="white", marker_line_width=1.2)
+            fig3.update_layout(
+                xaxis_title="Supplier",
+                yaxis_title="Average Lead Time (days)",
+                template="plotly_white",
+                title_font=dict(size=20, color="#8a2be2"),
+                plot_bgcolor="rgba(250,245,255,0.95)",
+            )
+            st.plotly_chart(fig3, use_container_width=True)
+
         else:
-            if lead_time_col is None:
-                df[order_date_col] = pd.to_datetime(df[order_date_col])
-                df[delivery_date_col] = pd.to_datetime(df[delivery_date_col])
-                df["lead_time_days"] = (df1[delivery_date_col] - df1[order_date_col]).dt.days
-                lead_time_col = "lead_time_days"
-
-            c1, c2, c3, c4, c5 = st.columns(5)
-            c1.metric("Avg", f"{df[lead_time_col].mean():.1f}d")
-            c2.metric("Median", f"{df[lead_time_col].median():.1f}d")
-            c3.metric("Min", f"{df[lead_time_col].min()}d")
-            c4.metric("Max", f"{df[lead_time_col].max()}d")
-            c5.metric("Std Dev", f"{df[lead_time_col].std():.1f}")
-
-            st.subheader("📊 Lead Time Distribution")
-            plt.figure(figsize=(10,5))
-            plt.hist(df[lead_time_col].dropna(), bins=20, color="#2ca02c", edgecolor="black")
-            plt.xlabel("Lead Time (days)")
-            plt.ylabel("Frequency")
-            plt.title("Lead Time Distribution")
-            st.pyplot(plt)
-
-            if supplier_col:
-                st.subheader("Supplier-wise Lead Times")
-                avg_supplier_lead_time = df.groupby(supplier_col)[lead_time_col].mean()
-                st.bar_chart(avg_supplier_lead_time)
+            st.warning("Supplier column not found in the dataset.")
 
     # ================== TAB 3: STOCKOUT ==================
     with tab3:

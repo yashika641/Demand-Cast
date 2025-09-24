@@ -9,14 +9,24 @@ def churn_prediction_model(transactions_df, customer_df, transaction_id_col, ord
     # ---- Custom CSS Styling ----
     st.markdown("""
         <style>
-        /* Background */
         .stApp {
-            background-image: url("https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/Gemini_Generated_Image_6uxpod6uxpod6uxp.png");
+            background: transparent !important;
+        }
+        video.bg-video {
+            position: fixed;     /* allow scrolling */
+            top: 0;
+            left: 0;
+            display:flex;
+            align-items: center;
+            justify-content: center;    
+            width: 110%;           /* fill full width */
+            height: 100%;           /* scale height proportionally */
+            min-height: 100%;       /* ensures it covers vertically */
+            object-fit: cover;    /* show entire video (no cropping) */
+            z-index: -1;            /* push behind content */
+            background: black;  
+            background-position:center;
             background-size: cover;
-            background-attachment: fixed;
-            font-family: 'Montserrat', sans-serif;
-            color: #ffffff;
-            background-position : center;
         }
         /* Section headers */
         .css-1v0mbdj h1, h2, h3, h4, h5 {

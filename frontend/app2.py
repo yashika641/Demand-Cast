@@ -2,8 +2,6 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from utils.google_trends_api import fetch_google_trends_best_keyword
-from utils.column_finder import column_finder
 
 # from inventory_models_functions import lead_time_dashboard
 from dashboards.sales_dashboard import sales_dashboard
@@ -22,84 +20,15 @@ if "page" not in st.session_state:
 def go_to_next_page(page_name):
     st.session_state.page = page_name
     st.rerun()
+    st.markdown("""
+        <script>
+            window.scrollTo(0, 0);
+        </script>
+    """, unsafe_allow_html=True)
 
 
 # ----------------set page config----------------#
 st.set_page_config(page_title="DemandCast", page_icon=":bar_chart:", layout="wide")
-# Navbar HTML & CSS
-# st.markdown("""
-# <style>
-# /* Navbar styling */
-# .navbar {
-#     position: fixed;
-#     top: 10;
-#     left: 0;
-#     width: 100%;
-#     height: 100px;
-#     background-color: transparent;
-#     display: flex;
-#     align-items: center;
-#     justify-content: space-between;
-#     padding: 0 30px;
-#     z-index: 9999;
-# }
-
-# /* Logo + Brand */
-# .navbar-logo {
-#     display: flex;
-#     align-items: center;
-# }
-# .navbar-logo img {
-#     height: 80px;
-#     width: 120px;
-#     object-fit: cover;
-#     object-position: center;
-#     border-radius: 8px;
-#     margin-right: 10px;
-# }
-# .navbar-logo span {
-#     color:#d7dcde;               /* desired color */
-#     font-weight: bold;
-#     font-size: 36px;              /* increased font size */
-#     font-family: 'Helvetica', sans-serif; /* font style */
-# }
-
-# /* Menu */
-# .navbar-menu {
-#     display: flex;
-#     align-items: center;
-# }
-# .navbar-menu a {
-#     color: white;
-#     text-decoration: none;
-#     margin-left: 30px;
-#     font-weight: 500;
-#     font-size: 20px;
-#     transition: 0.3s;
-#     font-family: Poppins, sans-serif;
-# }
-# .navbar-menu a:hover {
-#     text-decoration: underline;
-# }
-# </style>
-
-# <div class="navbar">
-#     <div class="navbar-logo">
-#         <img src="https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/logo1.PNG" alt="Logo">
-#         <span>DemandCast</span>
-#     </div>
-#     <div class="navbar-menu">
-#         <a href="#home">Home</a>
-#         <a href="#solutions">Solutions</a>
-#         <a href="#docs">Docs</a>
-#         <a href="#tools">Tools</a>
-#         <a href="#contact">Contact</a>
-#     </div>
-# </div>
-
-# <div style="padding-top: 110px;"></div>
-# """, unsafe_allow_html=True)
-
 if st.session_state.page == "home":
     st.markdown("""
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
@@ -152,16 +81,17 @@ if st.session_state.page == "home":
         position: fixed;     /* allow scrolling */
         top: 0;
         left: 0;
-        right:50;
         display:flex;
         align-items: center;
         justify-content: center;    
         width: 110%;           /* fill full width */
         height: 100%;           /* scale height proportionally */
         min-height: 100%;       /* ensures it covers vertically */
-        object-fit: contain;    /* show entire video (no cropping) */
+        object-fit: cover;    /* show entire video (no cropping) */
         z-index: -1;            /* push behind content */
         background: black;  
+        background-position:center;
+        background-size: cover;
     }
 
 
@@ -284,7 +214,7 @@ if st.session_state.page == "home":
     </script>
 
     <video autoplay muted loop class="bg-video">
-        <source src="https://github.com/yashika641/Demand-Cast/raw/refs/heads/main/datasets/bg-video1.mp4" type="video/mp4" >
+        <source src="https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/bg-video1.mp4" type="video/mp4" >
     </video>
     <div class="navbar">
         <div class="navbar-logo" style="display: flex; align-items: center;">
@@ -386,19 +316,29 @@ if st.session_state.page == "home":
 
 # -----------------files upload page -----------------#
 
-if st.session_state.page == "page1":
+elif st.session_state.page == "page1":
     # Hero title
     st.markdown(
         """
         <style>
-        /* Background */
         .stApp {
-            background-image: url("https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/Gemini_Generated_Image_6uxpod6uxpod6uxp.png");
+            background: transparent !important;
+        }
+        video.bg-video {
+            position: fixed;     /* allow scrolling */
+            top: 0;
+            left: 0;
+            display:flex;
+            align-items: center;
+            justify-content: center;    
+            width: 110%;           /* fill full width */
+            height: 100%;           /* scale height proportionally */
+            min-height: 100%;       /* ensures it covers vertically */
+            object-fit: cover;    /* show entire video (no cropping) */
+            z-index: -1;            /* push behind content */
+            background: black;  
+            background-position:center;
             background-size: cover;
-            background-attachment: fixed;
-            font-family: 'Montserrat', sans-serif;
-            color: #ffffff;
-            background-position : center;
         }
 
         /* Upload box styling */
@@ -440,6 +380,9 @@ if st.session_state.page == "page1":
             box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
         }
         </style>
+        <video autoplay muted loop class="bg-video">
+            <source src="https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/bg-video1.mp4" type="video/mp4" >
+        </video>
         """,
         unsafe_allow_html=True,
     )
@@ -589,14 +532,28 @@ elif st.session_state.page == "page2":
     st.markdown("""
     <style>
     .stApp {
-        # background-color: #ffffff;
+        background: transparent !important;
+    }
+    video.bg-video {
+        position: fixed;     /* allow scrolling */
+        top: 0;
+        left: 0;
+        display:flex;
+        align-items: center;
+        justify-content: center;    
+        width: 110%;           /* fill full width */
+        height: 100%;           /* scale height proportionally */
+        min-height: 100%;       /* ensures it covers vertically */
+        object-fit: cover;    /* show entire video (no cropping) */
+        z-index: -1;            /* push behind content */
+        background: black;  
+        background-position:center;
         background-size: cover;
-        background-attachment: fixed;
-        font-family: 'Montserrat', sans-serif;
-        color: #ffffff;
-        background-position : center;
     }
     </style>
+    <video autoplay muted loop class="bg-video">
+        <source src="https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/bg-video1.mp4" type="video/mp4" >
+    </video>
 """, unsafe_allow_html=True)
 
     st.markdown("""

@@ -138,19 +138,29 @@ def product_dashboard(products_df=None, sales_df=None, inventory_df=None, transa
     st.markdown(
         """
         <style>
-        /* Background */
         .stApp {
-            background-image: url("https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/Gemini_Generated_Image_6uxpod6uxpod6uxp.png");
+            background: transparent !important;
+        }
+        video.bg-video {
+            position: fixed;     /* allow scrolling */
+            top: 0;
+            left: 0;
+            display:flex;
+            align-items: center;
+            justify-content: center;    
+            width: 110%;           /* fill full width */
+            height: 100%;           /* scale height proportionally */
+            min-height: 100%;       /* ensures it covers vertically */
+            object-fit: cover;    /* show entire video (no cropping) */
+            z-index: -1;            /* push behind content */
+            background: black;  
+            background-position:center;
             background-size: cover;
-            background-attachment: fixed;
-            font-family: 'Montserrat', sans-serif;
-            color: #ffffff;
-            background-position : center;
         }
 
         /* Main title */
         .prod-title {
-            font-size: 28px;
+            font-size: 38px;
             font-weight: 800;
             color: #dbeafe;
             letter-spacing: 0.2px;
@@ -158,7 +168,7 @@ def product_dashboard(products_df=None, sales_df=None, inventory_df=None, transa
         }
         .prod-sub {
             color: #bbcfff;
-            font-size: 15px;
+            font-size: 50px;
             margin-top: 0;
             margin-bottom: 14px;
         }
@@ -176,9 +186,9 @@ def product_dashboard(products_df=None, sales_df=None, inventory_df=None, transa
 
         /* Animated subheaders */
         .section-h {
-            font-size:18px;
+            font-size:25px;
             font-weight:700;
-            color: #e6eef8;
+            color: #c145b8;
             margin-bottom:6px;
             background: linear-gradient(90deg,#7c3aed,#2563eb);
             -webkit-background-clip: text;
@@ -228,13 +238,17 @@ def product_dashboard(products_df=None, sales_df=None, inventory_df=None, transa
         /* reduce Streamlit default margins for denser layout */
         .css-1d391kg { padding-top: 8px; }
         </style>
+        
+        <video autoplay muted loop class="bg-video">
+            <source src="https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/bg-video1.mp4" type="video/mp4" >
+        </video>
         """,
         unsafe_allow_html=True,
     )
 
     # -------------------- Header --------------------
     st.markdown(f"<div class='prod-title'>🛍️ Product Dashboard</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='prod-sub'>Overview of products, sales, inventory, trends and cross-sell suggestions — styled in blue/purple glass theme.</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='prod-sub'> Product Dashboard – <br>Track inventory, performance, and<br> trends in one place.</div>", unsafe_allow_html=True)
 
     # -------------------- Column detection --------------------
     product_col = column_finder(prod, POSSIBLE_PRODUCT_COLS)
@@ -406,15 +420,48 @@ def product_dashboard(products_df=None, sales_df=None, inventory_df=None, transa
                 .head(10)
             )
             st.markdown("<div class='section-h'>📈 Top Products by Sales</div>", unsafe_allow_html=True)
-            fig = px.bar(top_sales, x=product_col, y=sales_col, title=f"Top 10 Products by {sales_col}",
-                         color_discrete_sequence=px.colors.sequential.Blues)
-            st.plotly_chart(fig, use_container_width=True, key="top_sales_chart")
-        except Exception as e:
-            st.warning(f"Could not compute top products by sales: {e}")
-    else:
-        st.info("Top products by sales: missing sales_df, sales column, or product column.")
-    st.markdown("</div>", unsafe_allow_html=True)
+            fig = px.bar(
+                top_sales,
+                x=product_col,
+                y=sales_col,
+                title=f"Top 10 Products by {sales_col}",
+                color_discrete_sequence=px.colors.sequential.Blues,  # bar colors
+            )
 
+            # Update Plotly layout (chart styling)
+            fig.update_layout(
+                plot_bgcolor="rgba(0,0,0,0)",   # transparent background
+                paper_bgcolor="rgba(0,0,0,0)",  # transparent frame
+                font=dict(size=14, color="#1E3A8A"),  # navy labels
+                title=dict(font=dict(size=20, color="#0EA5E9"), x=0.5),  # center title
+                xaxis=dict(showgrid=False, tickfont=dict(color="#2563EB")),  # blue axis
+                yaxis=dict(showgrid=True, gridcolor="rgba(0,0,0,0.1)", tickfont=dict(color="#2563EB")),
+            )
+
+            # Wrap chart in a styled div
+            st.markdown(
+                """
+                <style>
+                .chart-container {
+                    background: linear-gradient(to right, #E0F2FE, #F0F9FF);
+                    padding: 20px;
+                    border-radius: 16px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                    margin-bottom: 30px;
+                }
+                </style>
+                <div class="chart-container">
+                """,
+                unsafe_allow_html=True,
+            )
+
+            st.plotly_chart(fig, use_container_width=True, key="top_sales_chart")
+
+            st.markdown("</div>", unsafe_allow_html=True)
+            
+        except Exception as e:
+            raise 
+        
     # -------------------- Inventory turnover --------------------
     st.markdown("<div class='glass'>", unsafe_allow_html=True)
     turnover_df = None

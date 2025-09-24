@@ -82,3 +82,5 @@ google-cloud-storage
 faker
 
 snscrape
+regex
+

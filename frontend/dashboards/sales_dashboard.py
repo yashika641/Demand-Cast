@@ -84,14 +84,24 @@ def sales_dashboard(sales_df):
     st.markdown(
         """
         <style>
-        /* Background */
         .stApp {
-            background-image: url("https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/Gemini_Generated_Image_6uxpod6uxpod6uxp.png");
+            background: transparent !important;
+        }
+        video.bg-video {
+            position: fixed;     /* allow scrolling */
+            top: 0;
+            left: 0;
+            display:flex;
+            align-items: center;
+            justify-content: center;    
+            width: 110%;           /* fill full width */
+            height: 100%;           /* scale height proportionally */
+            min-height: 100%;       /* ensures it covers vertically */
+            object-fit: cover;    /* show entire video (no cropping) */
+            z-index: -1;            /* push behind content */
+            background: black;  
+            background-position:center;
             background-size: cover;
-            background-attachment: fixed;
-            font-family: 'Montserrat', sans-serif;
-            color: #ffffff;
-            background-position : center;
         }
 
         /* Page title */
@@ -186,6 +196,9 @@ def sales_dashboard(sales_df):
             text-align:center;
         }
         </style>
+        <video autoplay muted loop class="bg-video">
+            <source src="https://raw.githubusercontent.com/yashika641/Demand-Cast/main/datasets/bg-video1.mp4" type="video/mp4" >
+        </video>
         """,
         unsafe_allow_html=True,
     )
