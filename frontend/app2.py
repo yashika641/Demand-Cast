@@ -9,7 +9,7 @@ from dashboards.inventory_dashboard import inventory_dashboard
 from dashboards.product_dashboard import product_dashboard
 from dashboards.customer_dashboard import customer_dashboard
 from dashboards.promtions_dashboard import promotion_dashboard
-from streamlit_card import card
+from streamlit_cards import card
 
 
 if "page" not in st.session_state:

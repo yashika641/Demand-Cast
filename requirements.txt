@@ -16,3 +16,4 @@ ipywidgets
 pytrends
 tqdm
 keybert
+streamlit_card
