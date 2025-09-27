@@ -8,7 +8,7 @@ matplotlib
 prophet
 xgboost
 lightgbm
-streamlit-cards
+streamlit-card
 mlxtend
 regex
 plotly
