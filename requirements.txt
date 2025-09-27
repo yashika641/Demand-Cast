@@ -12,3 +12,7 @@ streamlit-cards
 mlxtend
 regex
 plotly
+ipywidgets
+pytrends
+tqdm
+keybert
