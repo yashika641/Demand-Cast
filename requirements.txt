@@ -11,3 +11,4 @@ lightgbm
 streamlit-cards
 mlxtend
 regex
+plotly
