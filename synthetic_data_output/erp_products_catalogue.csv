@@ -1,0 +1,151 @@
+product_id,product_name,subcategory,brand,unit_price,description
+ERP001,Odoo CRM Module,ERP Modules,Odoo,8100,"Manage leads, contacts, and customer relationships efficiently Offered by Odoo in category ERP Modules."
+ERP002,Odoo Sales Module,HR & Payroll,Odoo,8200,"Manage quotations, orders, invoicing, and track sales performance Offered by Odoo in category HR & Payroll."
+ERP003,Odoo Inventory Management,Inventory & Supply Chain,Odoo,8300,"Track warehouse stock, shipments, and inventory in real-time Offered by Odoo in category Inventory & Supply Chain."
+ERP004,Odoo Accounting Module,Marketing,Odoo,8400,Complete accounting solution with invoicing and reporting Offered by Odoo in category Marketing.
+ERP005,Odoo HR Module,Accounting,Odoo,8500,"Employee data management, payroll, leaves, and appraisal tracking Offered by Odoo in category Accounting."
+ERP006,Odoo Marketing Automation,Custom Services,Odoo,8600,"Automate campaigns, social media posts, and lead scoring Offered by Odoo in category Custom Services."
+ERP007,Odoo eCommerce Module,Integrations,Odoo,8700,Create and manage online stores integrated with ERP Offered by Odoo in category Integrations.
+ERP008,Odoo Point of Sale,CRM & Analytics,Odoo,8800,POS solution for retail and restaurants with real-time sync Offered by Odoo in category CRM & Analytics.
+ERP009,Odoo Project Management,ERP Modules,Odoo,8900,"Manage projects, tasks, stages, and collaboration Offered by Odoo in category ERP Modules."
+ERP010,Odoo Helpdesk Module,HR & Payroll,Odoo,9000,Ticketing system for customer support with SLA tracking Offered by Odoo in category HR & Payroll.
+ERP011,Odoo BI Dashboard,Inventory & Supply Chain,Odoo,9100,"Interactive dashboards for KPIs, sales, and operational insights Offered by Odoo in category Inventory & Supply Chain."
+ERP012,Odoo Custom Integration Service,Marketing,Odoo,9200,Integrate modules with third-party applications Offered by Odoo in category Marketing.
+ERP013,Odoo Mobile App Development,Accounting,Odoo,9300,Custom mobile apps integrated with ERP backend Offered by Odoo in category Accounting.
+ERP014,Odoo Cloud Hosting Service,Custom Services,Odoo,9400,Secure and scalable cloud hosting with backups Offered by Odoo in category Custom Services.
+ERP015,Odoo Training Services,Integrations,Odoo,9500,Hands-on training for employees on ERP and modules Offered by Odoo in category Integrations.
+ERP016,Odoo Chatbot Integration,CRM & Analytics,Odoo,9600,AI-based chatbot for customer support and automation Offered by Odoo in category CRM & Analytics.
+ERP017,Odoo API Development,ERP Modules,Odoo,9700,Custom APIs for integration with external software Offered by Odoo in category ERP Modules.
+ERP018,Odoo Workflow Automation,HR & Payroll,Odoo,9800,Automate business workflows across modules Offered by Odoo in category HR & Payroll.
+ERP019,Odoo Subscription Management,Inventory & Supply Chain,Odoo,9900,"Manage recurring subscriptions, billing, and churn Offered by Odoo in category Inventory & Supply Chain."
+ERP020,Odoo Purchase Analytics,Marketing,Odoo,10000,Monitor purchasing trends and supplier performance Offered by Odoo in category Marketing.
+ERP021,Zoho CRM Module,Accounting,Zoho,10100,"Manage leads, contacts, and customer relationships efficiently Offered by Zoho in category Accounting."
+ERP022,Zoho Sales Module,Custom Services,Zoho,10200,"Manage quotations, orders, invoicing, and track sales performance Offered by Zoho in category Custom Services."
+ERP023,Zoho Inventory Management,Integrations,Zoho,10300,"Track warehouse stock, shipments, and inventory in real-time Offered by Zoho in category Integrations."
+ERP024,Zoho Accounting Module,CRM & Analytics,Zoho,10400,Complete accounting solution with invoicing and reporting Offered by Zoho in category CRM & Analytics.
+ERP025,Zoho HR Module,ERP Modules,Zoho,10500,"Employee data management, payroll, leaves, and appraisal tracking Offered by Zoho in category ERP Modules."
+ERP026,Zoho Marketing Automation,HR & Payroll,Zoho,10600,"Automate campaigns, social media posts, and lead scoring Offered by Zoho in category HR & Payroll."
+ERP027,Zoho eCommerce Module,Inventory & Supply Chain,Zoho,10700,Create and manage online stores integrated with ERP Offered by Zoho in category Inventory & Supply Chain.
+ERP028,Zoho Point of Sale,Marketing,Zoho,10800,POS solution for retail and restaurants with real-time sync Offered by Zoho in category Marketing.
+ERP029,Zoho Project Management,Accounting,Zoho,10900,"Manage projects, tasks, stages, and collaboration Offered by Zoho in category Accounting."
+ERP030,Zoho Helpdesk Module,Custom Services,Zoho,11000,Ticketing system for customer support with SLA tracking Offered by Zoho in category Custom Services.
+ERP031,Zoho BI Dashboard,Integrations,Zoho,11100,"Interactive dashboards for KPIs, sales, and operational insights Offered by Zoho in category Integrations."
+ERP032,Zoho Custom Integration Service,CRM & Analytics,Zoho,11200,Integrate modules with third-party applications Offered by Zoho in category CRM & Analytics.
+ERP033,Zoho Mobile App Development,ERP Modules,Zoho,11300,Custom mobile apps integrated with ERP backend Offered by Zoho in category ERP Modules.
+ERP034,Zoho Cloud Hosting Service,HR & Payroll,Zoho,11400,Secure and scalable cloud hosting with backups Offered by Zoho in category HR & Payroll.
+ERP035,Zoho Training Services,Inventory & Supply Chain,Zoho,11500,Hands-on training for employees on ERP and modules Offered by Zoho in category Inventory & Supply Chain.
+ERP036,Zoho Chatbot Integration,Marketing,Zoho,11600,AI-based chatbot for customer support and automation Offered by Zoho in category Marketing.
+ERP037,Zoho API Development,Accounting,Zoho,11700,Custom APIs for integration with external software Offered by Zoho in category Accounting.
+ERP038,Zoho Workflow Automation,Custom Services,Zoho,11800,Automate business workflows across modules Offered by Zoho in category Custom Services.
+ERP039,Zoho Subscription Management,Integrations,Zoho,11900,"Manage recurring subscriptions, billing, and churn Offered by Zoho in category Integrations."
+ERP040,Zoho Purchase Analytics,CRM & Analytics,Zoho,12000,Monitor purchasing trends and supplier performance Offered by Zoho in category CRM & Analytics.
+ERP041,Salesforce CRM Module,ERP Modules,Salesforce,12100,"Manage leads, contacts, and customer relationships efficiently Offered by Salesforce in category ERP Modules."
+ERP042,Salesforce Sales Module,HR & Payroll,Salesforce,12200,"Manage quotations, orders, invoicing, and track sales performance Offered by Salesforce in category HR & Payroll."
+ERP043,Salesforce Inventory Management,Inventory & Supply Chain,Salesforce,12300,"Track warehouse stock, shipments, and inventory in real-time Offered by Salesforce in category Inventory & Supply Chain."
+ERP044,Salesforce Accounting Module,Marketing,Salesforce,12400,Complete accounting solution with invoicing and reporting Offered by Salesforce in category Marketing.
+ERP045,Salesforce HR Module,Accounting,Salesforce,12500,"Employee data management, payroll, leaves, and appraisal tracking Offered by Salesforce in category Accounting."
+ERP046,Salesforce Marketing Automation,Custom Services,Salesforce,12600,"Automate campaigns, social media posts, and lead scoring Offered by Salesforce in category Custom Services."
+ERP047,Salesforce eCommerce Module,Integrations,Salesforce,12700,Create and manage online stores integrated with ERP Offered by Salesforce in category Integrations.
+ERP048,Salesforce Point of Sale,CRM & Analytics,Salesforce,12800,POS solution for retail and restaurants with real-time sync Offered by Salesforce in category CRM & Analytics.
+ERP049,Salesforce Project Management,ERP Modules,Salesforce,12900,"Manage projects, tasks, stages, and collaboration Offered by Salesforce in category ERP Modules."
+ERP050,Salesforce Helpdesk Module,HR & Payroll,Salesforce,13000,Ticketing system for customer support with SLA tracking Offered by Salesforce in category HR & Payroll.
+ERP051,Salesforce BI Dashboard,Inventory & Supply Chain,Salesforce,13100,"Interactive dashboards for KPIs, sales, and operational insights Offered by Salesforce in category Inventory & Supply Chain."
+ERP052,Salesforce Custom Integration Service,Marketing,Salesforce,13200,Integrate modules with third-party applications Offered by Salesforce in category Marketing.
+ERP053,Salesforce Mobile App Development,Accounting,Salesforce,13300,Custom mobile apps integrated with ERP backend Offered by Salesforce in category Accounting.
+ERP054,Salesforce Cloud Hosting Service,Custom Services,Salesforce,13400,Secure and scalable cloud hosting with backups Offered by Salesforce in category Custom Services.
+ERP055,Salesforce Training Services,Integrations,Salesforce,13500,Hands-on training for employees on ERP and modules Offered by Salesforce in category Integrations.
+ERP056,Salesforce Chatbot Integration,CRM & Analytics,Salesforce,13600,AI-based chatbot for customer support and automation Offered by Salesforce in category CRM & Analytics.
+ERP057,Salesforce API Development,ERP Modules,Salesforce,13700,Custom APIs for integration with external software Offered by Salesforce in category ERP Modules.
+ERP058,Salesforce Workflow Automation,HR & Payroll,Salesforce,13800,Automate business workflows across modules Offered by Salesforce in category HR & Payroll.
+ERP059,Salesforce Subscription Management,Inventory & Supply Chain,Salesforce,13900,"Manage recurring subscriptions, billing, and churn Offered by Salesforce in category Inventory & Supply Chain."
+ERP060,Salesforce Purchase Analytics,Marketing,Salesforce,14000,Monitor purchasing trends and supplier performance Offered by Salesforce in category Marketing.
+ERP061,SAP CRM Module,Accounting,SAP,14100,"Manage leads, contacts, and customer relationships efficiently Offered by SAP in category Accounting."
+ERP062,SAP Sales Module,Custom Services,SAP,14200,"Manage quotations, orders, invoicing, and track sales performance Offered by SAP in category Custom Services."
+ERP063,SAP Inventory Management,Integrations,SAP,14300,"Track warehouse stock, shipments, and inventory in real-time Offered by SAP in category Integrations."
+ERP064,SAP Accounting Module,CRM & Analytics,SAP,14400,Complete accounting solution with invoicing and reporting Offered by SAP in category CRM & Analytics.
+ERP065,SAP HR Module,ERP Modules,SAP,14500,"Employee data management, payroll, leaves, and appraisal tracking Offered by SAP in category ERP Modules."
+ERP066,SAP Marketing Automation,HR & Payroll,SAP,14600,"Automate campaigns, social media posts, and lead scoring Offered by SAP in category HR & Payroll."
+ERP067,SAP eCommerce Module,Inventory & Supply Chain,SAP,14700,Create and manage online stores integrated with ERP Offered by SAP in category Inventory & Supply Chain.
+ERP068,SAP Point of Sale,Marketing,SAP,14800,POS solution for retail and restaurants with real-time sync Offered by SAP in category Marketing.
+ERP069,SAP Project Management,Accounting,SAP,14900,"Manage projects, tasks, stages, and collaboration Offered by SAP in category Accounting."
+ERP070,SAP Helpdesk Module,Custom Services,SAP,15000,Ticketing system for customer support with SLA tracking Offered by SAP in category Custom Services.
+ERP071,SAP BI Dashboard,Integrations,SAP,15100,"Interactive dashboards for KPIs, sales, and operational insights Offered by SAP in category Integrations."
+ERP072,SAP Custom Integration Service,CRM & Analytics,SAP,15200,Integrate modules with third-party applications Offered by SAP in category CRM & Analytics.
+ERP073,SAP Mobile App Development,ERP Modules,SAP,15300,Custom mobile apps integrated with ERP backend Offered by SAP in category ERP Modules.
+ERP074,SAP Cloud Hosting Service,HR & Payroll,SAP,15400,Secure and scalable cloud hosting with backups Offered by SAP in category HR & Payroll.
+ERP075,SAP Training Services,Inventory & Supply Chain,SAP,15500,Hands-on training for employees on ERP and modules Offered by SAP in category Inventory & Supply Chain.
+ERP076,SAP Chatbot Integration,Marketing,SAP,15600,AI-based chatbot for customer support and automation Offered by SAP in category Marketing.
+ERP077,SAP API Development,Accounting,SAP,15700,Custom APIs for integration with external software Offered by SAP in category Accounting.
+ERP078,SAP Workflow Automation,Custom Services,SAP,15800,Automate business workflows across modules Offered by SAP in category Custom Services.
+ERP079,SAP Subscription Management,Integrations,SAP,15900,"Manage recurring subscriptions, billing, and churn Offered by SAP in category Integrations."
+ERP080,SAP Purchase Analytics,CRM & Analytics,SAP,16000,Monitor purchasing trends and supplier performance Offered by SAP in category CRM & Analytics.
+ERP081,Microsoft Dynamics CRM Module,ERP Modules,Microsoft Dynamics,16100,"Manage leads, contacts, and customer relationships efficiently Offered by Microsoft Dynamics in category ERP Modules."
+ERP082,Microsoft Dynamics Sales Module,HR & Payroll,Microsoft Dynamics,16200,"Manage quotations, orders, invoicing, and track sales performance Offered by Microsoft Dynamics in category HR & Payroll."
+ERP083,Microsoft Dynamics Inventory Management,Inventory & Supply Chain,Microsoft Dynamics,16300,"Track warehouse stock, shipments, and inventory in real-time Offered by Microsoft Dynamics in category Inventory & Supply Chain."
+ERP084,Microsoft Dynamics Accounting Module,Marketing,Microsoft Dynamics,16400,Complete accounting solution with invoicing and reporting Offered by Microsoft Dynamics in category Marketing.
+ERP085,Microsoft Dynamics HR Module,Accounting,Microsoft Dynamics,16500,"Employee data management, payroll, leaves, and appraisal tracking Offered by Microsoft Dynamics in category Accounting."
+ERP086,Microsoft Dynamics Marketing Automation,Custom Services,Microsoft Dynamics,16600,"Automate campaigns, social media posts, and lead scoring Offered by Microsoft Dynamics in category Custom Services."
+ERP087,Microsoft Dynamics eCommerce Module,Integrations,Microsoft Dynamics,16700,Create and manage online stores integrated with ERP Offered by Microsoft Dynamics in category Integrations.
+ERP088,Microsoft Dynamics Point of Sale,CRM & Analytics,Microsoft Dynamics,16800,POS solution for retail and restaurants with real-time sync Offered by Microsoft Dynamics in category CRM & Analytics.
+ERP089,Microsoft Dynamics Project Management,ERP Modules,Microsoft Dynamics,16900,"Manage projects, tasks, stages, and collaboration Offered by Microsoft Dynamics in category ERP Modules."
+ERP090,Microsoft Dynamics Helpdesk Module,HR & Payroll,Microsoft Dynamics,17000,Ticketing system for customer support with SLA tracking Offered by Microsoft Dynamics in category HR & Payroll.
+ERP091,Microsoft Dynamics BI Dashboard,Inventory & Supply Chain,Microsoft Dynamics,17100,"Interactive dashboards for KPIs, sales, and operational insights Offered by Microsoft Dynamics in category Inventory & Supply Chain."
+ERP092,Microsoft Dynamics Custom Integration Service,Marketing,Microsoft Dynamics,17200,Integrate modules with third-party applications Offered by Microsoft Dynamics in category Marketing.
+ERP093,Microsoft Dynamics Mobile App Development,Accounting,Microsoft Dynamics,17300,Custom mobile apps integrated with ERP backend Offered by Microsoft Dynamics in category Accounting.
+ERP094,Microsoft Dynamics Cloud Hosting Service,Custom Services,Microsoft Dynamics,17400,Secure and scalable cloud hosting with backups Offered by Microsoft Dynamics in category Custom Services.
+ERP095,Microsoft Dynamics Training Services,Integrations,Microsoft Dynamics,17500,Hands-on training for employees on ERP and modules Offered by Microsoft Dynamics in category Integrations.
+ERP096,Microsoft Dynamics Chatbot Integration,CRM & Analytics,Microsoft Dynamics,17600,AI-based chatbot for customer support and automation Offered by Microsoft Dynamics in category CRM & Analytics.
+ERP097,Microsoft Dynamics API Development,ERP Modules,Microsoft Dynamics,17700,Custom APIs for integration with external software Offered by Microsoft Dynamics in category ERP Modules.
+ERP098,Microsoft Dynamics Workflow Automation,HR & Payroll,Microsoft Dynamics,17800,Automate business workflows across modules Offered by Microsoft Dynamics in category HR & Payroll.
+ERP099,Microsoft Dynamics Subscription Management,Inventory & Supply Chain,Microsoft Dynamics,17900,"Manage recurring subscriptions, billing, and churn Offered by Microsoft Dynamics in category Inventory & Supply Chain."
+ERP100,Microsoft Dynamics Purchase Analytics,Marketing,Microsoft Dynamics,18000,Monitor purchasing trends and supplier performance Offered by Microsoft Dynamics in category Marketing.
+ERP101,Oracle NetSuite CRM Module,Accounting,Oracle NetSuite,18100,"Manage leads, contacts, and customer relationships efficiently Offered by Oracle NetSuite in category Accounting."
+ERP102,Oracle NetSuite Sales Module,Custom Services,Oracle NetSuite,18200,"Manage quotations, orders, invoicing, and track sales performance Offered by Oracle NetSuite in category Custom Services."
+ERP103,Oracle NetSuite Inventory Management,Integrations,Oracle NetSuite,18300,"Track warehouse stock, shipments, and inventory in real-time Offered by Oracle NetSuite in category Integrations."
+ERP104,Oracle NetSuite Accounting Module,CRM & Analytics,Oracle NetSuite,18400,Complete accounting solution with invoicing and reporting Offered by Oracle NetSuite in category CRM & Analytics.
+ERP105,Oracle NetSuite HR Module,ERP Modules,Oracle NetSuite,18500,"Employee data management, payroll, leaves, and appraisal tracking Offered by Oracle NetSuite in category ERP Modules."
+ERP106,Oracle NetSuite Marketing Automation,HR & Payroll,Oracle NetSuite,18600,"Automate campaigns, social media posts, and lead scoring Offered by Oracle NetSuite in category HR & Payroll."
+ERP107,Oracle NetSuite eCommerce Module,Inventory & Supply Chain,Oracle NetSuite,18700,Create and manage online stores integrated with ERP Offered by Oracle NetSuite in category Inventory & Supply Chain.
+ERP108,Oracle NetSuite Point of Sale,Marketing,Oracle NetSuite,18800,POS solution for retail and restaurants with real-time sync Offered by Oracle NetSuite in category Marketing.
+ERP109,Oracle NetSuite Project Management,Accounting,Oracle NetSuite,18900,"Manage projects, tasks, stages, and collaboration Offered by Oracle NetSuite in category Accounting."
+ERP110,Oracle NetSuite Helpdesk Module,Custom Services,Oracle NetSuite,19000,Ticketing system for customer support with SLA tracking Offered by Oracle NetSuite in category Custom Services.
+ERP111,Oracle NetSuite BI Dashboard,Integrations,Oracle NetSuite,19100,"Interactive dashboards for KPIs, sales, and operational insights Offered by Oracle NetSuite in category Integrations."
+ERP112,Oracle NetSuite Custom Integration Service,CRM & Analytics,Oracle NetSuite,19200,Integrate modules with third-party applications Offered by Oracle NetSuite in category CRM & Analytics.
+ERP113,Oracle NetSuite Mobile App Development,ERP Modules,Oracle NetSuite,19300,Custom mobile apps integrated with ERP backend Offered by Oracle NetSuite in category ERP Modules.
+ERP114,Oracle NetSuite Cloud Hosting Service,HR & Payroll,Oracle NetSuite,19400,Secure and scalable cloud hosting with backups Offered by Oracle NetSuite in category HR & Payroll.
+ERP115,Oracle NetSuite Training Services,Inventory & Supply Chain,Oracle NetSuite,19500,Hands-on training for employees on ERP and modules Offered by Oracle NetSuite in category Inventory & Supply Chain.
+ERP116,Oracle NetSuite Chatbot Integration,Marketing,Oracle NetSuite,19600,AI-based chatbot for customer support and automation Offered by Oracle NetSuite in category Marketing.
+ERP117,Oracle NetSuite API Development,Accounting,Oracle NetSuite,19700,Custom APIs for integration with external software Offered by Oracle NetSuite in category Accounting.
+ERP118,Oracle NetSuite Workflow Automation,Custom Services,Oracle NetSuite,19800,Automate business workflows across modules Offered by Oracle NetSuite in category Custom Services.
+ERP119,Oracle NetSuite Subscription Management,Integrations,Oracle NetSuite,19900,"Manage recurring subscriptions, billing, and churn Offered by Oracle NetSuite in category Integrations."
+ERP120,Oracle NetSuite Purchase Analytics,CRM & Analytics,Oracle NetSuite,20000,Monitor purchasing trends and supplier performance Offered by Oracle NetSuite in category CRM & Analytics.
+ERP121,HubSpot CRM Module,ERP Modules,HubSpot,20100,"Manage leads, contacts, and customer relationships efficiently Offered by HubSpot in category ERP Modules."
+ERP122,HubSpot Sales Module,HR & Payroll,HubSpot,20200,"Manage quotations, orders, invoicing, and track sales performance Offered by HubSpot in category HR & Payroll."
+ERP123,HubSpot Inventory Management,Inventory & Supply Chain,HubSpot,20300,"Track warehouse stock, shipments, and inventory in real-time Offered by HubSpot in category Inventory & Supply Chain."
+ERP124,HubSpot Accounting Module,Marketing,HubSpot,20400,Complete accounting solution with invoicing and reporting Offered by HubSpot in category Marketing.
+ERP125,HubSpot HR Module,Accounting,HubSpot,20500,"Employee data management, payroll, leaves, and appraisal tracking Offered by HubSpot in category Accounting."
+ERP126,HubSpot Marketing Automation,Custom Services,HubSpot,20600,"Automate campaigns, social media posts, and lead scoring Offered by HubSpot in category Custom Services."
+ERP127,HubSpot eCommerce Module,Integrations,HubSpot,20700,Create and manage online stores integrated with ERP Offered by HubSpot in category Integrations.
+ERP128,HubSpot Point of Sale,CRM & Analytics,HubSpot,20800,POS solution for retail and restaurants with real-time sync Offered by HubSpot in category CRM & Analytics.
+ERP129,HubSpot Project Management,ERP Modules,HubSpot,20900,"Manage projects, tasks, stages, and collaboration Offered by HubSpot in category ERP Modules."
+ERP130,HubSpot Helpdesk Module,HR & Payroll,HubSpot,21000,Ticketing system for customer support with SLA tracking Offered by HubSpot in category HR & Payroll.
+ERP131,HubSpot BI Dashboard,Inventory & Supply Chain,HubSpot,21100,"Interactive dashboards for KPIs, sales, and operational insights Offered by HubSpot in category Inventory & Supply Chain."
+ERP132,HubSpot Custom Integration Service,Marketing,HubSpot,21200,Integrate modules with third-party applications Offered by HubSpot in category Marketing.
+ERP133,HubSpot Mobile App Development,Accounting,HubSpot,21300,Custom mobile apps integrated with ERP backend Offered by HubSpot in category Accounting.
+ERP134,HubSpot Cloud Hosting Service,Custom Services,HubSpot,21400,Secure and scalable cloud hosting with backups Offered by HubSpot in category Custom Services.
+ERP135,HubSpot Training Services,Integrations,HubSpot,21500,Hands-on training for employees on ERP and modules Offered by HubSpot in category Integrations.
+ERP136,HubSpot Chatbot Integration,CRM & Analytics,HubSpot,21600,AI-based chatbot for customer support and automation Offered by HubSpot in category CRM & Analytics.
+ERP137,HubSpot API Development,ERP Modules,HubSpot,21700,Custom APIs for integration with external software Offered by HubSpot in category ERP Modules.
+ERP138,HubSpot Workflow Automation,HR & Payroll,HubSpot,21800,Automate business workflows across modules Offered by HubSpot in category HR & Payroll.
+ERP139,HubSpot Subscription Management,Inventory & Supply Chain,HubSpot,21900,"Manage recurring subscriptions, billing, and churn Offered by HubSpot in category Inventory & Supply Chain."
+ERP140,HubSpot Purchase Analytics,Marketing,HubSpot,22000,Monitor purchasing trends and supplier performance Offered by HubSpot in category Marketing.
+ERP141,Odoo CRM Module,Accounting,Odoo,22100,"Manage leads, contacts, and customer relationships efficiently Offered by Odoo in category Accounting."
+ERP142,Odoo Sales Module,Custom Services,Odoo,22200,"Manage quotations, orders, invoicing, and track sales performance Offered by Odoo in category Custom Services."
+ERP143,Odoo Inventory Management,Integrations,Odoo,22300,"Track warehouse stock, shipments, and inventory in real-time Offered by Odoo in category Integrations."
+ERP144,Odoo Accounting Module,CRM & Analytics,Odoo,22400,Complete accounting solution with invoicing and reporting Offered by Odoo in category CRM & Analytics.
+ERP145,Odoo HR Module,ERP Modules,Odoo,22500,"Employee data management, payroll, leaves, and appraisal tracking Offered by Odoo in category ERP Modules."
+ERP146,Odoo Marketing Automation,HR & Payroll,Odoo,22600,"Automate campaigns, social media posts, and lead scoring Offered by Odoo in category HR & Payroll."
+ERP147,Odoo eCommerce Module,Inventory & Supply Chain,Odoo,22700,Create and manage online stores integrated with ERP Offered by Odoo in category Inventory & Supply Chain.
+ERP148,Odoo Point of Sale,Marketing,Odoo,22800,POS solution for retail and restaurants with real-time sync Offered by Odoo in category Marketing.
+ERP149,Odoo Project Management,Accounting,Odoo,22900,"Manage projects, tasks, stages, and collaboration Offered by Odoo in category Accounting."
+ERP150,Odoo Helpdesk Module,Custom Services,Odoo,23000,Ticketing system for customer support with SLA tracking Offered by Odoo in category Custom Services.

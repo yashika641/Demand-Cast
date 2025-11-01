@@ -1,0 +1,51 @@
+product_id,product_name,subcategory,brand,unit_price,description
+S001,Shopsy Men’s Cotton T-Shirt,Men Clothing,Shopsy,799,Soft cotton T-shirt with round neck and short sleeves
+S002,HRX Men’s Slim Fit Shirt,Men Clothing,HRX,1499,Slim-fit casual shirt with button-down collar
+S003,Zara Women’s Maxi Dress,Women Clothing,Zara,3999,Elegant maxi dress with floral prints and flowy silhouette
+S004,H&M Women’s Top,Women Clothing,H&M,1499,Lightweight cotton top for casual wear
+S005,UCB Kids’ Printed T-Shirt,Kids Clothing,UCB Kids,899,Comfortable cotton T-shirt with playful print
+S006,Levis Men’s Jeans,Men Clothing,Levis,2499,Denim jeans with stretchable fabric for comfort
+S007,Gini & Jony Kids’ Dress,Kids Clothing,Gini & Jony,1299,Cute cotton dress with floral prints
+S008,Wrangler Men’s Polo Shirt,Men Clothing,Wrangler,1799,Casual polo shirt with ribbed collar and short sleeves
+S009,H&M Women’s Leggings,Women Clothing,H&M,999,High-waist leggings made from breathable soft fabric
+S010,Chicco Kids’ Hoodie,Kids Clothing,Chicco,1199,Soft cotton hoodie with front pocket
+S011,Adidas Men’s Sneakers,Men Footwear,Adidas,3499,Lace-up sneakers with cushioned sole for workouts
+S012,Nike Women’s Running Shoes,Women Footwear,Nike,4599,Lightweight running shoes with excellent grip
+S013,Puma Kids’ Shoes,Kids Footwear,Puma,1799,Comfortable sports shoes for children
+S014,Skechers Men’s Casual Shoes,Men Footwear,Skechers,3999,Slip-on casual shoes with memory foam
+S015,Bata Women’s Flats,Women Footwear,Bata,1999,Comfortable slip-on flats for daily wear
+S016,Fossil Men’s Leather Wallet,Men Accessories,Fossil,2499,Genuine leather wallet with multiple card slots
+S017,Titan Women’s Watch,Women Accessories,Titan,4999,Stylish analog watch with stainless steel strap
+S018,Fastrack Men’s Backpack,Men Accessories,Fastrack,2199,Durable backpack with multiple compartments
+S019,Hidesign Women’s Handbag,Women Accessories,Hidesign,10999,Luxury leather handbag with premium finishing
+S020,Maybelline Lipstick,Beauty & Personal Care,Maybelline,499,Smooth lipstick with rich color payoff
+S021,L’Oreal Shampoo,Beauty & Personal Care,L’Oreal,299,Shampoo for smooth and shiny hair
+S022,Nivea Body Lotion,Beauty & Personal Care,Nivea,399,Moisturizing body lotion for daily use
+S023,Biotique Face Wash,Beauty & Personal Care,Biotique,349,Herbal face wash suitable for all skin types
+S024,Sleepwell Single Mattress,Home & Lifestyle,Sleepwell,10999,Comfortable single mattress with foam support
+S025,Amazon Basics Bedsheet Set,Home & Lifestyle,Amazon Basics,2499,Cotton bedsheet set with pillow covers
+S026,FabIndia Cotton Curtain,Home & Lifestyle,FabIndia,1999,Decorative cotton curtain for windows
+S027,Cello Water Bottle,Home & Lifestyle,Cello,299,Durable and lightweight water bottle
+S028,Philips Electric Kettle,Home & Lifestyle,Philips,2299,Stainless steel electric kettle with auto shut-off
+S029,Boat Bluetooth Earphones,Electronics,Boat,1499,Wireless Bluetooth earphones with deep bass
+S030,Mi Power Bank 10000mAh,Electronics,Xiaomi,1299,Portable power bank with fast charging support
+S031,Shopsy Men’s Hoodie,Men Clothing,Shopsy,1399,Cotton hoodie with drawstring and kangaroo pocket
+S032,Zara Women’s Blazer,Women Clothing,Zara,2999,Structured blazer with button closure
+S033,UCB Kids’ Jeans,Kids Clothing,UCB Kids,999,Denim jeans with elastic waistband
+S034,Levis Men’s Jacket,Men Clothing,Levis,4299,Denim jacket with button closure
+S035,H&M Women’s Top,Women Clothing,H&M,1299,Soft cotton top for casual wear
+S036,Chicco Kids’ Shorts,Kids Clothing,Chicco,799,Comfortable cotton shorts
+S037,Adidas Men’s Flip Flops,Men Footwear,Adidas,1499,Casual flip flops with cushioned sole
+S038,Nike Women’s Sneakers,Women Footwear,Nike,3999,Casual running sneakers
+S039,Puma Kids’ Sandals,Kids Footwear,Puma,1299,Open-toe sandals for children
+S040,Skechers Men’s Sports Shoes,Men Footwear,Skechers,4999,High-performance sports shoes
+S041,Bata Women’s Casual Shoes,Women Footwear,Bata,2199,Comfortable slip-on shoes
+S042,Fossil Men’s Watch,Men Accessories,Fossil,6999,Analog wristwatch with leather strap
+S043,Titan Women’s Watch,Women Accessories,Titan,5499,Elegant analog watch with metal strap
+S044,Fastrack Men’s Sling Bag,Men Accessories,Fastrack,1999,Compact sling bag with adjustable strap
+S045,Hidesign Women’s Wallet,Women Accessories,Hidesign,6999,Premium leather wallet with multiple compartments
+S046,Maybelline Nail Polish,Beauty & Personal Care,Maybelline,299,Long-lasting nail polish with vibrant colors
+S047,L’Oreal Hair Serum,Beauty & Personal Care,L’Oreal,499,Hair serum for smooth and shiny hair
+S048,Nivea Lip Balm,Beauty & Personal Care,Nivea,199,Moisturizing lip balm
+S049,Biotique Face Cream,Beauty & Personal Care,Biotique,399,Herbal face cream for daily skincare
+S050,Cello Lunch Box,Home & Lifestyle,Cello,349,Durable lunch box for school or office

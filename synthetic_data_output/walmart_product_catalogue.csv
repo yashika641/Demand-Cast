@@ -1,0 +1,151 @@
+product_id,product_name,subcategory,brand,unit_price,description
+WM001,Great Value Whole Wheat Flour 5lb,Grocery & Staples,Great Value,6.50,High-quality whole wheat flour for daily baking and cooking
+WM002,Nestle Coffee-mate Coffee Creamer 16oz,Beverages,Nestle,4.99,Creamy coffee creamer to enhance flavor
+WM003,Pepsi Soda 12-Pack 12oz,Beverages,Pepsi,6.99,Carbonated soft drink pack for refreshment
+WM004,Lays Classic Potato Chips 8oz,Snacks & Confectionery,Lays,2.99,Classic salted potato chips for snacking
+WM005,Colgate Total Toothpaste 6oz,Personal Care,Colgate,3.50,Toothpaste for cavity protection and gum care
+WM006,Dove Beauty Bar 4oz,Personal Care,Dove,2.50,Nourishing soap bar for smooth and healthy skin
+WM007,Tide Liquid Laundry Detergent 50oz,Cleaning Supplies,Tide,12.99,Liquid detergent for bright and clean clothes
+WM008,Mainstays Twin Sheet Set 4-Piece,Household & Kitchen,Mainstays,24.99,Cotton sheet set with pillowcases for comfort
+WM009,Great Value Vegetable Oil 48oz,Grocery & Staples,Great Value,5.99,Refined vegetable oil suitable for cooking and frying
+WM010,Pampers Baby Diapers Size 3 96-Count,Baby Care,Pampers,34.99,Soft and absorbent diapers for babies
+WM011,Huggies Baby Wipes 504ct,Baby Care,Huggies,19.99,Gentle wipes for babies’ skin care
+WM012,Equate Hand Sanitizer 8oz,Personal Care,Equate,2.99,Alcohol-based hand sanitizer for hygiene
+WM013,Great Value Granulated Sugar 4lb,Grocery & Staples,Great Value,3.50,Refined sugar for daily cooking and baking
+WM014,Kellogg's Frosted Flakes 18oz,Packaged Foods,Kellogg's,4.99,Crispy sweetened breakfast cereal
+WM015,Sam's Choice Sparkling Water 12-Pack 12oz,Beverages,Sam’s Choice,6.50,Refreshing sparkling water pack
+WM016,Colgate Soft Toothbrush,Personal Care,Colgate,1.99,Soft bristle toothbrush for daily oral care
+WM017,Dove Shampoo 12oz,Personal Care,Dove,5.99,Nourishing shampoo for smooth hair
+WM018,Tide Pods Laundry Detergent 35-Count,Cleaning Supplies,Tide,15.99,Convenient detergent pods for washing clothes
+WM019,Great Value Canola Oil 48oz,Grocery & Staples,Great Value,5.50,Healthy cooking oil for frying and baking
+WM020,Nestle Toll House Chocolate Chips 12oz,Packaged Foods,Nestle,4.99,Chocolate chips for baking and desserts
+WM021,Lays Barbecue Potato Chips 8oz,Snacks & Confectionery,Lays,2.99,Smoky flavored potato chips for snacking
+WM022,Kellogg's Rice Krispies 18oz,Packaged Foods,Kellogg's,4.99,Crispy rice cereal for breakfast
+WM023,Equate Liquid Hand Soap 7.5oz,Personal Care,Equate,1.99,Gentle liquid soap for daily use
+WM024,Mainstays Bath Towels 2-Pack,Household & Kitchen,Mainstays,14.99,Soft and absorbent cotton bath towels
+WM025,Pampers Sensitive Baby Wipes 56ct,Baby Care,Pampers,3.99,Gentle wipes for newborn skin
+WM026,Huggies Little Swimmers Size 4 24ct,Baby Care,Huggies,9.99,Swim diapers for water activities
+WM027,Great Value All-Purpose Flour 5lb,Grocery & Staples,Great Value,4.99,Versatile flour for baking and cooking
+WM028,Pepsi Cola 2L,Beverages,Pepsi,1.99,Refreshing cola beverage
+WM029,Nestle Milo 400g,Beverages,Nestle,5.99,Chocolate malt drink for children and adults
+WM030,Lays Sour Cream & Onion 8oz,Snacks & Confectionery,Lays,2.99,Flavored potato chips with a tangy twist
+WM031,Colgate Sensitive Pro-Relief Toothpaste 3oz,Personal Care,Colgate,3.99,Toothpaste for sensitive teeth
+WM032,Dove Conditioner 12oz,Personal Care,Dove,5.99,Hair conditioner for smooth and shiny hair
+WM033,Tide Ultra Powder 6lb,Cleaning Supplies,Tide,18.99,Detergent powder for large loads and deep cleaning
+WM034,Mainstays Pillow 2-Pack,Household & Kitchen,Mainstays,19.99,Soft pillows for comfortable sleep
+WM035,Great Value Brown Sugar 2lb,Grocery & Staples,Great Value,3.99,Unrefined brown sugar for cooking and baking
+WM036,Kellogg's Nutri-Grain Cereal Bars 6ct,Packaged Foods,Kellogg's,3.99,Healthy breakfast bars with whole grains
+WM037,Sam's Choice Sparkling Lemon Water 12-Pack 12oz,Beverages,Sam’s Choice,6.50,Refreshing lemon-flavored sparkling water
+WM038,Pampers Diaper Rash Cream 4oz,Baby Care,Pampers,4.99,Cream to protect babies from diaper rashes
+WM039,Huggies Baby Lotion 400ml,Baby Care,Huggies,6.99,Gentle lotion for soft baby skin
+WM040,Great Value Peanut Butter 16oz,Grocery & Staples,Great Value,3.99,Creamy peanut butter for sandwiches and snacks
+WM041,Nestle Nesquik Chocolate Syrup 20oz,Beverages,Nestle,4.50,Chocolate syrup for milk and desserts
+WM042,Lays Classic Salted Chips 8oz,Snacks & Confectionery,Lays,2.99,Original salted potato chips
+WM043,Colgate Max Fresh Toothpaste 4oz,Personal Care,Colgate,3.50,Toothpaste with fresh breath protection
+WM044,Dove Beauty Cream 100ml,Personal Care,Dove,3.99,Moisturizing cream for soft skin
+WM045,Tide Free Liquid Detergent 50oz,Cleaning Supplies,Tide,13.99,Liquid detergent for sensitive skin
+WM046,Mainstays 10-Piece Dinnerware Set,Household & Kitchen,Mainstays,34.99,Durable ceramic dinnerware set for families
+WM047,Sam's Choice Bottled Water 24-Pack 16.9oz,Beverages,Sam’s Choice,5.99,Pack of bottled water for hydration
+WM048,Great Value Corn Flakes 18oz,Packaged Foods,Great Value,3.99,Crispy breakfast cereal for daily use
+WM049,Kellogg's Mini-Wheats 18oz,Packaged Foods,Kellogg's,4.50,Fiber-rich breakfast cereal
+WM050,Nestle Coffee-mate Natural Bliss 16oz,Beverages,Nestle,5.99,Creamy coffee creamer with natural flavors
+WM051,Great Value Organic Eggs 12ct,Dairy & Eggs,Great Value,4.99,Fresh organic eggs for daily breakfast
+WM052,Equate Multivitamin Tablets 60ct,Health & Nutrition,Equate,9.99,Daily multivitamins for adults
+WM053,Pampers Baby Wipes Sensitive 64ct,Baby Care,Pampers,4.99,Gentle wipes for sensitive baby skin
+WM054,Huggies Natural Care Diapers Size 4 80ct,Baby Care,Huggies,29.99,Soft and absorbent diapers for toddlers
+WM055,Great Value Olive Oil 16.9oz,Grocery & Staples,Great Value,8.99,Extra virgin olive oil for cooking and dressing
+WM056,Nestle Pure Life Bottled Water 24-Pack 16.9oz,Beverages,Nestle,5.99,Pack of pure bottled water for hydration
+WM057,Pepsi Diet Soda 12-Pack 12oz,Beverages,Pepsi,6.99,Low-calorie diet soda pack
+WM058,Lays Wavy Original Potato Chips 8oz,Snacks & Confectionery,Lays,3.50,Wavy potato chips with crispy texture
+WM059,Colgate Whitening Toothpaste 6oz,Personal Care,Colgate,3.99,Whitening toothpaste for bright teeth
+WM060,Dove Shampoo 24oz,Personal Care,Dove,9.99,Moisturizing shampoo for smooth and shiny hair
+WM061,Tide Liquid HE Laundry Detergent 100oz,Cleaning Supplies,Tide,21.99,High-efficiency detergent for washing machines
+WM062,Mainstays Memory Foam Pillow,Household & Kitchen,Mainstays,24.99,Ergonomic memory foam pillow for comfort
+WM063,Sam's Choice Organic Apple Juice 64oz,Beverages,Sam’s Choice,4.99,Organic apple juice for healthy refreshment
+WM064,Kellogg's Eggo Waffles 12ct,Packaged Foods,Kellogg's,4.99,Frozen waffles for quick breakfast
+WM065,Great Value Brown Rice 5lb,Grocery & Staples,Great Value,7.50,Healthy brown rice for daily meals
+WM066,Equate Vitamin C Gummies 60ct,Health & Nutrition,Equate,7.99,Tasty gummies rich in vitamin C
+WM067,Pampers Swaddlers Size 1 92ct,Baby Care,Pampers,32.99,Soft diapers for newborn babies
+WM068,Huggies Baby Shampoo 13oz,Baby Care,Huggies,5.99,Gentle shampoo for baby hair care
+WM069,Nestle Milo Ready-to-Drink 200ml x 6,Beverages,Nestle,7.99,Chocolate malt drink in convenient packs
+WM070,Pepsi Max 2L,Beverages,Pepsi,1.99,Sugar-free carbonated beverage
+WM071,Lays BBQ Flavored Chips 8oz,Snacks & Confectionery,Lays,3.50,Barbecue flavored potato chips
+WM072,Colgate Plax Mouthwash 250ml,Personal Care,Colgate,4.99,Mint-flavored mouthwash for fresh breath
+WM073,Dove Body Lotion 20oz,Personal Care,Dove,7.99,Moisturizing lotion for smooth skin
+WM074,Tide Free & Gentle Powder 6lb,Cleaning Supplies,Tide,19.99,Detergent for sensitive skin and large loads
+WM075,Mainstays 5-Piece Towel Set,Household & Kitchen,Mainstays,19.99,Soft and absorbent towels for bathroom
+WM076,Sam's Choice Coconut Water 12-Pack 11oz,Beverages,Sam’s Choice,10.99,Refreshing natural coconut water
+WM077,Kellogg's Pop-Tarts Frosted Strawberry 8ct,Packaged Foods,Kellogg's,4.99,Strawberry-filled toaster pastries
+WM078,Great Value Maple Syrup 12oz,Grocery & Staples,Great Value,5.99,Rich maple syrup for pancakes and waffles
+WM079,Equate Omega-3 Fish Oil 1000mg 60ct,Health & Nutrition,Equate,9.99,Supports heart health and immunity
+WM080,Pampers Diaper Rash Cream 2oz,Baby Care,Pampers,3.99,Cream to protect baby skin from rashes
+WM081,Huggies Baby Lotion 20oz,Baby Care,Huggies,6.99,Gentle moisturizer for soft baby skin
+WM082,Nestle Coffee-Mate French Vanilla 16oz,Beverages,Nestle,4.99,Creamer for coffee with vanilla flavor
+WM083,Pepsi Wild Cherry 2L,Beverages,Pepsi,1.99,Cherry-flavored carbonated soft drink
+WM084,Lays Salt & Vinegar Chips 8oz,Snacks & Confectionery,Lays,3.50,Classic salt and vinegar potato chips
+WM085,Colgate Max White Toothpaste 6oz,Personal Care,Colgate,3.99,Whitening toothpaste for bright and healthy teeth
+WM086,Dove Hair Conditioner 12oz,Personal Care,Dove,5.99,Conditioner for smooth and shiny hair
+WM087,Tide HE Turbo Clean Liquid Detergent 75oz,Cleaning Supplies,Tide,18.99,High-efficiency detergent for tough stains
+WM088,Mainstays 6-Piece Dinnerware Set,Household & Kitchen,Mainstays,29.99,Ceramic plates, bowls, and mugs for families
+WM089,Sam's Choice Lemonade 12-Pack 12oz,Beverages,Sam’s Choice,6.50,Refreshing lemonade drink
+WM090,Kellogg's Special K Cereal 18oz,Packaged Foods,Kellogg's,5.50,Healthy breakfast cereal for weight management
+WM091,Great Value Honey 12oz,Grocery & Staples,Great Value,4.50,Pure honey for cooking, tea, and toast
+WM092,Equate Vitamin D3 1000 IU 60ct,Health & Nutrition,Equate,6.99,Supports bone and immune health
+WM093,Pampers Baby Wipes Aloe 72ct,Baby Care,Pampers,4.99,Gentle wipes with aloe for baby skin
+WM094,Huggies Little Snugglers Size 2 144ct,Baby Care,Huggies,39.99,Soft diapers for infants and toddlers
+WM095,Nestle Milo Powder 1kg,Beverages,Nestle,12.99,Chocolate malt powder for healthy drinks
+WM096,Pepsi Diet Max 2L,Beverages,Pepsi,1.99,Diet cola beverage with no sugar
+WM097,Lays Cheddar & Sour Cream Chips 8oz,Snacks & Confectionery,Lays,3.50,Flavored potato chips with cheese taste
+WM098,Colgate Sensitive Toothpaste 4oz,Personal Care,Colgate,3.50,Toothpaste for sensitive teeth and enamel protection
+WM099,Dove Beauty Bar 4oz,Personal Care,Dove,2.50,Nourishing soap for smooth skin
+WM100,Tide Free Liquid Laundry Detergent 50oz,Cleaning Supplies,Tide,13.99,Detergent suitable for sensitive skin
+WM101,Mainstays Kitchen Knife Set 6-Piece,Household & Kitchen,Mainstays,24.99,Stainless steel knives for kitchen use
+WM102,Sam's Choice Orange Juice 64oz,Beverages,Sam’s Choice,4.99,Freshly pressed orange juice
+WM103,Kellogg's Frosted Mini-Wheats 18oz,Packaged Foods,Kellogg's,4.99,High-fiber breakfast cereal
+WM104,Great Value Canola Oil 48oz,Grocery & Staples,Great Value,5.50,Healthy cooking oil for frying and baking
+WM105,Equate Iron Supplement 60ct,Health & Nutrition,Equate,7.99,Supports iron intake and prevents anemia
+WM106,Pampers Swaddlers Diapers Size 2 92ct,Baby Care,Pampers,32.99,Soft diapers for infants
+WM107,Huggies Baby Powder 400g,Baby Care,Huggies,5.99,Absorbent powder for baby skin
+WM108,Nestle Coffee-Mate Hazelnut 16oz,Beverages,Nestle,4.99,Flavorful coffee creamer with hazelnut taste
+WM109,Pepsi Cherry Cola 2L,Beverages,Pepsi,1.99,Cherry-flavored carbonated beverage
+WM110,Lays Classic Salted Chips 8oz,Snacks & Confectionery,Lays,2.99,Original potato chips for snacking
+WM111,Colgate Total Whitening Toothpaste 6oz,Personal Care,Colgate,3.99,Whitening toothpaste with cavity protection
+WM112,Dove Conditioner 24oz,Personal Care,Dove,9.99,Nourishing conditioner for hair
+WM113,Tide Liquid HE Laundry Detergent 75oz,Cleaning Supplies,Tide,18.99,Detergent for high-efficiency washing machines
+WM114,Mainstays Comforter Set Full Size,Household & Kitchen,Mainstays,49.99,Soft and warm comforter set for bedroom
+WM115,Sam's Choice Pineapple Juice 12-Pack 11oz,Beverages,Sam’s Choice,10.99,Refreshing canned pineapple juice
+WM116,Kellogg's Corn Pops 18oz,Packaged Foods,Kellogg's,4.99,Sweetened breakfast cereal
+WM117,Great Value White Sugar 10lb,Grocery & Staples,Great Value,8.99,Refined granulated sugar for cooking
+WM118,Equate Calcium Supplement 60ct,Health & Nutrition,Equate,8.99,Supports bone strength and health
+WM119,Pampers Baby Lotion 400ml,Baby Care,Pampers,6.99,Moisturizing lotion for baby skin
+WM120,Huggies Diaper Pants Size 5 42ct,Baby Care,Huggies,9.99,Comfortable diaper pants for toddlers
+WM121,Nestle Milo Ready-to-Drink 6-Pack 200ml,Beverages,Nestle,7.99,Chocolate malt drink in convenient packs
+WM122,Pepsi Diet Cola 12-Pack 12oz,Beverages,Pepsi,6.99,Low-calorie soda pack
+WM123,Lays Flamin' Hot Chips 8oz,Snacks & Confectionery,Lays,3.50,Spicy flavored potato chips
+WM124,Colgate Herbal Toothpaste 4oz,Personal Care,Colgate,3.50,Herbal toothpaste for oral care
+WM125,Dove Body Wash 20oz,Personal Care,Dove,7.99,Moisturizing body wash for skin
+WM126,Tide Pods Laundry Detergent 42-Count,Cleaning Supplies,Tide,19.99,Detergent pods for easy laundry
+WM127,Mainstays 12-Piece Cutlery Set,Household & Kitchen,Mainstays,14.99,Stainless steel utensils for daily use
+WM128,Sam's Choice Bottled Water 12-Pack 16.9oz,Beverages,Sam’s Choice,5.99,Pack of bottled water for daily hydration
+WM129,Kellogg's Apple Jacks 18oz,Packaged Foods,Kellogg's,4.99,Fruity breakfast cereal
+WM130,Great Value Maple Syrup 24oz,Grocery & Staples,Great Value,8.50,Rich maple syrup for pancakes and baking
+WM131,Equate Vitamin B Complex 60ct,Health & Nutrition,Equate,9.99,Supports metabolism and energy
+WM132,Pampers Sensitive Diapers Size 3 96ct,Baby Care,Pampers,34.99,Soft diapers for babies with sensitive skin
+WM133,Huggies Baby Shampoo 13oz,Baby Care,Huggies,5.99,Gentle shampoo for baby hair
+WM134,Nestle Milo Powder 500g,Beverages,Nestle,6.99,Chocolate malt powder for healthy drinks
+WM135,Pepsi Zero Sugar 2L,Beverages,Pepsi,1.99,Sugar-free carbonated beverage
+WM136,Lays Cheddar & Sour Cream 8oz,Snacks & Confectionery,Lays,3.50,Cheese-flavored potato chips
+WM137,Colgate Plax Antibacterial Mouthwash 250ml,Personal Care,Colgate,4.99,Mouthwash for fresh breath and oral hygiene
+WM138,Dove Hair Therapy Shampoo 12oz,Personal Care,Dove,5.99,Nourishing shampoo for healthy hair
+WM139,Tide HE Liquid Detergent 75oz,Cleaning Supplies,Tide,18.99,High-efficiency detergent for large loads
+WM140,Mainstays Kitchen Storage Container Set 10-Piece,Household & Kitchen,Mainstays,19.99,Durable containers for food storage
+WM141,Sam's Choice Sparkling Water Lemon 12-Pack 12oz,Beverages,Sam’s Choice,6.50,Lemon-flavored sparkling water
+WM142,Kellogg's Rice Krispies Treats 6ct,Packaged Foods,Kellogg's,3.99,Crispy marshmallow snack bars
+WM143,Great Value Organic Honey 12oz,Grocery & Staples,Great Value,6.50,Organic pure honey for daily use
+WM144,Equate Zinc Supplement 50mg 60ct,Health & Nutrition,Equate,8.99,Supports immunity and skin health
+WM145,Pampers Baby Lotion 13oz,Baby Care,Pampers,6.99,Moisturizing lotion for soft baby skin
+WM146,Huggies Little Movers Size 4 104ct,Baby Care,Huggies,36.99,Active diapers for toddlers
+WM147,Nestle Coffee-Mate Hazelnut Creamer 16oz,Beverages,Nestle,4.99,Creamy coffee creamer with hazelnut flavor
+WM148,Pepsi Wild Cherry 12-Pack 12oz,Beverages,Pepsi,6.99,Cherry-flavored soda pack
+WM149,Lays Wavy BBQ Chips 8oz,Snacks & Confectionery,Lays,3.50,Wavy chips with smoky barbecue flavor
+WM150,Colgate Whitening Mouthwash 250ml,Personal Care,Colgate,4.99,Whitening mouthwash for fresh breath

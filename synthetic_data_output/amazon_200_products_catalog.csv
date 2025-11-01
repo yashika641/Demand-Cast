@@ -1,0 +1,87 @@
+product_id,product_name,subcategory,brand,unit_price,description
+A001,Instant Pot Duo 7-in-1 Electric Pressure Cooker,Home & Kitchen,Instant Pot,8999,Instant Pot Duo 7-in-1 Electric Pressure Cooker by Instant Pot in category Home & Kitchen. High-quality product for your needs.
+A002,Dyson V11 Torque Drive Cordless Vacuum Cleaner,Home & Kitchen,Dyson,49999,Dyson V11 Torque Drive Cordless Vacuum Cleaner by Dyson in category Home & Kitchen. High-quality product for your needs.
+A003,Ninja Foodi 9-in-1 Pressure Cooker & Air Fryer,Home & Kitchen,Ninja,15999,Ninja Foodi 9-in-1 Pressure Cooker & Air Fryer by Ninja in category Home & Kitchen. High-quality product for your needs.
+A004,iRobot Roomba 675 Robot Vacuum,Home & Kitchen,iRobot,19999,iRobot Roomba 675 Robot Vacuum by iRobot in category Home & Kitchen. High-quality product for your needs.
+A005,Hamilton Beach FlexBrew 2-Way Coffee Maker,Home & Kitchen,Hamilton Beach,7999,Hamilton Beach FlexBrew 2-Way Coffee Maker by Hamilton Beach in category Home & Kitchen. High-quality product for your needs.
+A006,Cuisinart DCC-3200P1 Coffee Maker,Home & Kitchen,Cuisinart,6999,Cuisinart DCC-3200P1 Coffee Maker by Cuisinart in category Home & Kitchen. High-quality product for your needs.
+A007,Keurig K-Elite Single Serve Coffee Maker,Home & Kitchen,Keurig,8499,Keurig K-Elite Single Serve Coffee Maker by Keurig in category Home & Kitchen. High-quality product for your needs.
+A008,Lodge Pre-Seasoned Cast Iron Skillet,Home & Kitchen,Lodge,2499,Lodge Pre-Seasoned Cast Iron Skillet by Lodge in category Home & Kitchen. High-quality product for your needs.
+A009,OXO Good Grips 3-in-1 Avocado Slicer,Home & Kitchen,OXO,799,OXO Good Grips 3-in-1 Avocado Slicer by OXO in category Home & Kitchen. High-quality product for your needs.
+A010,Lodge Cast Iron Dutch Oven,Home & Kitchen,Lodge,4999,Lodge Cast Iron Dutch Oven by Lodge in category Home & Kitchen. High-quality product for your needs.
+A011,Apple AirPods Pro (2nd Gen),Electronics,Apple,24999,Apple AirPods Pro (2nd Gen) by Apple in category Electronics. High-quality product for your needs.
+A012,Samsung Galaxy S23 Ultra Smartphone,Electronics,Samsung,104999,Samsung Galaxy S23 Ultra Smartphone by Samsung in category Electronics. High-quality product for your needs.
+A013,Sony WH-1000XM5 Noise-Canceling Headphones,Electronics,Sony,29999,Sony WH-1000XM5 Noise-Canceling Headphones by Sony in category Electronics. High-quality product for your needs.
+A014,Amazon Echo (4th Gen) Smart Speaker,Electronics,Amazon,8999,Amazon Echo (4th Gen) Smart Speaker by Amazon in category Electronics. High-quality product for your needs.
+A015,Fitbit Charge 5 Fitness Tracker,Electronics,Fitbit,12999,Fitbit Charge 5 Fitness Tracker by Fitbit in category Electronics. High-quality product for your needs.
+A016,GoPro HERO11 Black Action Camera,Electronics,GoPro,49999,GoPro HERO11 Black Action Camera by GoPro in category Electronics. High-quality product for your needs.
+A017,Dell XPS 13 Laptop,Electronics,Dell,129999,Dell XPS 13 Laptop by Dell in category Electronics. High-quality product for your needs.
+A018,Anker PowerCore 10000 Portable Charger,Electronics,Anker,1999,Anker PowerCore 10000 Portable Charger by Anker in category Electronics. High-quality product for your needs.
+A019,Logitech MX Master 3 Wireless Mouse,Electronics,Logitech,8999,Logitech MX Master 3 Wireless Mouse by Logitech in category Electronics. High-quality product for your needs.
+A020,Razer Kraken Ultimate RGB USB Gaming Headset,Electronics,Razer,14999,Razer Kraken Ultimate RGB USB Gaming Headset by Razer in category Electronics. High-quality product for your needs.
+A021,Bose QuietComfort 45 Wireless Headphones,Electronics,Bose,29999,Bose QuietComfort 45 Wireless Headphones by Bose in category Electronics. High-quality product for your needs.
+A022,"Samsung 65"" QLED 4K Smart TV",Electronics,Samsung,79999,"Samsung 65"" QLED 4K Smart TV by Samsung in category Electronics. High-quality product for your needs."
+A023,Apple MacBook Air M2 Laptop,Electronics,Apple,124999,Apple MacBook Air M2 Laptop by Apple in category Electronics. High-quality product for your needs.
+A024,Levi's Men's 505 Regular Fit Jeans,Men Clothing,Levi's,2999,Levi's Men's 505 Regular Fit Jeans by Levi's in category Men Clothing. High-quality product for your needs.
+A025,Nike Men's Dri-FIT Training Shorts,Men Clothing,Nike,1799,Nike Men's Dri-FIT Training Shorts by Nike in category Men Clothing. High-quality product for your needs.
+A026,Under Armour Men's Tech 2.0 T-Shirt,Men Clothing,Under Armour,1299,Under Armour Men's Tech 2.0 T-Shirt by Under Armour in category Men Clothing. High-quality product for your needs.
+A027,Tommy Hilfiger Men's Core Flag Polo Shirt,Men Clothing,Tommy Hilfiger,2499,Tommy Hilfiger Men's Core Flag Polo Shirt by Tommy Hilfiger in category Men Clothing. High-quality product for your needs.
+A028,Dockers Men's Classic Fit Khaki Pants,Men Clothing,Dockers,2299,Dockers Men's Classic Fit Khaki Pants by Dockers in category Men Clothing. High-quality product for your needs.
+A029,Wrangler Men's Polo Shirt,Men Clothing,Wrangler,1799,Wrangler Men's Polo Shirt by Wrangler in category Men Clothing. High-quality product for your needs.
+A030,Levi's Men's Jacket,Men Clothing,Levi's,4299,Levi's Men's Jacket by Levi's in category Men Clothing. High-quality product for your needs.
+A031,Shopsy Men's Cotton T-Shirt,Men Clothing,Shopsy,799,Shopsy Men's Cotton T-Shirt by Shopsy in category Men Clothing. High-quality product for your needs.
+A032,Shopsy Men's Hoodie,Men Clothing,Shopsy,1399,Shopsy Men's Hoodie by Shopsy in category Men Clothing. High-quality product for your needs.
+A033,Calvin Klein Women's Modern Cotton Bralette,Women Clothing,Calvin Klein,1599,Calvin Klein Women's Modern Cotton Bralette by Calvin Klein in category Women Clothing. High-quality product for your needs.
+A034,Adidas Women's Essentials Linear Full Zip Hoodie,Women Clothing,Adidas,2499,Adidas Women's Essentials Linear Full Zip Hoodie by Adidas in category Women Clothing. High-quality product for your needs.
+A035,Hanes Women's EcoSmart Fleece Sweatshirt,Women Clothing,Hanes,1099,Hanes Women's EcoSmart Fleece Sweatshirt by Hanes in category Women Clothing. High-quality product for your needs.
+A036,Columbia Women's Benton Springs Full Zip Fleece Jacket,Women Clothing,Columbia,2499,Columbia Women's Benton Springs Full Zip Fleece Jacket by Columbia in category Women Clothing. High-quality product for your needs.
+A037,Zara Women's Maxi Dress,Women Clothing,Zara,3999,Zara Women's Maxi Dress by Zara in category Women Clothing. High-quality product for your needs.
+A038,H&M Women's Top,Women Clothing,H&M,1499,H&M Women's Top by H&M in category Women Clothing. High-quality product for your needs.
+A039,Zara Women's Blazer,Women Clothing,Zara,2999,Zara Women's Blazer by Zara in category Women Clothing. High-quality product for your needs.
+A040,H&M Women's Leggings,Women Clothing,H&M,999,H&M Women's Leggings by H&M in category Women Clothing. High-quality product for your needs.
+A041,UCB Kids' Printed T-Shirt,Kids Clothing,UCB Kids,899,UCB Kids' Printed T-Shirt by UCB Kids in category Kids Clothing. High-quality product for your needs.
+A042,Gini & Jony Kids' Dress,Kids Clothing,Gini & Jony,1299,Gini & Jony Kids' Dress by Gini & Jony in category Kids Clothing. High-quality product for your needs.
+A043,Chicco Kids' Hoodie,Kids Clothing,Chicco,1199,Chicco Kids' Hoodie by Chicco in category Kids Clothing. High-quality product for your needs.
+A044,UCB Kids' Jeans,Kids Clothing,UCB Kids,999,UCB Kids' Jeans by UCB Kids in category Kids Clothing. High-quality product for your needs.
+A045,Chicco Kids' Shorts,Kids Clothing,Chicco,799,Chicco Kids' Shorts by Chicco in category Kids Clothing. High-quality product for your needs.
+A046,Adidas Men's Sneakers,Footwear,Adidas,3499,Adidas Men's Sneakers by Adidas in category Footwear. High-quality product for your needs.
+A047,Nike Women's Running Shoes,Footwear,Nike,4599,Nike Women's Running Shoes by Nike in category Footwear. High-quality product for your needs.
+A048,Puma Kids' Shoes,Footwear,Puma,1799,Puma Kids' Shoes by Puma in category Footwear. High-quality product for your needs.
+A049,Skechers Men's Casual Shoes,Footwear,Skechers,3999,Skechers Men's Casual Shoes by Skechers in category Footwear. High-quality product for your needs.
+A050,Bata Women's Flats,Footwear,Bata,1999,Bata Women's Flats by Bata in category Footwear. High-quality product for your needs.
+A051,Adidas Men's Flip Flops,Footwear,Adidas,1499,Adidas Men's Flip Flops by Adidas in category Footwear. High-quality product for your needs.
+A052,Nike Women's Sneakers,Footwear,Nike,3999,Nike Women's Sneakers by Nike in category Footwear. High-quality product for your needs.
+A053,Puma Kids' Sandals,Footwear,Puma,1299,Puma Kids' Sandals by Puma in category Footwear. High-quality product for your needs.
+A054,Skechers Men's Sports Shoes,Footwear,Skechers,4999,Skechers Men's Sports Shoes by Skechers in category Footwear. High-quality product for your needs.
+A055,Bata Women's Casual Shoes,Footwear,Bata,2199,Bata Women's Casual Shoes by Bata in category Footwear. High-quality product for your needs.
+A056,Fossil Men's Leather Wallet,Accessories,Fossil,2499,Fossil Men's Leather Wallet by Fossil in category Accessories. High-quality product for your needs.
+A057,Titan Women's Watch,Accessories,Titan,4999,Titan Women's Watch by Titan in category Accessories. High-quality product for your needs.
+A058,Fastrack Men's Backpack,Accessories,Fastrack,2199,Fastrack Men's Backpack by Fastrack in category Accessories. High-quality product for your needs.
+A059,Hidesign Women's Handbag,Accessories,Hidesign,10999,Hidesign Women's Handbag by Hidesign in category Accessories. High-quality product for your needs.
+A060,Fossil Men's Watch,Accessories,Fossil,6999,Fossil Men's Watch by Fossil in category Accessories. High-quality product for your needs.
+A061,Titan Women's Watch,Accessories,Titan,5499,Titan Women's Watch by Titan in category Accessories. High-quality product for your needs.
+A062,Fastrack Men's Sling Bag,Accessories,Fastrack,1999,Fastrack Men's Sling Bag by Fastrack in category Accessories. High-quality product for your needs.
+A063,Hidesign Women's Wallet,Accessories,Hidesign,6999,Hidesign Women's Wallet by Hidesign in category Accessories. High-quality product for your needs.
+A064,Maybelline Lipstick,Beauty & Personal Care,Maybelline,499,Maybelline Lipstick by Maybelline in category Beauty & Personal Care. High-quality product for your needs.
+A065,L’Oreal Shampoo,Beauty & Personal Care,L’Oreal,299,L’Oreal Shampoo by L’Oreal in category Beauty & Personal Care. High-quality product for your needs.
+A066,Nivea Body Lotion,Beauty & Personal Care,Nivea,399,Nivea Body Lotion by Nivea in category Beauty & Personal Care. High-quality product for your needs.
+A067,Biotique Face Wash,Beauty & Personal Care,Biotique,349,Biotique Face Wash by Biotique in category Beauty & Personal Care. High-quality product for your needs.
+A068,Maybelline Nail Polish,Beauty & Personal Care,Maybelline,299,Maybelline Nail Polish by Maybelline in category Beauty & Personal Care. High-quality product for your needs.
+A069,L’Oreal Hair Serum,Beauty & Personal Care,L’Oreal,499,L’Oreal Hair Serum by L’Oreal in category Beauty & Personal Care. High-quality product for your needs.
+A070,Nivea Lip Balm,Beauty & Personal Care,Nivea,199,Nivea Lip Balm by Nivea in category Beauty & Personal Care. High-quality product for your needs.
+A071,Biotique Face Cream,Beauty & Personal Care,Biotique,399,Biotique Face Cream by Biotique in category Beauty & Personal Care. High-quality product for your needs.
+A072,Olay Regenerist Micro-Sculpting Cream,Beauty & Personal Care,Olay,2999,Olay Regenerist Micro-Sculpting Cream by Olay in category Beauty & Personal Care. High-quality product for your needs.
+A073,Neutrogena Hydro Boost Water Gel,Beauty & Personal Care,Neutrogena,1499,Neutrogena Hydro Boost Water Gel by Neutrogena in category Beauty & Personal Care. High-quality product for your needs.
+A074,Gillette Venus Extra Smooth Women's Razor,Beauty & Personal Care,Gillette,699,Gillette Venus Extra Smooth Women's Razor by Gillette in category Beauty & Personal Care. High-quality product for your needs.
+A075,Revlon One-Step Hair Dryer & Volumizer,Beauty & Personal Care,Revlon,3499,Revlon One-Step Hair Dryer & Volumizer by Revlon in category Beauty & Personal Care. High-quality product for your needs.
+A076,Maybelline Fit Me Matte + Poreless Foundation,Beauty & Personal Care,Maybelline,799,Maybelline Fit Me Matte + Poreless Foundation by Maybelline in category Beauty & Personal Care. High-quality product for your needs.
+A077,Chobani Non-Fat Greek Yogurt,Grocery & Gourmet Food,Chobani,299,Chobani Non-Fat Greek Yogurt by Chobani in category Grocery & Gourmet Food. High-quality product for your needs.
+A078,Quaker Old Fashioned Oats,Grocery & Gourmet Food,Quaker,499,Quaker Old Fashioned Oats by Quaker in category Grocery & Gourmet Food. High-quality product for your needs.
+A079,Blue Diamond Smokehouse Almonds,Grocery & Gourmet Food,Blue Diamond,699,Blue Diamond Smokehouse Almonds by Blue Diamond in category Grocery & Gourmet Food. High-quality product for your needs.
+A080,Starbucks Pike Place Roast Ground Coffee,Grocery & Gourmet Food,Starbucks,799,Starbucks Pike Place Roast Ground Coffee by Starbucks in category Grocery & Gourmet Food. High-quality product for your needs.
+A081,Nature Valley Crunchy Granola Bars,Grocery & Gourmet Food,Nature Valley,499,Nature Valley Crunchy Granola Bars by Nature Valley in category Grocery & Gourmet Food. High-quality product for your needs.
+A082,Kirkland Signature Organic Extra Virgin Olive Oil,Grocery & Gourmet Food,Kirkland,1999,Kirkland Signature Organic Extra Virgin Olive Oil by Kirkland in category Grocery & Gourmet Food. High-quality product for your needs.
+A083,Ghirardelli Chocolate Squares,Grocery & Gourmet Food,Ghirardelli,699,Ghirardelli Chocolate Squares by Ghirardelli in category Grocery & Gourmet Food. High-quality product for your needs.
+A084,Kind Healthy Grains Granola Bars,Grocery & Gourmet Food,Kind,499,Kind Healthy Grains Granola Bars by Kind in category Grocery & Gourmet Food. High-quality product for your needs.
+A085,Annie's Organic Bunny Fruit Snacks,Grocery & Gourmet Food,Annie's,399,Annie's Organic Bunny Fruit Snacks by Annie's in category Grocery & Gourmet Food. High-quality product for your needs.
+A086,Sargento Balanced Breaks Cheese & Crackers,Grocery & Gourmet Food,Sargento,699,Sargento Balanced Breaks Cheese & Crackers by Sargento in category Grocery & Gourmet Food. High-quality product for your needs.

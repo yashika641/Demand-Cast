@@ -1,0 +1,73 @@
+product_id,product_name,subcategory,brand,unit_price_(₹),description,unit_price,category
+P001,The Ordinary Niacinamide 10% + Zinc 1% Serum,serum,The Ordinary,650,Balances oil and reduces blemishes,14.93,misc
+P002,Minimalist Hyaluronic Acid 2%,serum,Minimalist,599,Deeply hydrates and plumps skin,7.77,misc
+P003,Neutrogena Hydro Boost Water Gel,moisturizer,Neutrogena,950,"Lightweight, oil-free hydration",17.95,misc
+P004,Cetaphil Gentle Skin Cleanser,face_wash,Cetaphil,799,Mild cleanser for sensitive skin,35.46,misc
+P005,Dot & Key Vitamin C Face Serum,serum,Dot & Key,845,Brightens dull skin and fades spots,9.68,misc
+P006,Plum Green Tea Renewed Clarity Night Gel,moisturizer,Plum,575,Reduces acne and controls oil,9.68,misc
+P007,L’Oreal Paris Revitalift Crystal Micro-Essence,toner,L’Oreal Paris,699,Refines pores and brightens skin,36.58,misc
+P008,Mamaearth Ubtan Face Wash,face_wash,Mamaearth,299,Exfoliates with turmeric and saffron,20.35,misc
+P009,Biotique Morning Nectar Moisturizer,moisturizer,Biotique,220,Ayurvedic hydration for daily use,14.39,misc
+P010,The Derma Co Sunscreen SPF 50,sunscreen,The Derma Co,499,Broad-spectrum matte-finish protection,15.85,misc
+P011,Aqualogica Glow+ Gel Moisturizer,moisturizer,Aqualogica,549,Infused with papaya and vitamin C,14.27,misc
+P012,Innisfree Super Volcanic Pore Clay Mask,mask,Innisfree,1150,Deep-cleanses and tightens pores,14.31,misc
+P013,mCaffeine Naked Detox Green Tea Toner,toner,mCaffeine,375,Tones and hydrates oily skin,9.84,misc
+P014,Olay Regenerist Micro-Sculpting Cream,moisturizer,Olay,1499,Anti-aging with hyaluronic acid,43.27,misc
+P015,The Moms Co Natural Face Wash,face_wash,The Moms Co,349,Gentle cleansing for everyday use,39.5,misc
+P016,Re’equil Oil-Free Moisturizer,moisturizer,Re’equil,595,Non-greasy hydration for oily skin,16.25,misc
+P017,Maybelline Fit Me Matte+Poreless Foundation,foundation,Maybelline,549,Lightweight matte foundation,25.26,misc
+P018,L’Oreal Paris Infallible Pro Matte Liquid Foundation,foundation,L’Oreal Paris,1099,Longwear oil-control foundation,11.28,misc
+P019,Lakme 9 to 5 Weightless Mousse Foundation,foundation,Lakme,625,"Natural coverage, lightweight feel",23.16,misc
+P020,Maybelline Lash Sensational Mascara,mascara,Maybelline,499,Volumizing and lengthening mascara,33.25,misc
+P021,Benefit Cosmetics BADgal BANG! Mascara,mascara,Benefit,1390,Intense black long-lasting mascara,34.31,misc
+P022,Nykaa So Matte Lipstick – Scarlet Siren,lipstick,Nykaa,399,Rich pigment and creamy texture,9.52,misc
+P023,MAC Retro Matte Lipstick – Ruby Woo,lipstick,MAC,1750,Iconic deep red matte lipstick,6.35,misc
+P024,Huda Beauty Power Bullet Lipstick – Interview,lipstick,Huda Beauty,1999,Full-pigment comfort matte,33.49,misc
+P025,Kay Beauty Matte Compact,compact,Kay Beauty,799,Oil-control compact for daily wear,15.89,misc
+P026,Faces Canada Ultime Pro HD Intense Matte Lip Crayon,lipstick,Faces Canada,699,Velvet finish longwear crayon,7.22,misc
+P027,Swiss Beauty Liquid Concealer,concealer,Swiss Beauty,249,Lightweight medium coverage,28.02,misc
+P028,Colorbar CheekIllusion Blush – Coral,blush,Colorbar,675,Soft natural glow finish,12.51,misc
+P029,Nyx Professional Makeup Matte Setting Spray,setting_spray,NYX,850,Controls shine & locks makeup,17.01,misc
+P030,Lakme Eyeconic Kajal – Deep Black,kajal,Lakme,250,Smudge-proof long-stay kajal,10.83,misc
+P031,Sugar Cosmetics Contour De Force Mini Blush,blush,Sugar,349,High-pigment blush for all tones,17.03,misc
+P032,Maybelline Superstay Matte Ink Lipstick – Lover,lipstick,Maybelline,649,Transfer-proof longstay liquid lipstick,42.05,misc
+P033,Nykaa Black Magic Liquid Eyeliner,eyeliner,Nykaa,299,Jet black waterproof liner,5.27,misc
+P034,L.A Girl Pro Conceal HD Concealer,concealer,L.A Girl,695,Creamy blendable formula,26.15,misc
+P035,PAC Studio Finish Compact,compact,PAC,875,Long-wear professional finish,21.45,misc
+P036,Charlotte Tilbury Pillow Talk Lipstick,lipstick,Charlotte Tilbury,3400,Luxury nude pink matte lipstick,29.42,misc
+P037,L’Oreal Paris Extraordinary Oil Shampoo,shampoo,L’Oreal Paris,699,Smoothens dry hair,9.18,misc
+P038,Tresemme Keratin Smooth Conditioner,conditioner,Tresemme,550,Makes hair frizz-free,44.19,misc
+P039,Mamaearth Onion Hair Oil,hair_oil,Mamaearth,499,Boosts hair growth,31.56,misc
+P040,WOW Apple Cider Vinegar Shampoo,shampoo,WOW,599,Detoxifies scalp naturally,8.94,misc
+P041,Dove Intense Repair Conditioner,conditioner,Dove,300,Nourishes damaged hair,19.77,misc
+P042,Biotique Bio Green Apple Shampoo,shampoo,Biotique,250,Cleanses oily scalp,8.43,misc
+P043,BBlunt Intense Moisture Hair Mask,hair_mask,BBlunt,675,Hydrates dry hair,7.31,misc
+P044,Pantene Pro-V Hair Fall Control Shampoo,shampoo,Pantene,299,Reduces breakage,11.02,misc
+P045,Indulekha Bhringa Hair Oil,hair_oil,Indulekha,432,Ayurvedic anti-hairfall oil,34.57,misc
+P046,St.Botanica Moroccan Argan Hair Mask,hair_mask,St.Botanica,850,Restores shine and softness,19.4,misc
+P047,Schwarzkopf Gliss Hair Repair Serum,serum,Schwarzkopf,999,Strengthens and smoothens,14.21,misc
+P048,L’Oreal Paris Dream Lengths Conditioner,conditioner,L’Oreal Paris,499,Seals split ends,26.14,misc
+P049,Nykaa Naturals Amla & Curry Leaves Hair Oil,hair_oil,Nykaa,349,Reduces dandruff,11.87,misc
+P050,TRESemmé Botanique Detox Shampoo,shampoo,Tresemme,575,Natural cleanse with aloe vera,40.26,misc
+P051,Gucci Bloom Eau de Parfum,perfume,Gucci,8400,Floral jasmine fragrance,11.48,misc
+P052,Versace Bright Crystal,perfume,Versace,6200,Fresh floral fruity scent,12.7,misc
+P053,Engage On Cool Aqua Body Spray,body_spray,Engage,210,Long-lasting freshness,18.54,misc
+P054,Nivea Fresh Natural Deodorant,deodorant,Nivea,199,"Gentle, everyday freshness",17.23,misc
+P055,The Body Shop White Musk Eau de Toilette,perfume,The Body Shop,3695,Subtle musky notes,25.62,misc
+P056,Skinn by Titan Celeste Perfume,perfume,Titan,2195,Soft floral feminine fragrance,23.63,misc
+P057,Davidoff Cool Water Woman,perfume,Davidoff,4999,Aquatic refreshing perfume,21.78,misc
+P058,Yardley London English Lavender,body_spray,Yardley,299,Classic floral spray,11.18,misc
+P059,Engage Woman Blush Deo,deodorant,Engage,175,Fruity-floral everyday deo,11.63,misc
+P060,Nike Up or Down Perfume,perfume,Nike,1999,Sporty energetic fragrance,24.51,misc
+P061,Fogg Paradise Body Spray,body_spray,Fogg,275,Long-lasting floral scent,14.58,misc
+P062,Carolina Herrera Good Girl Eau de Parfum,perfume,Carolina Herrera,8900,Luxurious amber floral,8.71,misc
+P063,The Body Shop British Rose Shower Gel,shower_gel,The Body Shop,595,Gentle cleansing with rose essence,27.13,misc
+P064,Nivea Nourishing Body Milk,body_lotion,Nivea,425,Deep moisture for dry skin,28.92,misc
+P065,Dove Go Fresh Body Wash,shower_gel,Dove,299,Refreshing cucumber scent,21.25,misc
+P066,Palmolive Aroma Therapy Body Wash,shower_gel,Palmolive,325,Relaxing essential oils,32.12,misc
+P067,Love Beauty & Planet Murumuru Butter Lotion,body_lotion,Love Beauty & Planet,699,Softens and brightens skin,6.44,misc
+P068,Biotique Apricot Body Scrub,body_scrub,Biotique,325,Gently exfoliates and polishes,25.07,misc
+P069,Vaseline Intensive Care Cocoa Glow Lotion,body_lotion,Vaseline,385,Moisturizes with cocoa butter,12.23,misc
+P070,Bath & Body Works Japanese Cherry Blossom Shower Gel,shower_gel,Bath & Body Works,999,Signature floral fragrance,17.9,misc
+P071,Khadi Natural Rose & Honey Body Wash,shower_gel,Khadi,250,Herbal body cleanser,12.23,misc
+P072,Plum BodyLovin’ Vanilla Vibes Lotion,body_lotion,Plum,575,Sweet vanilla-scented moisturizer,35.76,misc
