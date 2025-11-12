@@ -9,7 +9,9 @@ import element6 from './assets/element6.png'
 import num from './assets/1234.png'
 import demovideo from './assets/demo-video.mp4'
 import './App.css'
-import Uploader from './pages/uploader_page'    
+import Uploader from './pages/uploader_page' 
+import LoginForm from './pages/login'   
+
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
@@ -27,7 +29,7 @@ function HomePage() {
                         <li><a href="#services" className="hover:text-red-600">Services</a></li>
                         <li><a href="#contact" className="hover:text-red-600">Contact</a></li>
                     </ul>
-                    <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition ">login</button>
+                    <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition " onClick={() => navigate("/login")}>login</button>
                 </nav>
                 <div className='flex flex-row justify-center w=1/2 -mt-10'>
                     <div className="flex flex-col items-center justify-center min-h-screen text-center px-4">

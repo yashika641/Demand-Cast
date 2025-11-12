@@ -1,0 +1,107 @@
+/* Base page background */
+@import "tailwindcss";
+:root {
+  --bg-dark: #070913;
+  --primary-orange: #FF6A4D;
+  --accent-pink: #FF4AA3;
+  --accent-cyan: #44E1FF;
+}
+
+/* override body background to match image */
+body {
+  /* background: radial-gradient(1200px 600px at 20% 20%, rgba(68,225,255,0.03), transparent 10%), */
+              /* linear-gradient(180deg, #05060a 0%, #07101a 60%), var(--bg-dark); */
+  color: #e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Glass card */
+.glass-panel {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+  -webkit-backdrop-filter: blur(8px) saturate(1.05);
+  backdrop-filter: blur(8px) saturate(1.05);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(2,6,18,0.6);
+}
+
+/* neon outline for the bigger container */
+.glow-outline {
+  box-shadow: 0 0 40px rgba(255,106,77,0.06), inset 0 0 20px rgba(68,225,255,0.02);
+  border: 1px solid rgba(255,106,77,0.12);
+  border-radius: 16px;
+}
+
+/* hero title neon */
+.hero-title {
+  text-shadow: 0 6px 30px rgba(255, 106, 77, 0.12);
+}
+
+/* pill tabs */
+.pill-tab {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.03);
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.pill-tab:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,106,77,0.04); }
+.pill-tab.active {
+  background: linear-gradient(90deg, var(--accent-pink), var(--primary-orange));
+  color: #081016;
+  box-shadow: 0 12px 40px rgba(255,106,77,0.12);
+  border: none;
+}
+
+/* KPI cards */
+.kpi {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  padding: 18px;
+  min-width: 220px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.kpi .value {
+  color: var(--primary-orange);
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-shadow: 0 8px 30px rgba(255,106,77,0.08);
+}
+
+/* filter input look */
+.filter-select {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(68,225,255,0.06);
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  color: #e6eef8;
+}
+
+/* apply / clear button */
+.btn-apply {
+  background: linear-gradient(90deg, #FF6A4D, #FF4AA3);
+  color: #061017;
+  padding: .6rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 28px rgba(255,106,77,0.08);
+}
+
+/* donut chart container */
+.donut-wrap {
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(68,225,255,0.03);
+}
+
+/* small helper */
+.small-muted { color: #9fb3d2; }
+
+/* responsive tweaks */
+@media (max-width: 1024px) {
+  .kpi { min-width: 180px; }
+  .donut-wrap { padding: 12px; }
+}

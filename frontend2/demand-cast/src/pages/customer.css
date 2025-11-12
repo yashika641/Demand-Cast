@@ -1,0 +1,134 @@
+.customer-dashboard {
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+.bg-image {
+  position: fixed;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  filter: brightness(0.4);
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background: rgba(15, 15, 35, 0.5);
+  /* backdrop-filter: blur(10px); */
+  border-bottom: 1px solid rgba(236, 72, 153, 0.4);
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #b24cff;
+}
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.pill-tab {
+  background: linear-gradient(to right, #3b0764, #1e3a8a);
+  border: 1px solid rgba(236, 72, 153, 0.4);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  transition: all 0.3s;
+}
+.pill-tab:hover {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.6);
+  transform: scale(1.05);
+}
+.icon {
+  width: 20px;
+}
+.header-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ec4899, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: border-box;
+  color: transparent;
+}
+.header-sub {
+  color: #b3b3cc;
+  font-size: 1.3rem;
+}
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.tab-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #111827, #1e1b4b);
+  border: 1px solid rgba(236, 72, 153, 0.4);
+  transition: all 0.3s;
+}
+.tab-btn.active {
+  background: linear-gradient(to right, #b24cff, #4b5fff);
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.8);
+}
+.tab-section {
+  padding: 2rem;
+  border: 1px solid rgba(236, 72, 153, 0.4);
+  border-radius: 20px;
+  margin: 1rem auto;
+  width: 90%;
+  background: rgba(10, 10, 20, 0.6);
+  /* -webkit-backdrop-filter: blur(12px); */
+}
+.metrics-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.metric-card {
+  background: linear-gradient(145deg, #1f2937, #111827);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(236, 72, 153, 0.4);
+  transition: all 0.3s;
+}
+.metric-card:hover {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.6);
+  transform: scale(1.05);
+}
+.loyalty-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.loyalty-table th, .loyalty-table td {
+  padding: 0.8rem;
+  border: 1px solid rgba(236, 72, 153, 0.4);
+}
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+.plot {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(20,20,40,0.5);
+}
+.loading {
+  color: #ec4899;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.error {
+  color: #f87171;
+  text-align: center;
+}

@@ -10,36 +10,42 @@ export default function Services() {
             info: "Q1 Revenue +12% YOY",
             icon: <BarChart2 size={40} />,
             color: "neon-orange",
+            path: "/services/sales-analytics",
         },
         {
             title: "INVENTORY OPTIMIZATION",
             info: "Stock Utilization 88%",
             icon: <Home size={40} />,
             color: "neon-blue",
+            path: "/services/inventory-optimization",
         },
         {
             title: "CUSTOMER INSIGHTS",
             info: "CRM Score: A-",
             icon: <Users size={40} />,
             color: "neon-purple",
+            path: "/services/customer-analytics",
         },
         {
             title: "PRODUCT LIFECYCLE",
             info: "2 New Lines Launched",
             icon: <Tag size={40} />,
             color: "neon-green",
+            path: "/services/product-lifecycle",
         },
         {
             title: "CAMPAIGN STRATEGIST",
             info: "Last Campaign ROI: 4.5x",
             icon: <Megaphone size={40} />,
             color: "neon-yellow",
+            path: "/services/campaign-strategist",
         },
         {
             title: "ADD NEW SERVICE",
             info: "",
             icon: <Plus size={40} />,
             color: "neon-gray",
+            path: null,
         },
     ];
 
