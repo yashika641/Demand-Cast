@@ -1,0 +1,513 @@
+Below is a **complete, production-grade blueprint** for building your **RAG-based Enterprise Assistant** for your Demand–Supply Analytics Platform.
+
+This covers:
+
+### ✔ What components you need
+
+### ✔ What steps to follow
+
+### ✔ How to restrict wrong/obscene/off-topic questions
+
+### ✔ How to integrate with user files, predictions, models
+
+### ✔ How to teach it website structure & metadata
+
+### ✔ Safety + Domain-Restriction
+
+### ✔ How to deploy
+
+---
+
+# 🚀 **GOAL — Your Website’s RAG Chatbot Should:**
+
+### ✔ Act as an intelligent advisor based on:
+
+* user's files
+* generated predictions
+* analytics outputs
+* dashboards
+* pipeline outputs
+* stored model results (MLflow + Supabase)
+
+### ✔ ONLY answer questions inside:
+
+**Demand Forecasting, Leadtime Analytics, Stockout Prediction, Pricing, Promo Effectiveness, RAG-based document Q&A, Supply Chain Strategy**
+
+### ✔ STRICTLY reject:
+
+❌ Obscene
+❌ Harmful
+❌ Abusive
+❌ Personal relationship questions
+❌ Politics / religion
+❌ Anything outside the supply-chain domain
+❌ Anything not related to your platform
+
+### ✔ Have memory about:
+
+* website components
+* UI layout
+* features
+* who made the website (your team or you)
+* purpose of each page
+* meaning of each analytic feature
+* conceptual knowledge of demand/supply analytics
+* instructions on how to use site features
+
+---
+
+# 🧩 **WHAT YOU REQUIRE TO BUILD THIS (Full Stack)**
+
+## **1. A Vector Database (for RAG)**
+
+You will store:
+
+### **Knowledge Documents:**
+
+* Website documentation
+* Component descriptions
+* What each analytic feature means
+* Pipeline architecture
+* How models work
+* FAQ and “basic Q&A”
+* Data dictionary for user-uploaded files
+* Your ML pipelines documentation
+* Business interpretations of predictions
+* Domain glossary (demand, stockout, leadtime, elasticity, etc.)
+
+Recommended DB:
+
+* **Pinecone**
+* **Weaviate**
+* **Postgres pgvector (Supabase built-in)** ← BEST because you already use Supabase
+
+---
+
+## **2. Embedding Model**
+
+Recommended:
+
+* **bge-large-en** (already in your UI)
+* **sentence-transformers/all-MiniLM-L6-v2** (lightweight)
+* **gte-large** (very good quality)
+
+You need this for:
+
+* Indexing documents
+* Converting user queries → vectors
+
+---
+
+## **3. LLM (Response Generation)**
+
+Use a safe and controllable LLM.
+
+Options:
+
+* **OpenAI GPT-4.1-mini / GPT-4.1**
+* **Llama 3.1 70B via Groq** (fast, open-source)
+* **OpenAI o3-mini for safety**
+
+---
+
+## **4. A Safety Layer (Guardrail System)**
+
+You MUST have this.
+
+### You need 3 layers of safety:
+
+### **(A) Input Filter**
+
+Reject:
+
+* obscene words
+* abuse
+* NSFW
+* harmful requests
+* off-domain topics
+
+### **(B) Domain Restriction Filter**
+
+Allow ONLY:
+
+* demand forecasting
+* supply chain
+* leadtime
+* stockouts
+* pricing & elasticity
+* promotional uplift
+* RAG Q&A on user docs
+* analytics interpretation
+
+### **(C) Output Guardrails**
+
+Final response filtered through:
+
+* LLM instructed to stay in domain
+* Content moderation (OpenAI/Supabase policies)
+
+---
+
+## **5. A Knowledge Base of Your Website**
+
+You MUST create a structured KB:
+
+### **Website_Info/**
+
+* `layout.md`
+* `components.md`
+* `pages.md`
+* `user_flow.md`
+* `feature_explanations.md`
+* `domain_concepts.md`
+* `model_descriptions.md`
+* `pricing_explained.md`
+* `promo_effectiveness.md`
+* `leadtime_model_explained.md`
+* `demand_forecast_pipeline.md`
+* `data_upload_guidelines.md`
+* `How model training works.md`
+* `MLflow_run_id_info.md`
+* `How to interpret Dashboard.xlsx`
+* `FAQ.md`
+
+Each of these will be vectorized → stored in pgvector.
+
+---
+
+# 🧩 **6. Integration with USER FILES + PREDICTION OUTPUTS**
+
+User’s files stored in Supabase:
+
+* Sales
+* Inventory
+* Products
+* Promo master
+* Supplier (leadtime)
+* Customer segmentation files
+
+Your chatbot can:
+
+### ✔ Access these via backend API wrappers
+
+### ✔ Query predictions stored in `models` table
+
+### ✔ Query feature outputs returned by each pipeline
+
+### ✔ Explain predictions in natural language
+
+### ✔ Provide next-step recommendations
+
+This is similar to:
+
+* “Agent with tools”
+* “RAG agent with function calling”
+
+---
+
+# 🧩 **7. TOOL-CALLING (Most Important)**
+
+The chatbot needs tools:
+
+### **Tool 1 — Query Supabase**
+
+Get:
+
+* user files
+* model run IDs
+* predictions
+* dashboards
+* historical uploads
+* training statuses
+
+### **Tool 2 — Predict using MLflow**
+
+Call:
+
+* demand model (run_id)
+* stockout model
+* leadtime
+* pricing
+* promo model
+
+### **Tool 3 — Explain predictions**
+
+Convert predictions into:
+
+* risk alerts
+* recommendation text:
+
+  * “Increase price by 5%”
+  * “Expected stockout on Day 7”
+  * "Leadtime rising for Supplier X"
+  * “Promo uplift: +18%”
+
+### **Tool 4 — Retrieve contextual docs from RAG**
+
+Used for:
+
+* feature meaning
+* how website works
+* what each chart means
+* domain explanations
+
+---
+
+# 🧩 **8. SAFETY PROMPT (MASTER SYSTEM PROMPT)**
+
+Below is the **system prompt** that enforces ALL restrictions:
+
+```
+You are “DemandCast Assistant”, an official domain-restricted analytics expert for demand and supply chain intelligence.
+
+ALLOWED QUERIES:
+- demand forecasting
+- lead time analytics
+- stockout prediction
+- pricing elasticity
+- promotional uplift
+- interpretation of dashboards
+- explanations of model outputs, predictions, run_ids
+- questions about the website layout, features, components
+- RAG-based answers from uploaded documents
+- general supply-chain concepts
+
+FORBIDDEN QUERIES:
+- any abusive, obscene, explicit or harmful content
+- personal life advice, relationships, psychological advice
+- politics, religion, conspiracies
+- anything unrelated to demand-supply analytics
+
+If a question violates rules:
+Respond:
+“I’m restricted to demand–supply analytics and your uploaded business data. I cannot answer this query.”
+
+NEVER hallucinate.
+If answer is unknown → say “I do not have enough data to answer.”
+
+You must always:
+- stay polite
+- stay professional
+- stay within domain boundaries
+- refer to the website features only from the provided knowledge base
+```
+
+---
+
+# 🧩 **9. TECH ARCHITECTURE**
+
+### **Backend (FastAPI)**
+
+Endpoints:
+
+* `/rag/query`
+* `/rag/upsert_docs`
+* `/chatbot/ask`
+* `/models/predict?run_id=…`
+* `/files/get?user_id=…`
+* `/context/get_dashboard?user_id=…`
+
+### **Frontend (React)**
+
+Use:
+
+* Streaming responses
+* Chat bubbles
+* Loading states
+* Tool-use visual indicator
+
+---
+
+# 🧩 **10. REQUIRED MODULES**
+
+### Backend:
+
+```
+fastapi
+supabase
+psycopg2 (if using pgvector)
+tiktoken
+sentence-transformers
+openai
+langchain-core
+langchain-community
+langchain-openai
+langgraph (optional)
+uvicorn
+rq (for jobs if needed)
+pgvector python lib
+```
+
+---
+
+# 🧩 **11. STEPS TO BUILD (Complete Roadmap)**
+
+## **STEP 1 — Create Knowledge Base (Website Metadata & Domain Docs)**
+
+## **STEP 2 — Create Embedding Store (Supabase pgvector)**
+
+## **STEP 3 — Add Data Ingestion Script**
+
+Automatically convert `.md`, `.txt`, `.pdf`, `.json` to embeddings → store in pgvector.
+
+## **STEP 4 — Build Query Engine**
+
+Function:
+
+1. embed user query
+2. retrieve top-k vectors
+3. construct context
+4. send to LLM
+
+## **STEP 5 — Add Safety Guardrails**
+
+* regex filter
+* OpenAI moderation API
+* custom domain classifier (optional)
+
+## **STEP 6 — Add Tools**
+
+* Query user files
+* Read predictions
+* Query run_id
+* RAG search
+* Interpret analytics
+
+## **STEP 7 — Build Main Chat Router**
+
+* If user asks about "how to use website" → website KB
+* If user asks about "forecasting" → run demand model
+* If user asks about "promo uplift" → run promo model
+* If question off-topic → block with safety message
+
+## **STEP 8 — Deploy**
+
+* Backend on Render/AWS/EC2
+* Vector DB on Supabase
+* Frontend on Vercel
+
+---
+
+# 🧩 **12. OPTIONAL (HIGH-IMPACT EXTRAS)**
+
+### ✔ Session memory
+
+### ✔ Agentic Reasoning with LangGraph
+
+### ✔ Auto-chart generation
+
+### ✔ AI-based alerts
+
+### ✔ Analytics recommendation engine ("Next Best Action")
+
+### ✔ AI voice assistant
+
+---
+
+# 🎯 **DO YOU WANT ME TO BUILD THE FULL PROJECT FILES NEXT?**
+
+I can generate:
+
+### 🔹 Complete folder structure
+
+### 🔹 Full backend code (FastAPI + pgvector RAG)
+
+### 🔹 Full chatbot agent (with guardrails + tools)
+
+### 🔹 Complete frontend React chatbot
+
+### 🔹 Website knowledge embeddings script
+
+### 🔹 Moderation filters
+
+### 🔹 Prediction tools + context graphs
+
+### 🔹 Supabase schema for KB
+
+Just tell me:
+**“Build the complete RAG chatbot architecture”**
+
+
+
+
+
+
+
+
+
+Here is a **short, clean, minimal-but-complete** knowledge-base file list for your RAG system.
+This is the compact version — only the essentials you MUST create 👇
+
+---
+
+# 📁 **Short Knowledge Base File List (Minimal Required)**
+
+### **1. System & Safety**
+
+* `system_rules.md`
+* `allowed_queries.md`
+* `restricted_queries.md`
+* `safety_filters.md`
+
+---
+
+### **2. Platform Basics**
+
+* `about_platform.md`
+* `website_structure.md`
+* `component_descriptions.md`
+
+---
+
+### **3. Data**
+
+* `data_dictionary.md`
+* `file_requirements.md`
+
+---
+
+### **4. Pipelines**
+
+* `demand_pipeline.md`
+* `leadtime_pipeline.md`
+* `stockout_pipeline.md`
+* `pricing_elasticity_pipeline.md`
+* `promo_effectiveness_pipeline.md`
+
+---
+
+### **5. Models**
+
+* `model_registry.md`
+* `run_id_usage.md`
+* `how_predictions_work.md`
+
+---
+
+### **6. Domain Knowledge (Demand–Supply Analytics)**
+
+* `demand_forecasting_basics.md`
+* `stockout_prediction_basics.md`
+* `leadtime_basics.md`
+* `price_elasticity_basics.md`
+* `promo_effectiveness_basics.md`
+
+---
+
+### **7. User Help**
+
+* `how_to_upload_files.md`
+* `how_to_start_training.md`
+* `interpreting_results.md`
+* `dashboard_explainer.md`
+* `chatbot_usage_guide.md`
+
+---
+
+### **8. FAQ**
+
+* `general_faq.md`
+
+---
+
+If you want, I can also **generate all these files content automatically**.

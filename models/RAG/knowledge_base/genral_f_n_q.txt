@@ -1,0 +1,226 @@
+Here is a **clean, short, production-ready** **General FAQ** section you can put directly into your RAG knowledge base.
+
+Save as: **`general_faq.txt`**
+
+---
+
+# 📌 GENERAL FAQ — DEMANDCAST
+
+### **1. What is DemandCast?**
+
+DemandCast is an AI-powered demand and supply analytics platform. It allows users to upload their sales, inventory, pricing, and promo data to generate predictions, insights, and dashboards for better business decisions.
+
+---
+
+### **2. What problems does DemandCast solve?**
+
+DemandCast helps users with:
+
+* Demand forecasting
+* Lead time estimation
+* Stockout prediction
+* Price elasticity & optimal pricing
+* Promotion effectiveness measurement
+* Inventory optimization
+* Scenario simulation
+
+---
+
+### **3. Do I need technical skills to use DemandCast?**
+
+No. The platform is designed for non-technical users.
+You upload your files, configure settings, and the system does the rest.
+
+---
+
+### **4. What file formats are supported?**
+
+* CSV
+* Excel (XLSX)
+
+All files should contain clear column names and follow the expected structure (sales, inventory, product, etc.).
+
+---
+
+### **5. How does DemandCast process my data?**
+
+DemandCast performs:
+
+* Automatic column mapping
+* Data cleaning
+* Handling missing values
+* Feature engineering
+* Model selection
+* Training + evaluation
+* Prediction generation
+  All pipelines run in the background using workers.
+
+---
+
+### **6. What is a Run ID?**
+
+A Run ID is a unique identifier generated after a model is trained.
+You can use it to:
+
+* Retrieve predictions
+* Fetch evaluation metrics
+* Re-run inference
+* Track past model performance
+
+---
+
+### **7. How long does model training take?**
+
+Training time varies by:
+
+* Dataset size
+* Model complexity
+* Number of enabled pipelines
+
+Typically 3–30 minutes.
+
+---
+
+### **8. Can I run multiple pipelines at once?**
+
+Yes. All pipelines (demand, lead time, stockout, pricing, etc.) run concurrently in background jobs using the task queue.
+
+---
+
+### **9. What if my file names are different?**
+
+DemandCast auto-detects files using keywords like:
+
+* “sales”, “inventory”, “stock”, “products”, etc.
+  You don’t have to rename files manually.
+
+---
+
+### **10. How does DemandCast ensure data security?**
+
+* Secure authentication
+* Token-based user access
+* Database-level access control
+* Data stored only for the user
+* No external sharing
+
+---
+
+### **11. Can I ask the AI chatbot questions about unrelated topics?**
+
+No. The chatbot is **domain-restricted** and only answers questions related to:
+
+* Demand forecasting
+* Supply chain analytics
+* Platform usage
+* Business insights from uploaded data
+* Understanding dashboards and predictions
+
+It refuses:
+
+* Unsafe queries
+* Abusive or offensive language
+* Irrelevant topics
+* Personal advice outside analytics
+
+---
+
+### **12. What if my predictions look incorrect?**
+
+Possible reasons:
+
+* Incorrect or incomplete data
+* Wrong column mapping
+* Data with too many missing values
+* Insufficient history
+* Unusual spikes or outliers
+
+You can re-upload data or ask the chatbot for help diagnosing the problem.
+
+---
+
+### **13. Does DemandCast support time-series forecasting?**
+
+Yes. It uses multiple time-series approaches such as:
+
+* Prophet
+* LSTM
+* XGBoost
+* Random Forest
+* Hybrid models
+
+The system auto-selects the best model.
+
+---
+
+### **14. Can I export predictions?**
+
+Yes. Forecasts, stockout probabilities, price elasticity curves, and promo ROIs can be exported from the dashboard.
+
+---
+
+### **15. How do promotions and pricing get evaluated?**
+
+DemandCast analyzes:
+
+* Discount depth
+* Promo uplift
+* Incremental revenue
+* Cross elasticity
+* Customer behavior shifts
+* Lookback periods
+  to compute final promo effectiveness and optimal pricing.
+
+---
+
+### **16. What industries can use DemandCast?**
+
+Any business with:
+
+* Sales data
+* Inventory data
+* SKUs
+* Pricing
+* Promotions
+
+Industries include retail, FMCG, e-commerce, food, electronics, fashion, and more.
+
+---
+
+### **17. Who created DemandCast?**
+
+DemandCast was created by Yashika Pal, a data scientist and AI engineer with expertise in:
+
+* Machine learning
+* Predictive analytics
+* RAG chatbots
+* Full-stack development
+* Automated pipelines
+* Forecasting systems
+
+---
+
+### **18. Can I integrate DemandCast with other platforms?**
+
+API integration support will be added later.
+Currently, all analytics are file-upload driven.
+
+---
+
+### **19. What if I get an error?**
+
+You can:
+
+* Re-upload data
+* Check file format
+* Ensure required columns exist
+* Ask the AI advisor for help
+
+---
+
+### **20. Does DemandCast store my predictions?**
+
+Yes. Predictions and run IDs are stored securely so you can revisit them anytime from the dashboard.
+
+---
+ 

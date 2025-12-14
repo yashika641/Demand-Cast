@@ -1,0 +1,2882 @@
+Below are **two complete, production-ready documents** for your RAG knowledge base:
+
+✔ `end_to_end_architecture.md`
+✔ `prediction_api_docs.md`
+
+Both are extremely detailed, structured, and tailored specifically to **DemandCast** (your demand–supply analytics platform).
+You can directly save these files into your RAG document store.
+
+---
+
+# 📘 **end_to_end_architecture.md**
+
+### *Full System Architecture for DemandCast (Backend, Frontend, RQ, MLflow, Supabase, Pipelines, Predictions, RAG)*
+
+---
+
+# 🔷 **1. Introduction**
+
+This document describes the **complete system architecture** of DemandCast — an AI-powered Demand & Supply Analytics platform with:
+
+* automated ML pipelines
+* background model training
+* MLflow model registry
+* Redis + RQ workers
+* FastAPI microservices
+* Supabase DB + File storage
+* Modular prediction & evaluation APIs
+* RAG chatbot for analytics guidance
+
+This architecture ensures:
+
+✔ Scalability
+✔ Version control
+✔ Per-user isolation
+✔ Real-time pipeline execution
+✔ Secure data access
+
+---
+
+# 🔷 **2. High-Level Architecture Diagram (Text Form)**
+
+```
+      ┌─────────────────────────┐
+      │        Frontend         │
+      │ React / Next.js / UI    │
+      └───────────┬─────────────┘
+                  │ HTTPS
+                  ▼
+      ┌─────────────────────────┐
+      │        FastAPI          │
+      │   (auth, training,      │
+      │   predictions, RAG)     │
+      └──────┬────────┬────────┘
+             │        │
+   Enqueue jobs  Query latest run_id
+             │        │
+             ▼        ▼
+      ┌─────────────────────────┐
+      │       Redis / RQ        │
+      │   Background Workers    │
+      └───────────┬─────────────┘
+                  │ runs pipeline
+                  ▼
+      ┌─────────────────────────┐
+      │      ML Pipelines       │
+      │ (demand, stockout, etc) │
+      └───────────┬─────────────┘
+                  │ logs models
+                  ▼
+      ┌─────────────────────────┐
+      │         MLflow          │
+      │    Model Registry       │
+      └───────────┬─────────────┘
+                  │ store run_id
+                  ▼
+      ┌─────────────────────────┐
+      │       Supabase DB       │
+      │  models, user_files     │
+      └───────────┬─────────────┘
+                  │ read files
+                  ▼
+      ┌─────────────────────────┐
+      │  Supabase Storage       │
+      │ (CSV/Excel uploaded)    │
+      └─────────────────────────┘
+
+            ┌─────────────────┐
+            │   RAG Chatbot   │
+            │ (vector store + │
+            │   knowledge     │
+            │       base)     │
+            └─────────────────┘
+```
+
+---
+
+# 🔷 **3. Core Components**
+
+## **3.1 FastAPI Backend**
+
+Responsibilities:
+
+* authentication
+* route handling
+* enqueueing training jobs
+* retrieving run_id
+* prediction endpoints
+* exposing RAG chatbot API
+
+Main submodules:
+
+* `/model_training/start/train`
+* `/predict/*`
+* `/chatbot/query`
+
+---
+
+## **3.2 Redis + RQ Worker**
+
+Purpose:
+
+* background job queue
+* runs heavy ML pipelines async
+* each job produces an MLflow run_id
+
+Example worker command:
+
+```
+rq worker model_training
+```
+
+Workers execute:
+
+* run_demand_pipeline
+* run_stockout_pipeline
+* run_leadtime_pipeline
+* run_pricing_pipeline
+* run_promo_pipeline
+
+---
+
+## **3.3 ML Pipelines**
+
+Each pipeline includes:
+
+**✔ Column mapping**
+**✔ Preprocessing**
+**✔ Feature extraction**
+**✔ Train/val/test split**
+**✔ Model auto-selection**
+**✔ ML training**
+**✔ MLflow logging**
+**✔ run_id return**
+
+Pipelines use modular design:
+
+```
+models/demand_forecast/
+models/stockout/
+models/leadtime/
+models/pricing/
+models/promo/
+```
+
+---
+
+## **3.4 MLflow – Model Registry**
+
+MLflow stores:
+
+* serialized model
+* metrics
+* parameters
+* training dataset metadata
+* run_id
+* model artifacts
+
+Models can be loaded by:
+
+```
+mlflow.pyfunc.load_model(f"runs:/{run_id}/model")
+```
+
+---
+
+## **3.5 Supabase Database**
+
+Tables:
+
+### **1. user_files**
+
+Stores file_name + file_url
+
+### **2. models**
+
+Stores:
+
+* user_id
+* model_name
+* run_id
+* status
+* metrics
+* created_at
+
+---
+
+## **3.6 Supabase Storage**
+
+Stores user-uploaded files:
+
+* sales
+* inventory
+* products
+* promos
+* suppliers
+
+Files are parsed and combined for pipelines.
+
+---
+
+## **3.7 Frontend**
+
+Built with React/Next.js:
+
+* Upload center
+* Training center
+* Results dashboards
+* Visualization pages
+* RAG chatbot interface
+
+---
+
+## **3.8 RAG Chatbot**
+
+Runs on:
+
+* vector store
+* embeddings
+* text chunking
+* retrieval + LLM
+* safety filters
+
+Uses:
+
+* website docs
+* user predictions
+* model explanations (SHAP/LIME)
+* uploaded files summaries
+
+Provides:
+
+* personalized advice
+* debugging guidance
+* decision recommendations
+
+---
+
+# 🔷 **4. End-to-End Training & Prediction Flow**
+
+## **4.1 Training Flow**
+
+```
+User clicks “Train All Models”
+↓
+Frontend sends POST /model_training/start/train
+↓
+FastAPI queues jobs → Redis
+↓
+RQ worker pulls job
+↓
+Pipeline trains model
+↓
+MLflow saves model → returns run_id
+↓
+Supabase stores (user_id, model_name, run_id)
+↓
+Frontend notified training started
+```
+
+---
+
+## **4.2 Prediction Flow**
+
+```
+User clicks “Predict”
+↓
+Frontend calls /predict/<model_name>
+↓
+Backend fetches latest run_id from Supabase
+↓
+Load model from MLflow
+↓
+Retrieve + preprocess files
+↓
+Feature generation
+↓
+Model.predict()
+↓
+Postprocessing
+↓
+Prediction JSON returned to frontend
+```
+
+---
+
+# 🔷 **5. Security Architecture**
+
+* per-user row-level model isolation
+* JWT-based authentication
+* run_id only accessible for the owner
+* RAG Router blocks abusive/off-topic messages
+* No external domain advice allowed
+* Rate limiting per user
+
+---
+
+# 🔷 **6. Scalability**
+
+DemandCast supports:
+
+✔ horizontal scaling of RQ workers
+✔ distributed prediction servers
+✔ separated read/write DB replicas
+✔ async FastAPI endpoints
+✔ sharded vector store
+
+This architecture enables 1–10,000 users seamlessly.
+
+---
+
+# 🔷 **7. Summary**
+
+DemandCast architecture is:
+
+* modern
+* modular
+* scalable
+* MLflow-driven
+* production-ready
+* cleanly versioned
+
+This document serves as the **main reference** for understanding the whole platform.
+
+---
+
+---
+
+# 📘 **prediction_api_docs.md**
+
+### *Comprehensive API Documentation for All Prediction Endpoints*
+
+---
+
+# 🔷 **1. Introduction**
+
+This file documents how the DemandCast prediction API works, covering:
+
+* endpoints
+* request/response schema
+* input rules
+* run_id resolution
+* per-model behavior
+
+This is essential documentation for developers and your RAG chatbot.
+
+---
+
+# 🔷 **2. Authentication**
+
+Every prediction route requires JWT:
+
+```
+Authorization: Bearer <token>
+```
+
+If token is missing or invalid → 401.
+
+---
+
+# 🔷 **3. Prediction Endpoints Overview**
+
+| Model              | Endpoint            | Purpose                            |
+| ------------------ | ------------------- | ---------------------------------- |
+| Demand Forecasting | `/predict/demand`   | Predict next 7/14/30 days          |
+| Stockout Risk      | `/predict/stockout` | Predict stockout probability       |
+| Lead Time          | `/predict/leadtime` | Estimate supplier lead time        |
+| Pricing            | `/predict/pricing`  | Elasticity + optimal pricing       |
+| Promotions         | `/predict/promo`    | Promo uplift + incremental revenue |
+
+All endpoints internally load:
+
+* user's uploaded files
+* latest model run_id
+* correct MLflow model
+
+---
+
+# 🔷 **4. Shared Flow for All Prediction Routes**
+
+Every predict endpoint runs this universal function:
+
+```
+def predict(model_name, token):
+    user_id = get_user_id(token)
+    run_id = get_latest_run_id(user_id, model_name)
+    model = mlflow.load(run_id)
+    dfs = retrieve_files(token)
+    X = build_features(dfs)
+    preds = model.predict(X)
+    result = postprocess(preds)
+    return JSON
+```
+
+---
+
+# 🔷 **5. Endpoints in Detail**
+
+---
+
+## 🟦 **5.1 Demand Prediction**
+
+### **Endpoint**
+
+```
+POST /predict/demand
+```
+
+### **Request Body**
+
+```json
+{
+  "horizon": 30
+}
+```
+
+### **Response**
+
+```json
+{
+  "run_id": "abc123",
+  "horizon": 30,
+  "predictions": [
+     {"date": "2024-01-01", "sku": "P0001", "location": "L1", "forecast": 12},
+     ...
+  ]
+}
+```
+
+### **Pipeline Steps**
+
+1. load sales
+2. preprocess
+3. build demand features
+4. apply trained ML model
+5. post-process
+6. return forecasts
+
+---
+
+## 🟥 **5.2 Stockout Prediction**
+
+### **Endpoint**
+
+```
+POST /predict/stockout
+```
+
+### **Response Example**
+
+```json
+{
+  "run_id": "xyz789",
+  "predictions": [
+    {
+      "sku": "P0001",
+      "location": "L1",
+      "risk_score": 0.82,
+      "risk_class": "High"
+    }
+  ]
+}
+```
+
+### **Uses**
+
+* rolling demand
+* current stock level
+* lead time
+* lag features
+
+---
+
+## 🟨 **5.3 Lead Time Prediction**
+
+### **Endpoint**
+
+```
+POST /predict/leadtime
+```
+
+### **Response**
+
+```json
+{
+  "run_id": "lt555",
+  "supplier": "S099",
+  "expected_lead_time": 7.2,
+  "delay_probability": 0.31
+}
+```
+
+### **Includes**
+
+* smoothing
+* variability effects
+
+---
+
+## 🟩 **5.4 Pricing Prediction**
+
+### **Endpoint**
+
+```
+POST /predict/pricing
+```
+
+### **Returns**
+
+* elasticity
+* demand curve
+* revenue curve
+* optimal price
+
+Example response:
+
+```json
+{
+  "run_id": "pr900",
+  "elasticity": -1.45,
+  "optimal_price": 129,
+  "revenue_max_price": 134
+}
+```
+
+---
+
+## 🟪 **5.5 Promo Effectiveness Prediction**
+
+### **Endpoint**
+
+```
+POST /predict/promo
+```
+
+### **Response**
+
+```json
+{
+  "run_id": "promo222",
+  "uplift": 25.5,
+  "incremental_revenue": 12292,
+  "best_discount": "15%"
+}
+```
+
+---
+
+# 🔷 **6. Error Handling**
+
+### **400 — Missing File**
+
+```
+"Sales file missing in storage"
+```
+
+### **500 — run_id not found**
+
+```
+"No trained model available"
+```
+
+### **422 — Invalid schema**
+
+```
+"Missing required column: price"
+```
+
+---
+
+# 🔷 **7. Sample Code (Frontend)**
+
+```js
+const res = await fetch("/predict/demand", {
+  method: "POST",
+  headers: {
+    "Authorization": `Bearer ${token}`,
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ horizon: 30 })
+});
+```
+
+---
+
+# 🔷 **8. Summary**
+
+Prediction APIs in DemandCast are:
+
+* clean
+* consistent
+* run_id-driven
+* MLflow-backed
+* fully automated
+
+This ensures production-grade forecasting and analytics.
+ 
+Below is the **full, comprehensive, production-ready `demand_pipeline.md`** file for your RAG knowledge base.
+It includes every detail required for documentation, debugging, onboarding new engineers, and enabling your RAG chatbot to answer deep context-specific questions about demand forecasting in DemandCast.
+
+You can **copy–paste this entire content** into `demand_pipeline.md`.
+
+---
+
+# 📘 **demand_pipeline.md**
+
+### *Demand Forecasting Pipeline – Full Technical Documentation for DemandCast*
+
+---
+
+# 🔷 **1. Overview**
+
+The **Demand Forecast Pipeline** in DemandCast predicts **future product demand** using historical sales, pricing, promotions, and product attributes. The pipeline is designed to be:
+
+✔ Automated
+✔ Scalable
+✔ MLflow-tracked
+✔ Feature-rich
+✔ Fully reproducible
+✔ Per-user isolated
+
+It runs asynchronously via **Redis + RQ** and returns an **MLflow run_id**, which is later used for predictions, dashboards, SHAP explainability, and decision support.
+
+---
+
+# 🔷 **2. Pipeline Objectives**
+
+The Demand Forecast pipeline determines:
+
+* **Future sales quantity** for each SKU at each location
+* **Forecast horizon** (7/14/30/90 days)
+* **Promotion-sensitive demand patterns**
+* **Seasonality patterns**
+* **Trend shifts**
+* **Price elasticity effects** (if pricing data found)
+
+It enables downstream tasks like:
+
+* Stock planning
+* Replenishment triggers
+* Safety stock computation
+* Promo planning
+* Revenue forecasting
+
+---
+
+# 🔷 **3. Input Requirements**
+
+The pipeline expects (at minimum):
+
+### **Sales File (`sales_df`)**
+
+Required columns:
+
+* `date`
+* `product_id`
+* `sales`
+* `price` *(optional but improves accuracy)*
+
+Optional but useful:
+
+* `location_id`
+* `promo_flag`
+* `customer_id`
+
+If the user does not upload `products_df`, DemandCast automatically generates one from unique product_ids.
+
+---
+
+# 🔷 **4. Pipeline Steps**
+
+The pipeline consists of **8 major steps**, each described below.
+
+---
+
+# 🔷 **STEP 1 — Column Mapping**
+
+DemandCast supports arbitrary column names.
+
+Using the synonym mapper:
+
+```
+date_col_syn
+product_id_col_syn
+sales_col_syn
+price_col_syn
+```
+
+The pipeline auto-detects correct columns like:
+
+| Uploaded Column | Mapped As  |
+| --------------- | ---------- |
+| sale_date       | date       |
+| sku             | product_id |
+| qty_sold        | sales      |
+| unit_price      | price      |
+
+This allows users to upload any dataset without renaming columns.
+
+---
+
+# 🔷 **STEP 2 — Preprocessing**
+
+Performed by `preprocess_data()`:
+
+* missing date handling
+* sorting by date
+* converting categorical to numeric
+* removing extreme outliers
+* normalizing negative/unrealistic sales
+* removing constant columns
+* forward-fill price gaps
+* unify date format
+
+Goal: **clean, fully aligned dataset ready for feature extraction.**
+
+---
+
+# 🔷 **STEP 3 — Feature Engineering**
+
+Performed by `extract_demand_forecast_features()`.
+
+Features include:
+
+### **Lag features**
+
+```
+lag_1, lag_3, lag_7, lag_14, lag_30
+```
+
+### **Rolling windows**
+
+```
+rolling_7_mean
+rolling_14_mean
+rolling_30_mean
+rolling_7_sum
+rolling_30_sum
+```
+
+### **Seasonality features**
+
+```
+day_of_week
+month
+week_of_year
+is_weekend
+```
+
+### **Price features**
+
+```
+price
+price_change
+discount_percent
+price_rolling_mean
+```
+
+### **Promo features (if promo flag exists)**
+
+```
+is_promo
+promo_lag_7
+promo_rolling_sum_30
+```
+
+### **Trend features**
+
+```
+sales_diff
+rolling_slope
+```
+
+Hundreds of features may be generated depending on data availability.
+
+---
+
+# 🔷 **STEP 4 — Train–Test Split (Time Series)**
+
+DemandCast uses a **chronological split**:
+
+```
+70% → Train
+15% → Validation
+15% → Test
+```
+
+Unlike random splits, time-series split ensures:
+
+* no leakage
+* realistic future prediction simulation
+
+Done via `train_test_split_time_from_xy()`.
+
+---
+
+# 🔷 **STEP 5 — Class Imbalance Handling**
+
+*(Not for demand — but built-in for future hybrid classification tasks)*
+
+Demand forecasting is **regression**, so imbalance handling is not needed, but the pipeline includes hooks for potential hybrid tasks, such as:
+
+* demand=0 vs demand>0
+* new SKU warming
+
+---
+
+# 🔷 **STEP 6 — Auto Model Selection & Training**
+
+Performed by `train_demand_forecast_model()`.
+
+Model is chosen based on dataset size:
+
+| Dataset Size                  | Model                                     |
+| ----------------------------- | ----------------------------------------- |
+| Small (<10k rows)             | Prophet or RandomForest                   |
+| Medium (10k–150k)             | XGBoost                                   |
+| Large (>150k)                 | LSTM                                      |
+| Very large & time-series rich | TFT (disabled for now → fallback to LSTM) |
+
+### **Models Supported**
+
+* **Prophet**
+* **Random Forest Regressor**
+* **XGBoost**
+* **LSTM** *(TensorFlow)*
+* (TFT to be added later)
+
+Pipeline trains only **one** model — not a brute-force ensemble.
+
+---
+
+# 🔷 **STEP 7 — MLflow Logging**
+
+The trained model is logged into MLflow:
+
+* parameters used
+* metrics (MAE, RMSE, R²)
+* feature importance
+* model pickle / saved model
+* plots & artifacts
+* environment info
+
+Returns a unique:
+
+```
+run_id  →  "7abfa272018f4e179d"
+```
+
+This ID is stored in Supabase so predictions can be fetched later.
+
+---
+
+# 🔷 **STEP 8 — Prediction From Logged Model**
+
+After logging, the pipeline validates model loading:
+
+```
+preds, proba = predict_from_demand_mlflow_run(run_id, X_test)
+```
+
+Outputs:
+
+* test predictions
+* probability metrics (for LSTM/Prophet)
+* time-series forecast values
+
+Ensures the pipeline is reproducible via MLflow.
+
+---
+
+# 🔷 **5. Outputs of the Pipeline**
+
+### **Final Output Dictionary**
+
+```python
+{
+  "model": trained_model,
+  "model_type": "XGBOOST",
+  "metrics": {
+      "mae": ...,
+      "rmse": ...,
+      "r2": ...
+  },
+  "run_id": "7abfa272018f4e179d",
+  "predictions": preds,
+  "probabilities": proba
+}
+```
+
+### **What the frontend receives**
+
+Only:
+
+* `run_id`
+* metrics
+* model type
+
+Styling & charts handled by UI.
+
+---
+
+# 🔷 **6. How the Frontend Uses the Pipeline**
+
+When user starts training:
+
+```
+POST /model_training/start/train
+```
+
+Pipeline is queued.
+Frontend shows:
+
+* “Training started”
+* Estimated time: 32 minutes
+* run_id assigned per model
+
+Later, for prediction:
+
+```
+POST /predict/demand
+```
+
+System:
+
+* fetches latest run_id
+* loads MLflow model
+* preprocesses files
+* forecasts next horizon days
+
+---
+
+# 🔷 **7. Demand Forecasting Best Practices (For RAG Chatbot)**
+
+Your RAG assistant should know:
+
+* demand accuracy improves with price data
+* seasonality is MORE important than lag features
+* long horizon forecasts (90 days) are less accurate
+* multiple locations should have separate models for highest accuracy
+* Prophet underfits high-frequency data
+* XGBoost is strongest for structured retail data
+* LSTM only works well with dense continuous data
+
+---
+
+# 🔷 **8. Common Issues & How the RAG Should Respond**
+
+### ❌ Sales file missing
+
+→ “Upload a sales file with columns: date, product_id, sales.”
+
+### ❌ Date mismatch between sales & price
+
+→ “Ensure both files have consistent date formatting.”
+
+### ❌ MLflow run not found
+
+→ “Train the demand model before requesting predictions.”
+
+### ❌ No seasonality in the dataset
+
+→ “Use at least 3 months of data to enable seasonality detection.”
+
+---
+
+# 🔷 **9. Summary**
+
+The **Demand Forecast Pipeline** in DemandCast is:
+
+* fully automated
+* MLflow-backed
+* RQ-powered
+* designed for real-time retail & supply-chain forecasting
+* robust against messy user data
+* extendable for additional time-series models
+
+This document enables deep understanding for both developers and your RAG chatbot.
+
+---
+
+If you'd like, I can now generate:
+
+* `leadtime_pipeline.md`
+* `stockout_pipeline.md`
+* `pricing_pipeline.md`
+* `promo_pipeline.md`
+
+Just say **next**!
+
+
+Below is the **full, detailed, production-grade `leadtime_pipeline.md`** file.
+It covers everything your RAG chatbot must know about **Lead Time Prediction** inside DemandCast.
+
+You can **copy–paste this entire content** into your knowledge base.
+
+---
+
+# 📘 **leadtime_pipeline.md**
+
+### *Lead Time Prediction Pipeline – Technical Documentation for DemandCast*
+
+---
+
+# 🔷 **1. Overview**
+
+The **Lead Time Pipeline** in DemandCast predicts:
+
+* **Supplier Delivery Lead Time**
+* **Lead Time Variability**
+* **Delivery Delays**
+* **Supplier Performance Patterns**
+* **Future expected lead time for reordering decisions**
+
+It is essential for:
+
+* Replenishment planning
+* Safety stock calculation
+* Supplier risk assessment
+* Automated reorder point (ROP) modeling
+
+---
+
+# 🔷 **2. Objective of Lead Time Modeling**
+
+The goal is to compute:
+
+### **1️⃣ Predicted Lead Time**
+
+Expected number of days from order to delivery.
+
+### **2️⃣ Lead Time Variability**
+
+Standard deviation of lead time; important for safety stock.
+
+### **3️⃣ Supplier Reliability**
+
+Probability of on-time delivery based on past behavior.
+
+### **4️⃣ Anomaly Detection** (Optional)
+
+Spotting outlier delays or disruptions.
+
+DemandCast uses lead time predictions inside the larger **Demand → Inventory → Stockout** flows to automate replenishment decisions.
+
+---
+
+# 🔷 **3. Input Requirements**
+
+The pipeline expects a **supplier/PO (Purchase Order)** dataset with at least:
+
+### **Mandatory columns**
+
+* `order_date`
+* `delivery_date`
+* `product_id`
+* `supplier_id`
+
+### **Optional but recommended**
+
+* `order_quantity`
+* `received_quantity`
+* `price`
+* `po_id`
+* `location_id`
+
+If date columns have irregular names (e.g., `po_dte`, `delv_dt`), DemandCast auto-maps them using the synonym dictionary:
+
+```
+order_date_col_syn
+delivery_date_col_syn
+product_id_col_syn
+supplier_col_syn
+```
+
+---
+
+# 🔷 **4. Pipeline Steps**
+
+The Lead Time Pipeline consists of **8 steps**:
+
+---
+
+# 🔷 **STEP 1 — Column Mapping**
+
+DemandCast automatically detects & renames:
+
+| Detected Column         | Standard Name |
+| ----------------------- | ------------- |
+| dt_ordered, order_d     | order_date    |
+| dt_delivered, recv_date | delivery_date |
+| sku, item               | product_id    |
+| vend_id, supplier       | supplier_id   |
+
+This works via:
+
+```
+map_column(df, order_date_col_syn)
+```
+
+---
+
+# 🔷 **STEP 2 — Lead Time Calculation**
+
+A new column is created:
+
+```
+lead_time = (delivery_date - order_date).days
+```
+
+Invalid rows are removed:
+
+* negative lead times
+* unrealistically large values
+* missing dates
+
+---
+
+# 🔷 **STEP 3 — Preprocessing**
+
+Performed by `preprocess_data()`:
+
+* remove duplicates
+* convert date → datetime
+* standardize supplier_name
+* fix inconsistent product_ids
+* drop nulls
+* ensure numeric types
+
+---
+
+# 🔷 **STEP 4 — Feature Engineering**
+
+Performed using:
+
+```
+extract_leadtime_features(df)
+```
+
+### **Base Features**
+
+* `lead_time` (target)
+* `order_quantity`
+* `supplier_id`
+* `product_id`
+
+### **Date Features**
+
+* `order_month`
+* `order_week`
+* `order_dayofweek`
+* `is_month_start`
+* `is_month_end`
+
+### **Supplier Features**
+
+* `avg_lead_time_supplier`
+* `std_lead_time_supplier`
+* `supplier_delay_rate`
+  (% deliveries delayed)
+
+### **Product Features**
+
+* `avg_lt_product`
+* `volatility_product_lt`
+
+### **Trend Features**
+
+* rolling windows:
+
+```
+rolling_mean_7_lt
+rolling_std_30_lt
+rolling_slope_lt
+```
+
+### **Optional Parameters Integrated**
+
+From UI:
+
+#### ✔ **Smoothing Window (lookback)**
+
+Smooths historical lead times:
+
+```
+rolling_mean(smoothing)
+```
+
+#### ✔ **Supplier Variability Handling**
+
+If `variability = True`:
+
+* additional volatility features
+* weighted sample variance
+* supplier reliability score
+
+These parameters now directly affect model training.
+
+---
+
+# 🔷 **STEP 5 — Train–Test Split**
+
+Performed using:
+
+```
+train_test_split_time_from_xy()
+```
+
+Split is chronological:
+
+| Set        | Portion |
+| ---------- | ------- |
+| Train      | 70%     |
+| Validation | 15%     |
+| Test       | 15%     |
+
+This avoids leakage and preserves time dependency.
+
+---
+
+# 🔷 **STEP 6 — Auto Model Selection & Training**
+
+Performed by:
+
+```
+train_leadtime_model_auto()
+```
+
+### ✔ Model is chosen based on:
+
+* number of rows
+* number of categorical features
+* smoothing and variability effects
+* dataset density
+
+### Model Decision Logic
+
+| Condition                 | Model               |
+| ------------------------- | ------------------- |
+| many categorical features | CatBoost            |
+| < 20k rows                | Linear Regression   |
+| < 200k rows               | Random Forest       |
+| 200k–2M rows              | LightGBM            |
+| > 2M rows                 | XGBoost (hist tree) |
+| fallback                  | Random Forest       |
+
+### Incorporating UI Parameters
+
+**1️⃣ Smoothing (`smoothing=int`)**
+
+Applied during feature creation:
+
+* moving averages
+* volatility banding
+* rolling-window adjusted lead time
+
+**2️⃣ Variability Handling (`variability=bool`)**
+
+If True:
+
+* extra volatility features
+* supplier reliability weighting
+* penalization for high-variance suppliers
+* risk-adjusted RMSE loss scoring
+
+### Output of training:
+
+* selected model type
+* trained model object
+* metrics (MAE, RMSE, R²)
+
+---
+
+# 🔷 **STEP 7 — MLflow Logging**
+
+Model is logged using:
+
+```
+log_leadtime_model_to_mlflow()
+```
+
+Artifacts stored:
+
+* model.pkl
+* parameters (smoothing, variability)
+* metrics
+* feature importance
+* training curves
+* conda.yaml (env)
+
+Returns:
+
+```
+run_id → "e1fc72acd1bf4ce582"
+```
+
+Stored in Supabase → used later for predictions.
+
+---
+
+# 🔷 **STEP 8 — Prediction (from run_id)**
+
+Uses:
+
+```
+predict_from_mlflow_run(run_id, X_test)
+```
+
+Ensures:
+
+* model loads correctly
+* predictions match training pipeline
+* no drift in feature order
+
+---
+
+# 🔷 **5. Outputs Summary**
+
+The pipeline returns:
+
+```json
+{
+  "model": "<trained model>",
+  "model_type": "lightgbm",
+  "metrics": {
+    "mae": 1.44,
+    "rmse": 2.11,
+    "r2": 0.87
+  },
+  "run_id": "e1fc72acd1bf4ce582",
+  "predictions": [...],
+  "variability_used": true,
+  "smoothing": 7
+}
+```
+
+---
+
+# 🔷 **6. How The Frontend Uses Lead Time Pipeline**
+
+User selects parameters:
+
+* Smoothing Window
+* Supplier Variability Handling
+
+Frontend calls:
+
+```
+POST /model_training/start/train
+```
+
+RQ job runs in background → MLflow generates run_id.
+
+Prediction API:
+
+```
+POST /predict/leadtime
+```
+
+Dashboard displays:
+
+* predicted lead time per SKU
+* supplier reliability score
+* delay risk indicators
+* volatility-based safety stock recommendations
+
+---
+
+# 🔷 **7. Best Practices for RAG Chatbot**
+
+Your RAG assistant must know:
+
+* lead time data MUST include order_date + delivery_date
+* smoothing window reduces noise
+* variability handling increases safety stock
+* suppliers with unstable lead time are risk-prone
+* LightGBM/XGBoost work best for large datasets
+* low-volume SKUs often require smoothing
+* negative or zero lead times indicate data issues
+* if dates overlap or missing → ask user to fix their file
+
+---
+
+# 🔷 **8. Troubleshooting Scenarios**
+
+| Issue                        | Chatbot Response                                                |
+| ---------------------------- | --------------------------------------------------------------- |
+| Missing order_date           | “Upload a file containing order_date column.”                   |
+| Negative lead times          | “Delivery date cannot be before order date; please clean file.” |
+| Supplier_id missing          | “Supplier ID is required for supplier reliability modeling.”    |
+| User asks about safety stock | “Safety stock = Z × σ_LT × √D where LT = lead time.”            |
+
+---
+
+# 🔷 **9. Summary**
+
+The **Lead Time Pipeline** in DemandCast provides:
+
+* accurate supplier lead time prediction
+* variability-aware modelling
+* smoothing-enhanced feature engineering
+* MLflow tracking
+* scalable training
+* actionable insights for replenishment
+
+This documentation enables your RAG chatbot and engineering team to fully understand & operate the pipeline.
+
+---
+
+If you want next:
+
+✅ `stockout_pipeline.md`
+or
+✅ `pricing_elasticity_pipeline.md`
+or
+✅ `promo_effectiveness_pipeline.md`
+
+Just say **next**.
+
+Below is the **full, detailed, production-grade `stockout_pipeline.md`** file for your RAG knowledge base.
+It is aligned with your actual implementation (feature extraction, class imbalance handling, MLflow logging, RQ workers).
+
+You can **copy–paste this entire content** into `stockout_pipeline.md`.
+
+---
+
+# 📘 **stockout_pipeline.md**
+
+### *Stockout Prediction Pipeline – Technical Documentation for DemandCast*
+
+---
+
+# 🔷 **1. Overview**
+
+The **Stockout Prediction Pipeline** in DemandCast predicts whether a SKU will **go out of stock** within a specified time window.
+
+The model is a **classification pipeline** that outputs:
+
+* Probability of future stockout
+* Binary prediction: Stockout (1) or No Stockout (0)
+* Feature contributions for explainability
+* Supplier + inventory + demand-driven risk
+
+It is powered by:
+
+✔ Auto ML-based model selection
+✔ Class imbalance handling (SMOTE)
+✔ Time-series-aware splitting
+✔ MLflow logging
+✔ Support for calibrated probabilities
+✔ Multi-file dataset integration (sales + inventory + products)
+
+---
+
+# 🔷 **2. Business Objective**
+
+Stockout prediction helps prevent:
+
+* Lost sales
+* Customer dissatisfaction
+* Emergency procurement
+* Disrupted demand planning
+* Excess demand shifting to competitors
+
+Ensures:
+
+* Better replenishment scheduling
+* Improved fill-rate
+* Inventory optimization
+* Supplier-level risk mitigation
+
+---
+
+# 🔷 **3. Required Inputs**
+
+The pipeline requires **three datasets**:
+
+---
+
+### **1️⃣ Sales File (`sales_df`)**
+
+Required columns:
+
+* `date`
+* `product_id`
+* `sales` (units sold)
+
+Optional:
+
+* `price`
+* `promo_flag`
+* `location_id`
+
+---
+
+### **2️⃣ Inventory File (`inventory_df`)**
+
+Required:
+
+* `date`
+* `product_id`
+* `stock` (on-hand inventory)
+
+Optional:
+
+* `warehouse_id`
+* `in_transit_stock`
+* `available_stock`
+
+---
+
+### **3️⃣ Product Master File (`products_df`)**
+
+Required:
+
+* `product_id`
+
+Optional:
+
+* `category`
+* `brand`
+* `supplier_id`
+
+---
+
+If missing, DemandCast generates:
+
+```
+products_df = unique(product_id)
+```
+
+---
+
+# 🔷 **4. Pipeline Flow (8 Steps)**
+
+The Stockout pipeline has eight major phases.
+
+---
+
+# 🔷 **STEP 1 — Column Mapping**
+
+Automatic column mapping using synonym dictionary:
+
+```
+product_id_col_syn
+date_col_syn
+sales_col_syn
+stock_col_syn
+supplier_col_syn
+```
+
+Maps user columns like:
+
+| Uploaded Name    | Mapped As  |
+| ---------------- | ---------- |
+| sku, item        | product_id |
+| sale_dt          | date       |
+| qty_sold         | sales      |
+| soh, on_hand_qty | stock      |
+
+This ensures flexible uploads.
+
+---
+
+# 🔷 **STEP 2 — Dataset Merging**
+
+The system merges:
+
+```
+sales_df  +  inventory_df  +  products_df
+```
+
+Merge keys:
+
+```
+['product_id', 'date']
+```
+
+Post-processing includes:
+
+* removing nulls
+* aligning mismatched rows
+* cleaning negative stock
+* resolving duplicate entries
+
+Final merged dataset is the foundation for features.
+
+---
+
+# 🔷 **STEP 3 — Data Preprocessing**
+
+Performed using:
+
+```
+preprocess_data()
+```
+
+Actions include:
+
+* fixing inconsistent date formats
+* converting strings → numerics
+* imputing missing values
+* dropping unrealistic entries
+* normalizing stock & sales
+* advanced date parsing for seasonal effects
+
+---
+
+# 🔷 **STEP 4 — Feature Engineering**
+
+Performed with:
+
+```
+extract_stockout_features(df)
+```
+
+Features include:
+
+---
+
+### **Inventory Features**
+
+* current stock
+* stock coverage days = stock / avg_demand
+* rolling stock mean (7/14/30)
+* stock velocity
+* stockout gap indicators
+
+---
+
+### **Demand Features**
+
+* lag features: sales_lag_1, sales_lag_7, sales_lag_30
+* moving averages
+* demand volatility
+* demand trend slope
+
+---
+
+### **Combined Features**
+
+* (stock – demand)
+* days to zero stock
+* safety stock ratio
+
+---
+
+### **Categorical Features**
+
+* product category
+* supplier
+* brand
+
+Categorical columns are **factorized** into integers.
+
+---
+
+### **Target Label**
+
+Target column (created during feature extraction):
+
+```
+stockout_label = 1 if future_stock <= threshold else 0
+```
+
+Threshold may be:
+
+* stock = 0
+* stock < demand
+* stock below safety stock
+
+The pipeline uses the future date window to determine labels.
+
+---
+
+# 🔷 **STEP 5 — Time-Series Split**
+
+Performed using:
+
+```
+train_test_split_time_from_xy(X, y, date_col="date")
+```
+
+Split:
+
+| Split      | %   |
+| ---------- | --- |
+| Train      | 70% |
+| Validation | 15% |
+| Test       | 15% |
+
+Ensures **no leakage** and preserves sequence order.
+
+---
+
+# 🔷 **STEP 6 — Class Imbalance Handling**
+
+Stockouts are rare → severe imbalance.
+
+DemandCast uses:
+
+### ✔ **SMOTE / SMOTETomek**
+
+to oversample minority class.
+
+### ✔ **Scale_pos_weight for XGBoost**
+
+```
+scale_pos_weight = (n_negative / n_positive)
+```
+
+After balancing:
+
+```
+X_train_bal, y_train_bal
+```
+
+This improves model stability.
+
+---
+
+# 🔷 **STEP 7 — Model Selection & Training**
+
+Implemented in:
+
+```
+train_stockout_model()
+```
+
+Auto-selection logic:
+
+| Condition            | Model               |
+| -------------------- | ------------------- |
+| Lag features present | LSTM                |
+| < 5000 rows          | Logistic Regression |
+| < 50k rows           | Random Forest       |
+| > 50k rows           | XGBoost             |
+| fallback             | Random Forest       |
+
+---
+
+### **Models Trained**
+
+#### ✔ Logistic Regression
+
+Simple & fast for small datasets.
+
+#### ✔ Random Forest
+
+Best for limited data with many features.
+
+#### ✔ XGBoost
+
+High-performance for retail classification.
+
+#### ✔ LSTM
+
+If sequential patterns exist (`lag_` columns).
+
+---
+
+### **Probability Calibration**
+
+All models → calibrated via:
+
+```
+CalibratedClassifierCV(method="isotonic")
+```
+
+Ensures reliable probability outputs.
+
+---
+
+### **Final Outputs**
+
+From training:
+
+```
+accuracy
+f1_score
+classification_report
+predicted labels
+```
+
+---
+
+# 🔷 **STEP 8 — MLflow Logging**
+
+Logged with:
+
+```
+log_stockout_model_to_mlflow()
+```
+
+Artifacts:
+
+* model
+* metrics
+* confusion matrix
+* feature importance
+* training configuration
+* environment YAML
+
+Returns:
+
+```
+run_id = "c87cd08d8b534c2c9d"
+```
+
+Stored in Supabase → used by prediction API & RAG.
+
+---
+
+# 🔷 **9. Prediction from Logged Model**
+
+Prediction uses:
+
+```
+predict_from_mlflow_run(run_id, X_test)
+```
+
+Outputs:
+
+* predicted stockout=1/0
+* probabilities
+* risk levels per SKU
+
+---
+
+# 🔷 **10. Pipeline Output Format**
+
+Final dictionary:
+
+```json
+{
+  "model": "<stored model>",
+  "model_type": "xgboost",
+  "metrics": {
+    "accuracy": 0.92,
+    "f1": 0.88
+  },
+  "run_id": "c87cd08d8b534c2c9d",
+  "predictions": [...],
+  "probabilities": [...],
+  "final_features_df": "<df>",
+  "merged_df": "<df>"
+}
+```
+
+---
+
+# 🔷 **11. Frontend Integration**
+
+User starts training via:
+
+```
+POST /model_training/start/train
+```
+
+RQ creates a job → run_id saved → UI shows progress.
+
+User requests predictions:
+
+```
+POST /predict/stockout
+```
+
+System loads MLflow model:
+
+* preprocesses user files
+* rebuilds features
+* returns stockout risk per SKU
+
+---
+
+# 🔷 **12. RAG Chatbot Best Practices**
+
+Your RAG assistant should know:
+
+* Stockout prediction uses classification, not regression.
+* Requires both sales + inventory data.
+* Missing stock column → pipeline cannot run.
+* Lag features improve sequential prediction.
+* Class imbalance is handled internally.
+* High stock variance ⇒ higher stockout risk.
+* Models can fail if `date` column is invalid.
+* Predictions depend heavily on correctness of inventory file.
+
+---
+
+# 🔷 **13. Troubleshooting Guide**
+
+| Issue                | Chatbot Response                                      |
+| -------------------- | ----------------------------------------------------- |
+| Missing stock column | “Upload an inventory file with a stock column.”       |
+| Wrong date format    | “Please ensure dates are in YYYY-MM-DD format.”       |
+| Only sales uploaded  | “Stockout prediction requires an inventory file.”     |
+| Very small dataset   | “Stockout prediction may be unstable with <100 rows.” |
+| Incorrect product_id | “Ensure product_ids match between sales & inventory.” |
+
+---
+
+# 🔷 **14. Summary**
+
+The **Stockout Prediction Pipeline** in DemandCast is:
+
+* Robust
+* Auto-ML driven
+* Class imbalance–aware
+* Fully MLflow tracked
+* Reliable for enterprise retail analytics
+* Deeply integrated with DemandCast’s ecosystem
+
+---
+
+If you'd like, I can provide next:
+
+✅ `pricing_elasticity_pipeline.md`
+or
+✅ `promo_effectiveness_pipeline.md`
+
+Just say **next**.
+
+Below is the **full, detailed, production-grade `stockout_pipeline.md`** file for your RAG knowledge base.
+It is aligned with your actual implementation (feature extraction, class imbalance handling, MLflow logging, RQ workers).
+
+You can **copy–paste this entire content** into `stockout_pipeline.md`.
+
+---
+
+# 📘 **stockout_pipeline.md**
+
+### *Stockout Prediction Pipeline – Technical Documentation for DemandCast*
+
+---
+
+# 🔷 **1. Overview**
+
+The **Stockout Prediction Pipeline** in DemandCast predicts whether a SKU will **go out of stock** within a specified time window.
+
+The model is a **classification pipeline** that outputs:
+
+* Probability of future stockout
+* Binary prediction: Stockout (1) or No Stockout (0)
+* Feature contributions for explainability
+* Supplier + inventory + demand-driven risk
+
+It is powered by:
+
+✔ Auto ML-based model selection
+✔ Class imbalance handling (SMOTE)
+✔ Time-series-aware splitting
+✔ MLflow logging
+✔ Support for calibrated probabilities
+✔ Multi-file dataset integration (sales + inventory + products)
+
+---
+
+# 🔷 **2. Business Objective**
+
+Stockout prediction helps prevent:
+
+* Lost sales
+* Customer dissatisfaction
+* Emergency procurement
+* Disrupted demand planning
+* Excess demand shifting to competitors
+
+Ensures:
+
+* Better replenishment scheduling
+* Improved fill-rate
+* Inventory optimization
+* Supplier-level risk mitigation
+
+---
+
+# 🔷 **3. Required Inputs**
+
+The pipeline requires **three datasets**:
+
+---
+
+### **1️⃣ Sales File (`sales_df`)**
+
+Required columns:
+
+* `date`
+* `product_id`
+* `sales` (units sold)
+
+Optional:
+
+* `price`
+* `promo_flag`
+* `location_id`
+
+---
+
+### **2️⃣ Inventory File (`inventory_df`)**
+
+Required:
+
+* `date`
+* `product_id`
+* `stock` (on-hand inventory)
+
+Optional:
+
+* `warehouse_id`
+* `in_transit_stock`
+* `available_stock`
+
+---
+
+### **3️⃣ Product Master File (`products_df`)**
+
+Required:
+
+* `product_id`
+
+Optional:
+
+* `category`
+* `brand`
+* `supplier_id`
+
+---
+
+If missing, DemandCast generates:
+
+```
+products_df = unique(product_id)
+```
+
+---
+
+# 🔷 **4. Pipeline Flow (8 Steps)**
+
+The Stockout pipeline has eight major phases.
+
+---
+
+# 🔷 **STEP 1 — Column Mapping**
+
+Automatic column mapping using synonym dictionary:
+
+```
+product_id_col_syn
+date_col_syn
+sales_col_syn
+stock_col_syn
+supplier_col_syn
+```
+
+Maps user columns like:
+
+| Uploaded Name    | Mapped As  |
+| ---------------- | ---------- |
+| sku, item        | product_id |
+| sale_dt          | date       |
+| qty_sold         | sales      |
+| soh, on_hand_qty | stock      |
+
+This ensures flexible uploads.
+
+---
+
+# 🔷 **STEP 2 — Dataset Merging**
+
+The system merges:
+
+```
+sales_df  +  inventory_df  +  products_df
+```
+
+Merge keys:
+
+```
+['product_id', 'date']
+```
+
+Post-processing includes:
+
+* removing nulls
+* aligning mismatched rows
+* cleaning negative stock
+* resolving duplicate entries
+
+Final merged dataset is the foundation for features.
+
+---
+
+# 🔷 **STEP 3 — Data Preprocessing**
+
+Performed using:
+
+```
+preprocess_data()
+```
+
+Actions include:
+
+* fixing inconsistent date formats
+* converting strings → numerics
+* imputing missing values
+* dropping unrealistic entries
+* normalizing stock & sales
+* advanced date parsing for seasonal effects
+
+---
+
+# 🔷 **STEP 4 — Feature Engineering**
+
+Performed with:
+
+```
+extract_stockout_features(df)
+```
+
+Features include:
+
+---
+
+### **Inventory Features**
+
+* current stock
+* stock coverage days = stock / avg_demand
+* rolling stock mean (7/14/30)
+* stock velocity
+* stockout gap indicators
+
+---
+
+### **Demand Features**
+
+* lag features: sales_lag_1, sales_lag_7, sales_lag_30
+* moving averages
+* demand volatility
+* demand trend slope
+
+---
+
+### **Combined Features**
+
+* (stock – demand)
+* days to zero stock
+* safety stock ratio
+
+---
+
+### **Categorical Features**
+
+* product category
+* supplier
+* brand
+
+Categorical columns are **factorized** into integers.
+
+---
+
+### **Target Label**
+
+Target column (created during feature extraction):
+
+```
+stockout_label = 1 if future_stock <= threshold else 0
+```
+
+Threshold may be:
+
+* stock = 0
+* stock < demand
+* stock below safety stock
+
+The pipeline uses the future date window to determine labels.
+
+---
+
+# 🔷 **STEP 5 — Time-Series Split**
+
+Performed using:
+
+```
+train_test_split_time_from_xy(X, y, date_col="date")
+```
+
+Split:
+
+| Split      | %   |
+| ---------- | --- |
+| Train      | 70% |
+| Validation | 15% |
+| Test       | 15% |
+
+Ensures **no leakage** and preserves sequence order.
+
+---
+
+# 🔷 **STEP 6 — Class Imbalance Handling**
+
+Stockouts are rare → severe imbalance.
+
+DemandCast uses:
+
+### ✔ **SMOTE / SMOTETomek**
+
+to oversample minority class.
+
+### ✔ **Scale_pos_weight for XGBoost**
+
+```
+scale_pos_weight = (n_negative / n_positive)
+```
+
+After balancing:
+
+```
+X_train_bal, y_train_bal
+```
+
+This improves model stability.
+
+---
+
+# 🔷 **STEP 7 — Model Selection & Training**
+
+Implemented in:
+
+```
+train_stockout_model()
+```
+
+Auto-selection logic:
+
+| Condition            | Model               |
+| -------------------- | ------------------- |
+| Lag features present | LSTM                |
+| < 5000 rows          | Logistic Regression |
+| < 50k rows           | Random Forest       |
+| > 50k rows           | XGBoost             |
+| fallback             | Random Forest       |
+
+---
+
+### **Models Trained**
+
+#### ✔ Logistic Regression
+
+Simple & fast for small datasets.
+
+#### ✔ Random Forest
+
+Best for limited data with many features.
+
+#### ✔ XGBoost
+
+High-performance for retail classification.
+
+#### ✔ LSTM
+
+If sequential patterns exist (`lag_` columns).
+
+---
+
+### **Probability Calibration**
+
+All models → calibrated via:
+
+```
+CalibratedClassifierCV(method="isotonic")
+```
+
+Ensures reliable probability outputs.
+
+---
+
+### **Final Outputs**
+
+From training:
+
+```
+accuracy
+f1_score
+classification_report
+predicted labels
+```
+
+---
+
+# 🔷 **STEP 8 — MLflow Logging**
+
+Logged with:
+
+```
+log_stockout_model_to_mlflow()
+```
+
+Artifacts:
+
+* model
+* metrics
+* confusion matrix
+* feature importance
+* training configuration
+* environment YAML
+
+Returns:
+
+```
+run_id = "c87cd08d8b534c2c9d"
+```
+
+Stored in Supabase → used by prediction API & RAG.
+
+---
+
+# 🔷 **9. Prediction from Logged Model**
+
+Prediction uses:
+
+```
+predict_from_mlflow_run(run_id, X_test)
+```
+
+Outputs:
+
+* predicted stockout=1/0
+* probabilities
+* risk levels per SKU
+
+---
+
+# 🔷 **10. Pipeline Output Format**
+
+Final dictionary:
+
+```json
+{
+  "model": "<stored model>",
+  "model_type": "xgboost",
+  "metrics": {
+    "accuracy": 0.92,
+    "f1": 0.88
+  },
+  "run_id": "c87cd08d8b534c2c9d",
+  "predictions": [...],
+  "probabilities": [...],
+  "final_features_df": "<df>",
+  "merged_df": "<df>"
+}
+```
+
+---
+
+# 🔷 **11. Frontend Integration**
+
+User starts training via:
+
+```
+POST /model_training/start/train
+```
+
+RQ creates a job → run_id saved → UI shows progress.
+
+User requests predictions:
+
+```
+POST /predict/stockout
+```
+
+System loads MLflow model:
+
+* preprocesses user files
+* rebuilds features
+* returns stockout risk per SKU
+
+---
+
+# 🔷 **12. RAG Chatbot Best Practices**
+
+Your RAG assistant should know:
+
+* Stockout prediction uses classification, not regression.
+* Requires both sales + inventory data.
+* Missing stock column → pipeline cannot run.
+* Lag features improve sequential prediction.
+* Class imbalance is handled internally.
+* High stock variance ⇒ higher stockout risk.
+* Models can fail if `date` column is invalid.
+* Predictions depend heavily on correctness of inventory file.
+
+---
+
+# 🔷 **13. Troubleshooting Guide**
+
+| Issue                | Chatbot Response                                      |
+| -------------------- | ----------------------------------------------------- |
+| Missing stock column | “Upload an inventory file with a stock column.”       |
+| Wrong date format    | “Please ensure dates are in YYYY-MM-DD format.”       |
+| Only sales uploaded  | “Stockout prediction requires an inventory file.”     |
+| Very small dataset   | “Stockout prediction may be unstable with <100 rows.” |
+| Incorrect product_id | “Ensure product_ids match between sales & inventory.” |
+
+---
+
+# 🔷 **14. Summary**
+
+The **Stockout Prediction Pipeline** in DemandCast is:
+
+* Robust
+* Auto-ML driven
+* Class imbalance–aware
+* Fully MLflow tracked
+* Reliable for enterprise retail analytics
+* Deeply integrated with DemandCast’s ecosystem
+
+---
+
+If you'd like, I can provide next:
+
+✅ `pricing_elasticity_pipeline.md`
+or
+✅ `promo_effectiveness_pipeline.md`
+
+Just say **next**.
+
+Below is the **complete `promo_effectiveness_pipeline.md`** — production-ready, deeply detailed, fully aligned with your datasets and UI parameters (`lookback`, `discount sensitivity`).
+Great for your RAG system + developer docs.
+
+You can **copy–paste this entire content** into your knowledge base.
+
+---
+
+# 📘 **promo_effectiveness_pipeline.md**
+
+### *Promotional Effectiveness Pipeline – Technical Documentation for DemandCast*
+
+---
+
+# 🔷 **1. Overview**
+
+The **Promotional Effectiveness Pipeline** measures:
+
+* Promotion-driven uplift
+* Incremental sales
+* Incremental revenue
+* ROI of each promotion
+* Impact of promo type (BOGO, Flat Off, % Off, None)
+* Whether promotional activity helped or harmed sales
+* Price & discount-driven demand shifts
+* Customer response patterns
+
+It learns how promotions influence:
+
+* Sales volume
+* Price elasticity
+* Revenue curves
+* Customer purchase probability
+* Cross-category demand
+
+---
+
+# 🔷 **2. Business Purpose**
+
+Promos are expensive.
+This pipeline helps businesses answer:
+
+✔ Should we run discount campaigns?
+✔ What discount percent works best?
+✔ Do BOGO / Flat Off / % Off promos perform better?
+✔ What was the true uplift?
+✔ Are promotions cannibalizing other SKUs?
+✔ What is the ROI of each promo event?
+
+---
+
+# 🔷 **3. Input Requirements**
+
+You provided a **promo master dataset**:
+
+```
+date, sku_id, location_id, regular_price, promo_price, discount_percent, promo_type
+```
+
+and a **transactions dataset**:
+
+```
+transaction_id, date, sku_id, customer_id, location_id, units_sold, price, on_promotion, payment_method, channel
+```
+
+These two files are combined to compute promotional impact.
+
+---
+
+# 🔷 **4. Pipeline Parameters (From UI)**
+
+Your UI provides:
+
+### 🔹 **lookback (int)**
+
+Determines how far historical window is used for baseline comparison.
+
+Used for:
+
+* baseline sales
+* expected sales model
+* uplift calculations
+* demand normalization
+
+Typical values: **90, 180, 365**.
+
+---
+
+### 🔹 **discount (bool)**
+
+Whether discount sensitivity features should be used.
+
+If enabled:
+
+* discount_percent included
+* promo_type intensity used
+* effective_price recalculated
+* deep discount elasticity features enabled
+
+---
+
+# 🔷 **5. Pipeline Steps**
+
+The Promo Effectiveness Pipeline has **8 major phases**.
+
+---
+
+# 🔷 **STEP 1 — Column Mapping & Cleanup**
+
+Maps columns using `map_column` synonym rules:
+
+| Uploaded Column | Mapped As  |
+| --------------- | ---------- |
+| sku_id          | product_id |
+| promo_price     | price      |
+| units_sold      | sales      |
+| on_promotion    | promo_flag |
+
+Cleanup includes:
+
+* Deduplicating promotions
+* Cleaning invalid prices
+* Removing rows with both `regular_price` and `promo_price` missing
+* Ensuring promo types are standardized
+
+---
+
+# 🔷 **STEP 2 — Merge Promo & Sales Data**
+
+Merged on:
+
+```
+['date', 'sku_id', 'location_id']
+```
+
+Creates a combined dataset including:
+
+* regular vs promo price
+* who purchased what
+* customer-level behavior
+* promo type
+* discount applied
+
+Missing values filled accordingly:
+
+```
+if promo_price is null → regular_price
+if discount_percent is null → 0
+```
+
+---
+
+# 🔷 **STEP 3 — Feature Engineering**
+
+Performed in:
+
+```
+extract_promo_features(df)
+```
+
+### 🔹 **Price Features**
+
+* regular_price
+* promo_price
+* discount_percent
+* effective_price
+* price_gap = (regular_price - promo_price)
+
+If discount=ON:
+
+* discount_strength_bin
+* deep_discount_flag (discount > 30%)
+* price_drop_ratio
+
+---
+
+### 🔹 **Demand Features**
+
+* units_sold
+* lag_sales_1/7/14
+* mean_sales_7/30
+* sales_trend_slope
+* seasonality features (dow, month, week)
+
+---
+
+### 🔹 **Promo Features**
+
+* promo_flag
+* promo_type (one-hot encoded)
+* promo_intensity score
+* promo_duration (consecutive promo days)
+* is_start_of_promo
+* is_end_of_promo
+
+---
+
+### 🔹 **Baseline Calculation Using Lookback Window**
+
+To estimate **expected sales without promo**, we compute:
+
+```
+baseline_sales = avg(sales over N days before promo)
+```
+
+where:
+
+```
+N = lookback
+```
+
+Thus:
+
+```
+uplift_units = units_sold - baseline_sales
+uplift_revenue = units_sold*promo_price - baseline_sales*regular_price
+promo_roi = uplift_revenue - promo_cost
+```
+
+---
+
+# 🔷 **STEP 4 — Promo Effectiveness Labeling**
+
+Each day/SKU is labeled as:
+
+```
+promo_success = 1 if uplift_units > 0
+                else 0
+```
+
+This serves as target variable for classification models.
+
+---
+
+# 🔷 **STEP 5 — Train-Test Split**
+
+Performed via:
+
+```
+train_test_split_time_from_xy(X, y)
+```
+
+Split:
+
+* 70% train
+* 15% validation
+* 15% test
+
+Time-based split avoids leakage.
+
+---
+
+# 🔷 **STEP 6 — Model Selection & Training**
+
+Training done in:
+
+```
+train_promo_model_auto()
+```
+
+### ✔ Model Choice Logic
+
+| Condition                  | Model                          |
+| -------------------------- | ------------------------------ |
+| Many promo_type categories | CatBoost                       |
+| Small dataset (<20k rows)  | LightGBM / Logistic Regression |
+| Medium (20k–150k rows)     | XGBoost                        |
+| Lag-heavy sequential data  | LSTM                           |
+| Large dataset (>150k)      | LightGBM                       |
+
+---
+
+### ✔ Model Outputs
+
+* promo_success probability
+* uplift predictions
+* incremental revenue forecast
+* promo effectiveness classification
+
+---
+
+### ✔ Probability Calibration
+
+Uses:
+
+```
+CalibratedClassifierCV(method="isotonic")
+```
+
+Ensures stable uplift probability.
+
+---
+
+# 🔷 **STEP 7 — MLflow Logging**
+
+Performed using:
+
+```
+log_promo_model_to_mlflow()
+```
+
+Artifacts stored:
+
+* model.pkl
+* classification metrics
+* uplift curves
+* ROI breakdown
+* discount sensitivity effects
+* lookback window value
+* promo_type impact graphs
+
+Returns:
+
+```
+run_id = "p1c938fe82c9471bb"
+```
+
+This is stored in Supabase for future predictions.
+
+---
+
+# 🔷 **STEP 8 — Predictions & Final Output**
+
+Prediction using:
+
+```
+predict_from_promo_mlflow_run(run_id, X_test)
+```
+
+Outputs include:
+
+### ✔ For Each SKU / Day:
+
+* uplift_units
+* uplift_percent
+* uplift_revenue
+* probability promo helps
+* ROI estimate
+* recommended promo type
+
+### Example Output:
+
+```json
+{
+  "uplift_units": 34,
+  "uplift_percent": 18.5,
+  "uplift_revenue": 13410,
+  "promo_success_prob": 0.71,
+  "recommended_promo": "Flat Off 10%",
+  "run_id": "p1c938fe82c9471bb"
+}
+```
+
+---
+
+# 🔷 **9. UI Parameter Mapping (Important for RAG)**
+
+### **lookback**
+
+Used to compute baseline and uplift.
+RAG MUST answer:
+
+> “Lookback means how many historical days we use to measure non-promo baseline.”
+
+---
+
+### **discount sensitivity**
+
+Adds:
+
+* deeper discount elasticity
+* stronger price responsiveness models
+* discount segmentation
+* discount-type effectiveness
+
+RAG MUST answer:
+
+> “Discount sensitivity ON means the model will explicitly learn how sales respond to discount percentages and promo_type intensity.”
+
+---
+
+# 🔷 **10. RAG Chatbot Knowledge Guidelines**
+
+Chatbot must know:
+
+✔ Promo effectiveness requires both promo master + sales file
+✔ Without variation in discount levels → can't measure uplift
+✔ Promo labels are success/failure based on uplift vs baseline
+✔ ROI incorporates both uplift and promo cost
+✔ Lookback window changes baseline
+✔ Deep discounts may cause temporary uplift but lower revenue
+✔ Overlapping promos distort results
+✔ LSTM is only used when lag features available
+
+---
+
+# 🔷 **11. Troubleshooting & User Questions**
+
+| Issue                    | RAG Response                                                                             |
+| ------------------------ | ---------------------------------------------------------------------------------------- |
+| Only promo file uploaded | “You must upload both promo and sales files.”                                            |
+| discount_percent missing | “Discount must be present if discount sensitivity is ON.”                                |
+| no sales variation       | “Promo effectiveness cannot be computed because sales did not change across promo days.” |
+| missing price            | “Price is required for uplift and revenue calculation.”                                  |
+| missing promo_type       | “Promo type is needed for promo classification.”                                         |
+
+---
+
+# 🔷 **12. Summary**
+
+The **Promotional Effectiveness Pipeline** provides:
+
+* Accurate uplift estimation
+* ROI computation
+* Baseline-demand modeling
+* Promo-type impact analysis
+* MLflow-backed training & reproducibility
+* Pricing + Promo decision intelligence
+
+It is deeply integrated with:
+
+✔ Demand Forecasting
+✔ Price Elasticity
+✔ Lead Time
+✔ Stockout Prediction
+
+Making DemandCast a full **Demand × Supply × Pricing** intelligence engine.
+
+---
+
+If you want next:
+
+👉 **dashboard_explainer.md**
+👉 **how_predictions_work.md**
+👉 **model_registry.md**
+
+Just say **next**.

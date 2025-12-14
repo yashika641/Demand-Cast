@@ -206,3 +206,12 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 service_account_key.json
+.env
+# MLflow
+mlruns/
+
+# Large datasets
+C:\Users\palya\Desktop\demancast\Demand-Cast\mlflow_datasets\test_data.csv
+C:\Users\palya\Desktop\demancast\Demand-Cast\mlflow_datasets\train_data.csv
+
+

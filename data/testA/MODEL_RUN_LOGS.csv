@@ -1,0 +1,11 @@
+run_id,timestamp,model_name,dataset_version,training_duration,accuracy_metrics_json,status
+RUN1000,2024-01-01,global_tft,v5,337.42,"{""mape"": 27.77}",success
+RUN1001,2024-01-08,global_tft,v3,385.98,"{""mape"": 14.15}",failed
+RUN1002,2024-01-15,global_tft,v4,159.69,"{""mape"": 10.59}",success
+RUN1003,2024-01-22,intermittent,v3,455.17,"{""mape"": 26.43}",warning
+RUN1004,2024-01-29,uplift,v5,543.47,"{""mape"": 27.33}",warning
+RUN1005,2024-02-05,uplift,v4,581.57,"{""mape"": 28.48}",success
+RUN1006,2024-02-12,uplift,v3,491.22,"{""mape"": 26.6}",success
+RUN1007,2024-02-19,uplift,v1,454.39,"{""mape"": 22.16}",failed
+RUN1008,2024-02-26,global_tft,v5,456.96,"{""mape"": 27.37}",success
+RUN1009,2024-03-04,global_tft,v4,182.55,"{""mape"": 19.9}",failed

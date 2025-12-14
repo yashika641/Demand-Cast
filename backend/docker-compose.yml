@@ -1,0 +1,24 @@
+
+services:
+  redis:
+    image: redis:7
+    container_name: redis_server
+    ports:
+      - "6379:6379"
+    restart: always
+
+  rq_worker:
+    image: python:3.10
+    container_name: rq_worker
+    working_dir: /app
+    volumes:
+      - ..:/app   # mount your backend directory
+    command: >
+      sh -c "
+      pip install -r backend/requirements.txt &&
+      rq worker model_training
+      "
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis_server:6379/0
