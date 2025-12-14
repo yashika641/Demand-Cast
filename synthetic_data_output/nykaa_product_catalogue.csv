@@ -1,0 +1,121 @@
+product_id,product_name,subcategory,brand,unit_price,description
+P001,Redmi Note 12 5G,mobile,Xiaomi,14999,Powerful 5G smartphone with AMOLED display
+P002,Samsung Galaxy M14,mobile,Samsung,13999,Performance phone with long-lasting battery
+P003,Apple iPhone 14,mobile,Apple,69999,Premium smartphone with A15 Bionic chip
+P004,OnePlus Nord CE 3 Lite,mobile,OnePlus,19999,Sleek design with fast charging
+P005,Realme Narzo 60x,mobile,Realme,12999,Stylish budget 5G phone
+P006,HP Pavilion 14,laptop,HP,56999,Compact laptop for students and professionals
+P007,Dell Inspiron 15 3520,laptop,Dell,58999,Reliable daily use laptop with Intel i5
+P008,ASUS Vivobook Go 14,laptop,ASUS,49999,Lightweight laptop with long battery life
+P009,Lenovo IdeaPad Slim 3,laptop,Lenovo,52999,Thin and efficient laptop for multitasking
+P010,Apple MacBook Air M2,laptop,Apple,114999,Ultra-thin premium notebook
+P011,boAt Airdopes 161,earbuds,boAt,999,Wireless earbuds with immersive sound
+P012,Noise ColorFit Pro 4,smartwatch,Noise,2999,Feature-rich smartwatch with health tracking
+P013,Fire-Boltt Ninja Call Pro,smartwatch,Fire-Boltt,2499,Bluetooth calling smartwatch
+P014,MI Power Bank 3i,accessory,Xiaomi,1299,20000mAh high-speed power bank
+P015,SanDisk 128GB Pendrive,storage,SanDisk,899,Fast USB 3.0 pendrive
+P016,Sony WH-CH520 Headphones,headphones,Sony,3999,Wireless headphones with deep bass
+P017,Canon EOS 1500D DSLR,camera,Canon,39999,DSLR for photography enthusiasts
+P018,LG 32-inch LED TV,television,LG,17999,HD ready smart LED TV
+P019,Samsung 43-inch Smart TV,television,Samsung,29999,Full HD smart TV with vivid colors
+P020,Mi 5A 32-inch Smart TV,television,Xiaomi,15999,Android smart TV for streaming
+P021,Philips Trimmer BT3102,trimmer,Philips,1099,Beard trimmer with adjustable blades
+P022,Havells Hair Dryer,hair_dryer,Havells,999,Compact and efficient hair dryer
+P023,Maybelline Fit Me Foundation,makeup,Maybelline,499,Matte foundation for all skin types
+P024,Lakme Eyeconic Kajal,makeup,Lakme,199,Smudge-proof kajal for daily use
+P025,L'Oreal Paris Shampoo,haircare,L'Oreal,299,Shampoo for smooth and shiny hair
+P026,Dove Intense Repair Conditioner,haircare,Dove,349,Moisturizing conditioner for dry hair
+P027,Nivea Men Face Wash,skincare,Nivea,249,Refreshing face wash for men
+P028,Mamaearth Vitamin C Serum,skincare,Mamaearth,499,Skin brightening face serum
+P029,Plum Green Tea Night Cream,skincare,Plum,599,Oil-free night cream for glowing skin
+P030,Beardo Beard Oil,grooming,Beardo,349,Nourishing beard oil for men
+P031,Puma Men's T-Shirt,men_clothing,Puma,999,Comfortable sports t-shirt
+P032,Levi’s Slim Fit Jeans,men_clothing,Levi’s,2499,Stylish denim jeans for men
+P033,Van Heusen Formal Shirt,men_clothing,Van Heusen,1899,Formal shirt for office wear
+P034,Zara Women’s Dress,women_clothing,Zara,2999,Trendy evening wear dress
+P035,H&M Crop Top,women_clothing,H&M,999,Cotton crop top for casual wear
+P036,Adidas Running Shoes,footwear,Adidas,3599,Comfortable shoes for running
+P037,Nike Air Zoom Pegasus,footwear,Nike,6999,High-performance running shoes
+P038,Bata Leather Formal Shoes,footwear,Bata,2499,Classic leather shoes for office
+P039,HRX Gym Shorts,men_clothing,HRX,999,Sports shorts for gym workouts
+P040,Allen Solly Casual Shirt,men_clothing,Allen Solly,1499,Smart casual shirt for men
+P041,Tupperware Lunch Box,kitchen,Tupperware,899,Durable lunch box with compartments
+P042,Pigeon Mixer Grinder,kitchen,Pigeon,2499,3-jar mixer for home use
+P043,Prestige Pressure Cooker,kitchen,Prestige,1999,Durable steel pressure cooker
+P044,Borosil Glass Set,kitchen,Borosil,699,Set of 6 premium glass tumblers
+P045,Milton Water Bottle,kitchen,Milton,499,Insulated stainless steel bottle
+P046,Sleepwell Mattress,furniture,Sleepwell,8999,Comfortable double bed mattress
+P047,Nilkamal Plastic Chair,furniture,Nilkamal,999,Durable lightweight chair
+P048,HomeTown Coffee Table,furniture,HomeTown,3999,Modern living room coffee table
+P049,Philips LED Bulb (12W),lighting,Philips,299,Energy efficient bright bulb
+P050,Havells Ceiling Fan,appliance,Havells,2299,High-speed 3-blade ceiling fan
+P051,LG Refrigerator 260L,appliance,LG,24999,Energy efficient double-door fridge
+P052,Whirlpool Washing Machine 7kg,appliance,Whirlpool,19999,Automatic front load washer
+P053,Voltas 1.5 Ton AC,appliance,Voltas,35999,Split air conditioner with inverter
+P054,IFB Microwave Oven,appliance,IFB,10999,Convection microwave for cooking
+P055,Prestige Gas Stove 2-Burner,appliance,Prestige,3499,Stainless steel gas stove
+P056,Tata Tea Gold 1kg,beverages,Tata,599,Rich blend of Assam tea
+P057,Nescafe Classic 200g,beverages,Nescafe,499,Instant coffee powder
+P058,Maggie Noodles Pack of 12,snacks,Nestle,199,Instant noodles family pack
+P059,Britannia Good Day 1kg,snacks,Britannia,249,Butter cookies for all ages
+P060,Aashirvaad Atta 10kg,staples,Aashirvaad,499,Whole wheat flour
+P061,Fortune Sunflower Oil 5L,staples,Fortune,699,Refined sunflower cooking oil
+P062,Amul Butter 500g,dairy,Amul,289,Fresh salted butter
+P063,Parle-G Biscuits 1kg,snacks,Parle,129,Classic glucose biscuits
+P064,Lays Classic Salted 150g,snacks,Lays,59,Crispy salted potato chips
+P065,Surf Excel 2kg,cleaning,HUL,499,Advanced laundry detergent
+P066,Comfort Fabric Conditioner,cleaning,HUL,299,Fabric softener with fragrance
+P067,Dettol Antiseptic Liquid 500ml,cleaning,Dettol,199,Antibacterial antiseptic solution
+P068,Colgate Total Toothpaste,personal_care,Colgate,149,Complete oral protection toothpaste
+P069,Oral-B Electric Toothbrush,personal_care,Oral-B,799,Rechargeable toothbrush
+P070,Himalaya Neem Face Wash,skincare,Himalaya,249,Face wash for acne-prone skin
+P071,Sugar Matte Lipstick,makeup,Sugar,599,Long-lasting matte finish lipstick
+P072,Plum BodyLovin’ Vanilla Vibes Lotion,body_lotion,Plum,575,Sweet vanilla-scented moisturizer
+P073,Nykaa Nail Enamel,makeup,Nykaa,199,Glossy quick-dry nail polish
+P074,Titan Analog Watch,watch,Titan,2999,Classic analog wristwatch
+P075,Fastrack Sunglasses,eyewear,Fastrack,1599,UV-protected stylish sunglasses
+P076,Ray-Ban Aviator,eyewear,Ray-Ban,6999,Iconic metal-frame sunglasses
+P077,American Tourister Backpack,bags,American Tourister,2499,Durable travel backpack
+P078,Skybags Laptop Bag,bags,Skybags,2199,Spacious waterproof laptop bag
+P079,Boat Stone 350 Speaker,speaker,boAt,1999,Portable Bluetooth speaker
+P080,JBL Flip 5 Speaker,speaker,JBL,7999,Waterproof party speaker
+P081,Amazon Echo Dot 5th Gen,smart_device,Amazon,5499,Smart assistant with Alexa
+P082,Google Nest Mini,smart_device,Google,4499,Voice-controlled smart speaker
+P083,MI Smart LED Bulb,smart_device,Xiaomi,999,Color-changing Wi-Fi bulb
+P084,Apple AirPods Pro 2,headphones,Apple,24999,Noise-cancelling wireless earbuds
+P085,Samsung Galaxy Buds 2,headphones,Samsung,8999,Comfortable wireless earbuds
+P086,Asus TUF Gaming Laptop,laptop,ASUS,89999,Powerful gaming laptop with RTX GPU
+P087,Acer Aspire 5,laptop,Acer,49999,Slim laptop for students and work
+P088,Realme Smart TV 43",television,Realme,25999,Smart TV with voice control
+P089,LG Soundbar SN4,speaker,LG,9999,Home theatre soundbar system
+P090,Samsung Galaxy Watch 6,smartwatch,Samsung,25999,Advanced fitness smartwatch
+P091,OnePlus Watch 2,smartwatch,OnePlus,17999,Premium design AMOLED display
+P092,Decathlon Yoga Mat,fitness,Decathlon,999,Non-slip yoga mat
+P093,SG Cricket Bat,cricket,SG,1999,English willow cricket bat
+P094,Nivia Football,football,Nivia,899,Durable synthetic football
+P095,Adidas Gym Gloves,fitness,Adidas,699,Padded gym workout gloves
+P096,Puma Sports Bottle,fitness,Puma,499,Leak-proof BPA-free bottle
+P097,Yonex Badminton Racquet,badminton,Yonex,2999,Lightweight graphite racquet
+P098,Head Tennis Racket,tennis,Head,5999,Professional tennis racket
+P099,Butterfly Table Tennis Bat,table_tennis,Butterfly,1499,Table tennis bat for practice
+P100,Harper Lee – To Kill a Mockingbird,book,Harper Lee,299,Classic novel on justice and morality
+P101,George Orwell – 1984,book,George Orwell,349,Dystopian novel on surveillance
+P102,Atomic Habits by James Clear,book,James Clear,499,Self-help book on habit building
+P103,Ikigai by Hector Garcia,book,Hector Garcia,399,Japanese philosophy on purposeful living
+P104,Sapiens by Yuval Harari,book,Yuval Harari,599,History of humankind
+P105,Rich Dad Poor Dad,book,Robert Kiyosaki,399,Financial education classic
+P106,The Intelligent Investor,book,Benjamin Graham,699,Investment strategy guide
+P107,Think Like a Monk,book,Jay Shetty,499,Guide to peaceful and purposeful life
+P108,The Alchemist,book,Paulo Coelho,349,Spiritual journey story
+P109,Python Crash Course,book,Eric Matthes,699,Beginner-friendly Python guide
+P110,Data Science from Scratch,book,Joel Grus,799,Hands-on data science concepts
+P111,ASICS Running Shoes,footwear,ASICS,4999,Comfortable performance shoes
+P112,Campus Men’s Sandals,footwear,Campus,999,Lightweight summer sandals
+P113,Casio G-Shock Watch,watch,Casio,6999,Shock-resistant digital watch
+P114,Mi Band 8,smartwatch,Xiaomi,3999,Fitness tracker with heart rate monitor
+P115,Boat Rockerz 450,headphones,boAt,1999,Wireless Bluetooth on-ear headphones
+P116,Lavie Women’s Handbag,bags,Lavie,2499,Stylish PU leather handbag
+P117,Wildcraft Backpack,bags,Wildcraft,2299,Weather-resistant travel backpack
+P118,HP Wireless Mouse,accessory,HP,799,Compact and reliable wireless mouse
+P119,Logitech Keyboard K120,accessory,Logitech,999,Ergonomic full-size keyboard
+P120,Seagate 1TB Hard Drive,storage,Seagate,4499,Portable external hard drive

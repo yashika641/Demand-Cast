@@ -1,0 +1,121 @@
+product_id,product_name,subcategory,brand,unit_price,description
+P001,H&M Men’s Cotton T-Shirt,Men Clothing,H&M,799,Soft cotton T-shirt with round neck and short sleeves, perfect for casual wear
+P002,H&M Women’s Denim Jacket,Women Clothing,H&M,2499,Classic denim jacket with button closure, suitable for layering in all seasons
+P003,H&M Kids’ Printed Dress,Kids Clothing,H&M,1299,Cute cotton dress with floral prints and comfortable fit for daily wear
+P004,H&M Men’s Slim Fit Chinos,Men Clothing,H&M,1999,Slim-fit chino pants with stretchable waist for comfortable formal and casual wear
+P005,H&M Women’s Leggings,Women Clothing,H&M,899,High-waist stretch leggings made from soft breathable fabric
+P006,H&M Men’s Leather Belt,Men Accessories,H&M,699,Genuine leather belt with adjustable buckle, ideal for formal and casual wear
+P007,H&M Women’s Handbag,Women Accessories,H&M,2499,Stylish medium-sized handbag with multiple compartments and adjustable strap
+P008,H&M Men’s Sneakers,Men Footwear,H&M,2999,Casual lace-up sneakers with cushioned sole for comfort
+P009,H&M Women’s Sandals,Women Footwear,H&M,1999,Open-toe sandals with ankle strap and cushioned footbed for daily wear
+P010,H&M Cotton Bedsheet Set,Home & Lifestyle,H&M,3499,Soft cotton bedsheet set with pillow covers, breathable and durable
+P011,H&M Men’s Hoodie,Men Clothing,H&M,1299,Cotton hoodie with drawstring and kangaroo pocket for casual wear
+P012,H&M Women’s Wrap Dress,Women Clothing,H&M,1799,Comfortable wrap dress with adjustable waist tie
+P013,H&M Kids’ Jeans,Kids Clothing,H&M,999,Denim jeans with elastic waistband for easy wear
+P014,H&M Men’s Polo Shirt,Men Clothing,H&M,1099,Classic polo shirt with ribbed collar and short sleeves
+P015,H&M Women’s Blouse,Women Clothing,H&M,1499,Semi-formal blouse with button closure and soft fabric
+P016,H&M Men’s Chinos,Men Clothing,H&M,1799,Slim-fit stretchable chinos for office and casual outings
+P017,H&M Women’s Joggers,Women Clothing,H&M,1299,Comfortable joggers with elastic waist and ankle cuffs
+P018,H&M Men’s Casual Belt,Men Accessories,H&M,599,Leather belt suitable for daily wear
+P019,H&M Women’s Crossbody Bag,Women Accessories,H&M,1599,Compact crossbody bag with adjustable strap
+P020,H&M Men’s Running Shoes,Men Footwear,H&M,2499,Lightweight and breathable running shoes for daily workouts
+P021,H&M Women’s Flats,Women Footwear,H&M,1999,Comfortable flats for casual outings
+P022,H&M Cotton Pillow Covers,Home & Lifestyle,H&M,599,Set of two cotton pillow covers with modern print
+P023,H&M Bed Sheet Set,Home & Lifestyle,H&M,2999,Soft cotton bedsheet set with pillow covers
+P024,H&M Women’s Sweater,Women Clothing,H&M,1599,Knit sweater with long sleeves, warm and stylish for winters
+P025,H&M Men’s Jacket,Men Clothing,H&M,2999,Lightweight casual jacket with zipper closure
+P026,H&M Kids’ Hoodie with Prints,Kids Clothing,H&M,1099,Cotton hoodie with playful printed design
+P027,H&M Women’s Anorak Jacket,Women Clothing,H&M,2499,Water-resistant anorak jacket with adjustable hood
+P028,H&M Men’s Cargo Pants,Men Clothing,H&M,1999,Durable cargo pants with multiple pockets
+P029,H&M Women’s Tunic Top,Women Clothing,H&M,1299,Flowy tunic top with elegant embroidery
+P030,H&M Men’s Wallet,Men Accessories,H&M,499,Compact leather wallet for daily use
+P031,H&M Women’s Backpack,Women Accessories,H&M,1999,Stylish backpack with multiple compartments
+P032,H&M Men’s Casual Shoes,Men Footwear,H&M,2999,Lightweight lace-up shoes for everyday wear
+P033,H&M Women’s Sneakers,Women Footwear,H&M,2499,Casual lace-up sneakers with cushioned sole
+P034,H&M Cushion Cover Set,Home & Lifestyle,H&M,699,Set of two printed cotton cushion covers
+P035,H&M Bedding Set,Home & Lifestyle,H&M,3499,Soft cotton bedsheet set with pillow covers
+P036,Zara Men’s Slim Fit Shirt,Men Clothing,Zara,2999,Modern slim-fit shirt with button-down collar and full sleeves, ideal for office wear
+P037,Zara Women’s Maxi Dress,Women Clothing,Zara,4499,Elegant maxi dress with floral print and flowy silhouette
+P038,Zara Kids’ Hoodie,Kids Clothing,Zara,1599,Soft cotton hoodie with front pocket and comfortable fit
+P039,Zara Men’s Casual Blazer,Men Clothing,Zara,4999,Semi-formal blazer with tailored fit, perfect for events and meetings
+P040,Zara Women’s Skinny Jeans,Women Clothing,Zara,2499,Stretchable skinny jeans with high-rise waist for stylish everyday wear
+P041,Zara Men’s Leather Wallet,Men Accessories,Zara,1299,Genuine leather wallet with multiple card slots and coin pocket
+P042,Zara Women’s Tote Bag,Women Accessories,Zara,3999,Spacious tote bag with zip closure and elegant finish
+P043,Zara Men’s Sneakers,Men Footwear,Zara,3999,Lace-up sneakers with durable rubber sole and casual design
+P044,Zara Women’s Ankle Boots,Women Footwear,Zara,4999,Stylish ankle boots with block heels and zipper closure
+P045,Zara Decorative Cushion Cover,Home & Lifestyle,Zara,899,Soft cotton cushion cover with printed patterns
+P046,Zara Men’s Hoodie,Men Clothing,Zara,2499,Cotton hoodie with stylish design and drawstring
+P047,Zara Women’s Cardigan,Women Clothing,Zara,2999,Soft knit cardigan perfect for layering in cool weather
+P048,Zara Kids’ T-Shirt,Kids Clothing,Zara,999,Soft cotton T-shirt with colorful prints
+P049,Zara Men’s Denim Jacket,Men Clothing,Zara,4499,Classic denim jacket with button closure
+P050,Zara Women’s Skirt,Women Clothing,Zara,2499,Flared skirt with elastic waistband for casual outings
+P051,Zara Men’s Loafers,Men Footwear,Zara,6999,Leather loafers with slip-on design
+P052,Zara Women’s Ankle Boots,Women Footwear,Zara,7999,Stylish ankle boots with block heel
+P053,Zara Leather Belt,Men Accessories,Zara,2499,Genuine leather belt for daily and formal use
+P054,Zara Women’s Clutch Bag,Women Accessories,Zara,3999,Elegant leather clutch bag for parties
+P055,Zara Sunglasses,Accessories,Zara,3499,UV-protected fashionable sunglasses
+P056,Zara Bedding Set,Home & Lifestyle,Zara,6999,Cotton bedsheet and pillow cover set
+P057,Gucci Men’s Leather Jacket,Men Clothing,Gucci,159999,Premium leather jacket with zip closure and designer branding
+P058,Gucci Women’s Silk Dress,Women Clothing,Gucci,199999,High-end silk dress with elegant cut and luxurious feel
+P059,Gucci Kids’ T-Shirt,Kids Clothing,Gucci,9999,Cotton T-shirt with printed logo and comfortable fit
+P060,Gucci Men’s Formal Shoes,Men Footwear,Gucci,84999,Genuine leather formal shoes with classic design
+P061,Gucci Women’s Sandals,Women Footwear,Gucci,74999,Luxurious leather sandals with signature branding
+P062,Gucci Leather Handbag,Women Accessories,Gucci,199999,Designer leather handbag with iconic Gucci pattern
+P063,Gucci Men’s Belt,Men Accessories,Gucci,29999,Genuine leather belt with gold buckle and signature branding
+P064,Gucci Fragrance Eau De Parfum,Beauty & Personal Care,Gucci,15999,Luxury perfume with rich floral notes
+P065,Gucci Kids’ Leather Sneakers,Kids Footwear,Gucci,14999,High-quality leather sneakers for children
+P066,Gucci Women’s Tote Bag,Women Accessories,Gucci,189999,Luxury tote bag with premium leather and classic design
+P067,Prada Men’s Wool Coat,Men Clothing,Prada,249999,Stylish wool coat with tailored fit and premium finish
+P068,Prada Women’s Evening Gown,Women Clothing,Prada,299999,Designer evening gown with silk fabric and elegant cut
+P069,Prada Kids’ Sneakers,Kids Footwear,Prada,14999,Casual sneakers for children with durable sole
+P070,Prada Men’s Loafers,Men Footwear,Prada,99999,Premium leather loafers for formal occasions
+P071,Prada Women’s Heels,Women Footwear,Prada,119999,Designer high heels with elegant silhouette
+P072,Prada Leather Wallet,Men Accessories,Prada,49999,Genuine leather wallet with multiple card slots
+P073,Prada Women’s Shoulder Bag,Women Accessories,Prada,189999,Spacious leather shoulder bag with premium finishing
+P074,Prada Sunglasses,Accessories,Prada,49999,Designer sunglasses with UV protection and elegant frame
+P075,Prada Men’s Dress Shirt,Men Clothing,Prada,49999,Premium cotton dress shirt with tailored fit
+P076,Prada Women’s Silk Blouse,Women Clothing,Prada,89999,High-quality silk blouse with elegant cut
+P077,H&M Women’s Summer Dress,Women Clothing,H&M,1499,Lightweight cotton summer dress with floral print
+P078,H&M Men’s Denim Shirt,Men Clothing,H&M,1999,Classic denim shirt with button closure
+P079,H&M Kids’ Shorts,Kids Clothing,H&M,799,Cotton shorts with elastic waistband
+P080,H&M Women’s Cardigan,Women Clothing,H&M,1299,Soft knit cardigan perfect for layering
+P081,H&M Men’s Formal Pants,Men Clothing,H&M,1799,Slim-fit formal pants with stretchable fabric
+P082,H&M Women’s Sneakers,Women Footwear,H&M,2499,Casual lace-up sneakers with cushioned sole
+P083,H&M Men’s Loafers,Men Footwear,H&M,2999,Leather loafers with comfortable sole
+P084,H&M Women’s Ankle Boots,Women Footwear,H&M,3999,Stylish boots with block heels and zipper closure
+P085,H&M Women’s Handbag,Women Accessories,H&M,1499,Compact handbag with adjustable strap
+P086,H&M Men’s Backpack,Men Accessories,H&M,1999,Stylish backpack with multiple compartments
+P087,Zara Men’s Casual Shirt,Men Clothing,Zara,2499,Cotton casual shirt with button closure
+P088,Zara Women’s Shirt Dress,Women Clothing,Zara,3499,Comfortable cotton shirt dress with tie waist
+P089,Zara Kids’ Sweatshirt,Kids Clothing,Zara,1299,Soft cotton sweatshirt with playful prints
+P090,Zara Men’s Chinos,Men Clothing,Zara,3999,Slim-fit stretchable chinos for casual wear
+P091,Zara Women’s Jeans,Women Clothing,Zara,2999,High-rise skinny jeans with stretch
+P092,Zara Men’s Formal Shoes,Men Footwear,Zara,6999,Leather formal shoes with classic design
+P093,Zara Women’s Loafers,Women Footwear,Zara,4999,Casual leather loafers with comfortable sole
+P094,Zara Men’s Leather Belt,Men Accessories,Zara,2499,Adjustable leather belt for everyday use
+P095,Zara Women’s Crossbody Bag,Women Accessories,Zara,3999,Stylish leather crossbody bag
+P096,Zara Sunglasses,Accessories,Zara,3499,Fashionable UV-protected sunglasses
+P097,Zara Bedding Set,Home & Lifestyle,Zara,6999,Cotton bedsheet and pillow cover set
+P098,Gucci Men’s Polo Shirt,Men Clothing,Gucci,24999,Cotton T-shirt with designer logo print
+P099,Gucci Women’s Silk Skirt,Women Clothing,Gucci,89999,Premium silk skirt with elegant design
+P100,Gucci Kids’ Denim Jacket,Kids Clothing,Gucci,15999,Denim jacket with embroidered logo for children
+P101,Gucci Men’s Casual Sneakers,Men Footwear,Gucci,84999,Designer sneakers with leather upper
+P102,Gucci Women’s Heels,Women Footwear,Gucci,119999,Luxury leather heels with elegant finish
+P103,Gucci Leather Backpack,Accessories,Gucci,199999,Designer leather backpack with premium detailing
+P104,Prada Men’s T-Shirt,Men Clothing,Prada,24999,Cotton T-shirt with minimalist logo design
+P105,Prada Women’s Skirt,Women Clothing,Prada,99999,High-quality silk skirt with elegant silhouette
+P106,Prada Kids’ Hoodie,Kids Clothing,Prada,12999,Cotton hoodie for children with playful prints
+P107,Prada Men’s Dress Shoes,Men Footwear,Prada,119999,Formal leather shoes with classic design
+P108,Prada Women’s Flats,Women Footwear,Prada,79999,Luxury leather flats with cushioned sole
+P109,Prada Leather Backpack,Accessories,Prada,189999,Spacious leather backpack with premium finishing
+P110,H&M Women’s Blazer,Women Clothing,H&M,1999,Structured blazer with button closure
+P111,H&M Men’s Sweatshirt,Men Clothing,H&M,1499,Cotton sweatshirt for casual comfort
+P112,H&M Kids’ T-Shirt Set,Kids Clothing,H&M,999,Set of two cotton T-shirts with playful prints
+P113,H&M Women’s Jeans,Women Clothing,H&M,1499,High-rise denim jeans with stretchable fabric
+P114,H&M Men’s Shorts,Men Clothing,H&M,1099,Casual cotton shorts for summer
+P115,H&M Women’s Flats,Women Footwear,H&M,1999,Comfortable slip-on flats
+P116,H&M Men’s Sports Shoes,Men Footwear,H&M,2999,Lightweight sports shoes for daily workouts
+P117,H&M Cotton Bedspread,Home & Lifestyle,H&M,2999,Cotton bedspread set with pillow covers
+P118,Zara Women’s Blouse,Women Clothing,Zara,2499,Semi-formal blouse with button closure
+P119,Zara Men’s Sweatpants,Men Clothing,Zara,1999,Comfortable cotton sweatpants for casual wear
+P120,Zara Kids’ Dress,Kids Clothing,Zara,1299,Cute cotton dress with printed designs
