@@ -106,7 +106,7 @@ The goal is to support **inventory planning**, **marketing strategies**, and **d
 ### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/<your-username>/DemandCast.git
-cd DemandCast
+cd backend
 ````
 
 ### 2️⃣ Install dependencies
@@ -118,9 +118,18 @@ pip install -r requirements.txt
 ### 3️⃣ Run the dashboard
 
 ```bash
-streamlit run app.py
+cd project
+npm install
+npm run dev
 ```
 
+### Start backend and redis
+
+```bash
+cd backend
+uvicorn app:app --reload
+```
+##redis is deployed @upstash
 ---
 
 ## 📜 License
