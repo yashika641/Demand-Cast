@@ -1,0 +1,11 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+.git
+.mlruns
+data
+notebooks
+mlflow_datasets
+test_data.csv

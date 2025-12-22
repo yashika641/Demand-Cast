@@ -4,7 +4,6 @@ python-multipart
 pydantic
 aiofiles
 httpx
-torch==2.9.0
 transformers
 sentence-transformers
 redis
@@ -12,16 +11,10 @@ rq
 pypdf
 faiss-cpu
 python-dotenv
-openai
-langchain-core
-langchain-community
-langchain-openai
-langgraph
-pgvector
-tiktoken
 supabase
 scikit-learn
 xgboost
 lightgbm
 pandas
 numpy
+imbalanced-learn
