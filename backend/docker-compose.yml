@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  redis:
+    image: redis:7
+    container_name: demandcast_redis
+    ports:
+      - "6379:6379"
+    restart: always
+
+  rq_worker:
+    image: python:3.10
+    container_name: demandcast_worker
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    command: >
+      sh -c "
+      pip install -r requirements.txt &&
+      rq worker model_training
+      "
+    depends_on:
+      - redis
+    environment:
+      - REDIS_URL=redis://redis:6379/0

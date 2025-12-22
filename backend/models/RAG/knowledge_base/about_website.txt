@@ -1,0 +1,888 @@
+📌 DemandCast – Platform Overview & Purpose
+
+DemandCast is an AI-powered Demand & Supply Analytics Platform that provides end-to-end insights for businesses by analyzing their sales, inventory, product, customer, pricing, and supply chain data. The platform is built to make advanced demand forecasting, lead time prediction, stockout analytics, price elasticity modeling, promotional effectiveness measurement, and retrieval-augmented advisory accessible to every business user — without requiring technical expertise.
+
+DemandCast serves as a unified workspace where users can upload their raw business files, trigger automated model training pipelines, visualize predictions, explore insights, and receive intelligent recommendations through an AI chatbot trained specifically on demand-supply analytics.
+
+🎯 What DemandCast Does
+1. Data Upload & Intelligent Processing
+
+Users can upload simple CSV or Excel files:
+
+Sales transactions
+
+Inventory balance
+
+Product master
+
+Supplier lead time
+
+Promotional pricing history
+
+Pricing and discount files
+
+Customer-level purchases
+
+DemandCast automatically:
+
+Identifies the file type using intelligent regex and column mapping
+
+Cleans and standardizes the data
+
+Creates missing tables such as a synthetic product master when needed
+
+Validates uploaded files
+
+Handles missing values and inconsistent schemas
+
+This ensures users do not struggle with formatting challenges.
+
+🤖 2. Automated Model Training Orchestration
+
+DemandCast provides a dedicated Model Training Orchestration center where users configure settings for:
+
+Demand Forecasting
+
+Horizon selection
+
+Model type (Prophet, XGBoost, LSTM)
+
+Seasonality
+
+Lead Time Prediction
+
+Smoothing windows
+
+Supplier variability handling
+
+Stockout Prediction
+
+Class imbalance methods
+
+ML model selection
+
+Price Elasticity Modeling
+
+Regression or log-log method
+
+Cross elasticity
+
+Promotional Effectiveness
+
+Lookback window
+
+Discount sensitivity
+
+RAG Advisory Model
+
+Embedding model
+
+Document dataset
+
+Once the user starts the training:
+
+All pipelines run in the background using Redis + RQ
+
+Real files are processed
+
+MLflow run IDs are stored
+
+Dashboard components auto-refresh
+
+Estimated time is shown to the user
+
+Each model writes logs, metrics, and artifacts for future predictions.
+
+📈 3. Full Machine Learning Pipelines For Each Domain
+
+DemandCast comes with separate full-scale ML pipelines:
+
+Demand Forecasting Pipeline
+
+Feature engineering
+
+Time-series split
+
+Automatic model selection
+
+MLflow logging
+
+Future predictions
+
+Lead Time Prediction Pipeline
+
+Supplier-level variability analysis
+
+Smoothing & statistical estimation
+
+Auto-model (LR, RF, XGB, LGBM, CatBoost)
+
+Prediction of supply delays
+
+Stockout Prediction Pipeline
+
+Merge sales + inventory + product data
+
+Feature extraction
+
+SMOTE / oversampling
+
+Random Forest / XGBoost / LSTM models
+
+MLflow logging + probability outputs
+
+Price Elasticity Pipeline
+
+Demand-price relationship modeling
+
+Regression/log-log elasticity
+
+Optimal price point calculations
+
+Promotional Effectiveness Pipeline
+
+Uplift modeling
+
+Incremental revenue
+
+Promo ROI metrics
+
+Forecasting promo impact
+
+RAG Pipeline
+
+Embedding generation
+
+Document chunking
+
+Domain-restricted retrieval
+
+Safe advisory responses
+
+All pipelines produce metrics, predictions, and visual outputs for users.
+
+📊 4. Predictions & Analytics Hub
+
+After training, users access a dedicated Predictions Center containing:
+
+Forecasted demand curves
+
+Lead time distributions
+
+Expected stockout risks
+
+Uplift curves for promotions
+
+Price elasticity plots
+
+Cross-price sensitivity graphs
+
+Model evaluation charts
+
+Monte Carlo simulations for stock depletion
+
+Everything is displayed in intuitive charts and tables.
+
+🔍 5. Smart Data Explorer
+
+DemandCast includes a data explorer with:
+
+Filters
+
+Visualizations
+
+Summary statistics
+
+Key insights
+
+Trends and seasonality detection
+
+Users can inspect uploaded and processed datasets in detail.
+
+💬 6. Domain-Restricted RAG Chatbot
+
+DemandCast comes with a specialized advisory chatbot trained on:
+
+Website structure
+
+Platform features
+
+Data schemas
+
+ML pipeline knowledge
+
+Prediction interpretation
+
+Demand–supply analytics concepts
+
+Safety guidelines and restrictions
+
+The chatbot:
+
+Helps users understand model outputs
+
+Explains which dataset is needed where
+
+Troubleshoots data errors
+
+Provides analytics guidance and best practices
+
+DOES NOT entertain obscene, abusive, or irrelevant questions
+
+DOES NOT answer outside demand & supply analytics
+
+It acts like an AI business analyst dedicated to supply chain intelligence.
+
+🧠 7. Business Use Cases Enabled by DemandCast
+
+DemandCast empowers organizations to:
+
+Predict future sales with advanced models
+
+Calculate safety stock and reorder thresholds
+
+Optimize pricing for maximum revenue
+
+Measure promotion effectiveness
+
+Forecast stockouts and avoid lost revenue
+
+Predict supplier delays and lead time variability
+
+Advise on replenishment strategies
+
+Analyze customer behavior
+
+Identify anomalies and demand spikes
+
+The platform gives business users superpowers through powerful AI-driven analytics.
+
+⚙️ 8. Technical Architecture
+
+DemandCast uses:
+
+FastAPI backend
+
+Supabase for authentication & file storage
+
+Redis + RQ for background jobs
+
+MLflow for model registry
+
+Scikit-learn, XGBoost, LightGBM, and Keras for ML
+
+React for frontend
+
+Tailwind for UI styling
+
+RAG with vector embeddings for intelligent advisory
+
+The entire system is modular, scalable, and designed for enterprise use.
+
+🧩 9. Why DemandCast Is Unique
+
+Fully automated pipelines
+
+Complete demand-supply analytics suite
+
+Intelligent file detection & schema mapping
+
+Deep domain knowledge in supply chain
+
+Purpose-built RAG chatbot
+
+Runs heavy computation in background without blocking UI
+
+Real-time prediction dashboard
+
+MLflow-based version control
+
+Designed specifically for business users
+
+DemandCast integrates data, ML, advisory, and dashboards — all in one unified platform.
+
+🌐 10. Who Built It & Why
+
+DemandCast is built by a creator who wanted a platform that:
+
+Automates complex analytics
+
+Requires zero coding
+
+Helps users understand demand & supply patterns
+
+Offers actionable recommendations
+
+Removes reliance on manual Excel workflows
+
+Makes advanced modeling accessible to everyone
+
+It was designed with both technical depth and user simplicity in mind.
+
+✔️ Conclusion
+
+DemandCast is a complete ecosystem for demand forecasting, supply chain analytics, inventory intelligence, pricing science, promotional optimization, and domain-guided AI advisory.
+
+It is powerful, intuitive, safe, and entirely focused on demand & supply analytics — no distractions, no irrelevant chat, and no unsafe content.
+
+Below are **two complete, production-grade knowledge-base documents** for your RAG system:
+
+---
+
+# 📘 `website_structure.md`
+
+## **DemandCast – Full Website Structure Documentation**
+
+This document describes the **complete layout, architecture, page design, and component hierarchy** of the DemandCast application.
+The RAG chatbot will use this to understand:
+
+* What exists on the website
+* Where users should go
+* How different modules interact
+* What each area is meant for
+* How analytics flow from one page to another
+
+---
+
+# 🔷 **1. Top-Level Website Modules**
+
+DemandCast consists of **six major analytical engines**, each with its own workflow:
+
+1. **Demand Forecasting Engine**
+2. **Lead Time Prediction Engine**
+3. **Stockout Prediction Engine**
+4. **Pricing Elasticity & Revenue Optimization Engine**
+5. **Promotional Effectiveness Engine**
+6. **RAG Chatbot – AI Advisory System**
+
+All analytical modules follow the same 4-step UX:
+
+```
+UPLOAD FILES → START TRAINING → VIEW RESULTS → GENERATE INSIGHTS
+```
+
+---
+
+# 🔷 **2. Global Navigation Structure**
+
+```
+Header
+ ├── Dashboard
+ ├── Upload Center
+ ├── Model Training
+ ├── Analytics Modules
+ │     ├── Demand Forecasting
+ │     ├── Lead Time
+ │     ├── Stockout Prediction
+ │     ├── Price Elasticity
+ │     ├── Promo Effectiveness
+ ├── Predictions Center
+ ├── Documentation / Help
+ └── AI Chat Assistant (RAG)
+```
+
+---
+
+# 🔷 **3. Dashboard Overview (Homepage)**
+
+The Dashboard is the **summary center** of DemandCast.
+It displays:
+
+* Total SKUs uploaded
+* Total models trained
+* Status of training jobs (queued / running / completed)
+* Quick statistical summaries
+* A “Start New Analysis” panel
+* Module shortcuts
+
+The chatbot should know:
+**Dashboard = high-level summary + entry point to all workflows.**
+
+---
+
+# 🔷 **4. Upload Center**
+
+The Upload Center allows users to upload:
+
+* Sales file
+* Inventory file
+* Product master
+* Promotions file
+* Supplier / Lead Time file
+* Customer/Transaction file
+
+Uploaded files get stored in:
+
+```
+Supabase Storage → public/uploads/<user_id>/
+```
+
+The chatbot must advise:
+
+* Missing files
+* Wrong file format
+* What each file is used for
+
+---
+
+# 🔷 **5. Model Training Page**
+
+This page triggers training for all engines.
+
+Flow:
+
+```
+Select model → Configure settings → Submit → RQ Background Job → Supabase “models” table logs run
+```
+
+Each training job is sent to Redis RQ workers.
+
+The page shows:
+
+* Training progress
+* Model parameters chosen
+* ETA
+* Run ID for each module
+
+---
+
+# 🔷 **6. Analytics Module Pages (Key Components)**
+
+Each module has a dedicated page with:
+
+### ✔ **A. Configuration Panel**
+
+* Parameters (lookback, discount sensitivity, smoothing, horizon, seasonality)
+* Model type
+* Advanced settings
+
+### ✔ **B. Training Overview**
+
+* Chosen model
+* Dataset shape
+* Parameters
+* Run ID
+
+### ✔ **C. Visual Insights**
+
+Graphs for:
+
+* Forecast curves
+* Stockout probability over time
+* Lead time distribution
+* Price elasticity curves
+* Promo uplift curves
+* ROI projections
+
+### ✔ **D. Recommendations Panel**
+
+AI-generated, based on model outputs.
+
+---
+
+# 🔷 **7. Predictions Center**
+
+Where users request predictions **after models are trained**.
+
+Contains:
+
+* Input forms (SKU, time range, location)
+* Lookup by run_id
+* Compare predictions across models
+* Export CSV
+
+The chatbot should know:
+
+> “Predictions require a valid run_id linked to your trained model.”
+
+---
+
+# 🔷 **8. RAG Chatbot Page**
+
+The chatbot is placed as:
+
+* A floating assistant icon AND
+* A full-page chatbot mode
+
+Chatbot knowledge should include:
+
+* Website navigation
+* Module purpose
+* File requirements
+* Error handling
+* Forecast/promo/elasticity concepts
+* Advice based on user results
+* Restrictions (no obscene content, no irrelevant domains)
+
+---
+
+# 🔷 **9. Documentation Center**
+
+Contains:
+
+* User Guides
+* API docs
+* MLflow docs
+* Prediction pipeline docs
+* Troubleshooting guides
+* FAQ
+
+Chatbot MUST redirect here for deep explanations.
+
+---
+
+# 🔷 **10. User Account & Settings**
+
+Includes:
+
+* Profile
+* Subscription
+* Activity logs
+* Token usage for AI
+* Data deletion
+
+---
+
+# 🔷 **11. Data Flow Through the Website**
+
+```
+Upload → Validate → Preprocess → Feature Engineering → Train → Register to MLflow → Store run_id → Generate predictions → Visualize → Advice from Chatbot
+```
+
+The chatbot should understand this full flow.
+
+---
+
+# 🔷 **12. Component-Level Breakdown**
+
+Each analytics page reuses components:
+
+```
+FileCard
+FileUploadBox
+ModelSettingsPanel
+ProgressViewer
+MetricsCard
+LineChart
+BarChart
+Heatmap
+RecommendationCard
+RunIDDisplay
+DownloadButton
+```
+
+---
+
+This is the complete **website structure document**.
+
+---
+
+# 📘 `component_descriptions.md`
+
+## **All UI Components in DemandCast – Full Description Document**
+
+This document describes **each frontend component**, its job, UX role, and how it connects to backend pipelines.
+
+Perfect for RAG-based explanations & debugging instructions.
+
+---
+
+# 🔷 **1. File Upload Components**
+
+### **🟦 FileUploadCard**
+
+Purpose:
+
+* Allows users to upload a specific file type (sales, inventory, etc.)
+* Shows accepted formats and sample templates
+
+Behavior:
+
+* Drag & drop OR click to upload
+* Displays “Uploaded Successfully”
+* Stores file metadata in Supabase
+
+---
+
+### **🟦 FilePreviewModal**
+
+Purpose:
+
+* Displays first few rows of uploaded file
+* Helps identify column mapping issues
+
+---
+
+### **🟦 FileStatusIndicator**
+
+Shows:
+
+* Uploaded ✔
+* Missing ⚠
+* Wrong Format ❌
+
+---
+
+# 🔷 **2. Model Settings Components**
+
+### **🟧 ModelSettingsPanel**
+
+Used in every module:
+
+* Demand
+* Lead Time
+* Stockout
+* Price Elasticity
+* Promo Effectiveness
+
+Contains toggle inputs:
+
+* Horizon
+* Lookback
+* Discount sensitivity
+* Smoothing
+* Balance type
+* Seasonality
+* Model choice
+
+Chatbot should be able to explain **what each setting means**.
+
+---
+
+### **🟧 ParameterSlider**
+
+Used for lookback, smoothing, elasticity levels.
+
+---
+
+### **🟧 ToggleSwitch**
+
+Used for discount=True/False, variability=True/False.
+
+---
+
+# 🔷 **3. Training Workflow Components**
+
+### **🟨 TrainingStartButton**
+
+Triggers Redis RQ job creation.
+
+---
+
+### **🟨 JobStatusCard**
+
+Shows:
+
+* Job ID
+* Model name
+* Status (queued, running, finished)
+* ETA
+
+---
+
+### **🟨 ProgressBar**
+
+Receives callback updates from pipelines.
+
+---
+
+### **🟨 RunIDDisplay**
+
+Shows:
+
+```
+Your Model Run ID: <run_id>
+```
+
+Chatbot should explain:
+
+> “run_id is required for predictions and historical retrieval.”
+
+---
+
+# 🔷 **4. Analytics Components**
+
+### **🟩 MetricsCard**
+
+Displays metrics like:
+
+* RMSE
+* MAE
+* F1 Score
+* Accuracy
+* Elasticity Coefficient
+* ROI
+
+---
+
+### **🟩 Chart Components**
+
+#### 📈 LineChart
+
+Used for:
+
+* Forecasts
+* Price-demand curves
+* Stock curves
+
+#### 📊 BarChart
+
+Used for:
+
+* Category-wise breakdowns
+* Promo-type comparisons
+
+#### 🔥 Heatmap
+
+Used for:
+
+* Discount × Sales correlation
+* Stockout probability matrix
+
+---
+
+### **🟩 RecommendationCard**
+
+Contains AI-generated insights such as:
+
+* “Increase price by 3% for max revenue”
+* “BOGO is not effective for SKU P002”
+* “Lead time volatility is high for Supplier A”
+
+---
+
+# 🔷 **5. Predictions Components**
+
+### **🟪 PredictionInputPanel**
+
+User enters:
+
+* SKU
+* Time range
+* Run ID
+
+---
+
+### **🟪 PredictionResultCard**
+
+Outputs:
+
+* Predicted sales or stockout probability
+* Forecast curve
+* Confidence score
+
+---
+
+### **🟪 ExportButton**
+
+Exports CSV, Excel, or PNG.
+
+---
+
+# 🔷 **6. Chatbot Components**
+
+### **🟫 ChatDrawer**
+
+Floating chatbot icon → opens drawer.
+
+---
+
+### **🟫 ChatWindow**
+
+Full-page version of chatbot.
+
+---
+
+### **🟫 SuggestedPromptsBox**
+
+Shows helpful prompts:
+
+* “Explain price elasticity”
+* “Why is my forecast flat?”
+* “How do I interpret stockout probability?”
+
+---
+
+### **🟫 SafetyFilter**
+
+Prevents:
+
+* Abuse
+* Illegal requests
+* Irrelevant domain questions
+* NSFW content
+
+RAG should enforce boundaries.
+
+---
+
+# 🔷 **7. Helper Components**
+
+### **⚙ LoaderSpinner**
+
+Displays during file validation or backend calls.
+
+---
+
+### **⚙ NotificationToast**
+
+Shows:
+
+* Success
+* Error
+* Warning
+
+---
+
+### **⚙ ErrorBoundary**
+
+Catches component UI crashes.
+
+---
+
+# 🔷 **8. Layout Components**
+
+### **HeaderBar**
+
+Modules navigation.
+
+---
+
+### **SidebarNavigation**
+
+Lists all analytical modules.
+
+---
+
+### **ContentWrapper**
+
+Standard page layout.
+
+---
+
+### **Footer**
+
+Version number + credits.
+
+---
+
+# 🌟 Your RAG Chatbot Must Know:
+
+* What each component does
+* Which page contains which section
+* How modules and components connect
+* What a missing file affects
+* What run_id means
+* The pipeline behind each model
+* The exact UX flow
+
+---
+
+If you want the next docs:
+
+✔ `how_predictions_work.md`
+✔ `api_endpoints.md`
+✔ `rag_rules.md`
+✔ `model_registry.md`
+
+Just say **next**.

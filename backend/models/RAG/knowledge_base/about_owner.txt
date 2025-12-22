@@ -1,0 +1,303 @@
+📌 About the Creator of DemandCast
+
+DemandCast is built and architected by Yashika Pal, a data-driven, product-focused, and technically versatile creator with a strong foundation in Data Science, Machine Learning, Web Development, AI Engineering, and Bioinformatics.
+
+Today, DemandCast stands as a complete end-to-end platform for demand forecasting, supply analytics, and AI-powered decision intelligence — and it reflects both deep domain knowledge and strong engineering capabilities.
+
+👩‍💻 Creator: Yashika Pal
+LinkedIn:
+
+👉 https://www.linkedin.com/in/
+<your-profile>
+
+GitHub:
+
+👉 https://github.com/
+<your-github>
+
+(Replace with your actual links)
+
+⭐ Professional Identity
+
+You are a Data Scientist & AI Engineer with hands-on experience in:
+
+Machine Learning (Regression, Classification, Time Series, Forecasting)
+
+Deep Learning (LSTM, CNN, Transformers)
+
+NLP & RAG-based AI systems
+
+Full-Stack Development
+
+Scalable backend systems (FastAPI, Redis, RQ)
+
+Cloud & serverless platforms (Supabase, Firebase, Vercel)
+
+Bioinformatics models and data analysis
+
+Enterprise-level analytics frameworks
+
+Your unique combination of ML + full-stack + domain expertise is what enabled DemandCast to exist as a fully integrated platform.
+
+🧠 Your Skillset
+Data Science & Machine Learning
+
+Time Series Forecasting (Prophet, ARIMA, LSTM, XGBoost)
+
+Demand forecasting & inventory analytics
+
+Lead time modeling & supply chain ML
+
+Uplift modeling, promo effectiveness, price elasticity
+
+Stockout prediction, anomaly detection
+
+Model optimization, hyperparameter tuning
+
+MLflow model tracking & registry
+
+AI & NLP
+
+Retrieval-Augmented Generation (RAG)
+
+Vector embeddings, semantic search
+
+LLM prompt design
+
+Knowledge base engineering
+
+Chatbot design & safe-guarding
+
+Backend Development
+
+FastAPI
+
+Redis + RQ background workers
+
+REST API design
+
+File processing systems
+
+Supabase for auth, DB, and storage
+
+Modular ML pipelines
+
+MLflow logging orchestrations
+
+Frontend Development
+
+React.js
+
+Next.js (if applicable)
+
+Tailwind CSS
+
+Interactive dashboards
+
+API-integrated UI flows
+
+Real-time status components
+
+Data Engineering
+
+Data cleaning & validation
+
+ETL pipelines
+
+Schema detection & normalization
+
+Feature engineering systems
+
+Automated preprocessing
+
+Bioinformatics Knowledge
+
+Genomics & transcriptomics
+
+Expression matrix analytics
+
+Statistical modeling
+
+ML applications in biology
+
+🚀 Your Approach to Building DemandCast (Start → End)
+
+This section defines your philosophy and workflow while building the platform.
+
+1️⃣ Understanding the Vision
+
+You started by identifying a fundamental business problem:
+
+Companies struggle to use their raw sales & inventory data to make accurate demand and supply decisions.
+
+You envisioned a platform where non-technical users can:
+
+Upload CSV files
+
+Get auto-cleaned data
+
+Train ML models
+
+View predictions in a dashboard
+
+Ask questions through an AI advisor
+
+The goal: AI for demand–supply analytics without friction.
+
+2️⃣ Designing a Modular Architecture
+
+You architected DemandCast as separate yet interconnected modules:
+
+File Upload & Detection
+
+Data Cleaning
+
+Demand Forecast Pipeline
+
+Lead Time Pipeline
+
+Stockout Prediction Pipeline
+
+Price Elasticity Pipeline
+
+Promo Effectiveness Pipeline
+
+RAG Knowledge Advisor
+
+Dashboard & UI frontend
+
+Each module can evolve independently.
+
+3️⃣ Building the Backend First
+
+You focused first on:
+
+File decoding logic
+
+Intelligent regex-based file classification
+
+ML pipeline implementations
+
+MLflow logging
+
+Token-based user authentication
+
+Redis background job processing
+
+Supabase database modeling
+
+You ensured the backend was robust, fail-proof, and scalable.
+
+4️⃣ Developing Full ML Pipelines
+
+Each ML pipeline was created end-to-end with:
+
+Column mapping
+
+Data preprocessing
+
+Feature engineering
+
+Time-series splits
+
+Model selection logic
+
+Calibration
+
+Evaluation
+
+MLflow tracking
+
+Predictions
+
+Visualization hooks
+
+This ensured real-world reliability.
+
+5️⃣ Creating the Frontend Experience
+
+You built a beautiful and intuitive UI with:
+
+Dark-themed dashboard
+
+Card-based configuration sections
+
+Model orchestration page
+
+Real-time progress feedback
+
+Predictions center for each model
+
+File validation and upload interfaces
+
+Error-safe components
+
+Your UI mirrors professional analytics SaaS products.
+
+6️⃣ Integrating the RAG Advisory Bot
+
+You constructed a domain-restricted chatbot that:
+
+Reads the website’s knowledge base
+
+Provides supply-chain analytics guidance
+
+Respects strict safety rules
+
+Refuses irrelevant or harmful queries
+
+Understands platform architecture
+
+Can interpret user predictions and metrics
+
+This chatbot made the platform feel like a 24/7 AI analyst.
+
+7️⃣ End-to-End Deployment Thinking
+
+You adopted a production mindset:
+
+API rate limits
+
+Secure authentication
+
+Background job failover
+
+Monitoring RQ jobs
+
+Persistent model storage
+
+Reproducibility with run IDs
+
+Clean code architecture
+
+You aimed for enterprise-grade reliability rather than just working code.
+
+🌟 Your Philosophy
+
+Your work on DemandCast is grounded in:
+
+User simplicity
+
+Technical depth
+
+Clean architecture
+
+Trustworthy analytics
+
+Explainable, responsible AI
+
+Domain-restricted advisory
+
+DemandCast reflects your vision of making advanced analytics accessible, intelligent, and safe.
+
+🏆 In Summary
+
+You are a data scientist & AI engineer with strong full-stack capabilities.
+
+You built DemandCast as a complete demand-supply AI system.
+
+You crafted every pipeline, backend module, UI element, and RAG knowledge layer.
+
+You merged analytics, ML, UI, and domain intelligence into a cohesive product.
+
+DemandCast is not only a project — it is your signature work showcasing your engineering depth, product thinking, and AI expertise.

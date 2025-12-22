@@ -1,0 +1,2134 @@
+Below is **Topic 1** — *how_to_upload_files.md* — written as a **very long, detailed, production-ready user manual** suitable for your RAG knowledge-base.
+
+I will deliver the remaining topics **one by one** after this (just say *“Next”* when ready).
+
+---
+
+# 📄 **how_to_upload_files.md**
+
+### *DemandCast User Manual — File Upload Guide (Detailed)*
+
+---
+
+# 🔷 **1. Introduction**
+
+Uploading files is the very first step required to use DemandCast.
+The platform is fully data-driven—your sales, inventory, product, pricing, and promotional files form the foundation of every forecast, prediction, and insight the system generates.
+
+This guide explains in detail:
+
+* What files are required
+* File formats supported
+* How to prepare your files
+* How to upload the files inside DemandCast
+* How the platform identifies each file automatically
+* How to troubleshoot upload issues
+* Best practices for consistent results
+
+---
+
+# 🔷 **2. Supported File Types**
+
+DemandCast currently supports:
+
+* **CSV** files (`.csv`)
+* **Excel** files (`.xlsx`)
+
+No other formats (PDF, images, JSON, SQL dumps) are accepted.
+
+---
+
+# 🔷 **3. Required Files (Minimum)**
+
+You must upload at least the following files:
+
+| File Name          | Purpose                                                   |
+| ------------------ | --------------------------------------------------------- |
+| **Sales File**     | Demand forecasting, stockout analysis, promotions insight |
+| **Inventory File** | Stockout prediction, inventory simulations                |
+| **Products File**  | SKU metadata, reference IDs                               |
+
+---
+
+# 🔷 **4. Optional (But Highly Recommended)**
+
+Uploading these improves model accuracy:
+
+| File Name                    | Impact                                     |
+| ---------------------------- | ------------------------------------------ |
+| **Promotion / Pricing File** | Promo effectiveness, uplift, discount ROI  |
+| **Supplier / Leadtime File** | Leadtime modeling & reliability estimation |
+| **Customer File**            | Consumer segmentation & channel analytics  |
+
+---
+
+# 🔷 **5. Naming Your Files (Automatic Detection)**
+
+You **do NOT** need perfect names.
+DemandCast uses **automatic regex-based detection**.
+Example patterns it can detect:
+
+### **Sales File Keywords**
+
+* sale, sales, demand, order, transaction
+
+### **Inventory File Keywords**
+
+* inventory, stock, soh, onhand
+
+### **Products File Keywords**
+
+* product, sku, catalog, item
+
+### **Customer File Keywords**
+
+* customer, buyers, promo, pricing, campaigns
+
+### **Supplier / Leadtime File Keywords**
+
+* supplier, vendors, vendor, leadtime
+
+As long as your filename contains one of these keywords, the platform will correctly route your file.
+
+---
+
+# 🔷 **6. Preparing Your Files Before Upload**
+
+## ✔ 6.1. Remove merged cells
+
+Excel files with merged cells cause parser errors.
+
+## ✔ 6.2. Ensure header row exists
+
+Row 1 must contain column names.
+
+## ✔ 6.3. Remove formulas
+
+Convert formulas to values.
+
+## ✔ 6.4. Ensure date formats are valid
+
+Recommended formats:
+
+* `YYYY-MM-DD`
+* `DD/MM/YYYY`
+* Excel serial dates also accepted.
+
+## ✔ 6.5. No empty rows at the top
+
+Avoid blank rows before the header.
+
+## ✔ 6.6. No commas inside numeric fields (CSV)
+
+“1,234” becomes “1234”.
+
+---
+
+# 🔷 **7. Uploading Files in DemandCast (Step-by-Step)**
+
+### **Step 1: Go to “Upload Data” Section**
+
+This is the first component in your sidebar navigation.
+
+### **Step 2: Click on “Upload File”**
+
+You will see multiple upload blocks:
+
+* Sales Data
+* Inventory Data
+* Product Master
+* Promotion / Pricing Data
+* Supplier / Leadtime
+* Customer Info
+
+### **Step 3: Choose a File**
+
+Select a CSV/XLSX from your computer.
+
+### **Step 4: Upload Begins**
+
+You will see:
+
+* **Progress indicator**
+* **Success / error message**
+
+The file gets stored in:
+
+```
+Supabase Storage → uploads/<your_user_id>/
+```
+
+### **Step 5: Automatic File Classification**
+
+DemandCast reads:
+
+* Filename keywords
+* Columns inside file
+* Date/SKU patterns
+
+Then assigns it to the correct category automatically.
+
+### **Step 6: Upload Confirmation**
+
+A green banner will show:
+
+```
+“File uploaded successfully. Detected as: Sales Data.”
+```
+
+---
+
+# 🔷 **8. How DemandCast Stores Your Uploaded Files**
+
+Uploaded files are logged inside the database:
+
+### **Table: user_files**
+
+| Column      | Description         |
+| ----------- | ------------------- |
+| user_id     | Your user ID        |
+| file_name   | Original filename   |
+| file_url    | Public storage path |
+| file_size   | Size of file        |
+| uploaded_at | Timestamp           |
+
+Then they are placed in:
+
+```
+/storage/v1/object/public/uploads/<user_id>/<filename>
+```
+
+---
+
+# 🔷 **9. After Upload: How files are used by Pipelines**
+
+### ✔ **Demand Forecast**
+
+Uses:
+
+* sales data
+* product list
+
+### ✔ **Leadtime Model**
+
+Uses:
+
+* supplier file
+* inventory movement
+
+### ✔ **Stockout Model**
+
+Uses:
+
+* sales
+* inventory
+* product list
+
+### ✔ **Promo Effectiveness**
+
+Uses:
+
+* promo/pricing file
+* transaction sales file
+
+### ✔ **Price Elasticity**
+
+Uses:
+
+* product prices
+* sales demand
+
+---
+
+# 🔷 **10. Troubleshooting File Upload Errors**
+
+Below are common issues and how to fix them:
+
+---
+
+### ❌ **“Unsupported file format”**
+
+Cause: File is PDF, ZIP, or image.
+Fix: Upload only CSV or XLSX.
+
+---
+
+### ❌ **“Missing required columns”**
+
+Example: sales file missing `date` or `sku_id`.
+Fix: Add required columns.
+
+---
+
+### ❌ **“ParserError: Unexpected delimiter”**
+
+Fix:
+
+* Remove stray commas
+* Save CSV in UTF-8 encoding
+
+---
+
+### ❌ **“No relevant file found”**
+
+Cause: Filename lacks keywords.
+Fix: Rename file to include “sales”, “inventory”, “product”, etc.
+
+---
+
+### ❌ **“No uploaded files found”**
+
+Fix:
+
+* Ensure you are logged in
+* Re-upload files
+* Check file size (< 50MB recommended)
+
+---
+
+# 🔷 **11. File Requirements & Schema Overview**
+
+### **Sales File Must Have:**
+
+```
+date
+sku_id
+units_sold
+price
+location_id  (optional)
+customer_id  (optional)
+channel      (optional)
+on_promotion (optional)
+```
+
+### **Inventory File:**
+
+```
+date
+sku_id
+stock_on_hand
+```
+
+### **Products File:**
+
+```
+sku_id
+category
+brand
+regular_price (optional)
+```
+
+### **Promo/Pricing File:**
+
+```
+date
+sku_id
+promo_price
+discount_percent
+promo_type
+```
+
+### **Supplier/Leadtime File:**
+
+```
+vendor_id
+sku_id
+delivery_date
+order_date
+lead_time_days (optional)
+```
+
+---
+
+# 🔷 **12. Best Practices for Uploading Files**
+
+### ✔ Use consistent SKU IDs
+
+### ✔ Keep dates continuous without gaps
+
+### ✔ Upload at least 90 days of data (minimum)
+
+### ✔ Avoid duplicate rows
+
+### ✔ Use the same location_id convention across files
+
+---
+
+# 🔷 **13. What Happens After Upload? (Internals)**
+
+DemandCast:
+
+1. Downloads file from Supabase
+2. Parses CSV/XLSX
+3. Sanitizes NaN, inf, weird characters
+4. Standardizes column names
+5. Detects data types
+6. Stores them temporarily in memory
+7. Makes them available for training
+
+This preprocessing ensures pipelines work smoothly.
+
+---
+
+# 🔷 **14. FAQ (Upload Section)**
+
+### **Q: Can I replace a file later?**
+
+Yes. Uploading a new file automatically replaces the old one.
+
+### **Q: Is there a file size limit?**
+
+Recommended maximum: **50 MB**.
+
+### **Q: Can I upload ZIP files?**
+
+No.
+
+### **Q: Can filenames be in any language?**
+
+Yes, English preferred, but detection is based on keywords.
+
+### **Q: Do I need to upload files for every pipeline?**
+
+No. Upload only the files for pipelines you want to run.
+
+---
+
+# 🔷 **15. Conclusion**
+
+This completes the comprehensive guide on uploading files to DemandCast.
+Uploading clean, well-structured files is essential for accurate predictions and analytics.
+If you need help, the DemandCast AI Advisor (RAG chatbot) can answer:
+
+* “What file do I need for stockout modeling?”
+* “Is my sales file formatted correctly?”
+* “Which files are missing?”
+
+Just ask the chatbot anytime.
+
+---
+
+If you want the next file:
+
+👉 **Say: "Next: how_to_start_training.md"**
+
+Here is **Topic 2** — *how_to_start_training.md* — written as a **long, deeply detailed user manual** for your RAG knowledge base.
+
+When you're ready, say **"Next"** for the next file.
+
+---
+
+# 📄 **how_to_start_training.md**
+
+### *DemandCast User Manual — How to Start Model Training (Detailed)*
+
+---
+
+# 🔷 **1. Introduction**
+
+Once your data files are uploaded successfully, the next major step is **starting model training**.
+DemandCast allows you to trigger multiple machine-learning pipelines together:
+
+* Demand Forecasting
+* Lead Time Estimation
+* Stockout Prediction
+* Promotional Effectiveness
+* Pricing Elasticity
+* RAG Embeddings Generation
+
+All these models run **asynchronous background jobs** using RQ workers, allowing you to continue using the platform while your models train.
+
+This document explains exactly how to start training, how the system works, and what you should expect.
+
+---
+
+# 🔷 **2. What Happens When You Start Training?**
+
+When you click **“Start Training”** in the UI:
+
+### ✔ DemandCast:
+
+1. Validates your uploaded data
+2. Collects your selected model settings
+3. Sends the configuration to the FastAPI backend
+4. Backend launches **six parallel training jobs** using RQ
+5. Stores job IDs in your Supabase `models` table
+6. Continues working in the background
+7. Updates your dashboard when runs finish
+
+This allows seamless, non-blocking analytics.
+
+---
+
+# 🔷 **3. Requirements Before Training**
+
+Before clicking the Start button, you must:
+
+### ✔ Upload necessary files
+
+At minimum:
+
+* Sales File
+* Inventory File
+* Product File
+
+Optional but highly recommended:
+
+* Promo File
+* Pricing File
+* Vendor/Leadtime File
+* Customer File
+
+### ✔ Select model parameters
+
+Each pipeline has configurable settings (e.g. forecast horizon, smoothing window, etc.)
+
+### ✔ Ensure your authentication token is active
+
+Training requires a valid user session.
+
+---
+
+# 🔷 **4. Navigating to the Training Page**
+
+You will find this screen under:
+
+```
+Left Sidebar → Model Training
+```
+
+This page displays one section per pipeline:
+
+* Demand Forecast Model
+* Lead Time Model
+* Stockout Model
+* Promotional Effectiveness
+* Price Elasticity
+* RAG Model
+
+Each section contains drop-downs, toggles, and inputs.
+
+---
+
+# 🔷 **5. Understanding Each Setting**
+
+Every pipeline offers user-configurable parameters.
+
+---
+
+## **5.1 Demand Forecast Settings**
+
+| Setting          | Meaning                           |
+| ---------------- | --------------------------------- |
+| Forecast Horizon | Number of days forward to predict |
+| Seasonality      | Auto/manual seasonality detection |
+| Model Type       | Prophet, XGBoost, LSTM            |
+
+**Example:**
+Horizon = 30 → forecasts next 30 days.
+
+---
+
+## **5.2 Lead Time Settings**
+
+| Setting              | Meaning                               |
+| -------------------- | ------------------------------------- |
+| Smoothing Window     | How many days to smooth supplier data |
+| Variability Handling | On/off variability correction         |
+
+**Example:**
+Smoothing = 7 → weekly smoothing.
+
+---
+
+## **5.3 Stockout Model Settings**
+
+| Setting          | Meaning                       |
+| ---------------- | ----------------------------- |
+| Balance Strategy | Auto or manual class handling |
+| Model Type       | XGBoost or LightGBM           |
+
+---
+
+## **5.4 Promotional Effectiveness Settings**
+
+| Setting              | Meaning                               |
+| -------------------- | ------------------------------------- |
+| Lookback             | History window for uplift calculation |
+| Discount Sensitivity | Whether deep discounts matter         |
+
+---
+
+## **5.5 Pricing Model Settings**
+
+| Setting           | Meaning                                    |
+| ----------------- | ------------------------------------------ |
+| Elasticity Method | Log-log or regression                      |
+| Cross Elasticity  | Whether related products impact each other |
+
+---
+
+## **5.6 RAG Model Settings**
+
+| Setting         | Meaning                  |
+| --------------- | ------------------------ |
+| Embedding Model | BGE, GTE, MiniLM         |
+| Dataset Name    | Which documents to embed |
+
+---
+
+# 🔷 **6. Starting Training — Step-by-Step**
+
+Follow this simple process:
+
+---
+
+### **Step 1: Open “Model Training” Page**
+
+The UI shows all pipelines grouped with sections.
+
+---
+
+### **Step 2: Review All Settings**
+
+Make sure each section matches your desired configuration.
+Every setting is saved inside a `TrainingSettings` object sent to the backend.
+
+---
+
+### **Step 3: Click “Start Training” Button**
+
+The large bottom button:
+
+```
+🚀 Start Training
+```
+
+Triggers training.
+
+---
+
+### **Step 4: Backend Validates Your Token**
+
+FastAPI extracts:
+
+```
+Authorization: Bearer <token>
+```
+
+Then identifies your user via Supabase Authentication.
+
+---
+
+### **Step 5: Backend Enqueues Jobs**
+
+Six RQ jobs are created:
+
+```
+demand
+leadtime
+stockout
+promo
+pricing
+rag
+```
+
+Each job is sent to:
+
+```
+Queue: model_training
+```
+
+The backend returns:
+
+* List of job IDs
+* Estimated training time
+* Success confirmation
+
+---
+
+### **Step 6: UI Shows “Training Started” Message**
+
+The button disappears and you see:
+
+```
+Your models are now training...
+Check back in 32 minutes for insights.
+```
+
+---
+
+# 🔷 **7. What Happens Internally (Technical Overview)**
+
+The backend performs:
+
+---
+
+### ✔ File Retrieval
+
+Files extracted via:
+
+```
+from "user_files" table
+```
+
+and downloaded automatically.
+
+---
+
+### ✔ Data Standardization
+
+Each pipeline independently:
+
+* Renames columns
+* Cleans missing values
+* Removes infinities
+* Standardizes data types
+
+---
+
+### ✔ Feature Extraction
+
+Domain-specific features are generated, such as:
+
+* Lag features
+* Rolling averages
+* Seasonality flags
+* Price ratios
+* Promotion uplift indicators
+
+---
+
+### ✔ Auto Model Selection
+
+Based on dataset size and complexity, the platform picks:
+
+* Prophet / XGBoost / LSTM (Demand)
+* Linear / RandomForest / LightGBM / CatBoost (Leadtime)
+* Logistic / XGBoost / LSTM (Stockout)
+* Regression / Gradient Boosting (Promo)
+* LogLog / OLS / Elasticity modeling
+
+---
+
+### ✔ MLflow Logging
+
+Every pipeline logs:
+
+* Model
+* Metrics
+* Run ID
+* Artifacts
+* Hyperparameters
+
+Saved under your username.
+
+---
+
+### ✔ Database Update
+
+Each job writes into the `models` table:
+
+```
+user_id
+model_name
+job_id (rq)
+mlflow_run_id (after completion)
+status (queued → finished)
+updated_at
+```
+
+---
+
+# 🔷 **8. Monitoring Job Progress**
+
+The dashboard polls each run’s status.
+
+You will see one of:
+
+* **Queued**
+* **In Progress**
+* **Training**
+* **Validating**
+* **Logging**
+* **Finished**
+* **Failed**
+
+Each pipeline updates independently.
+
+---
+
+# 🔷 **9. When Training Finishes**
+
+After successful training, the dashboard displays:
+
+* Forecast curves
+* Stockout probabilities
+* Leadtime metrics
+* Elasticity graphs
+* Promo ROI
+* Model accuracy
+* Hyperparameters
+* Summary cards
+
+You can view these in:
+
+```
+Dashboard → Insights
+```
+
+---
+
+# 🔷 **10. Troubleshooting Training Issues**
+
+---
+
+### ❌ **Training fails instantly**
+
+Check if files are missing.
+
+---
+
+### ❌ **Demand pipeline fails**
+
+Check if:
+
+* `date` column exists
+* There are enough rows (> 30 days)
+
+---
+
+### ❌ **Stockout model fails**
+
+Verify:
+
+* inventory file has `stock`
+* sales and inventory align by date + sku
+
+---
+
+### ❌ **Leadtime pipeline fails**
+
+Ensure supplier file has:
+
+* `order_date`
+* `delivery_date`
+
+---
+
+### ❌ **Promo pipeline fails**
+
+Ensure promo file contains:
+
+* promo_price
+* discount_percent
+* promo_type
+
+---
+
+# 🔷 **11. FAQ (Training Section)**
+
+---
+
+### **Q: Can I run only 1 pipeline?**
+
+Not at the moment — all pipelines run together.
+
+---
+
+### **Q: Can I see individual pipeline progress?**
+
+Yes — your dashboard displays job statuses.
+
+---
+
+### **Q: Can I stop a running pipeline?**
+
+This feature will arrive later.
+
+---
+
+### **Q: Can I run training again after uploading new files?**
+
+Yes — simply click “Start Training” again.
+
+---
+
+### **Q: Is the estimated time accurate?**
+
+It is approximate, based on dataset size.
+
+---
+
+# 🔷 **12. End of Guide**
+
+You now know everything required to start training models inside DemandCast.
+
+If you need help, the RAG Chatbot can answer:
+
+* “Why is my stockout model failing?”
+* “What are my current model statuses?”
+* “What do my training settings mean?”
+* “Which pipelines require which files?”
+
+---
+
+If you're ready, say:
+
+👉 **Next: interpreting_results.md**
+
+Here is **Topic 3** — *interpreting_results.md* — a **very detailed, long-form user manual** designed specifically for your RAG knowledge base.
+Let me know when to proceed to **dashboard_explainer.md** next.
+
+---
+
+# 📄 **interpreting_results.md**
+
+### *DemandCast User Manual — Understanding and Interpreting Your Model Outputs (Detailed)*
+
+---
+
+# 🔷 1. Introduction
+
+Once model training finishes, DemandCast generates a comprehensive set of insights, predictions, metrics, and visualizations.
+This guide explains:
+
+* How to understand each model’s output
+* How to interpret forecasts correctly
+* How to use stockout probabilities strategically
+* How to read promotional uplift and ROI
+* How pricing curves translate into optimal price decisions
+* What alerts and recommendations mean
+* How to avoid analytical misinterpretation
+
+This document is critical for users who want to make **operational decisions** from analytics.
+
+---
+
+# 🔷 2. Where to View Results
+
+After training completes, results appear automatically inside:
+
+```
+Dashboard → Insights (Top Navigation)
+```
+
+Here you will find:
+
+* Forecasting results
+* Leadtime distribution
+* Stockout risk matrix
+* Promotion performance
+* Elasticity curves
+* Recommendations
+* Downloadable CSVs
+
+Each section corresponds to one pipeline.
+
+---
+
+# 🔷 3. Understanding Demand Forecast Results
+
+### **✔ 3.1 Forecast Curve**
+
+You’ll see a line chart showing:
+
+* Historical demand
+* Forecasted future values
+* Upper/lower prediction intervals (if applicable)
+
+**Interpretation Tips**:
+
+* A widening cone means increasing uncertainty.
+* Sharp spikes usually reflect actual demand seasonality (weekly/monthly cycles).
+* A flat forecast may indicate insufficient historical data.
+
+---
+
+### **✔ 3.2 Metrics Summary**
+
+You’ll find key metrics like:
+
+* **MAE** (Mean Absolute Error)
+* **RMSE** (Root Mean Squared Error)
+* **R² Score**
+* **MAPE** (optional)
+
+**Interpretation:**
+
+| Metric | Good       | Average | Poor |
+| ------ | ---------- | ------- | ---- |
+| MAE    | Low (<10%) | Medium  | High |
+| RMSE   | Low        | Medium  | High |
+| R²     | >0.8       | 0.5–0.8 | <0.5 |
+
+---
+
+### **✔ 3.3 SKU-Level Breakdown**
+
+SKU forecasts include:
+
+* Predicted sales
+* Trend direction
+* Seasonal patterns
+* Volatility levels
+
+**Interpretation Example**:
+
+* If SKU A shows rising trend → reorder more
+* If SKU B shows erratic movement → check supply consistency
+
+---
+
+# 🔷 4. Understanding Lead Time Results
+
+### **✔ 4.1 Supplier Lead Time Distribution**
+
+Displayed as:
+
+* Histogram
+* Box plot
+* PDF curve
+
+Interpretation:
+
+* Long tails indicate unreliable suppliers
+* Narrow bell shape indicates consistent deliveries
+* Multiple peaks may reflect multiple vendors
+
+---
+
+### **✔ 4.2 Lead Time Summary Stats**
+
+Includes:
+
+* Average lead time
+* Median
+* Variance
+* Worst-case lead time
+* Supplier reliability score
+
+**Interpretation:**
+
+* Large variance → adjust safety stock
+* High worst-case → avoid stockouts using buffer inventory
+
+---
+
+### **✔ 4.3 Supplier Scorecard**
+
+Each vendor receives a reliability index (0–100).
+
+Interpretation:
+
+* > 80 excellent
+* 60–80 moderate
+* <60 risky supplier
+
+---
+
+# 🔷 5. Understanding Stockout Model Results
+
+### **✔ 5.1 Stockout Probability Table**
+
+Each SKU-location pair shows:
+
+| SKU | Location | Probability | Risk Level | Expected Units Short |
+| --- | -------- | ----------- | ---------- | -------------------- |
+
+**Interpretation:**
+
+* **>0.7** → High risk
+* **0.4–0.7** → Medium
+* **<0.4** → Low
+
+Use high-risk SKUs for priority replenishment.
+
+---
+
+### **✔ 5.2 Confusion Matrix**
+
+Shows model accuracy.
+
+Interpretation:
+
+* High FN → the model is missing stockouts → risky
+* High FP → too many false alarms → refine thresholds
+
+---
+
+### **✔ 5.3 Recommendation Engine**
+
+You may see suggestions like:
+
+* “Increase safety stock for SKU P001 at Store L3.”
+* “Supplier X delay increases stockout probability.”
+
+---
+
+# 🔷 6. Understanding Promotional Effectiveness Results
+
+### **✔ 6.1 Uplift Curve**
+
+Shows:
+
+* No-promo scenario
+* Actual promo demand
+* Expected baseline
+
+**Interpretation:**
+
+If uplift is positive → promo worked.
+If uplift is negative → promo failed or cannibalized other SKUs.
+
+---
+
+### **✔ 6.2 Incremental Revenue**
+
+Displayed as:
+
+```
+Incremental Revenue = (Promo Sales - Baseline Sales) × Price
+```
+
+Interpretation:
+
+* High incremental revenue → profitable promotion
+* Negative → loss-making promo
+
+---
+
+### **✔ 6.3 Discount Sensitivity Charts**
+
+Shows correlation between discount % and sales increase.
+
+Interpretation:
+
+* Steep slope → users very discount sensitive
+* Flat → discount has no effect
+
+---
+
+### **✔ 6.4 Lookback Window Analysis**
+
+Your selected lookback window affects baseline.
+Larger lookback → more stable baseline
+Shorter lookback → more responsive to recent changes
+
+---
+
+# 🔷 7. Understanding Price Elasticity Results
+
+### **✔ 7.1 Elasticity Curve**
+
+Shows demand response to price changes.
+
+Interpretation:
+
+* Curve downward → normal demand behavior
+* If curve is flat → demand is price-insensitive
+* If curve steepens → risk of volume drop
+
+---
+
+### **✔ 7.2 Optimal Price Point**
+
+Computed using:
+
+* Price elasticity
+* Revenue maximization
+* U-shaped responsiveness
+
+Interpretation:
+
+* Optimal price is where **revenue is maximized**, not where demand is highest.
+* If optimal price > current price → underpricing issue
+* If optimal price < current price → price too high
+
+---
+
+### **✔ 7.3 Cross-Elasticity Matrix**
+
+Shows dependence of SKUs on each other.
+
+Interpretation:
+
+* Positive cross elasticity → substitutes
+* Negative → complements
+
+---
+
+# 🔷 8. RAG Knowledge-Based Insights
+
+### **✔ 8.1 Embedding Summary**
+
+Shows how many docs were embedded.
+
+### **✔ 8.2 Query Quality Heatmap**
+
+Displays how well the knowledge base covers user queries.
+
+### **✔ 8.3 Metadata Index**
+
+Shows:
+
+* Document names
+* Category
+* Last updated
+
+---
+
+# 🔷 9. Downloadable Artifacts
+
+You can export:
+
+* Raw predictions
+* Run IDs
+* Elasticity curves
+* Promo uplift CSV
+* Forecast CSV
+* Stockout probability table
+
+Each export contains full numeric results.
+
+---
+
+# 🔷 10. Common Interpretation Mistakes (Avoid Them)
+
+### ❌ Over-reacting to short-term spikes
+
+Always rely on trend + seasonality.
+
+---
+
+### ❌ Using stockout probabilities without considering leadtime
+
+Probability must be matched with supplier reliability.
+
+---
+
+### ❌ Misreading optimal price as “only price to use”
+
+Optimal price is model-based, but business constraints matter.
+
+---
+
+### ❌ Assuming promotional uplift means profit
+
+Higher volume ≠ Higher revenue
+Always check incremental margin.
+
+---
+
+### ❌ Expecting 100% accuracy
+
+No model provides perfect predictions.
+Interpret probabilistically.
+
+---
+
+# 🔷 11. FAQ (Interpreting Results)
+
+### **Q: Why does my forecast look flat?**
+
+Because:
+
+* Not enough historical data
+* Low variance
+* Model fallback to linear methods
+
+---
+
+### **Q: Why is stockout probability extremely high?**
+
+Check inventory file for missing or wrong stock levels.
+
+---
+
+### **Q: Why is optimal price lower than current price?**
+
+Increasing price reduces revenue more than it increases margin.
+
+---
+
+### **Q: Why is promo uplift negative?**
+
+Common reasons:
+
+* Promo too small
+* Wrong product placement
+* Cannibalization by competitors
+
+---
+
+# 🔷 12. Conclusion
+
+Interpreting results is key to converting analytics into meaningful decisions.
+DemandCast provides a unified dashboard that summarizes predictions, insights, and recommendations in an easily understandable format.
+
+For clarification, the AI advisor chatbot can answer queries such as:
+
+* “What does my elasticity curve indicate?”
+* “Why is this SKU at high stockout risk?”
+* “How should I interpret supplier reliability?”
+* “What does my forecast cone mean?”
+
+---
+
+Say **"Next"** when you want the **dashboard_explainer.md** file.
+
+Here is **Topic 4** — *dashboard_explainer.md* — written as a **long, detailed, structured user manual** for your RAG knowledge base.
+
+When ready, say **"Next"** for the final topic: **chatbot_usage_guide.md**.
+
+---
+
+# 📄 **dashboard_explainer.md**
+
+### *DemandCast User Manual — Dashboard & Navigation Guide (Deeply Detailed)*
+
+---
+
+# 🔷 1. Introduction
+
+The DemandCast Dashboard is the main control center where users explore their predictions, insights, operational alerts, model statuses, and performance metrics.
+This guide explains every component of the dashboard—its purpose, how to interpret each section, and how to navigate it efficiently.
+
+Whether you are a beginner or an advanced user, this document will help you extract maximum value from DemandCast’s visual insights.
+
+---
+
+# 🔷 2. Dashboard Overview
+
+After training completes, the dashboard becomes fully populated with:
+
+* Forecast charts
+* Inventory projections
+* Leadtime variability
+* Stockout probability tables
+* Price elasticity curves
+* Promo uplift analysis
+* Run ID logs
+* Recommendation panels
+
+The layout is designed to be intuitive but also powerful enough for deep analytical workflows.
+
+You can access it via:
+
+```
+Top Navigation → Dashboard
+```
+
+---
+
+# 🔷 3. Dashboard Sections Breakdown
+
+The dashboard is divided into the following major sections:
+
+1. **Model Status Monitor**
+2. **Demand Forecasting Insights**
+3. **Lead Time & Supplier Reliability**
+4. **Stockout Prediction & Alerts**
+5. **Promo Effectiveness Analytics**
+6. **Price Elasticity & Revenue Curves**
+7. **Inventory & Safety Stock Simulation**
+8. **Recommendations Hub**
+9. **Run IDs & Pipeline Logs**
+10. **Download Center**
+
+Each section is described below.
+
+---
+
+# 🔷 4. Model Status Monitor
+
+This widget provides a real-time snapshot of your training jobs.
+
+### Includes:
+
+* Job ID
+* Model Name
+* Status
+* Estimated Time
+* Updated At
+
+### Status Types:
+
+| Status      | Meaning                    |
+| ----------- | -------------------------- |
+| Queued      | Waiting in RQ worker queue |
+| In Progress | Worker executing pipeline  |
+| Training    | Model currently fitting    |
+| Validating  | Evaluating on test data    |
+| Logging     | Storing results in MLflow  |
+| Completed   | Finished successfully      |
+| Failed      | Error occurred             |
+
+### Purpose:
+
+* Helps you see which models are ready
+* Helps troubleshoot failed runs
+* Ensures data is processed properly before seeing insights
+
+---
+
+# 🔷 5. Demand Forecasting Insights
+
+This is one of the most important dashboard components.
+
+### **5.1 Forecasted Demand Curve**
+
+Shows:
+
+* Historical demand
+* Future forecast
+* Confidence intervals (upper/lower bounds)
+
+### **5.2 SKU Level Forecast Cards**
+
+Each card displays:
+
+* Trend direction (↑ / → / ↓)
+* Expected demand for horizon period
+* Confidence score
+* Seasonal peaks
+
+### **5.3 Forecast Accuracy Panel**
+
+Contains:
+
+* MAE
+* RMSE
+* R² Score
+* MAPE (if available)
+
+### **5.4 Seasonality Insights**
+
+You will see:
+
+* Weekly seasonality
+* Monthly seasonality
+* Peak days
+* Demand volatility
+
+### **How to Use:**
+
+* Identify upcoming shortages
+* Schedule replenishments
+* Plan marketing efforts around peaks
+
+---
+
+# 🔷 6. Lead Time & Supplier Reliability
+
+This section helps supply chain teams plan procurement and reduce stockouts.
+
+### **6.1 Lead Time Distribution Plot**
+
+Shows:
+
+* Histogram
+* Average lead time
+* Worst-case lead time
+* Variance
+
+### **6.2 Supplier Scorecard**
+
+For each supplier:
+
+* Lead time mean
+* Reliability index
+* Delay frequency
+* On-time delivery rate
+
+### **6.3 Safety Stock Recommendation Panel**
+
+Automatically calculates:
+
+* Required safety stock
+* Reorder thresholds
+* Buffer days
+
+### **6.4 Lead Time Alerts**
+
+Flags:
+
+* Highly unreliable suppliers
+* Volatile vendors
+* Long-tail distributions
+
+### How to Use:
+
+* Adjust reorder dates
+* Switch vendors if necessary
+* Increase safety stock for risky suppliers
+
+---
+
+# 🔷 7. Stockout Prediction & Alerts
+
+This section predicts which SKUs are at risk of running out of stock.
+
+### **7.1 Stockout Probability Table**
+
+Columns:
+
+* SKU
+* Location
+* Probability
+* Risk Level (Low/Medium/High)
+* Expected Units Short
+
+### **7.2 Risk Heatmap**
+
+Visual representation of SKU × Location risk levels.
+
+### **7.3 Confusion Matrix & Model Metrics**
+
+Shows:
+
+* Accuracy
+* F1-score
+* Precision & recall
+
+### **7.4 Stockout Alerts Panel**
+
+Examples:
+
+* “High risk: SKU P001 at L3”
+* “Stockout probability exceeds 80%”
+
+### How to Use:
+
+* Prioritize replenishment
+* Increase safety stock
+* Investigate supply issues
+
+---
+
+# 🔷 8. Promotional Effectiveness Analytics
+
+This helps understand the impact of promotions on sales.
+
+### **8.1 Uplift Chart**
+
+Shows:
+
+* Baseline demand
+* Promo effect
+* Incremental uplift
+
+### **8.2 ROI Summary**
+
+Displays:
+
+* Promo spend
+* Incremental revenue
+* Net ROI
+
+### **8.3 Discount Sensitivity Curve**
+
+Shows effect of discount % on sales uplift.
+
+### **8.4 Promo Type Breakdown**
+
+Performance by:
+
+* BOGO
+* Flat Off
+* Percentage Off
+* Bundles
+
+### How to Use:
+
+* Identify profitable promotions
+* Avoid low-ROI discounts
+* Optimize promo budget allocation
+
+---
+
+# 🔷 9. Price Elasticity & Revenue Curves
+
+This explains how price changes affect demand.
+
+### **9.1 Elasticity Curve**
+
+Shows:
+
+* Demand drop as price rises
+* Sensitivity region
+* Inelastic zone
+
+### **9.2 Optimal Price Point Card**
+
+Displays:
+
+* Current price
+* Revenue-maximizing price
+* Expected volume & revenue
+
+### **9.3 Cross Elasticity Matrix**
+
+Shows how related products interact:
+
+* Substitutes
+* Complements
+
+### How to Use:
+
+* Adjust prices dynamically
+* Increase revenue per SKU
+* Avoid overpricing
+
+---
+
+# 🔷 10. Inventory & Safety Stock Simulation
+
+Based on Monte Carlo simulation.
+
+### Shows:
+
+* Future inventory trajectories
+* Stockout likelihood
+* Safety stock thresholds
+* Forecasted demand vs inventory curves
+
+### How to Use:
+
+* Stress-test inventory
+* Prepare for worst-case scenarios
+* Plan reorder level scientifically
+
+---
+
+# 🔷 11. Recommendations Hub
+
+The recommendation engine provides actionable insights.
+
+Examples:
+
+* “Increase stock for SKU P006 at L3 within 3 days.”
+* “Supplier S22 has delivery variance >30%.”
+* “Promo effectiveness low—try higher discount.”
+* “Price elasticity suggests lowering price by 5%.”
+
+These suggestions are generated automatically after every training run.
+
+---
+
+# 🔷 12. Run IDs & Pipeline Logs
+
+This section displays all historical model runs.
+
+### Includes:
+
+* RQ job ID
+* MLflow run ID
+* Timestamp
+* Status
+* Model type
+* Metrics
+
+Useful for:
+
+* Debugging
+* Comparing models
+* Viewing old predictions
+* Retrieving run artifacts
+
+---
+
+# 🔷 13. Download Center
+
+Available exports:
+
+* Demand forecast CSV
+* Stockout probabilities
+* Leadtime tables
+* Promo uplift analysis
+* Elasticity curves
+* Recommendation JSON
+
+Designed for business presentations or further analysis.
+
+---
+
+# 🔷 14. Common Dashboard Questions
+
+### **Q: Why do some charts show empty sections?**
+
+Models might not have completed training yet.
+
+---
+
+### **Q: Why do some forecasts look flat?**
+
+Your data might be insufficient or lacking variability.
+
+---
+
+### **Q: Why do elasticities show no effect?**
+
+Product may be price-inelastic.
+
+---
+
+### **Q: Why does stockout heatmap show red for many SKUs?**
+
+Inventory may be too low, or suppliers unreliable.
+
+---
+
+### **Q: Why does supplier scorecard look blank?**
+
+Leadtime file may be missing required columns.
+
+---
+
+# 🔷 15. Conclusion
+
+The DemandCast Dashboard provides end-to-end visibility across forecasting, pricing, inventory, and promotions.
+It is the heart of the platform, designed to give clear, powerful, data-driven signals.
+
+For any help regarding dashboard insights, the DemandCast AI Advisor (your RAG chatbot) can explain:
+
+* “Why is this SKU at high stockout risk?”
+* “What does this leadtime histogram mean?”
+* “Why is my optimal price higher this time?”
+* “How do I interpret my forecast cone?”
+
+---
+
+Say **“Next”** for the final topic:
+👉 **chatbot_usage_guide.md**
+
+Below is the **final topic** — a **large, fully detailed, production-ready `chatbot_usage_guide.md`** for your RAG system.
+
+This will sit inside your knowledge base and guide users on **how to talk to the DemandCast AI Advisor**, what it can and *cannot* answer, and the rules of interaction.
+
+This is written as a long, professional, high-quality manual suitable for embedding inside RAG vectors.
+
+---
+
+# 📄 **chatbot_usage_guide.md**
+
+### *DemandCast User Manual — AI Advisor & Chatbot Interaction Guide*
+
+---
+
+# 🔷 1. Introduction
+
+DemandCast includes an integrated AI Advisor — a smart RAG-powered chatbot that analyzes **your uploaded data, trained model outputs, predictions, and dashboard insights** to provide actionable recommendations.
+
+This guide explains:
+
+* What the AI Advisor can help with
+* How to ask questions
+* How the chatbot generates answers
+* Limitations & restricted topics
+* Safety guidelines
+* Examples of recommended questions
+* Chatbot memory behavior
+* Troubleshooting instructions
+
+The purpose of this chatbot is to **translate complex analytics into simple insights**, guide decision-making, and help users navigate the DemandCast platform efficiently.
+
+---
+
+# 🔷 2. What the Chatbot Can Do
+
+The DemandCast AI Advisor specializes **ONLY** in *Demand & Supply Analytics*, and *the DemandCast platform itself*.
+
+It is built to help with:
+
+---
+
+## ✔️ **2.1 Understanding Your Forecasting Results**
+
+You can ask:
+
+* “Why is my demand forecast for SKU P003 increasing next month?”
+* “Explain what the confidence interval means in the demand chart.”
+* “Which SKUs have the strongest seasonality?”
+
+---
+
+## ✔️ **2.2 Inventory & Safety Stock Explanations**
+
+Examples:
+
+* “How much safety stock do I need for SKU P006 in Location L5?”
+* “Why is the safety stock recommendation so high?”
+
+---
+
+## ✔️ **2.3 Stockout Risk Interpretation**
+
+Examples:
+
+* “Which SKUs are at high stockout risk this week?”
+* “Why is the risk 80% for SKU P009 at L4?”
+
+---
+
+## ✔️ **2.4 Lead Time & Supplier Reliability Insights**
+
+Examples:
+
+* “Which supplier has the highest lead time variability?”
+* “How is safety stock calculated from lead time?”
+
+---
+
+## ✔️ **2.5 Promotional Effectiveness & Uplift**
+
+Examples:
+
+* “Was the BOGO promotion effective for SKU P001?”
+* “How much uplift did the last 20% discount generate?”
+
+---
+
+## ✔️ **2.6 Price Elasticity & Revenue Optimization**
+
+Examples:
+
+* “What is the optimal price for SKU P002?”
+* “Why is SKU P005 highly price-sensitive?”
+
+---
+
+## ✔️ **2.7 Website Navigation Help**
+
+The chatbot has full knowledge of:
+
+* Dashboard layout
+* Purpose of each section
+* What each component does
+* How to use the platform
+
+Examples:
+
+* “Where do I view my lead time charts?”
+* “What does the Price Elasticity section show?”
+
+---
+
+## ✔️ **2.8 File Uploads & Training Instructions**
+
+Examples:
+
+* “What file formats can I upload?”
+* “How do I start model training?”
+* “Why is my products file required?”
+
+---
+
+## ✔️ **2.9 Explaining Concepts in Supply Chain Analytics**
+
+Examples:
+
+* “Explain stockout probability in simple words.”
+* “What is safety stock?”
+* “How does XGBoost work in demand forecasting?”
+
+---
+
+## ✔️ **2.10 Recommendations & Best Practices**
+
+Examples:
+
+* “What action should I take for high stockout items?”
+* “Should I increase promo discount for SKU P004?”
+
+---
+
+# 🔷 3. What the Chatbot **Cannot** Do (Hard Restrictions)
+
+The AI Advisor is designed with strict boundaries.
+
+It will *refuse* to answer:
+
+---
+
+## ❌ **3.1 Any Obscene, Abusive, Hate, Violent or Sexual Content**
+
+The assistant will politely decline such requests.
+
+---
+
+## ❌ **3.2 Questions Unrelated to DemandCast / Supply Chain / Analytics**
+
+Examples:
+
+* “Tell me a joke about…”
+* “Write a rap song…”
+* “Explain quantum mechanics…”
+* “How to code a full-stack app unrelated to DemandCast…”
+
+The chatbot always replies:
+
+> “I can only assist with DemandCast platform usage or supply chain analytics.”
+
+---
+
+## ❌ **3.3 Personal Advice Not Related to Analytics**
+
+Not allowed:
+
+* Life advice
+* Relationship advice
+* Legal or medical suggestions
+
+---
+
+## ❌ **3.4 External world knowledge outside your knowledge base**
+
+Example:
+
+* “Who is the Prime Minister of X?”
+* “Give me news updates…”
+* “Tell me world statistics…”
+
+---
+
+## ❌ **3.5 Anything that compromises privacy or security**
+
+Such as:
+
+* Asking about other users
+* Attempting to access internal system environment
+* Fetching private files
+
+---
+
+# 🔷 4. How to Ask Questions Effectively
+
+The chatbot understands *natural language*, so you can speak casually.
+
+Recommended formats:
+
+---
+
+## ✔️ **4.1 Specific Insight Questions**
+
+> “Why is my lead time variance high for Supplier S004?”
+
+---
+
+## ✔️ **4.2 Interpretations**
+
+> “What does the forecast chart mean for SKU P002?”
+
+---
+
+## ✔️ **4.3 Actions / Recommendations**
+
+> “What should I do if this SKU has 80% stockout risk?”
+
+---
+
+## ✔️ **4.4 Comparisons**
+
+> “Which SKU has the highest uplift from promotions?”
+
+---
+
+## ✔️ **4.5 What-If Questions**
+
+> “What happens if I increase price by 5%?”
+
+---
+
+## ✔️ **4.6 Troubleshooting**
+
+> “Why does my products file show missing product IDs?”
+
+---
+
+# 🔷 5. How the Chatbot Uses Your Data
+
+The RAG engine dynamically retrieves:
+
+* Forecast outputs
+* Lead time metrics
+* Supplier statistics
+* Stockout probabilities
+* Promo uplift values
+* Elasticity curves
+* Uploaded CSV/Excel files
+* Configuration settings
+* MLflow model run outputs
+* Dashboard metadata
+* Platform usage guidelines
+
+The final reply is a blended combination of:
+
+1. **Knowledge base text**
+2. **Your file data**
+3. **Your model outputs**
+4. **Platform metadata**
+
+This ensures advice is always:
+
+* Context-aware
+* Personalized
+* Based on your real data
+
+---
+
+# 🔷 6. Chatbot Memory Behavior
+
+The chatbot **does not permanently store**:
+
+* Your files
+* Your chats
+* Any personal information
+
+However, it **temporarily** holds your session state to allow follow-up questions like:
+
+* “Explain the previous forecast again.”
+* “Now compare this to SKU P003.”
+
+Once session resets, memory resets.
+
+---
+
+# 🔷 7. FAQ — Frequently Asked Questions About the Chatbot
+
+---
+
+### **Q: Why is the chatbot refusing some questions?**
+
+Because the conversation is outside DemandCast’s functional scope or violates safety rules.
+
+---
+
+### **Q: Why does the chatbot ask for more data sometimes?**
+
+Some insights require:
+
+* Product-level file
+* Sales history
+* Inventory data
+
+---
+
+### **Q: Why does it ask me to complete training first?**
+
+Most analytics (forecast, stockout, elasticity) are derived **after model training**.
+
+---
+
+### **Q: Can it generate predictions live?**
+
+Yes, using MLflow run IDs + pipeline outputs.
+
+---
+
+### **Q: Does the chatbot replace dashboards?**
+
+No.
+It interprets them, summarizes them, and advises based on them.
+
+---
+
+### **Q: Can I ask for simple definitions?**
+
+Yes:
+
+* “What is safety stock?”
+* “What is price elasticity?”
+
+---
+
+### **Q: Will it ever answer personal or abusive content?**
+
+Never. It is blocked at system level.
+
+---
+
+# 🔷 8. Example Good Questions to Ask
+
+---
+
+### **Demand Forecasting**
+
+* “Why is my demand trending downward for L4?”
+* “Which SKUs will peak next month?”
+
+---
+
+### **Inventory**
+
+* “Why is safety stock so high for SKU P009?”
+
+---
+
+### **Stockout**
+
+* “Which locations are at most risk next week?”
+
+---
+
+### **Promo Insights**
+
+* “Did the discount sensitivity chart change after the last promotion?”
+
+---
+
+### **Elasticity**
+
+* “Why does the revenue curve peak at this price?”
+
+---
+
+### **Website Navigation**
+
+* “Where do I find the price elasticity visualization?”
+
+---
+
+# 🔷 9. Troubleshooting
+
+---
+
+### **Problem**: Chatbot not giving actionable advice
+
+**Solution**: Ensure model training is complete and run IDs exist.
+
+---
+
+### **Problem**: “Data missing” errors
+
+Check:
+
+* Files correctly uploaded
+* Required columns: product_id, date, sales, inventory, price, etc.
+
+---
+
+### **Problem**: Chatbot refusing questions
+
+Likely violated content or domain scope rules.
+
+---
+
+### **Problem**: Chatbot giving generic answers
+
+Means missing model outputs → Re-train required.
+
+---
+
+# 🔷 10. Summary
+
+The DemandCast AI Advisor is your 24/7 analytics companion, designed to:
+
+* Help interpret dashboards
+* Translate data into decisions
+* Explain predictions
+* Guide your actions
+* Ensure correct use of the platform
+* Keep conversations safe and domain-restricted
+
+Your chatbot is not a general-purpose AI — it is an expert in **Demand & Supply Analytics** and **DemandCast Platform Intelligence**.
