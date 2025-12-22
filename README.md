@@ -100,6 +100,7 @@ The goal is to support **inventory planning**, **marketing strategies**, and **d
 - Ideal for e-commerce, retail, analytics, and AI roles  
 
 ---
+Demo video for dashboard and website navigations -*https://drive.google.com/file/d/1nSYGIUfFNk4E5mAKOTpZxg535afzSSCm/view?usp=drive_link*
 
 ## 🚀 Getting Started
 
@@ -122,6 +123,7 @@ cd project
 npm install
 npm run dev
 ```
+For direct access - https://dreamy-frangollo-57d87c.netlify.app/login
 
 ### Start backend and redis
 
@@ -129,7 +131,7 @@ npm run dev
 cd backend
 uvicorn app:app --reload
 ```
-##redis is deployed @upstash
+redis is deployed @upstash
 ---
 
 ## 📜 License
