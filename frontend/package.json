@@ -53,13 +53,13 @@
             "sonner": "^2.0.3",
             "tailwind-merge": "*",
             "tailwindcss": "^4.1.17",
-            "vaul": "^1.1.2",
-            "vite": "*"
+            "vaul": "^1.1.2"
       },
       "devDependencies": {
             "@types/node": "^20.10.0",
             "@vitejs/plugin-react-swc": "^3.10.2",
-            "vite": "6.3.5"
+            "baseline-browser-mapping": "^2.9.19",
+            "vite": "^6.4.1"
       },
       "scripts": {
             "dev": "vite",

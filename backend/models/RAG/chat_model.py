@@ -111,4 +111,4 @@ Question: {query}
         print(chunk["message"]["content"], end="", flush=True)
 
 if __name__ == "__main__":
-    print(chatbot("who is the creater of this project?"))
+    print(chatbot("what is demandcast?"))
